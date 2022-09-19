@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  $tudyOf$tock
+//  StudyOfStock
 //
-//  Created by 박준하 on 2022/09/12.
+//  Created by 박준하 on 2022/09/19.
 //
 
 import UIKit
