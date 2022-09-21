@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EECB81828DB28B000BFB1D4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EECB81728DB28B000BFB1D4 /* LoginVC.swift */; };
 		0EF25B2128D880370098B038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF25B2028D880370098B038 /* AppDelegate.swift */; };
 		0EF25B2328D880370098B038 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF25B2228D880370098B038 /* SceneDelegate.swift */; };
 		0EF25B2528D880370098B038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF25B2428D880370098B038 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EECB81728DB28B000BFB1D4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0EF25B1D28D880370098B038 /* StudyOfStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyOfStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF25B2028D880370098B038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EF25B2228D880370098B038 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				0EF25B2028D880370098B038 /* AppDelegate.swift */,
 				0EF25B2228D880370098B038 /* SceneDelegate.swift */,
 				0EF25B2428D880370098B038 /* ViewController.swift */,
+				0EECB81728DB28B000BFB1D4 /* LoginVC.swift */,
 				0EF25B2928D880380098B038 /* Assets.xcassets */,
 				0EF25B2B28D880380098B038 /* LaunchScreen.storyboard */,
 				0EF25B2E28D880380098B038 /* Info.plist */,
@@ -204,6 +207,7 @@
 			files = (
 				0EF25B2528D880370098B038 /* ViewController.swift in Sources */,
 				0EF25B2128D880370098B038 /* AppDelegate.swift in Sources */,
+				0EECB81828DB28B000BFB1D4 /* LoginVC.swift in Sources */,
 				0EF25B2328D880370098B038 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
