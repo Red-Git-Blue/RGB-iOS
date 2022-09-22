@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class StartViewController: UIViewController {
     
     private lazy var mainImageView: UIImageView = {
         let imageName = "MainBackground"
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     }
 }
 
-private extension ViewController {
+private extension StartViewController {
     func setupLayout() {
         [
             mainImageView,
