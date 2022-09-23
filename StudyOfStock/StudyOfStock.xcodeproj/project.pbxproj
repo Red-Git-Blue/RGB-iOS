@@ -13,7 +13,6 @@
 		0EB3AA2328DCA7A1006249D3 /* FontVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB3AA2228DCA7A1006249D3 /* FontVC.swift */; };
 		0EB3AA2528DCB9B6006249D3 /* NanumGothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0EB3AA1A28DC7E09006249D3 /* NanumGothic.otf */; };
 		0EB3AA2728DCC36B006249D3 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB3AA2628DCC36B006249D3 /* TestVC.swift */; };
-		0EB3AA2928DCCC15006249D3 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB3AA2828DCCC15006249D3 /* SheetViewController.swift */; };
 		0EECB81828DB28B000BFB1D4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EECB81728DB28B000BFB1D4 /* LoginVC.swift */; };
 		0EF25B2128D880370098B038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF25B2028D880370098B038 /* AppDelegate.swift */; };
 		0EF25B2328D880370098B038 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF25B2228D880370098B038 /* SceneDelegate.swift */; };
@@ -30,7 +29,6 @@
 		0EB3AA1D28DC7E09006249D3 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../Downloads/나눔 글꼴/나눔고딕/NanumFontSetup_OTF_GOTHIC/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		0EB3AA2228DCA7A1006249D3 /* FontVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontVC.swift; sourceTree = "<group>"; };
 		0EB3AA2628DCC36B006249D3 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
-		0EB3AA2828DCCC15006249D3 /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
 		0EECB81728DB28B000BFB1D4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0EF25B1D28D880370098B038 /* StudyOfStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyOfStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF25B2028D880370098B038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 				0EF25B2228D880370098B038 /* SceneDelegate.swift */,
 				0EF25B2428D880370098B038 /* StartVC.swift */,
 				0EECB81728DB28B000BFB1D4 /* LoginVC.swift */,
-				0EB3AA2828DCCC15006249D3 /* SheetViewController.swift */,
 				0EB3AA2628DCC36B006249D3 /* TestVC.swift */,
 				0EB3AA2228DCA7A1006249D3 /* FontVC.swift */,
 				0EF25B2928D880380098B038 /* Assets.xcassets */,
@@ -243,7 +240,6 @@
 				0EF25B2128D880370098B038 /* AppDelegate.swift in Sources */,
 				0EB3AA2728DCC36B006249D3 /* TestVC.swift in Sources */,
 				0EECB81828DB28B000BFB1D4 /* LoginVC.swift in Sources */,
-				0EB3AA2928DCCC15006249D3 /* SheetViewController.swift in Sources */,
 				0EB3AA2328DCA7A1006249D3 /* FontVC.swift in Sources */,
 				0EF25B2328D880370098B038 /* SceneDelegate.swift in Sources */,
 			);
