@@ -7,8 +7,11 @@
 
 import UIKit
 import SnapKit
+import RxSwift
 
 class TestViewContoller: UIViewController {
+    
+    let disposeBag = DisposeBag()
     
     private lazy var emailTextLabel: UILabel = {
         var label = UILabel()
@@ -62,7 +65,7 @@ class TestViewContoller: UIViewController {
     private lazy var systemTextView1: UIView = {
         var view = UIView()
         view.backgroundColor = .systemGray5
-        view.layer.cornerRadius = 30
+        view.layer.cornerRadius = 25
         
         return view
     }()
@@ -70,7 +73,7 @@ class TestViewContoller: UIViewController {
     private lazy var systemTextView2: UIView = {
         var view = UIView()
         view.backgroundColor = .systemGray5
-        view.layer.cornerRadius = 30
+        view.layer.cornerRadius = 25
         
         return view
     }()
@@ -81,7 +84,18 @@ class TestViewContoller: UIViewController {
         let button = UIButton()
         button.frame = CGRect(x: 10, y: 100, width: 100, height: 100)
         button.setBackgroundImage(image, for: UIControl.State.normal)
-        button.addTarget(self, action:#selector(self.imageButtonTapped(_:)), for: .touchUpInside)
+        button.addTarget(self, action:#selector(goToSignupTapped), for: .touchUpInside)
+        
+        return button
+    }()
+    
+    private lazy var mainLoginButton: UIButton = {
+        let image = UIImage(named: "LoginButton")
+        
+        let button = UIButton()
+        button.frame = CGRect(x: 10, y: 100, width: 100, height: 100)
+        button.setBackgroundImage(image, for: UIControl.State.normal)
+        button.addTarget(self, action:#selector(loginTapped), for: .touchUpInside)
         
         return button
     }()
@@ -95,14 +109,9 @@ class TestViewContoller: UIViewController {
             }
             sheetPresentationController.detents = [customDetent, .large()]
         }
+        self.isModalInPresentation = true
         view.backgroundColor = .white
         setupLayout()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        print("뷰가 없어졌어요")
     }
 }
 
@@ -118,12 +127,14 @@ extension TestViewContoller {
             passwordTextField,
             
             haveId,
-            gotoSignUpButton
+            gotoSignUpButton,
+            
+            mainLoginButton
             
         ].forEach { view.addSubview($0) }
         
         emailTextLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(110)
+            $0.top.equalToSuperview().offset(80)
             $0.leading.equalToSuperview().offset(50)
         }
         
@@ -131,7 +142,7 @@ extension TestViewContoller {
             $0.top.equalTo(emailTextLabel.snp.bottom).offset(10)
             $0.leading.equalTo(emailTextLabel.snp.leading).offset(-10)
             $0.width.equalTo(350)
-            $0.height.equalTo(60)
+            $0.height.equalTo(55)
         }
         
         gmailTextField.snp.makeConstraints {
@@ -150,7 +161,7 @@ extension TestViewContoller {
             $0.top.equalTo(passwordTextLabel.snp.bottom).offset(10)
             $0.leading.equalTo(passwordTextLabel.snp.leading).offset(-10)
             $0.width.equalTo(350)
-            $0.height.equalTo(60)
+            $0.height.equalTo(55)
         }
         
         passwordTextField.snp.makeConstraints {
@@ -162,21 +173,32 @@ extension TestViewContoller {
         
         haveId.snp.makeConstraints {
             $0.top.equalTo(systemTextView2.snp.bottom).offset(50)
-            $0.leading.equalTo(passwordTextLabel.snp.leading).inset(20)
+            $0.leading.equalTo(passwordTextLabel.snp.leading).inset(40)
         }
         
         gotoSignUpButton.snp.makeConstraints {
             $0.top.equalTo(systemTextView2.snp.bottom).offset(53)
-            $0.leading.equalTo(passwordTextLabel.snp.leading).inset(190)
+            $0.leading.equalTo(passwordTextLabel.snp.leading).inset(210)
             $0.height.equalTo(15)
-            $0.width.equalTo(60)
+            $0.width.equalTo(65)
+        }
+        
+        mainLoginButton.snp.makeConstraints {
+            $0.top.equalTo(gotoSignUpButton.snp.bottom).offset(40)
+            $0.leading.equalTo(systemTextView2.snp.leading).offset(-10)
+            $0.height.equalTo(60)
+            $0.width.equalTo(360)
         }
     }
     
-    @objc func imageButtonTapped(_ sender:UIButton!)
+    @objc func goToSignupTapped(_ sender:UIButton!)
     {
         print("회원가입 드가자🥹")
     }
+    
+    @objc func loginTapped(_ sender:UIButton!)
+    {
+        print("로그인 드가자🥹")
+    }
 }
-
 
