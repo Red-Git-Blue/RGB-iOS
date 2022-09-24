@@ -107,7 +107,7 @@ class TestViewContoller: UIViewController {
             let customDetent = UISheetPresentationController.Detent.custom(identifier: id) { context in
                 return 540
             }
-            sheetPresentationController.detents = [customDetent, .large()]
+            sheetPresentationController.detents = [customDetent]
         }
         self.isModalInPresentation = true
         view.backgroundColor = .white
