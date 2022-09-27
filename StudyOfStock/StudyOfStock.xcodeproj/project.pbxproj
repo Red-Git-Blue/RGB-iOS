@@ -12,9 +12,9 @@
 		0EB3AA2128DC7E09006249D3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EB3AA1D28DC7E09006249D3 /* Roboto-Regular.ttf */; };
 		0EB3AA2328DCA7A1006249D3 /* FontVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB3AA2228DCA7A1006249D3 /* FontVC.swift */; };
 		0EB3AA2528DCB9B6006249D3 /* NanumGothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0EB3AA1A28DC7E09006249D3 /* NanumGothic.otf */; };
-		0EB3AA2728DCC36B006249D3 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB3AA2628DCC36B006249D3 /* TestVC.swift */; };
+		0EB3AA2728DCC36B006249D3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB3AA2628DCC36B006249D3 /* LoginVC.swift */; };
 		0EB3AA8428DDB655006249D3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB3AA8328DDB655006249D3 /* MainViewController.swift */; };
-		0EECB81828DB28B000BFB1D4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EECB81728DB28B000BFB1D4 /* LoginVC.swift */; };
+		0EECB81828DB28B000BFB1D4 /* LoginBgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EECB81728DB28B000BFB1D4 /* LoginBgVC.swift */; };
 		0EF25B2128D880370098B038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF25B2028D880370098B038 /* AppDelegate.swift */; };
 		0EF25B2328D880370098B038 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF25B2228D880370098B038 /* SceneDelegate.swift */; };
 		0EF25B2528D880370098B038 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF25B2428D880370098B038 /* StartVC.swift */; };
@@ -29,9 +29,9 @@
 		0EB3AA1C28DC7E09006249D3 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../Downloads/나눔 글꼴/나눔고딕/NanumFontSetup_OTF_GOTHIC/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		0EB3AA1D28DC7E09006249D3 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../Downloads/나눔 글꼴/나눔고딕/NanumFontSetup_OTF_GOTHIC/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		0EB3AA2228DCA7A1006249D3 /* FontVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontVC.swift; sourceTree = "<group>"; };
-		0EB3AA2628DCC36B006249D3 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		0EB3AA2628DCC36B006249D3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0EB3AA8328DDB655006249D3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		0EECB81728DB28B000BFB1D4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		0EECB81728DB28B000BFB1D4 /* LoginBgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBgVC.swift; sourceTree = "<group>"; };
 		0EF25B1D28D880370098B038 /* StudyOfStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyOfStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF25B2028D880370098B038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EF25B2228D880370098B038 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,8 +92,8 @@
 				0EF25B2028D880370098B038 /* AppDelegate.swift */,
 				0EF25B2228D880370098B038 /* SceneDelegate.swift */,
 				0EF25B2428D880370098B038 /* StartVC.swift */,
-				0EECB81728DB28B000BFB1D4 /* LoginVC.swift */,
-				0EB3AA2628DCC36B006249D3 /* TestVC.swift */,
+				0EECB81728DB28B000BFB1D4 /* LoginBgVC.swift */,
+				0EB3AA2628DCC36B006249D3 /* LoginVC.swift */,
 				0EB3AA8328DDB655006249D3 /* MainViewController.swift */,
 				0EB3AA2228DCA7A1006249D3 /* FontVC.swift */,
 				0EF25B2928D880380098B038 /* Assets.xcassets */,
@@ -242,8 +242,8 @@
 				0EB3AA8428DDB655006249D3 /* MainViewController.swift in Sources */,
 				0EF25B2528D880370098B038 /* StartVC.swift in Sources */,
 				0EF25B2128D880370098B038 /* AppDelegate.swift in Sources */,
-				0EB3AA2728DCC36B006249D3 /* TestVC.swift in Sources */,
-				0EECB81828DB28B000BFB1D4 /* LoginVC.swift in Sources */,
+				0EB3AA2728DCC36B006249D3 /* LoginVC.swift in Sources */,
+				0EECB81828DB28B000BFB1D4 /* LoginBgVC.swift in Sources */,
 				0EB3AA2328DCA7A1006249D3 /* FontVC.swift in Sources */,
 				0EF25B2328D880370098B038 /* SceneDelegate.swift in Sources */,
 			);
@@ -385,11 +385,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StudyOfStock/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -399,6 +401,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.StudyOfStock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -413,11 +418,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StudyOfStock/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -427,6 +434,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.StudyOfStock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

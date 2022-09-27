@@ -13,5 +13,6 @@ class MainViewController : UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .red
+        print("hello")
     }
 }

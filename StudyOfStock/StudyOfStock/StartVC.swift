@@ -78,7 +78,7 @@ private extension StartViewController {
     }
     
     @objc func didTapLoginButton() {
-        let goToMainLoginVC = LoginViewController()
+        let goToMainLoginVC = LoginBgViewController()
         goToMainLoginVC.modalPresentationStyle = .fullScreen
         self.present(goToMainLoginVC, animated: true, completion: nil)
     }

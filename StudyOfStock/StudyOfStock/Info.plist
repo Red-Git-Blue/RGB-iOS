@@ -2,18 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Fonts1</key>
+	<string>NanumGothic.otf</string>
+	<key>Fonts2</key>
+	<string>NanumGothicBold.otf</string>
+	<key>Fonts3</key>
+	<string>Roboto-Black.ttf</string>
+	<key>Fonts4</key>
+	<string>Roboto-Regular.ttf</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string></string>
 	</array>
-	<key>Fonts4</key>
-	<string>Roboto-Regular.ttf</string>
-	<key>Fonts3</key>
-	<string>Roboto-Black.ttf</string>
-	<key>Fonts2</key>
-	<string>NanumGothicBold.otf</string>
-	<key>Fonts1</key>
-	<string>NanumGothic.otf</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
