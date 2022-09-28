@@ -8,107 +8,80 @@
 import UIKit
 import SnapKit
 import RxSwift
+import RxKeyboard
 
 class LoginViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     
-    private lazy var emailTextLabel: UILabel = {
-        var label = UILabel()
-        label.textColor = .label
-        label.font = .systemFont(ofSize: 20.0, weight: .bold)
-        label.text = "이메일"
-        
-        return label
-    }()
+    private lazy var emailTextLabel = UILabel().then {
+        $0.textColor = .label
+        $0.font = .systemFont(ofSize: 20.0, weight: .bold)
+        $0.text = "이메일"
+    }
     
-    private lazy var passwordTextLabel: UILabel = {
-        var label = UILabel()
-        label.textColor = .label
-        label.font = .systemFont(ofSize: 20.0, weight: .bold)
-        label.text = "비밀번호"
-        
-        return label
-    }()
+    private lazy var passwordTextLabel = UILabel().then {
+        $0.textColor = .label
+        $0.font = .systemFont(ofSize: 20.0, weight: .bold)
+        $0.text = "비밀번호"
+    }
     
-    private lazy var haveId: UILabel = {
-        var label = UILabel()
-        label.textColor = .label
-        label.font = .systemFont(ofSize: 16.0, weight: .light)
-        label.text = "아직 회원이 아니신가요?"
-        
-        return label
-    }()
+    private lazy var haveId = UILabel().then {
+        $0.textColor = .label
+        $0.font = .systemFont(ofSize: 16.0, weight: .light)
+        $0.text = "아직 회원이 아니신가요?"
+    }
     
-    private lazy var gmailTextField: UITextField = {
-        var textField = UITextField()
-        textField.placeholder = "이메일을 입력해주세요"
+    private lazy var gmailTextField = UITextField().then {
+        $0.placeholder = "이메일을 입력해주세요"
 //        textField.delegate = self
-        textField.borderStyle = UITextField.BorderStyle.none
-        textField.keyboardType = UIKeyboardType.emailAddress
-        textField.returnKeyType = UIReturnKeyType.done
-        textField.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        textField.rx.text
+        $0.borderStyle = UITextField.BorderStyle.none
+        $0.keyboardType = UIKeyboardType.emailAddress
+        $0.returnKeyType = UIReturnKeyType.done
+        $0.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        $0.rx.text
             .subscribe { gmailText in
                 print("📭 LoginGamil : \(gmailText)")
             }
             .disposed(by: disposeBag)
-        
-        return textField
-    }()
+    }
     
-    private lazy var passwordTextField: UITextField = {
-        var textField = UITextField()
-        textField.placeholder = "비밀번호를 입력하세요"
-        textField.borderStyle = UITextField.BorderStyle.none
-        textField.keyboardType = UIKeyboardType.emailAddress
-        textField.returnKeyType = UIReturnKeyType.done
-        textField.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        textField.rx.text
+    private lazy var passwordTextField = UITextField().then {
+        $0.placeholder = "비밀번호를 입력하세요"
+        $0.borderStyle = UITextField.BorderStyle.none
+        $0.keyboardType = UIKeyboardType.emailAddress
+        $0.returnKeyType = UIReturnKeyType.done
+        $0.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        $0.rx.text
             .subscribe { passwordText in
                 print("🔐 passwordGamil : \(passwordText)")
             }
             .disposed(by: disposeBag)
-        return textField
-    }()
+    }
     
-    private lazy var emailTextFieldBg: UIView = {
-        var view = UIView()
-        view.backgroundColor = .systemGray5
-        view.layer.cornerRadius = 25
-        
-        return view
-    }()
+    private lazy var emailTextFieldBg = UIView().then {
+        $0.backgroundColor = .systemGray5
+        $0.layer.cornerRadius = 25
+    }
     
-    private lazy var passwordTextFieldBg: UIView = {
-        var view = UIView()
-        view.backgroundColor = .systemGray5
-        view.layer.cornerRadius = 25
-        
-        return view
-    }()
+    private lazy var passwordTextFieldBg = UIView().then {
+        $0.backgroundColor = .systemGray5
+        $0.layer.cornerRadius = 25
+    }
     
-    private lazy var gotoSignUpButton: UIButton = {
+    private lazy var gotoSignUpButton = UIButton().then {
         let image = UIImage(named: "SignupTextImage")
-        
-        let button = UIButton()
-        button.frame = CGRect(x: 10, y: 100, width: 100, height: 100)
-        button.setBackgroundImage(image, for: UIControl.State.normal)
-        button.addTarget(self, action:#selector(goToSignupTapped), for: .touchUpInside)
-        
-        return button
-    }()
+        $0.frame = CGRect(x: 10, y: 100, width: 100, height: 100)
+        $0.setBackgroundImage(image, for: UIControl.State.normal)
+        $0.addTarget(self, action:#selector(goToSignupTapped), for: .touchUpInside)
+    }
     
-    private lazy var mainLoginButton: UIButton = {
+    private lazy var mainLoginButton = UIButton().then {
         let image = UIImage(named: "LoginButton")
-        
-        let button = UIButton()
-        button.frame = CGRect(x: 10, y: 100, width: 100, height: 100)
-        button.setBackgroundImage(image, for: UIControl.State.normal)
-        button.addTarget(self, action:#selector(loginTapped), for: .touchUpInside)
-        
-        return button
-    }()
+        $0.frame = CGRect(x: 10, y: 100, width: 100, height: 100)
+        $0.setBackgroundImage(image, for: UIControl.State.normal)
+        $0.addTarget(self, action:#selector(loginTapped), for: .touchUpInside)
+    }
     
     override func viewDidLoad() {
         if let sheetPresentationController = sheetPresentationController {

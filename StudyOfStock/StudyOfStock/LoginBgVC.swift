@@ -32,23 +32,17 @@ class LoginBgViewController: UIViewController {
         return imageView
     }()
     
-    private lazy var notMember: UILabel = {
-        var label = UILabel()
-        label.textColor = .white
-        label.font = .systemFont(ofSize: 32.0, weight: .bold)
-        label.text = "로그인"
-        
-       return label
-    }()
+    private lazy var notMember = UILabel().then {
+        $0.textColor = .white
+        $0.font = .systemFont(ofSize: 32.0, weight: .bold)
+        $0.text = "로그인"
+    }
     
-    private lazy var goToLogin: UILabel = {
-        var label = UILabel()
-        label.textColor = .white
-        label.font = .systemFont(ofSize: 16.0, weight: .semibold)
-        label.text = "로그인 하여 시작하세요"
-        
-        return label
-    }()
+    private lazy var goToLogin = UILabel().then {
+        $0.textColor = .white
+        $0.font = .systemFont(ofSize: 16.0, weight: .semibold)
+        $0.text = "로그인 하여 시작하세요"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

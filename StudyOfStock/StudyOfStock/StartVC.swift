@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Then
 
 class StartViewController: UIViewController {
     
@@ -18,28 +19,22 @@ class StartViewController: UIViewController {
         return imageView
     }()
     
-    private lazy var mainLoginButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .red
-        button.setTitle("로그인", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 24.0, weight: .semibold)
-        button.layer.cornerRadius = 20
-        button.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
-        
-        return button
-    }()
+    private lazy var mainLoginButton = UIButton().then {
+        $0.backgroundColor = .red
+        $0.setTitle("로그인", for: .normal)
+        $0.setTitleColor(.systemBlue, for: .normal)
+        $0.titleLabel?.font = .systemFont(ofSize: 24.0, weight: .semibold)
+        $0.layer.cornerRadius = 20
+        $0.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+    }
     
-    private lazy var mainSignUpButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .red
-        button.setTitle("회원가입", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 24.0, weight: .semibold)
-        button.layer.cornerRadius = 20
-        
-        return button
-    }()
+    private lazy var mainSignUpButton = UIButton().then {
+        $0.backgroundColor = .red
+        $0.setTitle("회원가입", for: .normal)
+        $0.setTitleColor(.white, for: .normal)
+        $0.titleLabel?.font = .systemFont(ofSize: 24.0, weight: .semibold)
+        $0.layer.cornerRadius = 20
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
