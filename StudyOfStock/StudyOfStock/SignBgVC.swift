@@ -1,8 +1,8 @@
 //
-//  LoginVC.swift
+//  SignBgVC.swift
 //  StudyOfStock
 //
-//  Created by 박준하 on 2022/09/21.
+//  Created by 박준하 on 2022/09/28.
 //
 
 import UIKit
@@ -10,9 +10,7 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class LoginBackgroundViewController: UIViewController {
-    
-//    let font = SosFont.getFont()
+class SignBackgroundViewController: UIViewController {
     
     var disposeBag = DisposeBag()
     
@@ -35,25 +33,25 @@ class LoginBackgroundViewController: UIViewController {
     private lazy var notMember = UILabel().then {
         $0.textColor = .white
         $0.font = .systemFont(ofSize: 32.0, weight: .bold)
-        $0.text = "로그인"
+        $0.text = "아직 회원이 아니신가요?"
     }
     
     private lazy var goToLogin = UILabel().then {
         $0.textColor = .white
         $0.font = .systemFont(ofSize: 16.0, weight: .semibold)
-        $0.text = "로그인 하여 시작하세요"
+        $0.text = "이메일 인증으로 간편하게 인증해보세요."
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("LoginBgViewController")
+        print("SignBgViewController")
         setupLayout()
         
         upView()
     }
 }
 
-extension LoginBackgroundViewController {
+extension SignBackgroundViewController {
     func setupLayout() {
         [
             mainImageView,
@@ -88,7 +86,7 @@ extension LoginBackgroundViewController {
     }
 }
 
-extension LoginBackgroundViewController {
+extension SignBackgroundViewController {
     
     func upView() {
         Observable<Int>.interval(.seconds(Int(0)), scheduler: MainScheduler.instance)
@@ -106,7 +104,7 @@ extension LoginBackgroundViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now()) {
 
-            let TestViewContoller = LoginViewController()
+            let TestViewContoller = SignViewController()
             self.present(TestViewContoller, animated: true)
         }
     }

@@ -34,6 +34,7 @@ class StartViewController: UIViewController {
         $0.setTitleColor(.white, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 24.0, weight: .semibold)
         $0.layer.cornerRadius = 20
+        $0.addTarget(self, action: #selector(didTapSignButton), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
@@ -73,8 +74,14 @@ private extension StartViewController {
     }
     
     @objc func didTapLoginButton() {
-        let goToMainLoginVC = LoginBgViewController()
+        let goToMainLoginVC = LoginBackgroundViewController()
         goToMainLoginVC.modalPresentationStyle = .fullScreen
         self.present(goToMainLoginVC, animated: true, completion: nil)
+    }
+    
+    @objc func didTapSignButton(){
+        let goToMainSignupVC = SignBackgroundViewController()
+        goToMainSignupVC.modalPresentationStyle = .fullScreen
+        self.present(goToMainSignupVC, animated: true, completion: nil)
     }
 }

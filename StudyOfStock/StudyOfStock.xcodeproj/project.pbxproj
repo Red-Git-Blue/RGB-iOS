@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E53E63B28E438A600FB3D9C /* SignVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E53E63A28E438A600FB3D9C /* SignVC.swift */; };
+		0E53E63D28E4395000FB3D9C /* SignBgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E53E63C28E4395000FB3D9C /* SignBgVC.swift */; };
 		0EB3AA1F28DC7E09006249D3 /* NanumGothicBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0EB3AA1B28DC7E09006249D3 /* NanumGothicBold.otf */; };
 		0EB3AA2028DC7E09006249D3 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EB3AA1C28DC7E09006249D3 /* Roboto-Black.ttf */; };
 		0EB3AA2128DC7E09006249D3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EB3AA1D28DC7E09006249D3 /* Roboto-Regular.ttf */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E53E63A28E438A600FB3D9C /* SignVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignVC.swift; sourceTree = "<group>"; };
+		0E53E63C28E4395000FB3D9C /* SignBgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignBgVC.swift; sourceTree = "<group>"; };
 		0EB3AA1A28DC7E09006249D3 /* NanumGothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothic.otf; path = "../../../Downloads/나눔 글꼴/나눔고딕/NanumFontSetup_OTF_GOTHIC/NanumGothic.otf"; sourceTree = "<group>"; };
 		0EB3AA1B28DC7E09006249D3 /* NanumGothicBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothicBold.otf; path = "../../../Downloads/나눔 글꼴/나눔고딕/NanumFontSetup_OTF_GOTHIC/NanumGothicBold.otf"; sourceTree = "<group>"; };
 		0EB3AA1C28DC7E09006249D3 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../Downloads/나눔 글꼴/나눔고딕/NanumFontSetup_OTF_GOTHIC/Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -90,8 +94,10 @@
 				0EF25B2028D880370098B038 /* AppDelegate.swift */,
 				0EF25B2228D880370098B038 /* SceneDelegate.swift */,
 				0EF25B2428D880370098B038 /* StartVC.swift */,
-				0EECB81728DB28B000BFB1D4 /* LoginBgVC.swift */,
+				0E53E63A28E438A600FB3D9C /* SignVC.swift */,
 				0EB3AA2628DCC36B006249D3 /* LoginVC.swift */,
+				0E53E63C28E4395000FB3D9C /* SignBgVC.swift */,
+				0EECB81728DB28B000BFB1D4 /* LoginBgVC.swift */,
 				0EB3AA2228DCA7A1006249D3 /* FontVC.swift */,
 				0EF25B2928D880380098B038 /* Assets.xcassets */,
 				0EF25B2B28D880380098B038 /* LaunchScreen.storyboard */,
@@ -239,6 +245,8 @@
 				0EF25B2528D880370098B038 /* StartVC.swift in Sources */,
 				0EF25B2128D880370098B038 /* AppDelegate.swift in Sources */,
 				0EB3AA2728DCC36B006249D3 /* LoginVC.swift in Sources */,
+				0E53E63B28E438A600FB3D9C /* SignVC.swift in Sources */,
+				0E53E63D28E4395000FB3D9C /* SignBgVC.swift in Sources */,
 				0EECB81828DB28B000BFB1D4 /* LoginBgVC.swift in Sources */,
 				0EB3AA2328DCA7A1006249D3 /* FontVC.swift in Sources */,
 				0EF25B2328D880370098B038 /* SceneDelegate.swift in Sources */,
