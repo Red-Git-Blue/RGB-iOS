@@ -152,7 +152,7 @@ extension SignViewController {
         
         nickTextFieldBg.snp.makeConstraints {
             $0.top.equalTo(nickNameTextLabel.snp.bottom).offset(10)
-            $0.leading.equalTo(nickNameTextLabel.snp.leading).offset(-10)
+            $0.centerX.equalToSuperview()
             $0.width.equalTo(350)
             $0.height.equalTo(55)
         }
@@ -171,7 +171,7 @@ extension SignViewController {
         
         emailTextFieldBg.snp.makeConstraints {
             $0.top.equalTo(emailTextLabel.snp.bottom).offset(10)
-            $0.leading.equalTo(emailTextLabel.snp.leading).offset(-10)
+            $0.centerX.equalTo(nickTextFieldBg.snp.centerX)
             $0.width.equalTo(350)
             $0.height.equalTo(55)
         }
@@ -190,7 +190,7 @@ extension SignViewController {
         
         passwordTextFieldBg.snp.makeConstraints {
             $0.top.equalTo(passwordTextLabel.snp.bottom).offset(10)
-            $0.leading.equalTo(passwordTextLabel.snp.leading).offset(-10)
+            $0.centerX.equalTo(emailTextFieldBg.snp.centerX)
             $0.width.equalTo(emailTextFieldBg.snp.width)
             $0.height.equalTo(emailTextFieldBg.snp.height)
         }
@@ -229,6 +229,9 @@ extension SignViewController {
     
     @objc func SignTapped(_ sender: UIButton!)
     {
+        print("닉네임: \(nickNameTextField.text!)")
+        print("이메일: \(emailTextField.text!)")
+        print("비밀번호: \(passwordTextField.text!)")
         print("🌈 회원가입 드가자")
     }
 }

@@ -58,6 +58,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E53E63E28E45ABF00FB3D9C /* signup */ = {
+			isa = PBXGroup;
+			children = (
+				0E53E63A28E438A600FB3D9C /* SignVC.swift */,
+				0E53E63C28E4395000FB3D9C /* SignBgVC.swift */,
+			);
+			path = signup;
+			sourceTree = "<group>";
+		};
+		0E53E63F28E464D000FB3D9C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0EB3AA2628DCC36B006249D3 /* LoginVC.swift */,
+				0EECB81728DB28B000BFB1D4 /* LoginBgVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		0EB3AA1928DC7C4C006249D3 /* font */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +112,8 @@
 				0EF25B2028D880370098B038 /* AppDelegate.swift */,
 				0EF25B2228D880370098B038 /* SceneDelegate.swift */,
 				0EF25B2428D880370098B038 /* StartVC.swift */,
-				0E53E63A28E438A600FB3D9C /* SignVC.swift */,
-				0EB3AA2628DCC36B006249D3 /* LoginVC.swift */,
-				0E53E63C28E4395000FB3D9C /* SignBgVC.swift */,
-				0EECB81728DB28B000BFB1D4 /* LoginBgVC.swift */,
+				0E53E63E28E45ABF00FB3D9C /* signup */,
+				0E53E63F28E464D000FB3D9C /* Login */,
 				0EB3AA2228DCA7A1006249D3 /* FontVC.swift */,
 				0EF25B2928D880380098B038 /* Assets.xcassets */,
 				0EF25B2B28D880380098B038 /* LaunchScreen.storyboard */,

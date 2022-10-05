@@ -88,7 +88,7 @@ class LoginViewController: UIViewController {
             sheetPresentationController.largestUndimmedDetentIdentifier = .large
             let id = UISheetPresentationController.Detent.Identifier("LoginCustom")
             let customDetent = UISheetPresentationController.Detent.custom(identifier: id) { context in
-                return 540
+                return 540 * self.view.frame.height / 932
             }
             sheetPresentationController.detents = [customDetent]
         }
@@ -117,61 +117,64 @@ extension LoginViewController {
             
         ].forEach { view.addSubview($0) }
         
+        let width = view.frame.width / 430
+        let height = view.frame.height / 932
+        
         emailTextLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(80)
-            $0.leading.equalToSuperview().offset(50)
+            $0.top.equalToSuperview().offset(80 * height)
+            $0.leading.equalToSuperview().offset(50 * width)
         }
         
         emailTextFieldBg.snp.makeConstraints {
-            $0.top.equalTo(emailTextLabel.snp.bottom).offset(10)
-            $0.leading.equalTo(emailTextLabel.snp.leading).offset(-10)
-            $0.width.equalTo(350)
-            $0.height.equalTo(55)
+            $0.top.equalTo(emailTextLabel.snp.bottom).offset(10 * height)
+            $0.leading.equalTo(emailTextLabel.snp.leading).offset(-10 * width)
+            $0.width.equalTo(350 * width)
+            $0.height.equalTo(55 * height)
         }
         
         gmailTextField.snp.makeConstraints {
-            $0.top.equalTo(emailTextLabel.snp.bottom).offset(10)
-            $0.leading.equalTo(emailTextLabel.snp.leading).offset(10)
-            $0.width.equalTo(emailTextFieldBg.snp.width).inset(20)
+            $0.top.equalTo(emailTextLabel.snp.bottom).offset(10 * height)
+            $0.leading.equalTo(emailTextLabel.snp.leading).offset(10 * width)
+            $0.width.equalTo(emailTextFieldBg.snp.width).inset(20 * width)
             $0.height.equalTo(emailTextFieldBg.snp.height)
         }
         
         passwordTextLabel.snp.makeConstraints {
-            $0.top.equalTo(gmailTextField.snp.bottom).offset(40)
+            $0.top.equalTo(gmailTextField.snp.bottom).offset(40 * height)
             $0.leading.equalTo(emailTextLabel.snp.leading)
         }
         
         passwordTextFieldBg.snp.makeConstraints {
-            $0.top.equalTo(passwordTextLabel.snp.bottom).offset(10)
-            $0.leading.equalTo(passwordTextLabel.snp.leading).offset(-10)
-            $0.width.equalTo(350)
-            $0.height.equalTo(55)
+            $0.top.equalTo(passwordTextLabel.snp.bottom).offset(10 * height)
+            $0.leading.equalTo(passwordTextLabel.snp.leading).offset(-10 * width)
+            $0.width.equalTo(350 * width)
+            $0.height.equalTo(55 * height)
         }
         
         passwordTextField.snp.makeConstraints {
-            $0.top.equalTo(passwordTextLabel.snp.bottom).offset(10)
-            $0.leading.equalTo(passwordTextLabel.snp.leading).offset(10)
-            $0.width.equalTo(passwordTextFieldBg.snp.width).inset(20)
+            $0.top.equalTo(passwordTextLabel.snp.bottom).offset(10 * height)
+            $0.leading.equalTo(passwordTextLabel.snp.leading).offset(10 * width)
+            $0.width.equalTo(passwordTextFieldBg.snp.width).inset(20 * width)
             $0.height.equalTo(passwordTextFieldBg.snp.height)
         }
         
         haveId.snp.makeConstraints {
-            $0.top.equalTo(passwordTextFieldBg.snp.bottom).offset(50)
-            $0.leading.equalTo(passwordTextLabel.snp.leading).inset(40)
+            $0.top.equalTo(passwordTextFieldBg.snp.bottom).offset(50 * height)
+            $0.leading.equalTo(passwordTextLabel.snp.leading).inset(40 * width)
         }
         
         gotoSignUpButton.snp.makeConstraints {
-            $0.top.equalTo(passwordTextFieldBg.snp.bottom).offset(53)
-            $0.leading.equalTo(passwordTextLabel.snp.leading).inset(210)
-            $0.height.equalTo(15)
-            $0.width.equalTo(65)
+            $0.top.equalTo(passwordTextFieldBg.snp.bottom).offset(53 * height)
+            $0.leading.equalTo(passwordTextLabel.snp.leading).inset(210 * width)
+            $0.height.equalTo(15 * height)
+            $0.width.equalTo(65 * width)
         }
         
         mainLoginButton.snp.makeConstraints {
-            $0.top.equalTo(gotoSignUpButton.snp.bottom).offset(40)
-            $0.leading.equalTo(passwordTextFieldBg.snp.leading).offset(-10)
-            $0.height.equalTo(60)
-            $0.width.equalTo(360)
+            $0.top.equalTo(gotoSignUpButton.snp.bottom).offset(40 * height)
+            $0.leading.equalTo(passwordTextFieldBg.snp.leading).offset(-10 * width)
+            $0.height.equalTo(60 * height)
+            $0.width.equalTo(360 * width)
         }
     }
     

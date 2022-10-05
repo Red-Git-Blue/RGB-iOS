@@ -62,6 +62,9 @@ extension LoginBackgroundViewController {
             goToLogin
         ].forEach { view.addSubview($0) }
         
+        let width = view.frame.width / 430
+        let height = view.frame.height / 932
+        
         mainImageView.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.bottom.equalToSuperview()
@@ -70,19 +73,19 @@ extension LoginBackgroundViewController {
         }
         
         sosLogo.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(20)
-            $0.top.equalToSuperview().offset(70)
-            $0.height.equalTo(60)
-            $0.width.equalTo(60)
+            $0.leading.equalToSuperview().inset(20 * width)
+            $0.top.equalToSuperview().offset(70 * height)
+            $0.height.equalTo(60 * height)
+            $0.width.equalTo(60 * width)
         }
         
         notMember.snp.makeConstraints {
-            $0.top.equalTo(sosLogo.snp.bottom).offset(50)
+            $0.top.equalTo(sosLogo.snp.bottom).offset(50 * height)
             $0.leading.equalTo(sosLogo.snp.leading)
         }
         
         goToLogin.snp.makeConstraints {
-            $0.top.equalTo(notMember.snp.bottom).offset(10)
+            $0.top.equalTo(notMember.snp.bottom).offset(10 * height)
             $0.leading.equalTo(notMember.snp.leading)
         }
     }

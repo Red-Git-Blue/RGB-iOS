@@ -20,20 +20,16 @@ class StartViewController: UIViewController {
     }()
     
     private lazy var mainLoginButton = UIButton().then {
-        $0.backgroundColor = .red
-        $0.setTitle("로그인", for: .normal)
-        $0.setTitleColor(.systemBlue, for: .normal)
-        $0.titleLabel?.font = .systemFont(ofSize: 24.0, weight: .semibold)
-        $0.layer.cornerRadius = 20
+        let image = UIImage(named: "mainLogin")
+        $0.frame = CGRect(x: 10, y: 100, width: 100, height: 100)
+        $0.setBackgroundImage(image, for: UIControl.State.normal)
         $0.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
     }
     
     private lazy var mainSignUpButton = UIButton().then {
-        $0.backgroundColor = .red
-        $0.setTitle("회원가입", for: .normal)
-        $0.setTitleColor(.white, for: .normal)
-        $0.titleLabel?.font = .systemFont(ofSize: 24.0, weight: .semibold)
-        $0.layer.cornerRadius = 20
+        let image = UIImage(named: "mainSign")
+        $0.frame = CGRect(x: 10, y: 100, width: 100, height: 100)
+        $0.setBackgroundImage(image, for: UIControl.State.normal)
         $0.addTarget(self, action: #selector(didTapSignButton), for: .touchUpInside)
     }
     
@@ -51,6 +47,9 @@ private extension StartViewController {
             mainSignUpButton
         ].forEach { view.addSubview($0) }
         
+        let width = view.frame.width / 430
+        let height = view.frame.height / 932
+        
         mainImageView.snp.makeConstraints {
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
@@ -59,17 +58,17 @@ private extension StartViewController {
         }
         
         mainLoginButton.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(39)
-            $0.trailing.equalToSuperview().inset(39)
-            $0.bottom.equalToSuperview().inset(350)
-            $0.height.equalTo(60)
+            $0.leading.equalToSuperview().inset(39 * width)
+            $0.trailing.equalToSuperview().inset(39 * width)
+            $0.bottom.equalToSuperview().inset(350 * height)
+            $0.height.equalTo(60 * height)
         }
         
         mainSignUpButton.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(39)
-            $0.trailing.equalToSuperview().inset(39)
-            $0.bottom.equalTo(mainLoginButton.snp.bottom).offset(90)
-            $0.height.equalTo(60)
+            $0.leading.equalToSuperview().inset(39 * width)
+            $0.trailing.equalToSuperview().inset(39 * width)
+            $0.bottom.equalTo(mainLoginButton.snp.bottom).offset(80 * height)
+            $0.height.equalTo(55 * height)
         }
     }
     
