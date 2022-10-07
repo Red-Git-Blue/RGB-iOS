@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
     
     private lazy var emailTextFieldBg = UIView().then {
         $0.backgroundColor = .systemGray5
-        $0.layer.cornerRadius = 25
+        $0.layer.cornerRadius = 25 * view.frame.height / 932
     }
     
     private lazy var passwordTextFieldBg = UIView().then {
@@ -78,17 +78,18 @@ class LoginViewController: UIViewController {
     
     private lazy var mainLoginButton = UIButton().then {
         let image = UIImage(named: "LoginButton")
-        $0.frame = CGRect(x: 10, y: 100, width: 100, height: 100)
+        $0.frame = CGRect(x: 10, y: 100, width: 100 * view.frame.width / 430, height: 100 * view.frame.height / 932)
         $0.setBackgroundImage(image, for: UIControl.State.normal)
         $0.addTarget(self, action:#selector(loginTapped), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
         if let sheetPresentationController = sheetPresentationController {
+            let height = view.frame.height
             sheetPresentationController.largestUndimmedDetentIdentifier = .large
             let id = UISheetPresentationController.Detent.Identifier("LoginCustom")
             let customDetent = UISheetPresentationController.Detent.custom(identifier: id) { context in
-                return 540 * self.view.frame.height / 932
+                return 540 * height / 932
             }
             sheetPresentationController.detents = [customDetent]
         }
@@ -115,10 +116,12 @@ extension LoginViewController {
             
             mainLoginButton
             
-        ].forEach { view.addSubview($0) }
+        ].forEach {
+            view.addSubview($0)
+        }
         
-        let width = view.frame.width / 430
-        let height = view.frame.height / 932
+        let width = view.frame.width / 430.0
+        let height = view.frame.height / 932.0
         
         emailTextLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(80 * height)

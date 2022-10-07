@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		0E53E63B28E438A600FB3D9C /* SignVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E53E63A28E438A600FB3D9C /* SignVC.swift */; };
 		0E53E63D28E4395000FB3D9C /* SignBgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E53E63C28E4395000FB3D9C /* SignBgVC.swift */; };
+		0E946CD428F0328900F4B73B /* MyAPI+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E946CD328F0328900F4B73B /* MyAPI+Request.swift */; };
+		0E946CD628F032CE00F4B73B /* MyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E946CD528F032CE00F4B73B /* MyAPI.swift */; };
+		0E946CDA28F0365D00F4B73B /* MyAPI+BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E946CD928F0365D00F4B73B /* MyAPI+BaseURL.swift */; };
+		0E946CDC28F036E400F4B73B /* MyAPI+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E946CDB28F036E400F4B73B /* MyAPI+Method.swift */; };
+		0E946CDE28F037A500F4B73B /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E946CDD28F037A500F4B73B /* ModelType.swift */; };
+		0E946CE028F037B700F4B73B /* TextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E946CDF28F037B700F4B73B /* TextVC.swift */; };
+		0E946CE228F0380400F4B73B /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E946CE128F0380400F4B73B /* RequestModel.swift */; };
+		0E946CE728F03B6F00F4B73B /* MyAPI+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E946CE628F03B6F00F4B73B /* MyAPI+Path.swift */; };
+		0E946CE928F03D3700F4B73B /* MyAPI+Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E946CE828F03D3700F4B73B /* MyAPI+Task.swift */; };
+		0E946CEB28F0423D00F4B73B /* Moya+NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E946CEA28F0423D00F4B73B /* Moya+NetworkError.swift */; };
 		0EB3AA1F28DC7E09006249D3 /* NanumGothicBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0EB3AA1B28DC7E09006249D3 /* NanumGothicBold.otf */; };
 		0EB3AA2028DC7E09006249D3 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EB3AA1C28DC7E09006249D3 /* Roboto-Black.ttf */; };
 		0EB3AA2128DC7E09006249D3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EB3AA1D28DC7E09006249D3 /* Roboto-Regular.ttf */; };
@@ -27,6 +37,16 @@
 /* Begin PBXFileReference section */
 		0E53E63A28E438A600FB3D9C /* SignVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignVC.swift; sourceTree = "<group>"; };
 		0E53E63C28E4395000FB3D9C /* SignBgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignBgVC.swift; sourceTree = "<group>"; };
+		0E946CD328F0328900F4B73B /* MyAPI+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyAPI+Request.swift"; sourceTree = "<group>"; };
+		0E946CD528F032CE00F4B73B /* MyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAPI.swift; sourceTree = "<group>"; };
+		0E946CD928F0365D00F4B73B /* MyAPI+BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyAPI+BaseURL.swift"; sourceTree = "<group>"; };
+		0E946CDB28F036E400F4B73B /* MyAPI+Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyAPI+Method.swift"; sourceTree = "<group>"; };
+		0E946CDD28F037A500F4B73B /* ModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
+		0E946CDF28F037B700F4B73B /* TextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVC.swift; sourceTree = "<group>"; };
+		0E946CE128F0380400F4B73B /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		0E946CE628F03B6F00F4B73B /* MyAPI+Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyAPI+Path.swift"; sourceTree = "<group>"; };
+		0E946CE828F03D3700F4B73B /* MyAPI+Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyAPI+Task.swift"; sourceTree = "<group>"; };
+		0E946CEA28F0423D00F4B73B /* Moya+NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+NetworkError.swift"; sourceTree = "<group>"; };
 		0EB3AA1A28DC7E09006249D3 /* NanumGothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothic.otf; path = "../../../Downloads/나눔 글꼴/나눔고딕/NanumFontSetup_OTF_GOTHIC/NanumGothic.otf"; sourceTree = "<group>"; };
 		0EB3AA1B28DC7E09006249D3 /* NanumGothicBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothicBold.otf; path = "../../../Downloads/나눔 글꼴/나눔고딕/NanumFontSetup_OTF_GOTHIC/NanumGothicBold.otf"; sourceTree = "<group>"; };
 		0EB3AA1C28DC7E09006249D3 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../Downloads/나눔 글꼴/나눔고딕/NanumFontSetup_OTF_GOTHIC/Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -71,9 +91,26 @@
 			isa = PBXGroup;
 			children = (
 				0EB3AA2628DCC36B006249D3 /* LoginVC.swift */,
+				0E946CD528F032CE00F4B73B /* MyAPI.swift */,
+				0E946CE828F03D3700F4B73B /* MyAPI+Task.swift */,
+				0E946CE628F03B6F00F4B73B /* MyAPI+Path.swift */,
+				0E946CDD28F037A500F4B73B /* ModelType.swift */,
+				0E946CD928F0365D00F4B73B /* MyAPI+BaseURL.swift */,
+				0E946CDB28F036E400F4B73B /* MyAPI+Method.swift */,
+				0E946CD328F0328900F4B73B /* MyAPI+Request.swift */,
+				0E946CEA28F0423D00F4B73B /* Moya+NetworkError.swift */,
 				0EECB81728DB28B000BFB1D4 /* LoginBgVC.swift */,
+				0E946CE328F0382900F4B73B /* Model */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		0E946CE328F0382900F4B73B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E946CE128F0380400F4B73B /* RequestModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		0EB3AA1928DC7C4C006249D3 /* font */ = {
@@ -109,6 +146,7 @@
 		0EF25B1F28D880370098B038 /* StudyOfStock */ = {
 			isa = PBXGroup;
 			children = (
+				0E946CDF28F037B700F4B73B /* TextVC.swift */,
 				0EF25B2028D880370098B038 /* AppDelegate.swift */,
 				0EF25B2228D880370098B038 /* SceneDelegate.swift */,
 				0EF25B2428D880370098B038 /* StartVC.swift */,
@@ -258,13 +296,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E946CD628F032CE00F4B73B /* MyAPI.swift in Sources */,
 				0EF25B2528D880370098B038 /* StartVC.swift in Sources */,
 				0EF25B2128D880370098B038 /* AppDelegate.swift in Sources */,
+				0E946CE728F03B6F00F4B73B /* MyAPI+Path.swift in Sources */,
 				0EB3AA2728DCC36B006249D3 /* LoginVC.swift in Sources */,
 				0E53E63B28E438A600FB3D9C /* SignVC.swift in Sources */,
+				0E946CE028F037B700F4B73B /* TextVC.swift in Sources */,
+				0E946CE928F03D3700F4B73B /* MyAPI+Task.swift in Sources */,
 				0E53E63D28E4395000FB3D9C /* SignBgVC.swift in Sources */,
 				0EECB81828DB28B000BFB1D4 /* LoginBgVC.swift in Sources */,
+				0E946CD428F0328900F4B73B /* MyAPI+Request.swift in Sources */,
+				0E946CEB28F0423D00F4B73B /* Moya+NetworkError.swift in Sources */,
+				0E946CE228F0380400F4B73B /* RequestModel.swift in Sources */,
 				0EB3AA2328DCA7A1006249D3 /* FontVC.swift in Sources */,
+				0E946CDC28F036E400F4B73B /* MyAPI+Method.swift in Sources */,
+				0E946CDA28F0365D00F4B73B /* MyAPI+BaseURL.swift in Sources */,
+				0E946CDE28F037A500F4B73B /* ModelType.swift in Sources */,
 				0EF25B2328D880370098B038 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
