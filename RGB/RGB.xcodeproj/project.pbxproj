@@ -17,9 +17,9 @@
 		0E0F94E028FD5D590004951F /* MyAPI+BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94D828FD5D590004951F /* MyAPI+BaseURL.swift */; };
 		0E0F94E328FD5DFF0004951F /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94E228FD5DFF0004951F /* RequestModel.swift */; };
 		0E0F94E628FD5FC50004951F /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94E528FD5FC50004951F /* SignupVC.swift */; };
+		0E9BC15A28FEB7B700B8DB56 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC15928FEB7B700B8DB56 /* StartViewController.swift */; };
 		0EE4352428F4476F00CA7E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4352328F4476F00CA7E58 /* AppDelegate.swift */; };
 		0EE4352628F4476F00CA7E58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4352528F4476F00CA7E58 /* SceneDelegate.swift */; };
-		0EE4352828F4476F00CA7E58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4352728F4476F00CA7E58 /* ViewController.swift */; };
 		0EE4352D28F4477000CA7E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EE4352C28F4477000CA7E58 /* Assets.xcassets */; };
 		0EE4353028F4477000CA7E58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EE4352E28F4477000CA7E58 /* LaunchScreen.storyboard */; };
 		C4E4DF7EB91D0CFBD09D454F /* Pods_RGB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5927F0380868D63D3ADDAAA4 /* Pods_RGB.framework */; };
@@ -36,10 +36,10 @@
 		0E0F94D828FD5D590004951F /* MyAPI+BaseURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyAPI+BaseURL.swift"; sourceTree = "<group>"; };
 		0E0F94E228FD5DFF0004951F /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		0E0F94E528FD5FC50004951F /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		0E9BC15928FEB7B700B8DB56 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		0EE4352028F4476F00CA7E58 /* RGB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE4352328F4476F00CA7E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EE4352528F4476F00CA7E58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0EE4352728F4476F00CA7E58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0EE4352C28F4477000CA7E58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EE4352F28F4477000CA7E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EE4353128F4477000CA7E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,8 +106,8 @@
 			children = (
 				0EE4352328F4476F00CA7E58 /* AppDelegate.swift */,
 				0EE4352528F4476F00CA7E58 /* SceneDelegate.swift */,
-				0EE4352728F4476F00CA7E58 /* ViewController.swift */,
 				0E0F94E528FD5FC50004951F /* SignupVC.swift */,
+				0E9BC15928FEB7B700B8DB56 /* StartViewController.swift */,
 				0E0F94E428FD5E080004951F /* Model */,
 				0E0F94E128FD5D640004951F /* Networking */,
 				0EE4352C28F4477000CA7E58 /* Assets.xcassets */,
@@ -248,7 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EE4352828F4476F00CA7E58 /* ViewController.swift in Sources */,
 				0E0F94DA28FD5D590004951F /* ModelType.swift in Sources */,
 				0E0F94DB28FD5D590004951F /* MyAPI.swift in Sources */,
 				0E0F94DD28FD5D590004951F /* MyAPI+Path.swift in Sources */,
@@ -257,6 +256,7 @@
 				0E0F94E628FD5FC50004951F /* SignupVC.swift in Sources */,
 				0E0F94DE28FD5D590004951F /* MyAPI+Request.swift in Sources */,
 				0E0F94DF28FD5D590004951F /* MyAPI+Task.swift in Sources */,
+				0E9BC15A28FEB7B700B8DB56 /* StartViewController.swift in Sources */,
 				0EE4352428F4476F00CA7E58 /* AppDelegate.swift in Sources */,
 				0E0F94E028FD5D590004951F /* MyAPI+BaseURL.swift in Sources */,
 				0EE4352628F4476F00CA7E58 /* SceneDelegate.swift in Sources */,
