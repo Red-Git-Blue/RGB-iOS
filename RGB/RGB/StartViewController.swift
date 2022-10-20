@@ -35,6 +35,7 @@ class StartViewController : UIViewController {
             .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
                 print("🔥loginButton")
+                self!.mainLoginButtonTap()
             })
             .disposed(by: disposeBag)
     }
@@ -46,6 +47,7 @@ class StartViewController : UIViewController {
             .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
                 print("💠signupButton")
+                self!.mainSignUpButtonTap()
             })
             .disposed(by: disposeBag)
     }
@@ -79,5 +81,17 @@ extension StartViewController {
             $0.bottom.equalTo(mainLoginButton.snp.bottom).offset(80 * height)
             $0.height.equalTo(55 * height)
         }
+        
+    }
+    
+    func mainLoginButtonTap() {
+        print("ㅗ")
+    }
+    
+    func mainSignUpButtonTap() {
+        print("ㅜ")
+        let signupBGVC = SignupBackGroundViewController()
+        signupBGVC.modalPresentationStyle = .fullScreen
+        self.present(signupBGVC, animated: true)
     }
 }
