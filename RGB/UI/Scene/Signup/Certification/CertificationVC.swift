@@ -1,25 +1,20 @@
 //
-//  SignupVC.swift
+//  CertificationVC.swift
 //  RGB
 //
-//  Created by 박준하 on 2022/10/25.
+//  Created by 박준하 on 2022/10/26.
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
-import Then
 import SnapKit
-import RxRelay
+import RxCocoa
+import RxSwift
+import Then
 
-class SignupViewController: UIViewController {
-    
-    let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5),
-                      .font : UIFont.systemFont(ofSize: 14, weight: .bold)]
+class CertificationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         if let sheetPresentationController = sheetPresentationController {
             sheetPresentationController.largestUndimmedDetentIdentifier = .large
             let id = UISheetPresentationController.Detent.Identifier("SignCustom")
@@ -34,15 +29,7 @@ class SignupViewController: UIViewController {
         opacityView.frame = view.bounds
         opacityView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(opacityView)
-        
-        let view = SignupView()
-        
-        view.goLoginButton.rx.tap
-            .bind {
-                let SigninViewContoller = SigninBackGroundViewController()
-                SigninViewContoller.modalPresentationStyle = .fullScreen
-                self.present(SigninViewContoller, animated: false)
-            }
+        let view = CertificationView()
         
         view.updateWith(self)
     }

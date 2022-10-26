@@ -40,7 +40,7 @@ class SignupView: BaseSignView {
     }
     
     internal lazy var goLoginButton = UIButton().then {
-        $0.setTitle("회원가입  >", for: .normal)
+        $0.setTitle("로그인  >", for: .normal)
         $0.setTitleColor(UIColor(named: "errorColor"), for: .normal)
         $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
     }
