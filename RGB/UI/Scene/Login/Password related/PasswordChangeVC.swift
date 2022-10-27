@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  RGB
-//
-//  Created by 박준하 on 2022/10/25.
-//
-
 import UIKit
 import SnapKit
 import RxSwift
@@ -30,6 +23,7 @@ class PasswordChangeVC: UIViewController {
         view.addSubview(opacityView)
         
         let view = PasswordView()
+        
         view.updateWith(self)
     }
 }

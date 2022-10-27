@@ -1,10 +1,3 @@
-//
-//  CertificationVC.swift
-//  RGB
-//
-//  Created by 박준하 on 2022/10/26.
-//
-
 import UIKit
 import SnapKit
 import RxCocoa

@@ -1,10 +1,3 @@
-//
-//  PasswordCompletionVC.swift
-//  RGB
-//
-//  Created by 박준하 on 2022/10/26.
-//
-
 import UIKit
 
 class PasswordCompletionViewController: UIViewController {
@@ -27,6 +20,13 @@ class PasswordCompletionViewController: UIViewController {
         view.addSubview(opacityView)
 
         let view = PasswordCompletionView()
+        
+        view.PasswordLoginButton.rx
+            .tap.bind {
+                let LoginViewContoller = SigninBackGroundViewController()
+                LoginViewContoller.modalPresentationStyle = .fullScreen
+                self.present(LoginViewContoller, animated: false)
+            }
         
         view.updateWith(self)
     }

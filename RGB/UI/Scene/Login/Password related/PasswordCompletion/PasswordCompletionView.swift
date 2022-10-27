@@ -1,16 +1,10 @@
-//
-//  PasswordCompletionView.swift
-//  RGB
-//
-//  Created by 박준하 on 2022/10/26.
-//
 import Then
 import UIKit
 import SnapKit
 
 class PasswordCompletionView : BaseCompletionView {
     
-    internal lazy var LoginButton = UIButton().then {
+    internal lazy var PasswordLoginButton = UIButton().then {
         let image = UIImage(named: "LoginButton")
         $0.setBackgroundImage(image, for: UIControl.State.normal)
     }
@@ -23,10 +17,10 @@ class PasswordCompletionView : BaseCompletionView {
         sendButton.setTitle("여기다가 온 email 적어주세요", for: .normal)
         
         [
-            LoginButton
+            PasswordLoginButton
         ].forEach { controller.view.addSubview($0) }
         
-        LoginButton.snp.makeConstraints {
+        PasswordLoginButton.snp.makeConstraints {
             $0.bottom.equalToSuperview().inset(80.0)
             $0.centerX.equalTo(controller.view)
             $0.height.equalTo(50.0)
