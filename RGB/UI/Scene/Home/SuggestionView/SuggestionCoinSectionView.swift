@@ -102,7 +102,7 @@ private extension SuggestionCoinSectionView {
         }
 
         collectionView.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(30.0)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(24.0)
             $0.height.equalTo(SuggestionFeatureCollectionViewCell.height * 4)
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()

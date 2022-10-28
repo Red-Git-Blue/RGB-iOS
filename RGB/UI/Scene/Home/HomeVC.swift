@@ -31,7 +31,7 @@ final class AppViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupNavigationController()
         setupLayout()
     }
@@ -39,9 +39,17 @@ final class AppViewController: UIViewController {
 
 private extension AppViewController {
     func setupNavigationController() {
-        navigationItem.title = "내 보유 코인"
-        navigationItem.largeTitleDisplayMode = .always
-        navigationController?.navigationBar.prefersLargeTitles = true
+
+        let bar: UINavigationBar! = self.navigationController?.navigationBar
+        
+        bar.backgroundColor = .clear
+        bar.setBackgroundImage(UIImage(), for: .default)
+        bar.shadowImage = UIImage()
+        bar.isTranslucent = true
+        let bellNavigetionItem = UIBarButtonItem(image: UIImage(systemName: "bell"), style: .plain, target: nil, action: nil)
+        let setNavigetionItem = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: nil, action: nil)
+        
+        navigationItem.rightBarButtonItems = [setNavigetionItem, bellNavigetionItem]
     }
 
     func setupLayout() {

@@ -9,7 +9,7 @@ final class SuggestionFeatureCollectionViewCell: UICollectionViewCell {
         $0.layer.borderColor = UIColor.tertiaryLabel.cgColor
         //        옆에 imageview 테두리 만들기
         //        imageView.layer.borderWidth = 0.5
-        $0.layer.cornerRadius = 20
+        $0.layer.cornerRadius = 15
     }
 
     private lazy var titleLabel = UILabel().then {
@@ -36,13 +36,11 @@ final class SuggestionFeatureCollectionViewCell: UICollectionViewCell {
 
     func setup() {
         setupLayout()
-
         titleLabel.text = "PEACH&NIGA"
         descriptionLabel.text = "027849"
         inDecreaseLabel.text = "+12.8%"
         coinPriceLabel.text = "23,904"
     }
-
 }
 
 // MARK: Private
@@ -60,7 +58,8 @@ private extension SuggestionFeatureCollectionViewCell {
             $0.leading.equalToSuperview().inset(20.0)
             $0.top.equalToSuperview().inset(22.0)
             $0.bottom.equalToSuperview().inset(20.0)
-            $0.width.equalTo(imageView.snp.height)
+            $0.width.equalTo(35.0)
+            $0.height.equalTo(35.0)
         }
         
         titleLabel.snp.makeConstraints {
@@ -84,7 +83,7 @@ private extension SuggestionFeatureCollectionViewCell {
 
         inDecreaseLabel.snp.makeConstraints {
             $0.centerX.equalTo(coinPriceLabel.snp.centerX).inset(10.0)
-            $0.top.equalTo(coinPriceLabel.snp.bottom).offset(3.0)
+            $0.top.equalTo(coinPriceLabel.snp.bottom).offset(4.0)
         }
     }
 }
