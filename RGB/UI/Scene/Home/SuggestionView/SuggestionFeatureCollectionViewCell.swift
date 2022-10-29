@@ -5,7 +5,7 @@ final class SuggestionFeatureCollectionViewCell: UICollectionViewCell {
     static var height: CGFloat { 75.0 }
 
     private lazy var imageView = UIImageView().then {
-        $0.backgroundColor = .tertiarySystemGroupedBackground
+        $0.backgroundColor = .red
         $0.layer.borderColor = UIColor.tertiaryLabel.cgColor
         //        옆에 imageview 테두리 만들기
         //        imageView.layer.borderWidth = 0.5

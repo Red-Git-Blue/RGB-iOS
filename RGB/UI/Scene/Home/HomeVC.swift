@@ -13,6 +13,7 @@ final class AppViewController: UIViewController {
         
         let userGraphListSectionView = UserGraphListSectionView(frame: .zero)
         let suggestionCoinSectionView = SuggestionCoinSectionView(frame: .zero)
+        let grassSectionView = GrassSectionView(frame: .zero)
         
         let spacingView = UIView()
         spacingView.snp.makeConstraints {
@@ -22,6 +23,7 @@ final class AppViewController: UIViewController {
         [
             userGraphListSectionView,
             suggestionCoinSectionView,
+            grassSectionView,
             spacingView
         ].forEach {
             stackView.addArrangedSubview($0)
@@ -41,14 +43,14 @@ private extension AppViewController {
     func setupNavigationController() {
 
         let bar: UINavigationBar! = self.navigationController?.navigationBar
-        
+
         bar.backgroundColor = .clear
         bar.setBackgroundImage(UIImage(), for: .default)
         bar.shadowImage = UIImage()
         bar.isTranslucent = true
         let bellNavigetionItem = UIBarButtonItem(image: UIImage(systemName: "bell"), style: .plain, target: nil, action: nil)
         let setNavigetionItem = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: nil, action: nil)
-        
+
         navigationItem.rightBarButtonItems = [setNavigetionItem, bellNavigetionItem]
     }
 
@@ -73,3 +75,19 @@ private extension AppViewController {
         }
     }
 }
+
+//extension UIBarButtonItem {
+//
+//    static func menuButton(_ target: Any?, action: Selector, imageName: String) -> UIBarButtonItem {
+//        let button = UIButton(type: .system)
+//        button.setImage(UIImage(systemName: "\(imageName)"), for: .normal)
+//        button.addTarget(target, action: action, for: .touchUpInside)
+//
+//        let menuBarItem = UIBarButtonItem(customView: button)
+//        menuBarItem.customView?.translatesAutoresizingMaskIntoConstraints = false
+//        menuBarItem.customView?.heightAnchor.constraint(equalToConstant: 4).isActive = true
+//        menuBarItem.customView?.widthAnchor.constraint(equalToConstant: 4).isActive = true
+//
+//        return menuBarItem
+//    }
+//}

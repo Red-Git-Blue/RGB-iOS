@@ -78,7 +78,7 @@ extension SuggestionCoinSectionView: UICollectionViewDataSource {
 //        cell?.setup(rankingFeature: rankingFeature)
         
         cell?.setup()
-        cell?.backgroundColor = .blue
+        cell?.backgroundColor = UIColor(named: "CollectionViewColor")
         cell?.layer.cornerRadius = 20
         return cell ?? UICollectionViewCell()
     }

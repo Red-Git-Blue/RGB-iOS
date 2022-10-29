@@ -1,10 +1,27 @@
-import SnapKit
-import UIKit
+//
+//  GrassSectionView.swift
+//  RGB
+//
+//  Created by 박준하 on 2022/10/29.
+//
 
-final class UserGraphListSectionView: UIView {
+import UIKit
+import Then
+import SnapKit
+
+class GrassSectionView: UIView {
+    
+    private lazy var titleLabel = UILabel().then {
+        $0.font = .systemFont(ofSize: 24.0, weight: .black)
+        $0.text = "잔디"
+    }
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 60.0
+        layout.minimumInteritemSpacing = 0.0
+        layout.sectionInset = UIEdgeInsets(top: 0.0, left: 30.0, bottom: 0.0, right: 30.0)
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.delegate = self
@@ -17,7 +34,7 @@ final class UserGraphListSectionView: UIView {
 
         collectionView.register(
             UICollectionViewCell.self,
-            forCellWithReuseIdentifier: "FeatureSectionCollectionViewCell"
+            forCellWithReuseIdentifier: "GrassCollectionViewCell"
         )
 
         return collectionView
@@ -37,20 +54,20 @@ final class UserGraphListSectionView: UIView {
     }
 }
 
-extension UserGraphListSectionView: UICollectionViewDataSource {
+extension GrassSectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureSectionCollectionViewCell", for: indexPath)
-        cell.backgroundColor = .gray
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GrassCollectionViewCell", for: indexPath)
+        cell.backgroundColor = UIColor(named: "CollectionViewColor")
         
         return cell
     }
 }
 
-extension UserGraphListSectionView: UICollectionViewDelegateFlowLayout {
+extension GrassSectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //주변의 왼 = 16 // 오른 = 16 == 32 뺴기
         CGSize(width: collectionView.frame.width - 64.0, height: frame.width)
@@ -59,7 +76,7 @@ extension UserGraphListSectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         //주변의 왼 = 16 // 오른 = 16
         //중앙 정령
-        UIEdgeInsets(top: 0.0, left: 32.0, bottom: 0.0, right: 32.0)
+        UIEdgeInsets(top: 0.0, left: 30.0, bottom: 0.0, right: 30.0)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -68,18 +85,24 @@ extension UserGraphListSectionView: UICollectionViewDelegateFlowLayout {
     }
 }
 
-private extension UserGraphListSectionView {
+private extension GrassSectionView {
     func setupViews() {
         [
+            titleLabel,
             collectionView,
             separatorView
         ].forEach { addSubview($0) }
+        
+        titleLabel.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(40.0)
+            $0.top.equalToSuperview().inset(30.0)
+        }
 
         collectionView.snp.makeConstraints {
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
-            $0.top.equalToSuperview().inset(16.0)
-            $0.height.equalTo(240)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(20.0)
+            $0.height.equalTo(140)
             $0.width.equalTo(370)
             $0.bottom.equalToSuperview()
         }
@@ -92,4 +115,3 @@ private extension UserGraphListSectionView {
         }
     }
 }
-
