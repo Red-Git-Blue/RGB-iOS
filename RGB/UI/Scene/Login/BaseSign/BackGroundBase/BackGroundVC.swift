@@ -1,9 +1,27 @@
+//
+//  BackGroundVC.swift
+//  RGB
+//
+//  Created by 박준하 on 2022/10/31.
+//
+
 import UIKit
 import SnapKit
 import RxSwift
 import RxCocoa
 
-class LoginBackGroundViewController: UIViewController {
+class BackGroundViewController: UIViewController {
+    
+    private final var type: BackGroundType
+    
+    init(type: BackGroundType) {
+        self.type = type
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     var disposeBag = DisposeBag()
     
@@ -17,7 +35,7 @@ class LoginBackGroundViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("SignBgViewController")
+        print("BackGroundViewController")
         
         setupLayout()
         upView()
@@ -26,7 +44,7 @@ class LoginBackGroundViewController: UIViewController {
     }
 }
 
-extension LoginBackGroundViewController {
+extension BackGroundViewController {
     func setupLayout() {
         [
             mainImageView
@@ -41,7 +59,7 @@ extension LoginBackGroundViewController {
     }
 }
 
-extension LoginBackGroundViewController {
+extension BackGroundViewController {
     
     func upView() {
         Observable<Int>.interval(.seconds(Int(0)), scheduler: MainScheduler.instance)
@@ -59,7 +77,7 @@ extension LoginBackGroundViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now()) {
 
-            let LoginViewContoller = LoginViewController()
+            let LoginViewContoller = self.type.getNextController()
             self.present(LoginViewContoller, animated: true)
         }
     }

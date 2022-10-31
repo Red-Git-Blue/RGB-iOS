@@ -34,14 +34,14 @@ class LoginViewController: UIViewController {
         view.forgetPasswordButton.rx.tap
             .bind {
                 print("🙉:: ForgetPasswordButton!")
-                let passwordViewContoller = PasswordBackGroundViewController()
+                let passwordViewContoller = BackGroundViewController(type: .Password)
                 passwordViewContoller.modalPresentationStyle = .fullScreen
                 self.present(passwordViewContoller, animated: false)
             }
         
         view.goSignupButton.rx.tap
             .bind {
-                let SignupViewContoller = SignupBackGroundViewController()
+                let SignupViewContoller = BackGroundViewController(type: .Signup)
                 SignupViewContoller.modalPresentationStyle = .fullScreen
                 self.present(SignupViewContoller, animated: false)
             }

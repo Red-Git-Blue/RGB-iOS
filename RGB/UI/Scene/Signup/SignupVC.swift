@@ -32,7 +32,7 @@ class SignupViewController: UIViewController {
         
         view.goLoginButton.rx.tap
             .bind {
-                let SigninViewContoller = SigninBackGroundViewController()
+                let SigninViewContoller = BackGroundViewController(type: .Login)
                 SigninViewContoller.modalPresentationStyle = .fullScreen
                 self.present(SigninViewContoller, animated: false)
             }

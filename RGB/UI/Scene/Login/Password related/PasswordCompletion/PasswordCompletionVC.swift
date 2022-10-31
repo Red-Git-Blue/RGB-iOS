@@ -23,7 +23,7 @@ class PasswordCompletionViewController: UIViewController {
         
         view.PasswordLoginButton.rx
             .tap.bind {
-                let LoginViewContoller = SigninBackGroundViewController()
+                let LoginViewContoller = BackGroundViewController(type: .Login)
                 LoginViewContoller.modalPresentationStyle = .fullScreen
                 self.present(LoginViewContoller, animated: false)
             }
