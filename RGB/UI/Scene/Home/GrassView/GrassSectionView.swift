@@ -3,6 +3,9 @@ import Then
 import SnapKit
 
 class GrassSectionView: UIView {
+    private final var controller: UIViewController
+    
+    var grassSection = [GrassSectionModel]()
     
     private lazy var titleLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 24.0, weight: .black)
@@ -35,11 +38,25 @@ class GrassSectionView: UIView {
 
     private let separatorView = SeparatorView(frame: .zero)
 
-    override init(frame: CGRect) {
+    init(frame: CGRect, viewController: UIViewController) {
+        controller = viewController
         super.init(frame: frame)
 
         setupViews()
         collectionView.reloadData()
+        
+        grassSection = [
+            GrassSectionModel(yearCommit: "120 Commit (상위 11%)", monthCommit: "34 Commit"),
+            GrassSectionModel(yearCommit: "12012 Commit (상위 1%)", monthCommit: "25 Commit"),
+            GrassSectionModel(yearCommit: "70 Commit (상위 61%)", monthCommit: "2 Commit"),
+            GrassSectionModel(yearCommit: "114 Commit (상위 26%)", monthCommit: "25 Commit"),
+            GrassSectionModel(yearCommit: "64 Commit (상위 67%)", monthCommit: "12 Commit"),
+            GrassSectionModel(yearCommit: "170 Commit (상위 94%)", monthCommit: "12 Commit"),
+            GrassSectionModel(yearCommit: "234 Commit (상위 8%)", monthCommit: "26 Commit"),
+            GrassSectionModel(yearCommit: "623 Commit (상위 1%)", monthCommit: "23 Commit"),
+            GrassSectionModel(yearCommit: "12 Commit (상위 83%)", monthCommit: "32 Commit"),
+            GrassSectionModel(yearCommit: "84 Commit (상위 6%)", monthCommit: "12 Commit"),
+        ]
     }
 
     required init?(coder: NSCoder) {
@@ -57,6 +74,13 @@ extension GrassSectionView: UICollectionViewDataSource {
         cell.backgroundColor = UIColor(named: "CollectionViewColor")
         
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedSuggesion = grassSection[indexPath.row]
+        print(grassSection[indexPath.row])
+        let detailViewController = GrassSectionDetilViewController()
+        detailViewController.grassSection = selectedSuggesion
+        controller.present(detailViewController, animated: true)
     }
 }
 

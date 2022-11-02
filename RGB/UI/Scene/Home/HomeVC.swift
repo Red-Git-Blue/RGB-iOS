@@ -13,7 +13,7 @@ final class AppViewController: UIViewController {
         
         let userGraphListSectionView = UserGraphListSectionView(frame: .zero, viewController: self)
         let suggestionCoinSectionView = SuggestionCoinSectionView(frame: .zero, viewController: self)
-        let grassSectionView = GrassSectionView(frame: .zero)
+        let grassSectionView = GrassSectionView(frame: .zero, viewController: self)
         
         let spacingView = UIView()
         spacingView.snp.makeConstraints {
