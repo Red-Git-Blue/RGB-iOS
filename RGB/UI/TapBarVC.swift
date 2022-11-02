@@ -4,8 +4,6 @@ import SnapKit
 
 class TapBarViewController : UITabBarController {
     
-    let tapColor = UIColor(named: "errorColor")
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -46,6 +44,6 @@ class TapBarViewController : UITabBarController {
         self.tabBar.tintColor = UIColor(named: "errorColor")
         self.tabBar.unselectedItemTintColor = .white
         self.viewControllers = [homeVC, chartVC, searchVC, shopVC, userVC]
-        
+        self.tabBar.backgroundColor = UIColor(named: "CollectionViewColor")
     }
 }

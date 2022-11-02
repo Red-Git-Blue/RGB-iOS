@@ -11,8 +11,8 @@ final class AppViewController: UIViewController {
         stackView.distribution = .equalSpacing
         stackView.spacing = 0.0
         
-        let userGraphListSectionView = UserGraphListSectionView(frame: .zero)
-        let suggestionCoinSectionView = SuggestionCoinSectionView(frame: .zero)
+        let userGraphListSectionView = UserGraphListSectionView(frame: .zero, viewController: self)
+        let suggestionCoinSectionView = SuggestionCoinSectionView(frame: .zero, viewController: self)
         let grassSectionView = GrassSectionView(frame: .zero)
         
         let spacingView = UIView()
