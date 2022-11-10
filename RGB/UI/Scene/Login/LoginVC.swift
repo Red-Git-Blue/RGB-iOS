@@ -1,4 +1,5 @@
 import UIKit
+import Moya
 import RxSwift
 import RxCocoa
 import Then
@@ -6,6 +7,7 @@ import SnapKit
 import RxRelay
 
 class LoginViewController: UIViewController {
+    let provider = MoyaProvider<MyAPI>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,23 @@ class LoginViewController: UIViewController {
         
         view.mainButton.rx.tap
             .bind {
+                if(view.firstTextField.text == nil || view.firstTextField.text!.isEmpty) {
+                    print("닉네임 없서")
+                    return
+                }
+                if(view.seconedTextField.text == nil || view.seconedTextField.text!.isEmpty) {
+                    print("비밀번호 없서")
+                    return
+                }
+                self.provider.rx.request(.postSignIn(LoginRequest(email: view.firstTextField.text!, password: view.seconedTextField.text!))).subscribe { response in
+                    switch response {
+                    case .success(let response):
+                        print(response.data)
+                        break
+                    case .failure(let error):
+                        print("펑! \(error)")
+                    }
+                }.disposed(by: view.disposeBag)
                 print("🐊:: LoginButton!")
             }
         
