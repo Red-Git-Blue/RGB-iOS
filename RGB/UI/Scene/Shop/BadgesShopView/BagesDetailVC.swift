@@ -12,6 +12,43 @@ import RxSwift
 import Kingfisher
 
 class BagesDetailViewController: UIViewController {
+    private let scrollView = UIScrollView()
+    private let contentView = UIView()
+
+    private lazy var stackView = UIStackView().then { stackView in
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        stackView.spacing = 0.0
+        
+        let bagesTapSectionView = BagesTapView(frame: .zero, viewController: self)
+        
+        let newBagesSectionView = NewBadgesView(frame: .zero, viewController: self)
+        
+        let lastTextView = LastTextView(frame: .zero, viewController: self)
+        
+        
+        let spacingView = UIView()
+        spacingView.snp.makeConstraints {
+            $0.height.equalTo(640.0)
+        }
+        
+        let lastSpacingView = UIView()
+        lastSpacingView.snp.makeConstraints {
+            $0.height.equalTo(200)
+        }
+        
+        [
+            bagesTapSectionView,
+            spacingView,
+            newBagesSectionView,
+            lastTextView,
+            lastSpacingView
+            
+        ].forEach {
+            stackView.addArrangedSubview($0)
+        }
+        
+    }
     
     var bageList: BagesListModel?
     
@@ -19,93 +56,29 @@ class BagesDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainBagesImage.layer.cornerRadius = 20
-        setup()
-        NabigetionBar()
-    }
-    
-    private lazy var mainBagesImage = UIImageView().then {
-        let imageName = "MainBage"
-        let image = UIImage(named: imageName)
-        let imageView = UIImageView(image: image!)
-        $0.backgroundColor = .red
-    }
-    
-    private lazy var bagesName = UILabel().then {
-        $0.font = .systemFont(ofSize: 24.0, weight: .bold)
-        $0.textColor = .white
-        $0.text = "고급스러운 무의 배지"
-    }
-    
-    private lazy var bagesdescriptions = UILabel().then {
-        $0.font = .systemFont(ofSize: 14.0, weight: .regular)
-        $0.textColor = .white
-        $0.numberOfLines = 0
-        $0.text = "고급스러운 색감과 무의 예술적인 감각을 살린 배지이지만,\n준하가 백만 년 동안 정성스럽게 키웠다."
-    }
-    
-    private lazy var coinPriceLabel = UILabel().then {
-        $0.font = .systemFont(ofSize: 16.0, weight: .bold)
-        $0.textColor = .white
-        $0.text = "12,000원"
+        setupLayout()
     }
 }
+private extension BagesDetailViewController {
 
+    func setupLayout() {
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            $0.bottom.equalToSuperview()
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
+        }
 
-extension BagesDetailViewController {
-    func setup() {
-        [
-            mainBagesImage,
-            bagesName,
-            bagesdescriptions,
-            coinPriceLabel
-        ].forEach { view.addSubview($0) }
-        
-        mainBagesImage.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(110.0)
-            $0.centerX.equalToSuperview()
-            $0.height.equalTo(370)
-            $0.width.equalTo(370)
+        scrollView.addSubview(contentView)
+        contentView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+            $0.width.equalToSuperview()
         }
-        
-        bagesName.snp.makeConstraints {
-            $0.top.equalTo(mainBagesImage.snp.bottom).offset(40.0)
-            $0.leading.equalToSuperview().inset(30.0)
-        }
-        
-        bagesdescriptions.snp.makeConstraints {
-            $0.top.equalTo(bagesName.snp.bottom).offset(20.0)
-            $0.leading.equalTo(bagesName.snp.leading)
-        }
-        
-        coinPriceLabel.snp.makeConstraints {
-            $0.top.equalTo(bagesdescriptions.snp.bottom).offset(20.0)
-            $0.leading.equalTo(bagesdescriptions.snp.leading)
-        }
-    }
-    
-    func NabigetionBar() {
-        let bar: UINavigationBar! = self.navigationController?.navigationBar
 
-        bar.backgroundColor = .clear
-        bar.setBackgroundImage(UIImage(), for: .default)
-        bar.shadowImage = UIImage()
-        bar.isTranslucent = true
-        
-//        let outButtonItem = UIBarButtonItem(
-//            image: UIImage(named: "outButton"),
-//            style: UIBarButtonItem.Style.done,
-//            target: self,
-//            action: nil
-//        )
-//
-//        let hartButtonItem = UIBarButtonItem(
-//            image: UIImage(named: "hartButton"),
-//            style: UIBarButtonItem.Style.done,
-//            target: self,
-//            action: nil
-//        )
-//        self.navigationItem.leftBarButtonItem = outButtonItem
-//        self.navigationItem.rightBarButtonItem = hartButtonItem
+        contentView.addSubview(stackView)
+        stackView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
 }
