@@ -11,16 +11,40 @@ final class ShopViewController: UIViewController {
         stackView.distribution = .equalSpacing
         stackView.spacing = 0.0
         
-        let advertisementSectionView = advertisementView(frame: .zero, viewController: self)
+        let advertisementSectionView = AdvertisementSectionView(frame: .zero, viewController: self)
+        
+        let categorySectionView = CategorySectionView(frame: .zero, viewController: self)
+        
+        let popularBadgesView = PopularBadgesView(frame: .zero, viewController: self)
+        
+        let newBadgesView = NewBadgesView(frame: .zero, viewController: self)
+        
+        let lastTextView = LastTextView(frame: .zero, viewController: self)
         
         let spacingView = UIView()
         spacingView.snp.makeConstraints {
-            $0.height.equalTo(100.0)
+            $0.height.equalTo(60.0)
+        }
+        let viewSpacingView = UIView()
+        viewSpacingView.snp.makeConstraints {
+            $0.height.equalTo(60.0)
+        }
+        
+        let lastSpacingView = UIView()
+        lastSpacingView.snp.makeConstraints {
+            $0.height.equalTo(200)
         }
         
         [
             advertisementSectionView,
-            spacingView
+            spacingView,
+            categorySectionView,
+            viewSpacingView,
+            popularBadgesView,
+            spacingView,
+            newBadgesView,
+            lastTextView,
+            lastSpacingView
         ].forEach {
             stackView.addArrangedSubview($0)
         }
@@ -57,19 +81,3 @@ private extension ShopViewController {
         }
     }
 }
-
-//extension UIBarButtonItem {
-//
-//    static func menuButton(_ target: Any?, action: Selector, imageName: String) -> UIBarButtonItem {
-//        let button = UIButton(type: .system)
-//        button.setImage(UIImage(systemName: "\(imageName)"), for: .normal)
-//        button.addTarget(target, action: action, for: .touchUpInside)
-//
-//        let menuBarItem = UIBarButtonItem(customView: button)
-//        menuBarItem.customView?.translatesAutoresizingMaskIntoConstraints = false
-//        menuBarItem.customView?.heightAnchor.constraint(equalToConstant: 4).isActive = true
-//        menuBarItem.customView?.widthAnchor.constraint(equalToConstant: 4).isActive = true
-//
-//        return menuBarItem
-//    }
-//}

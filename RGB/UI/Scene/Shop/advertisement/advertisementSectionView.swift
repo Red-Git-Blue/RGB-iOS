@@ -2,7 +2,7 @@ import SnapKit
 import Then
 import UIKit
 
-final class advertisementView: UIView {
+final class AdvertisementSectionView: UIView {
     private final var controller: UIViewController
     
 //    var userGraphModelList = [UserGraphListModel]()
@@ -27,12 +27,6 @@ final class advertisementView: UIView {
 
         return collectionView
     }()
-    
-    private let categoryLabel = UILabel().then {
-        $0.text = "카테고리"
-        $0.font = .systemFont(ofSize: 24.0, weight: .bold)
-        $0.textColor = .label
-    }
 
     private let separatorView = SeparatorView(frame: .zero)
 
@@ -45,13 +39,12 @@ final class advertisementView: UIView {
 //        collectionView.layer.cornerRadius = 20
     }
     
-
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
-extension advertisementView: UICollectionViewDataSource {
+extension AdvertisementSectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
@@ -73,7 +66,7 @@ extension advertisementView: UICollectionViewDataSource {
 //    }
 }
 
-extension advertisementView: UICollectionViewDelegateFlowLayout {
+extension AdvertisementSectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //주변의 왼 = 16 // 오른 = 16 == 32 뺴기
         CGSize(width: collectionView.frame.width - 60.0, height: frame.width)
@@ -91,11 +84,10 @@ extension advertisementView: UICollectionViewDelegateFlowLayout {
     }
 }
 
-private extension advertisementView {
+private extension AdvertisementSectionView {
     func setupViews() {
         [
-            collectionView,
-            categoryLabel
+            collectionView
         ].forEach { addSubview($0) }
 
         collectionView.snp.makeConstraints {
@@ -105,11 +97,6 @@ private extension advertisementView {
             $0.height.equalTo(120)
             $0.width.equalTo(370)
             $0.bottom.equalToSuperview()
-        }
-        
-        categoryLabel.snp.makeConstraints {
-            $0.top.equalTo(collectionView.snp.bottom).inset(30.0)
-            $0.leading.equalTo(collectionView.snp.leading)
         }
     }
 }
