@@ -52,8 +52,6 @@ extension AdvertisementSectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "advertisementSectionCollectionViewCell", for: indexPath)
         cell.backgroundColor = UIColor(named: "CollectionViewColor")
-//        cell.contentView.layer.cornerRadius = 10.0
-        
         return cell
     }
     
