@@ -44,7 +44,6 @@
 		0EAFF94429221BD000162DD0 /* LastTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF94329221BD000162DD0 /* LastTextView.swift */; };
 		0EAFF94929222E6100162DD0 /* BagesListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF94829222E6100162DD0 /* BagesListModel.swift */; };
 		0EAFF94B2922444500162DD0 /* BagesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF94A2922444500162DD0 /* BagesDetailVC.swift */; };
-		0EAFF94D2922569D00162DD0 /* BagesTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF94C2922569D00162DD0 /* BagesTapView.swift */; };
 		0EAFF95629239C3600162DD0 /* PurchaseAndGiftButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF95529239C3600162DD0 /* PurchaseAndGiftButtonView.swift */; };
 		0EE4352428F4476F00CA7E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4352328F4476F00CA7E58 /* AppDelegate.swift */; };
 		0EE4352628F4476F00CA7E58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4352528F4476F00CA7E58 /* SceneDelegate.swift */; };
@@ -110,7 +109,6 @@
 		0EAFF94329221BD000162DD0 /* LastTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTextView.swift; sourceTree = "<group>"; };
 		0EAFF94829222E6100162DD0 /* BagesListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesListModel.swift; sourceTree = "<group>"; };
 		0EAFF94A2922444500162DD0 /* BagesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailVC.swift; sourceTree = "<group>"; };
-		0EAFF94C2922569D00162DD0 /* BagesTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesTapView.swift; sourceTree = "<group>"; };
 		0EAFF95529239C3600162DD0 /* PurchaseAndGiftButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseAndGiftButtonView.swift; sourceTree = "<group>"; };
 		0EE4352028F4476F00CA7E58 /* RGB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE4352328F4476F00CA7E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -291,7 +289,6 @@
 				0EAFF94829222E6100162DD0 /* BagesListModel.swift */,
 				0EAFF94A2922444500162DD0 /* BagesDetailVC.swift */,
 				0EAFF95529239C3600162DD0 /* PurchaseAndGiftButtonView.swift */,
-				0EAFF94C2922569D00162DD0 /* BagesTapView.swift */,
 				0EAFF94529221BD700162DD0 /* LastTextView */,
 				0EAFF94229221B6B00162DD0 /* NewBadges */,
 				0EAFF93F2921F0E200162DD0 /* PopularBadges */,
@@ -616,7 +613,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EF59AFF2909FE01003FEA03 /* Separator.swift in Sources */,
-				0EAFF94D2922569D00162DD0 /* BagesTapView.swift in Sources */,
 				0E61D6932907E6310098A3F5 /* SignupView.swift in Sources */,
 				0E0F94DA28FD5D590004951F /* ModelType.swift in Sources */,
 				0E0F94DB28FD5D590004951F /* MyAPI.swift in Sources */,

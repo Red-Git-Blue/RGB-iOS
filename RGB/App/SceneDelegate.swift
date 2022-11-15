@@ -11,7 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.windowScene = windowScene
         
 //        let homeViewController = AppViewController()
-        let tapbarViewController = BagesDetailViewController()
+        let tapbarViewController = TapBarViewController()
         let rootNavigationController = UINavigationController(rootViewController: tapbarViewController)
         
         self.window?.rootViewController = rootNavigationController

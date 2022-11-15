@@ -97,7 +97,6 @@ extension NewBadgesView: UICollectionViewDataSource {
         return cell ?? UICollectionViewCell()
     }
     
-<<<<<<< 58749743b13387c4bacb2c273e89c43caa4d7777
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        let selectedSuggesion = bagesList[indexPath.row]
 //        print(bagesList[indexPath.row])
@@ -105,7 +104,6 @@ extension NewBadgesView: UICollectionViewDataSource {
 //        detailViewController.suggestion = selectedSuggesion
 //        controller.present(detailViewController, animated: true)
 //    }
-=======
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedSuggesion = bagesList[indexPath.row]
         print(bagesList[indexPath.row])
@@ -114,7 +112,6 @@ extension NewBadgesView: UICollectionViewDataSource {
         detailViewController.modalPresentationStyle = .fullScreen
         controller.present(detailViewController, animated: true)
     }
->>>>>>> 🎁:: giftButton
 }
 
 extension NewBadgesView {

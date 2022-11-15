@@ -14,19 +14,16 @@ import RxCocoa
 class BagesDetailViewController: UIViewController {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
-<<<<<<< 58749743b13387c4bacb2c273e89c43caa4d7777
-=======
     
     var bageList: BagesListModel?
     var disposeBag = DisposeBag()
->>>>>>> 🎁:: giftButton
-
+    
     private lazy var stackView = UIStackView().then { stackView in
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
         stackView.spacing = 0.0
         
-        let bagesTapSectionView = BagesTapView(frame: .zero, viewController: self)
+        //        let bagesTapSectionView = BagesTapView(frame: .zero, viewController: self)
         
         let newBagesSectionView = NewBadgesView(frame: .zero, viewController: self)
         
@@ -44,7 +41,7 @@ class BagesDetailViewController: UIViewController {
         }
         
         [
-            bagesTapSectionView,
+            //            bagesTapSectionView,
             spacingView,
             newBagesSectionView,
             lastTextView,
@@ -55,12 +52,6 @@ class BagesDetailViewController: UIViewController {
         }
         
     }
-    
-<<<<<<< 58749743b13387c4bacb2c273e89c43caa4d7777
-    var bageList: BagesListModel?
-    
-    var disposeBag = DisposeBag()
-=======
     private let buttonView = UIView().then {
         $0.backgroundColor = .clear
     }
@@ -71,7 +62,6 @@ class BagesDetailViewController: UIViewController {
         $0.titleLabel?.font = .systemFont(ofSize: 20.0, weight: .bold)
         $0.backgroundColor = .red
     }
->>>>>>> 🎁:: giftButton
     
     private lazy var giftButton = UIButton().then {
         $0.setTitle("선물하기", for: .normal)
@@ -83,9 +73,6 @@ class BagesDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
-<<<<<<< 58749743b13387c4bacb2c273e89c43caa4d7777
-    }
-=======
         setup()
         purchaseButton.layer.cornerRadius = 20
         giftButton.layer.cornerRadius = 20
@@ -101,8 +88,7 @@ class BagesDetailViewController: UIViewController {
             .bind {
                 print("🎁:: 선물하기!!")
             }.disposed(by: disposeBag)
-      }
->>>>>>> 🎁:: giftButton
+    }
 }
 private extension BagesDetailViewController {
 
