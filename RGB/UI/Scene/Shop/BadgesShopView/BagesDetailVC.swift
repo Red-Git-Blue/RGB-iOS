@@ -46,7 +46,6 @@ class BagesDetailViewController: UIViewController {
             newBagesSectionView,
             lastTextView,
             lastSpacingView
-            
         ].forEach {
             stackView.addArrangedSubview($0)
         }
@@ -74,31 +73,15 @@ class BagesDetailViewController: UIViewController {
         super.viewDidLoad()
         setupLayout()
         setup()
+        navBarSetup()
         
-        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 60, width: view.frame.size.width, height: 60))
-        view.addSubview(navBar)
-        
-        let vieew = UIView(frame: CGRect(origin: .zero, size: CGSize(width: 30, height: 50)))
-        vieew.backgroundColor = .clear
-        let btn2 = UIButton(frame: CGRect(x: 0, y: 10, width: 30, height: 30))
-        btn2.setImage(UIImage(named: "outButton")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        btn2.contentMode = .scaleAspectFit
-//        btn2.addTarget(self, action: nil, for: .touchUpInside)
-        vieew.addSubview(btn2)
-
-        let itemsContainer = UIBarButtonItem(customView: vieew)
-
-        let navItem = UINavigationItem(title: "SomeTitle")
-        navItem.leftBarButtonItems = [itemsContainer]
-
-        navBar.setItems([navItem], animated: false)
+        view.backgroundColor = .systemBackground
         
         purchaseButton.layer.cornerRadius = 20
         giftButton.layer.cornerRadius = 20
         
         purchaseButton.rx.tap
             .bind {
-                self.dismiss(animated: true)
                 print("🧾:: 구매하기!!")
             }.disposed(by: disposeBag)
         
@@ -156,5 +139,32 @@ private extension BagesDetailViewController {
             $0.height.equalTo(50.0)
             $0.width.equalTo(172.0)
         }
+    }
+    
+    func navBarSetup() {
+        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 60, width: view.frame.size.width, height: 20))
+        view.addSubview(navBar)
+        
+        navBar.backgroundColor = .systemBackground
+        
+        let vieew = UIView(frame: CGRect(origin: .zero, size: CGSize(width: 30, height: 50)))
+        vieew.backgroundColor = .clear
+        let btn2 = UIButton(frame: CGRect(x: 0, y: 10, width: 25, height: 25))
+        btn2.setImage(UIImage(named: "outButton")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        btn2.contentMode = .scaleAspectFit
+        btn2.tintColor = .label
+        btn2.addTarget(self, action: #selector(dismissTap), for: .touchUpInside)
+        vieew.addSubview(btn2)
+
+        let itemsContainer = UIBarButtonItem(customView: vieew)
+
+        let navItem = UINavigationItem()
+        navItem.leftBarButtonItem = itemsContainer
+
+        navBar.setItems([navItem], animated: false)
+    }
+    
+    @objc func dismissTap(sender: UIButton!){
+        self.dismiss(animated: true)
     }
 }
