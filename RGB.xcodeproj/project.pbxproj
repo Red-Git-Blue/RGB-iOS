@@ -17,6 +17,7 @@
 		0E0F94E028FD5D590004951F /* MyAPI+BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94D828FD5D590004951F /* MyAPI+BaseURL.swift */; };
 		0E0F94E328FD5DFF0004951F /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94E228FD5DFF0004951F /* RequestModel.swift */; };
 		0E0F94E628FD5FC50004951F /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94E528FD5FC50004951F /* Signup.swift */; };
+		0E23C2062923BFAC00C467F8 /* BagesTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C2052923BFAC00C467F8 /* BagesTapView.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
 		0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B26290FDF2E005E379E /* SuggestionModel.swift */; };
@@ -82,6 +83,7 @@
 		0E0F94D828FD5D590004951F /* MyAPI+BaseURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyAPI+BaseURL.swift"; sourceTree = "<group>"; };
 		0E0F94E228FD5DFF0004951F /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		0E0F94E528FD5FC50004951F /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
+		0E23C2052923BFAC00C467F8 /* BagesTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesTapView.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
 		0E555B26290FDF2E005E379E /* SuggestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionModel.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				0EAFF93D2921E30600162DD0 /* BadgesCell.swift */,
+				0E23C2052923BFAC00C467F8 /* BagesTapView.swift */,
 				0EAFF94829222E6100162DD0 /* BagesListModel.swift */,
 				0EAFF94A2922444500162DD0 /* BagesDetailVC.swift */,
 				0EAFF95529239C3600162DD0 /* PurchaseAndGiftButtonView.swift */,
@@ -619,6 +622,7 @@
 				0E0F94DD28FD5D590004951F /* MyAPI+Path.swift in Sources */,
 				0E555B29290FE0EC005E379E /* SuggesionDetailViewController.swift in Sources */,
 				0EF59AD929097ABA003FEA03 /* HomeVC.swift in Sources */,
+				0E23C2062923BFAC00C467F8 /* BagesTapView.swift in Sources */,
 				0EF59ADF29097AE6003FEA03 /* ShopVC.swift in Sources */,
 				0EAFF92F29211D0D00162DD0 /* AdvertisementSectionView.swift in Sources */,
 				0E0F94D928FD5D590004951F /* MyAPI+Method.swift in Sources */,

@@ -23,7 +23,7 @@ class BagesDetailViewController: UIViewController {
         stackView.distribution = .equalSpacing
         stackView.spacing = 0.0
         
-        //        let bagesTapSectionView = BagesTapView(frame: .zero, viewController: self)
+        let bagesTapSectionView = BagesTapView(frame: .zero, viewController: self)
         
         let newBagesSectionView = NewBadgesView(frame: .zero, viewController: self)
         
@@ -41,7 +41,7 @@ class BagesDetailViewController: UIViewController {
         }
         
         [
-            //            bagesTapSectionView,
+            bagesTapSectionView,
             spacingView,
             newBagesSectionView,
             lastTextView,
@@ -74,13 +74,31 @@ class BagesDetailViewController: UIViewController {
         super.viewDidLoad()
         setupLayout()
         setup()
+        
+        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 60, width: view.frame.size.width, height: 60))
+        view.addSubview(navBar)
+        
+        let vieew = UIView(frame: CGRect(origin: .zero, size: CGSize(width: 30, height: 50)))
+        vieew.backgroundColor = .clear
+        let btn2 = UIButton(frame: CGRect(x: 0, y: 10, width: 30, height: 30))
+        btn2.setImage(UIImage(named: "outButton")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        btn2.contentMode = .scaleAspectFit
+//        btn2.addTarget(self, action: nil, for: .touchUpInside)
+        vieew.addSubview(btn2)
+
+        let itemsContainer = UIBarButtonItem(customView: vieew)
+
+        let navItem = UINavigationItem(title: "SomeTitle")
+        navItem.leftBarButtonItems = [itemsContainer]
+
+        navBar.setItems([navItem], animated: false)
+        
         purchaseButton.layer.cornerRadius = 20
         giftButton.layer.cornerRadius = 20
         
-        view.backgroundColor = .systemBackground
-        
         purchaseButton.rx.tap
             .bind {
+                self.dismiss(animated: true)
                 print("🧾:: 구매하기!!")
             }.disposed(by: disposeBag)
         
