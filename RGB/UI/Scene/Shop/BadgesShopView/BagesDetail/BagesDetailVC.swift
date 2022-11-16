@@ -83,6 +83,7 @@ class BagesDetailViewController: UIViewController {
         purchaseButton.rx.tap
             .bind {
                 print("🧾:: 구매하기!!")
+                self.upView()
             }.disposed(by: disposeBag)
         
         giftButton.rx.tap
@@ -166,5 +167,26 @@ private extension BagesDetailViewController {
     
     @objc func dismissTap(sender: UIButton!){
         self.dismiss(animated: true)
+    }
+    
+    func upView() {
+        Observable<Int>.interval(.seconds(Int(0)), scheduler: MainScheduler.instance)
+            .take(0)
+            .subscribe(onNext: { value in
+              print(value)
+            }, onError: { error in
+              print(error)
+            }, onCompleted: {
+              print("onCompleted")
+            }, onDisposed: {
+              print("onDisposed")
+            })
+            .disposed(by: disposeBag)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+
+            let bagesDetailBuyVC = BagesDetailBuyViewController()
+            self.present(bagesDetailBuyVC, animated: true)
+        }
     }
 }

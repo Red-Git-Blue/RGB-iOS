@@ -39,6 +39,8 @@ class BagesTapView: UIView {
         controller = viewController
         super.init(frame: frame)
         setup()
+        
+        mainBagesImage.layer.cornerRadius = 20
     }
 
     required init?(coder: NSCoder) {
