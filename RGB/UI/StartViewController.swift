@@ -84,9 +84,9 @@ extension StartViewController {
     
     func mainLoginButtonTap() {
         print("🌚mainLoginButtonTap🌚")
-        let signinBGVC = BackGroundViewController(type: .Login)
-        signinBGVC.modalPresentationStyle = .fullScreen
-        self.present(signinBGVC, animated: false)
+        let signBGVC = BackGroundViewController(type: .Login)
+        signBGVC.modalPresentationStyle = .fullScreen
+        self.present(signBGVC, animated: false)
     }
     
     func mainSignUpButtonTap() {

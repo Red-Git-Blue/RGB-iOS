@@ -15,7 +15,7 @@ final class UserViewController: UIViewController {
         
         let userChartView = UserChartView(frame: .zero, viewController: self)
         
-        let userBagesView = UserBagesView(frame: .zero, viewController: self)
+        let userBagesView = UserBadgesView(frame: .zero, viewController: self)
         
         let spacingView = UIView()
         spacingView.snp.makeConstraints {

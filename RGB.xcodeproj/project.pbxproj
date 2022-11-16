@@ -21,7 +21,7 @@
 		0E23C209292477E200C467F8 /* BagesDetailBuyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C208292477E200C467F8 /* BagesDetailBuyVC.swift */; };
 		0E23C20B2924BCD800C467F8 /* UserInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C20A2924BCD800C467F8 /* UserInformationView.swift */; };
 		0E23C20E2924D14D00C467F8 /* UserChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C20D2924D14D00C467F8 /* UserChartView.swift */; };
-		0E23C2112924EDCE00C467F8 /* UserBagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C2102924EDCE00C467F8 /* UserBagesView.swift */; };
+		0E23C2112924EDCE00C467F8 /* UserBadgesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C2102924EDCE00C467F8 /* UserBadgesView.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
 		0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B26290FDF2E005E379E /* SuggestionModel.swift */; };
@@ -65,7 +65,6 @@
 		0EF59ADB29097ACF003FEA03 /* ChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59ADA29097ACF003FEA03 /* ChartVC.swift */; };
 		0EF59ADD29097AD9003FEA03 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59ADC29097AD9003FEA03 /* SearchVC.swift */; };
 		0EF59ADF29097AE6003FEA03 /* ShopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59ADE29097AE6003FEA03 /* ShopVC.swift */; };
-		0EF59AE129097AED003FEA03 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59AE029097AED003FEA03 /* UserVC.swift */; };
 		0EF59AEF29099246003FEA03 /* UserGraphListSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59AEE29099246003FEA03 /* UserGraphListSectionView.swift */; };
 		0EF59AF72909993A003FEA03 /* SuggestionCoinSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59AF62909993A003FEA03 /* SuggestionCoinSectionView.swift */; };
 		0EF59AF92909994F003FEA03 /* SuggestionFeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59AF82909994F003FEA03 /* SuggestionFeatureCollectionViewCell.swift */; };
@@ -74,6 +73,7 @@
 		0EF59B04290CD7EF003FEA03 /* GrassSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59B03290CD7EF003FEA03 /* GrassSectionView.swift */; };
 		0EF711682906A419005D62EE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF711672906A419005D62EE /* LoginView.swift */; };
 		6FAB5117A39FCDD46D18402F /* Pods_RGB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8416AB1030575CC12D855FE4 /* Pods_RGB.framework */; };
+		F211DB7D48C4AEBE76C7FC00 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211DC1658F4F0A12C74281E /* UserVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,7 +91,7 @@
 		0E23C208292477E200C467F8 /* BagesDetailBuyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailBuyVC.swift; sourceTree = "<group>"; };
 		0E23C20A2924BCD800C467F8 /* UserInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationView.swift; sourceTree = "<group>"; };
 		0E23C20D2924D14D00C467F8 /* UserChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChartView.swift; sourceTree = "<group>"; };
-		0E23C2102924EDCE00C467F8 /* UserBagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBagesView.swift; sourceTree = "<group>"; };
+		0E23C2102924EDCE00C467F8 /* UserBadgesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBadgesView.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
 		0E555B26290FDF2E005E379E /* SuggestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionModel.swift; sourceTree = "<group>"; };
@@ -137,7 +137,6 @@
 		0EF59ADA29097ACF003FEA03 /* ChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartVC.swift; sourceTree = "<group>"; };
 		0EF59ADC29097AD9003FEA03 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		0EF59ADE29097AE6003FEA03 /* ShopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopVC.swift; sourceTree = "<group>"; };
-		0EF59AE029097AED003FEA03 /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		0EF59AEE29099246003FEA03 /* UserGraphListSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGraphListSectionView.swift; sourceTree = "<group>"; };
 		0EF59AF62909993A003FEA03 /* SuggestionCoinSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCoinSectionView.swift; sourceTree = "<group>"; };
 		0EF59AF82909994F003FEA03 /* SuggestionFeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionFeatureCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -148,6 +147,7 @@
 		6F19F388A3CBD1A2BBFF1839 /* Pods-RGB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB.release.xcconfig"; path = "Target Support Files/Pods-RGB/Pods-RGB.release.xcconfig"; sourceTree = "<group>"; };
 		8416AB1030575CC12D855FE4 /* Pods_RGB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF07B590D822EC472F2703B /* Pods-RGB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB.debug.xcconfig"; path = "Target Support Files/Pods-RGB/Pods-RGB.debug.xcconfig"; sourceTree = "<group>"; };
+		F211DC1658F4F0A12C74281E /* UserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +213,7 @@
 		0E23C2122924EDD500C467F8 /* UserBages */ = {
 			isa = PBXGroup;
 			children = (
-				0E23C2102924EDCE00C467F8 /* UserBagesView.swift */,
+				0E23C2102924EDCE00C467F8 /* UserBadgesView.swift */,
 			);
 			path = UserBages;
 			sourceTree = "<group>";
@@ -466,7 +466,7 @@
 		0EF59AE629097BBD003FEA03 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				0EF59AE029097AED003FEA03 /* UserVC.swift */,
+				F211DC1658F4F0A12C74281E /* UserVC.swift */,
 				0E23C2122924EDD500C467F8 /* UserBages */,
 				0E23C20F2924D2DD00C467F8 /* UserChart */,
 				0E23C20C2924BEF500C467F8 /* UserInformation */,
@@ -661,7 +661,7 @@
 			files = (
 				0E23C209292477E200C467F8 /* BagesDetailBuyVC.swift in Sources */,
 				0EF59AFF2909FE01003FEA03 /* Separator.swift in Sources */,
-				0E23C2112924EDCE00C467F8 /* UserBagesView.swift in Sources */,
+				0E23C2112924EDCE00C467F8 /* UserBadgesView.swift in Sources */,
 				0E61D6932907E6310098A3F5 /* SignupView.swift in Sources */,
 				0E0F94DA28FD5D590004951F /* ModelType.swift in Sources */,
 				0E0F94DB28FD5D590004951F /* MyAPI.swift in Sources */,
@@ -701,7 +701,6 @@
 				0E9BC16228FEC46100B8DB56 /* LoginVC.swift in Sources */,
 				0EF59AD429096081003FEA03 /* CertificationCompletionVC.swift in Sources */,
 				0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */,
-				0EF59AE129097AED003FEA03 /* UserVC.swift in Sources */,
 				0EF711682906A419005D62EE /* LoginView.swift in Sources */,
 				0EE4352428F4476F00CA7E58 /* AppDelegate.swift in Sources */,
 				0E99736D2908A52400B95BC6 /* CertificationVC.swift in Sources */,
@@ -721,6 +720,7 @@
 				0E856A592906880400F2A258 /* BaseSignView.swift in Sources */,
 				0E0F94E328FD5DFF0004951F /* RequestModel.swift in Sources */,
 				0E9973772908E3C100B95BC6 /* PasswordCompletionView.swift in Sources */,
+				F211DB7D48C4AEBE76C7FC00 /* UserVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
