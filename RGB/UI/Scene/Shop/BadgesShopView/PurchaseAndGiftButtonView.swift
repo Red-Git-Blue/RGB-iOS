@@ -28,7 +28,6 @@ class PurchaseAndGiftButtonView: UIView {
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
         super.init(frame: frame)
-
         setup()
     }
     

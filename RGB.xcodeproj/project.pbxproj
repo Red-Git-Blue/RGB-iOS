@@ -19,6 +19,8 @@
 		0E0F94E628FD5FC50004951F /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94E528FD5FC50004951F /* Signup.swift */; };
 		0E23C2062923BFAC00C467F8 /* BagesTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C2052923BFAC00C467F8 /* BagesTapView.swift */; };
 		0E23C209292477E200C467F8 /* BagesDetailBuyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C208292477E200C467F8 /* BagesDetailBuyVC.swift */; };
+		0E23C20B2924BCD800C467F8 /* UserInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C20A2924BCD800C467F8 /* UserInformationView.swift */; };
+		0E23C20E2924D14D00C467F8 /* UserChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C20D2924D14D00C467F8 /* UserChartView.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
 		0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B26290FDF2E005E379E /* SuggestionModel.swift */; };
@@ -86,6 +88,8 @@
 		0E0F94E528FD5FC50004951F /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		0E23C2052923BFAC00C467F8 /* BagesTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesTapView.swift; sourceTree = "<group>"; };
 		0E23C208292477E200C467F8 /* BagesDetailBuyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailBuyVC.swift; sourceTree = "<group>"; };
+		0E23C20A2924BCD800C467F8 /* UserInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationView.swift; sourceTree = "<group>"; };
+		0E23C20D2924D14D00C467F8 /* UserChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChartView.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
 		0E555B26290FDF2E005E379E /* SuggestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionModel.swift; sourceTree = "<group>"; };
@@ -188,13 +192,21 @@
 			path = BagesDetail;
 			sourceTree = "<group>";
 		};
-		0E555B25290FC004005E379E /* BackGroundBase */ = {
+		0E23C20C2924BEF500C467F8 /* UserInformation */ = {
+			isa = PBXGroup;
+			children = (
+				0E23C20A2924BCD800C467F8 /* UserInformationView.swift */,
+			);
+			path = UserInformation;
+			sourceTree = "<group>";
+		};
+		0E555B25290FC004005E379E /* BGroundBase */ = {
 			isa = PBXGroup;
 			children = (
 				0E555B21290FB768005E379E /* BackGroundVC.swift */,
 				0E555B23290FB7F5005E379E /* BackGroundTypes.swift */,
 			);
-			path = BackGroundBase;
+			path = BGroundBase;
 			sourceTree = "<group>";
 		};
 		0E555B2A290FE139005E379E /* SuggestionModel */ = {
@@ -390,7 +402,7 @@
 			children = (
 				0E856A582906880400F2A258 /* BaseSignView.swift */,
 				0E9973732908A8F700B95BC6 /* BaseCompletionView.swift */,
-				0E555B25290FC004005E379E /* BackGroundBase */,
+				0E555B25290FC004005E379E /* BGroundBase */,
 			);
 			path = BaseSign;
 			sourceTree = "<group>";
@@ -437,6 +449,8 @@
 			isa = PBXGroup;
 			children = (
 				0EF59AE029097AED003FEA03 /* UserVC.swift */,
+				0E23C20D2924D14D00C467F8 /* UserChartView.swift */,
+				0E23C20C2924BEF500C467F8 /* UserInformation */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -640,6 +654,7 @@
 				0E0F94D928FD5D590004951F /* MyAPI+Method.swift in Sources */,
 				0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */,
 				0EF59AF72909993A003FEA03 /* SuggestionCoinSectionView.swift in Sources */,
+				0E23C20E2924D14D00C467F8 /* UserChartView.swift in Sources */,
 				0EEE8D3C2911093700227199 /* UserGraphListDetileVC.swift in Sources */,
 				0E99737B2908E44C00B95BC6 /* PasswordCompletionVC.swift in Sources */,
 				0EEE8D3E2911096900227199 /* UserGraphListModel.swift in Sources */,
@@ -654,6 +669,7 @@
 				0EEE8D5729126E2800227199 /* GrassSectionDetilVC.swift in Sources */,
 				0E0F94E628FD5FC50004951F /* Signup.swift in Sources */,
 				0E0F94DE28FD5D590004951F /* MyAPI+Request.swift in Sources */,
+				0E23C20B2924BCD800C467F8 /* UserInformationView.swift in Sources */,
 				0E0F94DF28FD5D590004951F /* MyAPI+Task.swift in Sources */,
 				0EAFF93E2921E30600162DD0 /* BadgesCell.swift in Sources */,
 				0EAFF93B2921E0E600162DD0 /* PopularBadgesView.swift in Sources */,

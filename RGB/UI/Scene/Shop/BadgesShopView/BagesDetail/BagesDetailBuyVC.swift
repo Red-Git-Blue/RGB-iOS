@@ -8,8 +8,12 @@
 import UIKit
 import Then
 import SnapKit
+import RxCocoa
+import RxSwift
 
 class BagesDetailBuyViewController: UIViewController {
+    
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         view.backgroundColor = .black
@@ -28,6 +32,17 @@ class BagesDetailBuyViewController: UIViewController {
         bagesImage.layer.cornerRadius = 20
         purchaseButton.layer.cornerRadius = 20
         cancelButton.layer.cornerRadius = 20
+        
+        purchaseButton.rx.tap
+            .bind {
+                print("🤑:: 구매구매!")
+            }.disposed(by: disposeBag)
+        
+        cancelButton.rx.tap
+            .bind {
+                self.dismiss(animated: true)
+                print("↩️:: cancel!")
+            }.disposed(by: disposeBag)
     }
     
     private lazy var bagesImage = UIImageView().then {
@@ -63,7 +78,7 @@ class BagesDetailBuyViewController: UIViewController {
         $0.setTitle("취소하기", for: .normal)
         $0.setTitleColor(UIColor(ciColor: .white), for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 20.0, weight: .bold)
-        $0.backgroundColor = .green
+        $0.backgroundColor = .gray
     }
 }
 

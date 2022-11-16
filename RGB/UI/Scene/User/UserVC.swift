@@ -11,9 +11,7 @@ final class UserViewController: UIViewController {
         stackView.distribution = .equalSpacing
         stackView.spacing = 0.0
         
-        let userGraphListSectionView = UserGraphListSectionView(frame: .zero, viewController: self)
-        let suggestionCoinSectionView = SuggestionCoinSectionView(frame: .zero, viewController: self)
-        let grassSectionView = GrassSectionView(frame: .zero, viewController: self)
+        let userInformationView = UserInformationView(frame: .zero, viewController: self)
         
         let spacingView = UIView()
         spacingView.snp.makeConstraints {
@@ -21,10 +19,7 @@ final class UserViewController: UIViewController {
         }
         
         [
-            userGraphListSectionView,
-            suggestionCoinSectionView,
-            grassSectionView,
-            spacingView
+            userInformationView
         ].forEach {
             stackView.addArrangedSubview($0)
         }
