@@ -15,15 +15,23 @@ final class UserViewController: UIViewController {
         
         let userChartView = UserChartView(frame: .zero, viewController: self)
         
+        let userBagesView = UserBagesView(frame: .zero, viewController: self)
+        
         let spacingView = UIView()
         spacingView.snp.makeConstraints {
-            $0.height.equalTo(230.0)
+            $0.height.equalTo(210.0)
         }
         
+        let spacingMiddleView = UIView()
+        spacingMiddleView.snp.makeConstraints {
+            $0.height.equalTo(210.0)
+        }
         [
             userInformationView,
             spacingView,
-            userChartView
+            userChartView,
+            spacingMiddleView,
+            userBagesView
         ].forEach {
             stackView.addArrangedSubview($0)
         }

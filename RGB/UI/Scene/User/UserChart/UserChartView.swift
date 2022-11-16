@@ -66,6 +66,10 @@ class UserChartView: UIView {
         $0.textColor = .white
     }
     
+    private lazy var separator = UIView().then {
+        $0.backgroundColor = .separator
+    }
+    
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
         super.init(frame: frame)
@@ -93,7 +97,8 @@ extension UserChartView {
             averageCoinLabelTitle,
             averageCoinLabel,
             marketCapCoinLabelTitle,
-            marketCapCoinLabel
+            marketCapCoinLabel,
+            separator
         ].forEach { self.addSubview($0) }
         
         coinLabel.snp.makeConstraints {
@@ -148,6 +153,13 @@ extension UserChartView {
         marketCapCoinLabel.snp.makeConstraints {
             $0.top.equalTo(averageCoinLabel.snp.bottom).offset(5.0)
             $0.trailing.equalTo(averageCoinLabel.snp.trailing)
+        }
+        
+        separator.snp.makeConstraints {
+            $0.top.equalTo(backgroundView.snp.bottom).offset(30.0)
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(1.0)
+            $0.width.equalTo(370.0)
         }
     }
 }

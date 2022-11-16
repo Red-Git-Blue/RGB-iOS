@@ -21,6 +21,7 @@
 		0E23C209292477E200C467F8 /* BagesDetailBuyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C208292477E200C467F8 /* BagesDetailBuyVC.swift */; };
 		0E23C20B2924BCD800C467F8 /* UserInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C20A2924BCD800C467F8 /* UserInformationView.swift */; };
 		0E23C20E2924D14D00C467F8 /* UserChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C20D2924D14D00C467F8 /* UserChartView.swift */; };
+		0E23C2112924EDCE00C467F8 /* UserBagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C2102924EDCE00C467F8 /* UserBagesView.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
 		0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B26290FDF2E005E379E /* SuggestionModel.swift */; };
@@ -90,6 +91,7 @@
 		0E23C208292477E200C467F8 /* BagesDetailBuyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailBuyVC.swift; sourceTree = "<group>"; };
 		0E23C20A2924BCD800C467F8 /* UserInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationView.swift; sourceTree = "<group>"; };
 		0E23C20D2924D14D00C467F8 /* UserChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChartView.swift; sourceTree = "<group>"; };
+		0E23C2102924EDCE00C467F8 /* UserBagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBagesView.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
 		0E555B26290FDF2E005E379E /* SuggestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionModel.swift; sourceTree = "<group>"; };
@@ -198,6 +200,22 @@
 				0E23C20A2924BCD800C467F8 /* UserInformationView.swift */,
 			);
 			path = UserInformation;
+			sourceTree = "<group>";
+		};
+		0E23C20F2924D2DD00C467F8 /* UserChart */ = {
+			isa = PBXGroup;
+			children = (
+				0E23C20D2924D14D00C467F8 /* UserChartView.swift */,
+			);
+			path = UserChart;
+			sourceTree = "<group>";
+		};
+		0E23C2122924EDD500C467F8 /* UserBages */ = {
+			isa = PBXGroup;
+			children = (
+				0E23C2102924EDCE00C467F8 /* UserBagesView.swift */,
+			);
+			path = UserBages;
 			sourceTree = "<group>";
 		};
 		0E555B25290FC004005E379E /* BGroundBase */ = {
@@ -449,7 +467,8 @@
 			isa = PBXGroup;
 			children = (
 				0EF59AE029097AED003FEA03 /* UserVC.swift */,
-				0E23C20D2924D14D00C467F8 /* UserChartView.swift */,
+				0E23C2122924EDD500C467F8 /* UserBages */,
+				0E23C20F2924D2DD00C467F8 /* UserChart */,
 				0E23C20C2924BEF500C467F8 /* UserInformation */,
 			);
 			path = User;
@@ -642,6 +661,7 @@
 			files = (
 				0E23C209292477E200C467F8 /* BagesDetailBuyVC.swift in Sources */,
 				0EF59AFF2909FE01003FEA03 /* Separator.swift in Sources */,
+				0E23C2112924EDCE00C467F8 /* UserBagesView.swift in Sources */,
 				0E61D6932907E6310098A3F5 /* SignupView.swift in Sources */,
 				0E0F94DA28FD5D590004951F /* ModelType.swift in Sources */,
 				0E0F94DB28FD5D590004951F /* MyAPI.swift in Sources */,
