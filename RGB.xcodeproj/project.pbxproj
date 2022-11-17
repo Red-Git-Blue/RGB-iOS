@@ -38,6 +38,7 @@
 		0E61D6932907E6310098A3F5 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61D6922907E6310098A3F5 /* SignupView.swift */; };
 		0E61D6952907F0080098A3F5 /* PasswordChangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61D6942907F0080098A3F5 /* PasswordChangeVC.swift */; };
 		0E61D69A2907F0E20098A3F5 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61D6992907F0E20098A3F5 /* PasswordView.swift */; };
+		0E7929C42926428A00C0D188 /* ThemeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7929C32926428A00C0D188 /* ThemeListCell.swift */; };
 		0E856A592906880400F2A258 /* BaseSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E856A582906880400F2A258 /* BaseSignView.swift */; };
 		0E99736D2908A52400B95BC6 /* CertificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99736C2908A52400B95BC6 /* CertificationVC.swift */; };
 		0E9973702908A58F00B95BC6 /* CertificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99736F2908A58F00B95BC6 /* CertificationView.swift */; };
@@ -115,6 +116,7 @@
 		0E61D6922907E6310098A3F5 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		0E61D6942907F0080098A3F5 /* PasswordChangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeVC.swift; sourceTree = "<group>"; };
 		0E61D6992907F0E20098A3F5 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
+		0E7929C32926428A00C0D188 /* ThemeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeListCell.swift; sourceTree = "<group>"; };
 		0E856A582906880400F2A258 /* BaseSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSignView.swift; sourceTree = "<group>"; };
 		0E99736C2908A52400B95BC6 /* CertificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationVC.swift; sourceTree = "<group>"; };
 		0E99736F2908A58F00B95BC6 /* CertificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationView.swift; sourceTree = "<group>"; };
@@ -244,8 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				0E23C2162925B5A500C467F8 /* SettingVC.swift */,
-				0E23C2192925BDB600C467F8 /* ChangeThemeCell.swift */,
-				0E23C221292618C000C467F8 /* ThemeVC.swift */,
+				0E7929C229263B8300C0D188 /* Theme */,
 				0E23C21B2925BE3E00C467F8 /* NotificationSettingsCell.swift */,
 				0E23C21D2925BE6F00C467F8 /* ChangeLanguageCell.swift */,
 				0E23C21F2925BE9E00C467F8 /* AccountSettingCell.swift */,
@@ -323,6 +324,16 @@
 				0E9973752908E38A00B95BC6 /* PasswordCompletion */,
 			);
 			path = "Password related";
+			sourceTree = "<group>";
+		};
+		0E7929C229263B8300C0D188 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				0E23C221292618C000C467F8 /* ThemeVC.swift */,
+				0E7929C32926428A00C0D188 /* ThemeListCell.swift */,
+				0E23C2192925BDB600C467F8 /* ChangeThemeCell.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		0E99736E2908A52B00B95BC6 /* Certification */ = {
@@ -761,6 +772,7 @@
 				0E9973702908A58F00B95BC6 /* CertificationView.swift in Sources */,
 				0EF59AEF29099246003FEA03 /* UserGraphListSectionView.swift in Sources */,
 				0EF59AD6290978E2003FEA03 /* TapBarVC.swift in Sources */,
+				0E7929C42926428A00C0D188 /* ThemeListCell.swift in Sources */,
 				0E856A592906880400F2A258 /* BaseSignView.swift in Sources */,
 				0E0F94E328FD5DFF0004951F /* RequestModel.swift in Sources */,
 				0E9973772908E3C100B95BC6 /* PasswordCompletionView.swift in Sources */,

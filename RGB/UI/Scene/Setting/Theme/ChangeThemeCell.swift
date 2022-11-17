@@ -34,7 +34,7 @@ extension ChangeThemeCell {
         }
         themeLable.snp.makeConstraints {
             $0.top.equalTo(themeImage.snp.top).offset(1.0)
-            $0.leading.equalTo(themeImage.snp.leading).inset(20.0)
+            $0.leading.equalTo(themeImage.snp.leading).inset(40.0)
         }
     }
 }
