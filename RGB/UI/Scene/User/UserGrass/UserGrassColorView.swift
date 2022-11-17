@@ -1,24 +1,23 @@
 //
-//  UserBagesView.swift
+//  UserGrassColorView.swift
 //  RGB
 //
 //  Created by 박준하 on 2022/11/16.
 //
-
 import UIKit
 
-class UserBadgesView: UIView {
+class UserGrassColorView: UIView {
     private final var controller: UIViewController
 
-    private lazy var badgesLabel = UILabel().then {
+    private lazy var grassLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 16.0, weight: .bold)
-        $0.text = "배지"
+        $0.text = "색상"
         $0.textColor = .white
     }
 
-    private lazy var badgesCountLabel = UILabel().then {
+    private lazy var glassCountLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 16.0, weight: .bold)
-        $0.text = "(12 / 53)"
+        $0.text = "(6 / 21)"
         $0.textColor = .gray
     }
 
@@ -28,19 +27,15 @@ class UserBadgesView: UIView {
         $0.titleLabel?.font = .systemFont(ofSize: 16.0, weight: .bold)
     }
     
-    private lazy var badgesCollectionView = UIView().then {
+    private lazy var grassColorCollectionView = UIView().then {
         $0.backgroundColor = .red
-    }
-    
-    private lazy var separator = UIView().then {
-        $0.backgroundColor = .separator
     }
 
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
         super.init(frame: frame)
         setup()
-        badgesCollectionView.layer.cornerRadius = 20
+        grassColorCollectionView.layer.cornerRadius = 20
     }
 
     required init?(coder: NSCoder) {
@@ -49,26 +44,25 @@ class UserBadgesView: UIView {
 
 }
 
-extension UserBadgesView {
+extension UserGrassColorView {
     func setup() {
         [
-            badgesLabel,
-            badgesCountLabel,
+            grassLabel,
+            glassCountLabel,
             showAllAppsButton,
-            badgesCollectionView,
-            separator
+            grassColorCollectionView
         ].forEach {
             self.addSubview($0)
         }
 
-        badgesLabel.snp.makeConstraints {
+        grassLabel.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.leading.equalToSuperview().inset(30.0)
         }
 
-        badgesCountLabel.snp.makeConstraints {
+        glassCountLabel.snp.makeConstraints {
             $0.top.equalToSuperview()
-            $0.leading.equalTo(badgesLabel.snp.trailing)
+            $0.leading.equalTo(grassLabel.snp.trailing)
         }
 
         showAllAppsButton.snp.makeConstraints {
@@ -76,17 +70,10 @@ extension UserBadgesView {
             $0.trailing.equalToSuperview().inset(30.0)
         }
         
-        badgesCollectionView.snp.makeConstraints {
-            $0.top.equalTo(badgesLabel.snp.bottom).offset(10.0)
+        grassColorCollectionView.snp.makeConstraints {
+            $0.top.equalTo(grassLabel.snp.bottom).offset(10.0)
             $0.leading.equalToSuperview().inset(30.0)
             $0.height.equalTo(237.0)
-            $0.width.equalTo(370.0)
-        }
-        
-        separator.snp.makeConstraints {
-            $0.top.equalTo(badgesCollectionView.snp.bottom).offset(30.0)
-            $0.centerX.equalToSuperview()
-            $0.height.equalTo(1.0)
             $0.width.equalTo(370.0)
         }
     }

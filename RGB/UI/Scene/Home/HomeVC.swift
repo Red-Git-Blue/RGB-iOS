@@ -49,7 +49,7 @@ private extension AppViewController {
         bar.shadowImage = UIImage()
         bar.isTranslucent = true
         let bellNavigetionItem = UIBarButtonItem(image: UIImage(systemName: "bell"), style: .plain, target: nil, action: nil)
-        let setNavigetionItem = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: nil, action: nil)
+        let setNavigetionItem = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: #selector(tapSettingButton))
 
         navigationItem.rightBarButtonItems = [setNavigetionItem, bellNavigetionItem]
     }
@@ -73,5 +73,10 @@ private extension AppViewController {
         stackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    @objc func tapSettingButton() {
+        self.navigationController?.pushViewController(SettingViewController(), animated: true)
+        print("설정 버튼이 클릭됨")
     }
 }

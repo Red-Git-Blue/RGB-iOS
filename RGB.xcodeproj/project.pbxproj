@@ -22,6 +22,13 @@
 		0E23C20B2924BCD800C467F8 /* UserInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C20A2924BCD800C467F8 /* UserInformationView.swift */; };
 		0E23C20E2924D14D00C467F8 /* UserChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C20D2924D14D00C467F8 /* UserChartView.swift */; };
 		0E23C2112924EDCE00C467F8 /* UserBadgesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C2102924EDCE00C467F8 /* UserBadgesView.swift */; };
+		0E23C21429250CA300C467F8 /* UserGrassColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C21329250CA300C467F8 /* UserGrassColorView.swift */; };
+		0E23C2172925B5A500C467F8 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C2162925B5A500C467F8 /* SettingVC.swift */; };
+		0E23C21A2925BDB600C467F8 /* ChangeThemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C2192925BDB600C467F8 /* ChangeThemeCell.swift */; };
+		0E23C21C2925BE3E00C467F8 /* NotificationSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C21B2925BE3E00C467F8 /* NotificationSettingsCell.swift */; };
+		0E23C21E2925BE6F00C467F8 /* ChangeLanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C21D2925BE6F00C467F8 /* ChangeLanguageCell.swift */; };
+		0E23C2202925BE9E00C467F8 /* AccountSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C21F2925BE9E00C467F8 /* AccountSettingCell.swift */; };
+		0E23C222292618C000C467F8 /* ThemeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C221292618C000C467F8 /* ThemeVC.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
 		0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B26290FDF2E005E379E /* SuggestionModel.swift */; };
@@ -92,6 +99,13 @@
 		0E23C20A2924BCD800C467F8 /* UserInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationView.swift; sourceTree = "<group>"; };
 		0E23C20D2924D14D00C467F8 /* UserChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChartView.swift; sourceTree = "<group>"; };
 		0E23C2102924EDCE00C467F8 /* UserBadgesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBadgesView.swift; sourceTree = "<group>"; };
+		0E23C21329250CA300C467F8 /* UserGrassColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGrassColorView.swift; sourceTree = "<group>"; };
+		0E23C2162925B5A500C467F8 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		0E23C2192925BDB600C467F8 /* ChangeThemeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeThemeCell.swift; sourceTree = "<group>"; };
+		0E23C21B2925BE3E00C467F8 /* NotificationSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsCell.swift; sourceTree = "<group>"; };
+		0E23C21D2925BE6F00C467F8 /* ChangeLanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageCell.swift; sourceTree = "<group>"; };
+		0E23C21F2925BE9E00C467F8 /* AccountSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingCell.swift; sourceTree = "<group>"; };
+		0E23C221292618C000C467F8 /* ThemeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeVC.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
 		0E555B26290FDF2E005E379E /* SuggestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionModel.swift; sourceTree = "<group>"; };
@@ -218,6 +232,27 @@
 			path = UserBages;
 			sourceTree = "<group>";
 		};
+		0E23C21529250CA900C467F8 /* UserGrass */ = {
+			isa = PBXGroup;
+			children = (
+				0E23C21329250CA300C467F8 /* UserGrassColorView.swift */,
+			);
+			path = UserGrass;
+			sourceTree = "<group>";
+		};
+		0E23C2182925B5AA00C467F8 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				0E23C2162925B5A500C467F8 /* SettingVC.swift */,
+				0E23C2192925BDB600C467F8 /* ChangeThemeCell.swift */,
+				0E23C221292618C000C467F8 /* ThemeVC.swift */,
+				0E23C21B2925BE3E00C467F8 /* NotificationSettingsCell.swift */,
+				0E23C21D2925BE6F00C467F8 /* ChangeLanguageCell.swift */,
+				0E23C21F2925BE9E00C467F8 /* AccountSettingCell.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		0E555B25290FC004005E379E /* BGroundBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +300,7 @@
 				0EF59AE629097BBD003FEA03 /* User */,
 				0EF7116B2907ACA8005D62EE /* Login */,
 				0E61D68C2907D3780098A3F5 /* Signup */,
+				0E23C2182925B5AA00C467F8 /* Setting */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -467,6 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				F211DC1658F4F0A12C74281E /* UserVC.swift */,
+				0E23C21529250CA900C467F8 /* UserGrass */,
 				0E23C2122924EDD500C467F8 /* UserBages */,
 				0E23C20F2924D2DD00C467F8 /* UserChart */,
 				0E23C20C2924BEF500C467F8 /* UserInformation */,
@@ -672,6 +709,7 @@
 				0EF59ADF29097AE6003FEA03 /* ShopVC.swift in Sources */,
 				0EAFF92F29211D0D00162DD0 /* AdvertisementSectionView.swift in Sources */,
 				0E0F94D928FD5D590004951F /* MyAPI+Method.swift in Sources */,
+				0E23C21A2925BDB600C467F8 /* ChangeThemeCell.swift in Sources */,
 				0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */,
 				0EF59AF72909993A003FEA03 /* SuggestionCoinSectionView.swift in Sources */,
 				0E23C20E2924D14D00C467F8 /* UserChartView.swift in Sources */,
@@ -686,12 +724,14 @@
 				0EAFF9352921335D00162DD0 /* CategorySectionView.swift in Sources */,
 				0EF59ADD29097AD9003FEA03 /* SearchVC.swift in Sources */,
 				0E61D6952907F0080098A3F5 /* PasswordChangeVC.swift in Sources */,
+				0E23C21E2925BE6F00C467F8 /* ChangeLanguageCell.swift in Sources */,
 				0EEE8D5729126E2800227199 /* GrassSectionDetilVC.swift in Sources */,
 				0E0F94E628FD5FC50004951F /* Signup.swift in Sources */,
 				0E0F94DE28FD5D590004951F /* MyAPI+Request.swift in Sources */,
 				0E23C20B2924BCD800C467F8 /* UserInformationView.swift in Sources */,
 				0E0F94DF28FD5D590004951F /* MyAPI+Task.swift in Sources */,
 				0EAFF93E2921E30600162DD0 /* BadgesCell.swift in Sources */,
+				0E23C2172925B5A500C467F8 /* SettingVC.swift in Sources */,
 				0EAFF93B2921E0E600162DD0 /* PopularBadgesView.swift in Sources */,
 				0EAFF94429221BD000162DD0 /* LastTextView.swift in Sources */,
 				0EAFF94929222E6100162DD0 /* BagesListModel.swift in Sources */,
@@ -704,15 +744,19 @@
 				0EF711682906A419005D62EE /* LoginView.swift in Sources */,
 				0EE4352428F4476F00CA7E58 /* AppDelegate.swift in Sources */,
 				0E99736D2908A52400B95BC6 /* CertificationVC.swift in Sources */,
+				0E23C222292618C000C467F8 /* ThemeVC.swift in Sources */,
 				0EEE8D5929126E9500227199 /* GrassSectionModel.swift in Sources */,
 				0E0F94E028FD5D590004951F /* MyAPI+BaseURL.swift in Sources */,
 				0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */,
 				0E61D6912907E6250098A3F5 /* SignupVC.swift in Sources */,
 				0EF59ADB29097ACF003FEA03 /* ChartVC.swift in Sources */,
 				0E61D69A2907F0E20098A3F5 /* PasswordView.swift in Sources */,
+				0E23C2202925BE9E00C467F8 /* AccountSettingCell.swift in Sources */,
+				0E23C21C2925BE3E00C467F8 /* NotificationSettingsCell.swift in Sources */,
 				0EF59B04290CD7EF003FEA03 /* GrassSectionView.swift in Sources */,
 				0EAFF95629239C3600162DD0 /* PurchaseAndGiftButtonView.swift in Sources */,
 				0EAFF94B2922444500162DD0 /* BagesDetailVC.swift in Sources */,
+				0E23C21429250CA300C467F8 /* UserGrassColorView.swift in Sources */,
 				0EE4352628F4476F00CA7E58 /* SceneDelegate.swift in Sources */,
 				0E9973702908A58F00B95BC6 /* CertificationView.swift in Sources */,
 				0EF59AEF29099246003FEA03 /* UserGraphListSectionView.swift in Sources */,
