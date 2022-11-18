@@ -7,10 +7,14 @@
 
 import UIKit
 
-class GrassGatchaViewController: UIViewController {
+class GrassGatchaViewController: AbstractShop {
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .green
+    }
+    
+    override func viewIndex() -> Int {
+        return 3
     }
 }

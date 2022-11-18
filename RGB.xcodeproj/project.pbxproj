@@ -515,9 +515,6 @@
 			isa = PBXGroup;
 			children = (
 				0EF69C30292790E000C36DAC /* Shops */,
-				0EF69C312927911400C36DAC /* AbstractShop.swift */,
-				0EF69C352927971400C36DAC /* List */,
-				0EF69C39292797AB00C36DAC /* GrassGatcha */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -587,8 +584,11 @@
 		0EF69C30292790E000C36DAC /* Shops */ = {
 			isa = PBXGroup;
 			children = (
+				0EF69C3A29279DCB00C36DAC /* BaseShop */,
 				0EF69C2E2927904D00C36DAC /* Main */,
 				0EF69C2F292790B800C36DAC /* Category */,
+				0EF69C352927971400C36DAC /* List */,
+				0EF69C39292797AB00C36DAC /* GrassGatcha */,
 			);
 			path = Shops;
 			sourceTree = "<group>";
@@ -607,6 +607,14 @@
 				0EF69C362927973D00C36DAC /* GrassGatchaVC.swift */,
 			);
 			path = GrassGatcha;
+			sourceTree = "<group>";
+		};
+		0EF69C3A29279DCB00C36DAC /* BaseShop */ = {
+			isa = PBXGroup;
+			children = (
+				0EF69C312927911400C36DAC /* AbstractShop.swift */,
+			);
+			path = BaseShop;
 			sourceTree = "<group>";
 		};
 		0EF711662906A2F7005D62EE /* textFile */ = {

@@ -2,7 +2,7 @@ import SnapKit
 import Then
 import UIKit
 
-final class ShopViewController: UIViewController {
+final class ShopViewController: AbstractShop {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
 
@@ -52,8 +52,11 @@ final class ShopViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupLayout()
+    }
+    
+    override func viewIndex() -> Int {
+        return 0
     }
 }
 
@@ -78,9 +81,5 @@ private extension ShopViewController {
         stackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
-    }
-    
-    @objc func nav() {
-        presentView(CategoryViewController(), false)
     }
 }
