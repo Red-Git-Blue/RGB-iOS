@@ -110,7 +110,7 @@ extension NewBadgesView: UICollectionViewDataSource {
         let detailViewController = BagesDetailViewController()
         detailViewController.bageList = selectedSuggesion
         detailViewController.modalPresentationStyle = .fullScreen
-        controller.present(detailViewController, animated: true)
+        controller.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 
