@@ -30,7 +30,6 @@ class UserGraphListDetileViewController: UIViewController {
             self.isModalInPresentation = true
         }
         setup()
-        
     }
     
     internal lazy var downButton = UIButton().then {
@@ -229,7 +228,7 @@ extension UserGraphListDetileViewController {
         
         graphList.snp.makeConstraints {
             $0.top.equalTo(userTakeCoin.snp.bottom).offset(20.0)
-            $0.leading.equalTo(userImage.snp.leading)
+            $0.centerX.equalToSuperview()
             $0.height.equalTo(160.0)
             $0.width.equalTo(370.0)
         }

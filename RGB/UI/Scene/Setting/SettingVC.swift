@@ -34,7 +34,8 @@ final class SettingViewController: UIViewController  {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
+        
+//        tableView.rowHeight = UITableView.automaticDimension
         tableView.frame = tableView.frame.inset(by: UIEdgeInsets(top: 0.0, left: 30.0, bottom: 0.0, right: 30.0))
     }
 }
@@ -50,9 +51,10 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate{
         switch indexPathRow {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "changeThemeCell") as! ChangeThemeCell
-            cell.layer.cornerRadius = 20
             cell.setup()
+            cell.layer.cornerRadius = 20
             cell.backgroundColor = UIColor(named: "TableViewColor")
+            cell.layoutMarginsDidChange()
             cell.frame = cell.frame.inset(by: UIEdgeInsets(top: 20.0, left: 0.0, bottom: 20.0, right: 0.0))
             return cell
         case 1:

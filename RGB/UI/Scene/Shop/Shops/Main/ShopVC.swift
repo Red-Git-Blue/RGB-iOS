@@ -48,9 +48,8 @@ final class ShopViewController: UIViewController {
         ].forEach {
             stackView.addArrangedSubview($0)
         }
-        
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,5 +78,9 @@ private extension ShopViewController {
         stackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    @objc func nav() {
+        presentView(CategoryViewController(), false)
     }
 }

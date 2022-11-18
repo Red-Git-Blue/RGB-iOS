@@ -50,6 +50,8 @@ private extension AppViewController {
         bar.isTranslucent = true
         let bellNavigetionItem = UIBarButtonItem(image: UIImage(systemName: "bell"), style: .plain, target: nil, action: nil)
         let setNavigetionItem = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: #selector(tapSettingButton))
+        
+        [bellNavigetionItem, setNavigetionItem].forEach { $0.tintColor = .white }
 
         navigationItem.rightBarButtonItems = [setNavigetionItem, bellNavigetionItem]
     }
