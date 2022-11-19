@@ -512,7 +512,7 @@
 			children = (
 				0EF69C3D2928604900C36DAC /* BaseChart */,
 				0EF69C4229288F2E00C36DAC /* Coin */,
-				0EF69C3E2928637500C36DAC /* StatsVC.swift */,
+				0EF69C4C2928A7A300C36DAC /* Stats */,
 				0EF69C40292863BE00C36DAC /* RankVC.swift */,
 			);
 			path = Chart;
@@ -673,6 +673,14 @@
 				0EF69C492928A2D100C36DAC /* DropCoinView.swift */,
 			);
 			path = DropCoin;
+			sourceTree = "<group>";
+		};
+		0EF69C4C2928A7A300C36DAC /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				0EF69C3E2928637500C36DAC /* StatsVC.swift */,
+			);
+			path = Stats;
 			sourceTree = "<group>";
 		};
 		0EF711662906A2F7005D62EE /* textFile */ = {
