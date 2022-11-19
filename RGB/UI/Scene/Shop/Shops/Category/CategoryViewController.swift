@@ -1,6 +1,6 @@
 import UIKit
 
-class CategoryViewController: AbstractShop {
+class CategoryViewController: BaseAbstractShop {
     override func viewDidLoad() {
         super.viewDidLoad()
         

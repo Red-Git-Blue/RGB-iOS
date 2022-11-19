@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class AbstractShop: UIViewController {
+public class BaseAbstractShop: UIViewController {
     
     func viewIndex() -> Int {
         return 0

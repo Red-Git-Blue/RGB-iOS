@@ -1,6 +1,6 @@
 import UIKit
 
-class GrassGatchaViewController: AbstractShop {
+class GrassGatchaViewController: BaseAbstractShop {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
 

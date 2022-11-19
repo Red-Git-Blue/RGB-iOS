@@ -2,7 +2,7 @@ import SnapKit
 import Then
 import UIKit
 
-final class ShopViewController: AbstractShop {
+final class ShopViewController: BaseAbstractShop {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
 

@@ -81,9 +81,12 @@
 		0EF59B04290CD7EF003FEA03 /* GrassSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59B03290CD7EF003FEA03 /* GrassSectionView.swift */; };
 		0EF69C2B29275EF300C36DAC /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C2A29275EF300C36DAC /* CategoryViewController.swift */; };
 		0EF69C2D29278E4D00C36DAC /* ControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C2C29278E4D00C36DAC /* ControllerManager.swift */; };
-		0EF69C322927911400C36DAC /* AbstractShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C312927911400C36DAC /* AbstractShop.swift */; };
+		0EF69C322927911400C36DAC /* BaseAbstractShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C312927911400C36DAC /* BaseAbstractShop.swift */; };
 		0EF69C342927970800C36DAC /* LIstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C332927970800C36DAC /* LIstVC.swift */; };
 		0EF69C372927973D00C36DAC /* GrassGatchaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C362927973D00C36DAC /* GrassGatchaVC.swift */; };
+		0EF69C3C29285F2300C36DAC /* BaseAbstractChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C3B29285F2300C36DAC /* BaseAbstractChart.swift */; };
+		0EF69C3F2928637500C36DAC /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C3E2928637500C36DAC /* StatsVC.swift */; };
+		0EF69C41292863BE00C36DAC /* RankVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C40292863BE00C36DAC /* RankVC.swift */; };
 		0EF711682906A419005D62EE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF711672906A419005D62EE /* LoginView.swift */; };
 		6FAB5117A39FCDD46D18402F /* Pods_RGB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8416AB1030575CC12D855FE4 /* Pods_RGB.framework */; };
 		F211DB7D48C4AEBE76C7FC00 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211DC1658F4F0A12C74281E /* UserVC.swift */; };
@@ -166,9 +169,12 @@
 		0EF59B03290CD7EF003FEA03 /* GrassSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassSectionView.swift; sourceTree = "<group>"; };
 		0EF69C2A29275EF300C36DAC /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		0EF69C2C29278E4D00C36DAC /* ControllerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerManager.swift; sourceTree = "<group>"; };
-		0EF69C312927911400C36DAC /* AbstractShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractShop.swift; sourceTree = "<group>"; };
+		0EF69C312927911400C36DAC /* BaseAbstractShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAbstractShop.swift; sourceTree = "<group>"; };
 		0EF69C332927970800C36DAC /* LIstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LIstVC.swift; sourceTree = "<group>"; };
 		0EF69C362927973D00C36DAC /* GrassGatchaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassGatchaVC.swift; sourceTree = "<group>"; };
+		0EF69C3B29285F2300C36DAC /* BaseAbstractChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAbstractChart.swift; sourceTree = "<group>"; };
+		0EF69C3E2928637500C36DAC /* StatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
+		0EF69C40292863BE00C36DAC /* RankVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankVC.swift; sourceTree = "<group>"; };
 		0EF711672906A419005D62EE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6F19F388A3CBD1A2BBFF1839 /* Pods-RGB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB.release.xcconfig"; path = "Target Support Files/Pods-RGB/Pods-RGB.release.xcconfig"; sourceTree = "<group>"; };
 		8416AB1030575CC12D855FE4 /* Pods_RGB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -498,7 +504,10 @@
 		0EF59AE329097B91003FEA03 /* Chart */ = {
 			isa = PBXGroup;
 			children = (
+				0EF69C3D2928604900C36DAC /* BaseChart */,
 				0EF59ADA29097ACF003FEA03 /* ChartVC.swift */,
+				0EF69C3E2928637500C36DAC /* StatsVC.swift */,
+				0EF69C40292863BE00C36DAC /* RankVC.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -612,9 +621,17 @@
 		0EF69C3A29279DCB00C36DAC /* BaseShop */ = {
 			isa = PBXGroup;
 			children = (
-				0EF69C312927911400C36DAC /* AbstractShop.swift */,
+				0EF69C312927911400C36DAC /* BaseAbstractShop.swift */,
 			);
 			path = BaseShop;
+			sourceTree = "<group>";
+		};
+		0EF69C3D2928604900C36DAC /* BaseChart */ = {
+			isa = PBXGroup;
+			children = (
+				0EF69C3B29285F2300C36DAC /* BaseAbstractChart.swift */,
+			);
+			path = BaseChart;
 			sourceTree = "<group>";
 		};
 		0EF711662906A2F7005D62EE /* textFile */ = {
@@ -795,6 +812,7 @@
 				0E9973742908A8F700B95BC6 /* BaseCompletionView.swift in Sources */,
 				0EAFF9392921B49700162DD0 /* CategorySectionViewCell.swift in Sources */,
 				0EF59AFD2909997A003FEA03 /* SuggestionFeature.swift in Sources */,
+				0EF69C3F2928637500C36DAC /* StatsVC.swift in Sources */,
 				0EAFF9352921335D00162DD0 /* CategorySectionView.swift in Sources */,
 				0EF59ADD29097AD9003FEA03 /* SearchVC.swift in Sources */,
 				0E61D6952907F0080098A3F5 /* PasswordChangeVC.swift in Sources */,
@@ -815,8 +833,9 @@
 				0EAFF9412921F10E00162DD0 /* NewBadgesView.swift in Sources */,
 				0E9BC16228FEC46100B8DB56 /* LoginVC.swift in Sources */,
 				0EF59AD429096081003FEA03 /* CertificationCompletionVC.swift in Sources */,
-				0EF69C322927911400C36DAC /* AbstractShop.swift in Sources */,
+				0EF69C322927911400C36DAC /* BaseAbstractShop.swift in Sources */,
 				0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */,
+				0EF69C3C29285F2300C36DAC /* BaseAbstractChart.swift in Sources */,
 				0EF69C372927973D00C36DAC /* GrassGatchaVC.swift in Sources */,
 				0EF711682906A419005D62EE /* LoginView.swift in Sources */,
 				0EE4352428F4476F00CA7E58 /* AppDelegate.swift in Sources */,
@@ -830,6 +849,7 @@
 				0EF59ADB29097ACF003FEA03 /* ChartVC.swift in Sources */,
 				0E61D69A2907F0E20098A3F5 /* PasswordView.swift in Sources */,
 				0E23C2202925BE9E00C467F8 /* AccountSettingCell.swift in Sources */,
+				0EF69C41292863BE00C36DAC /* RankVC.swift in Sources */,
 				0E23C21C2925BE3E00C467F8 /* NotificationSettingsCell.swift in Sources */,
 				0EF69C342927970800C36DAC /* LIstVC.swift in Sources */,
 				0EF59B04290CD7EF003FEA03 /* GrassSectionView.swift in Sources */,
