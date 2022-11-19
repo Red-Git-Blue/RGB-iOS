@@ -91,6 +91,7 @@
 		0EF69C4729289D5F00C36DAC /* IncreaseCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C4629289D5F00C36DAC /* IncreaseCoinView.swift */; };
 		0EF69C4A2928A2D100C36DAC /* DropCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C492928A2D100C36DAC /* DropCoinView.swift */; };
 		0EF69C4F2928D34B00C36DAC /* MyRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C4E2928D34B00C36DAC /* MyRankView.swift */; };
+		0EF69C522928E53B00C36DAC /* HighestThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C512928E53B00C36DAC /* HighestThreeView.swift */; };
 		0EF711682906A419005D62EE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF711672906A419005D62EE /* LoginView.swift */; };
 		6FAB5117A39FCDD46D18402F /* Pods_RGB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8416AB1030575CC12D855FE4 /* Pods_RGB.framework */; };
 		F211DB7D48C4AEBE76C7FC00 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211DC1658F4F0A12C74281E /* UserVC.swift */; };
@@ -183,6 +184,7 @@
 		0EF69C4629289D5F00C36DAC /* IncreaseCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncreaseCoinView.swift; sourceTree = "<group>"; };
 		0EF69C492928A2D100C36DAC /* DropCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropCoinView.swift; sourceTree = "<group>"; };
 		0EF69C4E2928D34B00C36DAC /* MyRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRankView.swift; sourceTree = "<group>"; };
+		0EF69C512928E53B00C36DAC /* HighestThreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighestThreeView.swift; sourceTree = "<group>"; };
 		0EF711672906A419005D62EE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6F19F388A3CBD1A2BBFF1839 /* Pods-RGB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB.release.xcconfig"; path = "Target Support Files/Pods-RGB/Pods-RGB.release.xcconfig"; sourceTree = "<group>"; };
 		8416AB1030575CC12D855FE4 /* Pods_RGB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -689,9 +691,26 @@
 			isa = PBXGroup;
 			children = (
 				0EF69C40292863BE00C36DAC /* RankVC.swift */,
-				0EF69C4E2928D34B00C36DAC /* MyRankView.swift */,
+				0EF69C502928E4A300C36DAC /* myRank */,
+				0EF69C532928E63D00C36DAC /* fundsHighestThree */,
 			);
 			path = Rank;
+			sourceTree = "<group>";
+		};
+		0EF69C502928E4A300C36DAC /* myRank */ = {
+			isa = PBXGroup;
+			children = (
+				0EF69C4E2928D34B00C36DAC /* MyRankView.swift */,
+			);
+			path = myRank;
+			sourceTree = "<group>";
+		};
+		0EF69C532928E63D00C36DAC /* fundsHighestThree */ = {
+			isa = PBXGroup;
+			children = (
+				0EF69C512928E53B00C36DAC /* HighestThreeView.swift */,
+			);
+			path = fundsHighestThree;
 			sourceTree = "<group>";
 		};
 		0EF711662906A2F7005D62EE /* textFile */ = {
@@ -874,6 +893,7 @@
 				0E9973742908A8F700B95BC6 /* BaseCompletionView.swift in Sources */,
 				0EAFF9392921B49700162DD0 /* CategorySectionViewCell.swift in Sources */,
 				0EF59AFD2909997A003FEA03 /* SuggestionFeature.swift in Sources */,
+				0EF69C522928E53B00C36DAC /* HighestThreeView.swift in Sources */,
 				0EF69C3F2928637500C36DAC /* StatsVC.swift in Sources */,
 				0EAFF9352921335D00162DD0 /* CategorySectionView.swift in Sources */,
 				0EF59ADD29097AD9003FEA03 /* SearchVC.swift in Sources */,

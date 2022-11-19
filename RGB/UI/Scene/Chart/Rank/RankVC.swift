@@ -19,6 +19,8 @@ final class RankViewController: BaseAbstractChart {
         
         let myRankView = MyRankView(frame: .zero, viewController: self)
         
+        let highestThreeView = fundsHighestThreeView(frame: .zero, viewController: self)
+        
         let spacingView = UIView()
         spacingView.snp.makeConstraints {
             $0.height.equalTo(100.0)
@@ -31,7 +33,9 @@ final class RankViewController: BaseAbstractChart {
         
         [
             myRankView,
-            spacingView
+            spacingView,
+            highestThreeView,
+            middleSpacingView
         ].forEach {
             stackView.addArrangedSubview($0)
         }
