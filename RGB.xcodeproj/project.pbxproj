@@ -71,7 +71,7 @@
 		0EF59AD6290978E2003FEA03 /* TapBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59AD5290978E2003FEA03 /* TapBarVC.swift */; };
 		0EF59AD929097ABA003FEA03 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59AD829097ABA003FEA03 /* HomeVC.swift */; };
 		0EF59ADB29097ACF003FEA03 /* CointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59ADA29097ACF003FEA03 /* CointVC.swift */; };
-		0EF59ADD29097AD9003FEA03 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59ADC29097AD9003FEA03 /* SearchVC.swift */; };
+		0EF59ADD29097AD9003FEA03 /* CoinSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59ADC29097AD9003FEA03 /* CoinSearchVC.swift */; };
 		0EF59ADF29097AE6003FEA03 /* ShopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59ADE29097AE6003FEA03 /* ShopVC.swift */; };
 		0EF59AEF29099246003FEA03 /* UserGraphListSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59AEE29099246003FEA03 /* UserGraphListSectionView.swift */; };
 		0EF59AF72909993A003FEA03 /* SuggestionCoinSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59AF62909993A003FEA03 /* SuggestionCoinSectionView.swift */; };
@@ -92,6 +92,9 @@
 		0EF69C4A2928A2D100C36DAC /* DropCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C492928A2D100C36DAC /* DropCoinView.swift */; };
 		0EF69C4F2928D34B00C36DAC /* MyRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C4E2928D34B00C36DAC /* MyRankView.swift */; };
 		0EF69C522928E53B00C36DAC /* HighestThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C512928E53B00C36DAC /* HighestThreeView.swift */; };
+		0EF69C552928EC7100C36DAC /* RevenueHighestThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C542928EC7100C36DAC /* RevenueHighestThree.swift */; };
+		0EF69C5829291D3600C36DAC /* BaseAbstractSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C5729291D3600C36DAC /* BaseAbstractSearch.swift */; };
+		0EF69C5B29291F3000C36DAC /* UserSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C5A29291F3000C36DAC /* UserSearchView.swift */; };
 		0EF711682906A419005D62EE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF711672906A419005D62EE /* LoginView.swift */; };
 		6FAB5117A39FCDD46D18402F /* Pods_RGB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8416AB1030575CC12D855FE4 /* Pods_RGB.framework */; };
 		F211DB7D48C4AEBE76C7FC00 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211DC1658F4F0A12C74281E /* UserVC.swift */; };
@@ -164,7 +167,7 @@
 		0EF59AD5290978E2003FEA03 /* TapBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarVC.swift; sourceTree = "<group>"; };
 		0EF59AD829097ABA003FEA03 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		0EF59ADA29097ACF003FEA03 /* CointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CointVC.swift; sourceTree = "<group>"; };
-		0EF59ADC29097AD9003FEA03 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		0EF59ADC29097AD9003FEA03 /* CoinSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSearchVC.swift; sourceTree = "<group>"; };
 		0EF59ADE29097AE6003FEA03 /* ShopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopVC.swift; sourceTree = "<group>"; };
 		0EF59AEE29099246003FEA03 /* UserGraphListSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGraphListSectionView.swift; sourceTree = "<group>"; };
 		0EF59AF62909993A003FEA03 /* SuggestionCoinSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCoinSectionView.swift; sourceTree = "<group>"; };
@@ -185,6 +188,9 @@
 		0EF69C492928A2D100C36DAC /* DropCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropCoinView.swift; sourceTree = "<group>"; };
 		0EF69C4E2928D34B00C36DAC /* MyRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRankView.swift; sourceTree = "<group>"; };
 		0EF69C512928E53B00C36DAC /* HighestThreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighestThreeView.swift; sourceTree = "<group>"; };
+		0EF69C542928EC7100C36DAC /* RevenueHighestThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueHighestThree.swift; sourceTree = "<group>"; };
+		0EF69C5729291D3600C36DAC /* BaseAbstractSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAbstractSearch.swift; sourceTree = "<group>"; };
+		0EF69C5A29291F3000C36DAC /* UserSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchView.swift; sourceTree = "<group>"; };
 		0EF711672906A419005D62EE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6F19F388A3CBD1A2BBFF1839 /* Pods-RGB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB.release.xcconfig"; path = "Target Support Files/Pods-RGB/Pods-RGB.release.xcconfig"; sourceTree = "<group>"; };
 		8416AB1030575CC12D855FE4 /* Pods_RGB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -525,7 +531,9 @@
 		0EF59AE429097BA7003FEA03 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				0EF59ADC29097AD9003FEA03 /* SearchVC.swift */,
+				0EF69C5729291D3600C36DAC /* BaseAbstractSearch.swift */,
+				0EF69C5929291F1500C36DAC /* CoinSearch */,
+				0EF69C5C29291F8600C36DAC /* UserSearch */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -693,6 +701,7 @@
 				0EF69C40292863BE00C36DAC /* RankVC.swift */,
 				0EF69C502928E4A300C36DAC /* myRank */,
 				0EF69C532928E63D00C36DAC /* fundsHighestThree */,
+				0EF69C562928EC7700C36DAC /* RevenueHighestThree */,
 			);
 			path = Rank;
 			sourceTree = "<group>";
@@ -711,6 +720,30 @@
 				0EF69C512928E53B00C36DAC /* HighestThreeView.swift */,
 			);
 			path = fundsHighestThree;
+			sourceTree = "<group>";
+		};
+		0EF69C562928EC7700C36DAC /* RevenueHighestThree */ = {
+			isa = PBXGroup;
+			children = (
+				0EF69C542928EC7100C36DAC /* RevenueHighestThree.swift */,
+			);
+			path = RevenueHighestThree;
+			sourceTree = "<group>";
+		};
+		0EF69C5929291F1500C36DAC /* CoinSearch */ = {
+			isa = PBXGroup;
+			children = (
+				0EF59ADC29097AD9003FEA03 /* CoinSearchVC.swift */,
+			);
+			path = CoinSearch;
+			sourceTree = "<group>";
+		};
+		0EF69C5C29291F8600C36DAC /* UserSearch */ = {
+			isa = PBXGroup;
+			children = (
+				0EF69C5A29291F3000C36DAC /* UserSearchView.swift */,
+			);
+			path = UserSearch;
 			sourceTree = "<group>";
 		};
 		0EF711662906A2F7005D62EE /* textFile */ = {
@@ -896,7 +929,7 @@
 				0EF69C522928E53B00C36DAC /* HighestThreeView.swift in Sources */,
 				0EF69C3F2928637500C36DAC /* StatsVC.swift in Sources */,
 				0EAFF9352921335D00162DD0 /* CategorySectionView.swift in Sources */,
-				0EF59ADD29097AD9003FEA03 /* SearchVC.swift in Sources */,
+				0EF59ADD29097AD9003FEA03 /* CoinSearchVC.swift in Sources */,
 				0E61D6952907F0080098A3F5 /* PasswordChangeVC.swift in Sources */,
 				0E23C21E2925BE6F00C467F8 /* ChangeLanguageCell.swift in Sources */,
 				0EEE8D5729126E2800227199 /* GrassSectionDetilVC.swift in Sources */,
@@ -915,6 +948,7 @@
 				0E9BC15A28FEB7B700B8DB56 /* StartViewController.swift in Sources */,
 				0EAFF9412921F10E00162DD0 /* NewBadgesView.swift in Sources */,
 				0E9BC16228FEC46100B8DB56 /* LoginVC.swift in Sources */,
+				0EF69C5B29291F3000C36DAC /* UserSearchView.swift in Sources */,
 				0EF59AD429096081003FEA03 /* CertificationCompletionVC.swift in Sources */,
 				0EF69C4729289D5F00C36DAC /* IncreaseCoinView.swift in Sources */,
 				0EF69C322927911400C36DAC /* BaseAbstractShop.swift in Sources */,
@@ -939,10 +973,12 @@
 				0EF59B04290CD7EF003FEA03 /* GrassSectionView.swift in Sources */,
 				0EAFF95629239C3600162DD0 /* PurchaseAndGiftButtonView.swift in Sources */,
 				0EAFF94B2922444500162DD0 /* BagesDetailVC.swift in Sources */,
+				0EF69C552928EC7100C36DAC /* RevenueHighestThree.swift in Sources */,
 				0E23C21429250CA300C467F8 /* UserGrassColorView.swift in Sources */,
 				0EE4352628F4476F00CA7E58 /* SceneDelegate.swift in Sources */,
 				0E9973702908A58F00B95BC6 /* CertificationView.swift in Sources */,
 				0EF59AEF29099246003FEA03 /* UserGraphListSectionView.swift in Sources */,
+				0EF69C5829291D3600C36DAC /* BaseAbstractSearch.swift in Sources */,
 				0EF59AD6290978E2003FEA03 /* TapBarVC.swift in Sources */,
 				0E7929C42926428A00C0D188 /* ThemeListCell.swift in Sources */,
 				0E856A592906880400F2A258 /* BaseSignView.swift in Sources */,

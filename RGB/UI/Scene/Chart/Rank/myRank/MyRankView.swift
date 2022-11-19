@@ -23,7 +23,7 @@ class MyRankView: UIView {
     
     private lazy var myRankLabel = UILabel().then {
         $0.text = "내 순위"
-        $0.font = .systemFont(ofSize: 16.0, weight: .bold)
+        $0.font = .systemFont(ofSize: 24.0, weight: .black)
         $0.textColor = .white
     }
     
@@ -70,19 +70,19 @@ extension MyRankView {
         
         myRankLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(10.0)
-            $0.leading.equalToSuperview().inset(30.0)
+            $0.leading.equalToSuperview().inset(40.0)
         }
         
         myRankView.snp.makeConstraints {
             $0.top.equalTo(myRankLabel.snp.bottom).offset(12.0)
-            $0.leading.equalTo(myRankLabel.snp.leading)
+            $0.centerX.equalToSuperview()
             $0.height.equalTo(50.0)
             $0.width.equalTo(370.0)
         }
         
         fundsLabel.snp.makeConstraints {
             $0.top.equalTo(myRankView.snp.top).offset(17.0)
-            $0.leading.equalTo(myRankView.snp.leading).inset(20.0)
+            $0.leading.equalTo(myRankLabel.snp.leading).inset(20.0)
         }
         
         fundsRanking.snp.makeConstraints {

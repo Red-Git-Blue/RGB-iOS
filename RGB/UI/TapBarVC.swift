@@ -21,7 +21,7 @@ class TapBarViewController : UITabBarController {
         
         chartVC.tabBarItem = tabTwoBarItem2
         
-        let searchVC = UINavigationController(rootViewController: SearchViewController())
+        let searchVC = UINavigationController(rootViewController: CoinSearchViewController())
         let tabThrBarItem3 = UITabBarItem(title: "",
                                           image: UIImage(systemName: "magnifyingglass"),
                                           tag: 3)
