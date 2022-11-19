@@ -13,14 +13,32 @@ final class CoinViewController: BaseAbstractChart {
         
         let popularCoinSectionView = PopularCoinView(frame: .zero, viewController: self)
         
+        let increaseCoinView = IncreaseCoinView(frame: .zero, viewController: self)
+        
+        let dropCoinViewView = DropCoinView(frame: .zero, viewController: self)
+        
         let spacingView = UIView()
         spacingView.snp.makeConstraints {
-            $0.height.equalTo(100.0)
+            $0.height.equalTo(440.0)
+        }
+        
+        let minSpacingView = UIView()
+        minSpacingView.snp.makeConstraints {
+            $0.height.equalTo(440.0)
+        }
+        
+        let lastSpacingView = UIView()
+        lastSpacingView.snp.makeConstraints {
+            $0.height.equalTo(440.0)
         }
         
         [
             popularCoinSectionView,
-            spacingView
+            spacingView,
+            increaseCoinView,
+            minSpacingView,
+            dropCoinViewView,
+            lastSpacingView
         ].forEach {
             stackView.addArrangedSubview($0)
         }
@@ -29,7 +47,6 @@ final class CoinViewController: BaseAbstractChart {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .red
         
         setupLayout()
     }

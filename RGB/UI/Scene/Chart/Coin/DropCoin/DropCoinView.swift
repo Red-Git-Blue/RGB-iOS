@@ -1,5 +1,5 @@
 //
-//  PopularCoinView.swift
+//  DropCoinView.swift
 //  RGB
 //
 //  Created by 박준하 on 2022/11/19.
@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-class PopularCoinView: UIView {
+class DropCoinView: UIView {
     private final var controller: UIViewController
     
     var suggesionModelList = [SuggesionModel]()
@@ -25,10 +25,10 @@ class PopularCoinView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private lazy var popularCoinText = UILabel().then {
+    private lazy var IncreaseCoinText = UILabel().then {
         $0.font = .systemFont(ofSize: 16.0, weight: .bold)
         $0.textColor = .white
-        $0.text = "인기 코인"
+        $0.text = "하락 코인"
     }
     
     private lazy var collectionView: UICollectionView = {
@@ -60,7 +60,7 @@ class PopularCoinView: UIView {
 
 }
 
-extension PopularCoinView: UICollectionViewDelegateFlowLayout {
+extension DropCoinView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(
             width: collectionView.frame.width - 60.0,
@@ -69,7 +69,7 @@ extension PopularCoinView: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension PopularCoinView: UICollectionViewDataSource {
+extension DropCoinView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 9
     }
@@ -96,20 +96,20 @@ extension PopularCoinView: UICollectionViewDataSource {
     }
 }
 
-extension PopularCoinView {
+extension DropCoinView {
     func setup() {
         [
-            popularCoinText,
+            IncreaseCoinText,
             collectionView
         ].forEach { self.addSubview($0) }
         
-        popularCoinText.snp.makeConstraints {
-            $0.top.equalTo(self.safeAreaLayoutGuide).offset(10.0)
+        IncreaseCoinText.snp.makeConstraints {
+            $0.top.equalToSuperview()
             $0.leading.equalToSuperview().inset(30.0)
         }
         
         collectionView.snp.makeConstraints {
-            $0.top.equalTo(popularCoinText.snp.bottom).offset(12.0)
+            $0.top.equalTo(IncreaseCoinText.snp.bottom).offset(12.0)
             $0.height.equalTo(SuggestionFeatureCollectionViewCell.height * 5)
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
