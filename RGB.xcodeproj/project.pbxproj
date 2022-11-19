@@ -90,6 +90,7 @@
 		0EF69C4429288F8500C36DAC /* PopularCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C4329288F8500C36DAC /* PopularCoinView.swift */; };
 		0EF69C4729289D5F00C36DAC /* IncreaseCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C4629289D5F00C36DAC /* IncreaseCoinView.swift */; };
 		0EF69C4A2928A2D100C36DAC /* DropCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C492928A2D100C36DAC /* DropCoinView.swift */; };
+		0EF69C4F2928D34B00C36DAC /* MyRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C4E2928D34B00C36DAC /* MyRankView.swift */; };
 		0EF711682906A419005D62EE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF711672906A419005D62EE /* LoginView.swift */; };
 		6FAB5117A39FCDD46D18402F /* Pods_RGB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8416AB1030575CC12D855FE4 /* Pods_RGB.framework */; };
 		F211DB7D48C4AEBE76C7FC00 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211DC1658F4F0A12C74281E /* UserVC.swift */; };
@@ -181,6 +182,7 @@
 		0EF69C4329288F8500C36DAC /* PopularCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCoinView.swift; sourceTree = "<group>"; };
 		0EF69C4629289D5F00C36DAC /* IncreaseCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncreaseCoinView.swift; sourceTree = "<group>"; };
 		0EF69C492928A2D100C36DAC /* DropCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropCoinView.swift; sourceTree = "<group>"; };
+		0EF69C4E2928D34B00C36DAC /* MyRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRankView.swift; sourceTree = "<group>"; };
 		0EF711672906A419005D62EE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6F19F388A3CBD1A2BBFF1839 /* Pods-RGB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB.release.xcconfig"; path = "Target Support Files/Pods-RGB/Pods-RGB.release.xcconfig"; sourceTree = "<group>"; };
 		8416AB1030575CC12D855FE4 /* Pods_RGB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -513,7 +515,7 @@
 				0EF69C3D2928604900C36DAC /* BaseChart */,
 				0EF69C4229288F2E00C36DAC /* Coin */,
 				0EF69C4C2928A7A300C36DAC /* Stats */,
-				0EF69C40292863BE00C36DAC /* RankVC.swift */,
+				0EF69C4D2928D0BD00C36DAC /* Rank */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -681,6 +683,15 @@
 				0EF69C3E2928637500C36DAC /* StatsVC.swift */,
 			);
 			path = Stats;
+			sourceTree = "<group>";
+		};
+		0EF69C4D2928D0BD00C36DAC /* Rank */ = {
+			isa = PBXGroup;
+			children = (
+				0EF69C40292863BE00C36DAC /* RankVC.swift */,
+				0EF69C4E2928D34B00C36DAC /* MyRankView.swift */,
+			);
+			path = Rank;
 			sourceTree = "<group>";
 		};
 		0EF711662906A2F7005D62EE /* textFile */ = {
@@ -878,6 +889,7 @@
 				0E23C2172925B5A500C467F8 /* SettingVC.swift in Sources */,
 				0EAFF93B2921E0E600162DD0 /* PopularBadgesView.swift in Sources */,
 				0EAFF94429221BD000162DD0 /* LastTextView.swift in Sources */,
+				0EF69C4F2928D34B00C36DAC /* MyRankView.swift in Sources */,
 				0EAFF94929222E6100162DD0 /* BagesListModel.swift in Sources */,
 				0EF59AF92909994F003FEA03 /* SuggestionFeatureCollectionViewCell.swift in Sources */,
 				0E9BC15A28FEB7B700B8DB56 /* StartViewController.swift in Sources */,
