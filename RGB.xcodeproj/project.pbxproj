@@ -70,7 +70,7 @@
 		0EF59AD429096081003FEA03 /* CertificationCompletionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59AD329096081003FEA03 /* CertificationCompletionVC.swift */; };
 		0EF59AD6290978E2003FEA03 /* TapBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59AD5290978E2003FEA03 /* TapBarVC.swift */; };
 		0EF59AD929097ABA003FEA03 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59AD829097ABA003FEA03 /* HomeVC.swift */; };
-		0EF59ADB29097ACF003FEA03 /* ChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59ADA29097ACF003FEA03 /* ChartVC.swift */; };
+		0EF59ADB29097ACF003FEA03 /* CointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59ADA29097ACF003FEA03 /* CointVC.swift */; };
 		0EF59ADD29097AD9003FEA03 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59ADC29097AD9003FEA03 /* SearchVC.swift */; };
 		0EF59ADF29097AE6003FEA03 /* ShopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59ADE29097AE6003FEA03 /* ShopVC.swift */; };
 		0EF59AEF29099246003FEA03 /* UserGraphListSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59AEE29099246003FEA03 /* UserGraphListSectionView.swift */; };
@@ -87,6 +87,7 @@
 		0EF69C3C29285F2300C36DAC /* BaseAbstractChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C3B29285F2300C36DAC /* BaseAbstractChart.swift */; };
 		0EF69C3F2928637500C36DAC /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C3E2928637500C36DAC /* StatsVC.swift */; };
 		0EF69C41292863BE00C36DAC /* RankVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C40292863BE00C36DAC /* RankVC.swift */; };
+		0EF69C4429288F8500C36DAC /* PopularCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C4329288F8500C36DAC /* PopularCoinView.swift */; };
 		0EF711682906A419005D62EE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF711672906A419005D62EE /* LoginView.swift */; };
 		6FAB5117A39FCDD46D18402F /* Pods_RGB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8416AB1030575CC12D855FE4 /* Pods_RGB.framework */; };
 		F211DB7D48C4AEBE76C7FC00 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211DC1658F4F0A12C74281E /* UserVC.swift */; };
@@ -158,7 +159,7 @@
 		0EF59AD329096081003FEA03 /* CertificationCompletionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationCompletionVC.swift; sourceTree = "<group>"; };
 		0EF59AD5290978E2003FEA03 /* TapBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarVC.swift; sourceTree = "<group>"; };
 		0EF59AD829097ABA003FEA03 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		0EF59ADA29097ACF003FEA03 /* ChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartVC.swift; sourceTree = "<group>"; };
+		0EF59ADA29097ACF003FEA03 /* CointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CointVC.swift; sourceTree = "<group>"; };
 		0EF59ADC29097AD9003FEA03 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		0EF59ADE29097AE6003FEA03 /* ShopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopVC.swift; sourceTree = "<group>"; };
 		0EF59AEE29099246003FEA03 /* UserGraphListSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGraphListSectionView.swift; sourceTree = "<group>"; };
@@ -175,6 +176,7 @@
 		0EF69C3B29285F2300C36DAC /* BaseAbstractChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAbstractChart.swift; sourceTree = "<group>"; };
 		0EF69C3E2928637500C36DAC /* StatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
 		0EF69C40292863BE00C36DAC /* RankVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankVC.swift; sourceTree = "<group>"; };
+		0EF69C4329288F8500C36DAC /* PopularCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCoinView.swift; sourceTree = "<group>"; };
 		0EF711672906A419005D62EE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6F19F388A3CBD1A2BBFF1839 /* Pods-RGB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB.release.xcconfig"; path = "Target Support Files/Pods-RGB/Pods-RGB.release.xcconfig"; sourceTree = "<group>"; };
 		8416AB1030575CC12D855FE4 /* Pods_RGB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -505,7 +507,7 @@
 			isa = PBXGroup;
 			children = (
 				0EF69C3D2928604900C36DAC /* BaseChart */,
-				0EF59ADA29097ACF003FEA03 /* ChartVC.swift */,
+				0EF69C4229288F2E00C36DAC /* Coin */,
 				0EF69C3E2928637500C36DAC /* StatsVC.swift */,
 				0EF69C40292863BE00C36DAC /* RankVC.swift */,
 			);
@@ -632,6 +634,15 @@
 				0EF69C3B29285F2300C36DAC /* BaseAbstractChart.swift */,
 			);
 			path = BaseChart;
+			sourceTree = "<group>";
+		};
+		0EF69C4229288F2E00C36DAC /* Coin */ = {
+			isa = PBXGroup;
+			children = (
+				0EF59ADA29097ACF003FEA03 /* CointVC.swift */,
+				0EF69C4329288F8500C36DAC /* PopularCoinView.swift */,
+			);
+			path = Coin;
 			sourceTree = "<group>";
 		};
 		0EF711662906A2F7005D62EE /* textFile */ = {
@@ -797,6 +808,7 @@
 				0E555B29290FE0EC005E379E /* SuggesionDetailViewController.swift in Sources */,
 				0EF59AD929097ABA003FEA03 /* HomeVC.swift in Sources */,
 				0E23C2062923BFAC00C467F8 /* BagesTapView.swift in Sources */,
+				0EF69C4429288F8500C36DAC /* PopularCoinView.swift in Sources */,
 				0EF59ADF29097AE6003FEA03 /* ShopVC.swift in Sources */,
 				0EAFF92F29211D0D00162DD0 /* AdvertisementSectionView.swift in Sources */,
 				0E0F94D928FD5D590004951F /* MyAPI+Method.swift in Sources */,
@@ -846,7 +858,7 @@
 				0E0F94E028FD5D590004951F /* MyAPI+BaseURL.swift in Sources */,
 				0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */,
 				0E61D6912907E6250098A3F5 /* SignupVC.swift in Sources */,
-				0EF59ADB29097ACF003FEA03 /* ChartVC.swift in Sources */,
+				0EF59ADB29097ACF003FEA03 /* CointVC.swift in Sources */,
 				0E61D69A2907F0E20098A3F5 /* PasswordView.swift in Sources */,
 				0E23C2202925BE9E00C467F8 /* AccountSettingCell.swift in Sources */,
 				0EF69C41292863BE00C36DAC /* RankVC.swift in Sources */,

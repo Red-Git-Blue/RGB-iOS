@@ -14,7 +14,7 @@ class TapBarViewController : UITabBarController {
         
         homeVC.tabBarItem = tabOneBarItem
         
-        let chartVC = UINavigationController(rootViewController: ChartViewController())
+        let chartVC = UINavigationController(rootViewController: CoinViewController())
         let tabTwoBarItem2 = UITabBarItem(title: "",
                                           image: UIImage(systemName: "chart.bar.fill"),
                                           tag: 2)

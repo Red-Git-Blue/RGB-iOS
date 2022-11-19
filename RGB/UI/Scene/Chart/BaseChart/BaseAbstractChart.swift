@@ -34,7 +34,7 @@ public class BaseAbstractChart: UIViewController {
     }
     
     @objc func coinTap() {
-        presentView(ChartViewController(), false)
+        presentView(CoinViewController(), false)
     }
     
     @objc func statsTap() {
