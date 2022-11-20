@@ -4,48 +4,6 @@ import RxCocoa
 import CoreLocation
 import Then
 
-// Cell
-class MyCollectionViewCell3 : UICollectionViewCell {
-    
-    static let identifier = "cell3"
-    
-    var img = UIImageView().then {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.image = UIImage(named: "testImage")
-    }
-    
-    var label = UILabel().then {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.text = "상어상어"
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.cellSetting()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func cellSetting() {
-        self.backgroundColor = .gray
-        self.addSubview(img)
-        self.addSubview(label)
-        
-        img.contentMode = .scaleToFill
-        img.snp.makeConstraints {
-            $0.leading.top.trailing.equalTo(0)
-            $0.bottom.equalTo(-20)
-        }
-        label.snp.makeConstraints {
-//            $0.leading.bottom.trailing.equalTo(0)
-//            $0.top.equalTo(img.snp.bottom)
-            $0.top.equalTo(img.snp.bottom)
-        }
-    }
-}
-
 class CategoryViewController: BaseAbstractShop {
     
     override func viewIndex() -> Int {
@@ -69,23 +27,25 @@ class CategoryViewController: BaseAbstractShop {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let data = Observable<[String]>.of(self.array)
         
         view.addSubview(collectionView)
         collectionView.delegate = self
         
         autoLayout()
-        collectionView.register(MyCollectionViewCell3.self, forCellWithReuseIdentifier: MyCollectionViewCell3.identifier)
+        collectionView.register(CateforyCollectionViewCell.self, forCellWithReuseIdentifier: CateforyCollectionViewCell.identifier)
         
         
         data.asObservable()
             .bind(to: collectionView.rx
                     .items(
-                        cellIdentifier: MyCollectionViewCell3.identifier,
-                        cellType: MyCollectionViewCell3.self)
+                        cellIdentifier: CateforyCollectionViewCell.identifier,
+                        cellType: CateforyCollectionViewCell.self)
             ) { index, recommend, cell in
-                cell.img.image = UIImage(named: "testImage")
+                cell.img.image = UIImage(named: "CateforyCollectionViewCell")
                 cell.label.text = "index \(index)"
+                cell.layer.cornerRadius = 10
             }
         
     }

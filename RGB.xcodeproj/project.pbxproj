@@ -95,6 +95,7 @@
 		0EF69C552928EC7100C36DAC /* RevenueHighestThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C542928EC7100C36DAC /* RevenueHighestThree.swift */; };
 		0EF69C5829291D3600C36DAC /* BaseAbstractSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C5729291D3600C36DAC /* BaseAbstractSearch.swift */; };
 		0EF69C5B29291F3000C36DAC /* UserSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C5A29291F3000C36DAC /* UserSearchView.swift */; };
+		0EF69C5E292A587200C36DAC /* CateforyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF69C5D292A587200C36DAC /* CateforyCollectionViewCell.swift */; };
 		0EF711682906A419005D62EE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF711672906A419005D62EE /* LoginView.swift */; };
 		6FAB5117A39FCDD46D18402F /* Pods_RGB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8416AB1030575CC12D855FE4 /* Pods_RGB.framework */; };
 		F211DB7D48C4AEBE76C7FC00 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211DC1658F4F0A12C74281E /* UserVC.swift */; };
@@ -191,6 +192,7 @@
 		0EF69C542928EC7100C36DAC /* RevenueHighestThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueHighestThree.swift; sourceTree = "<group>"; };
 		0EF69C5729291D3600C36DAC /* BaseAbstractSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAbstractSearch.swift; sourceTree = "<group>"; };
 		0EF69C5A29291F3000C36DAC /* UserSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchView.swift; sourceTree = "<group>"; };
+		0EF69C5D292A587200C36DAC /* CateforyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CateforyCollectionViewCell.swift; sourceTree = "<group>"; };
 		0EF711672906A419005D62EE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6F19F388A3CBD1A2BBFF1839 /* Pods-RGB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB.release.xcconfig"; path = "Target Support Files/Pods-RGB/Pods-RGB.release.xcconfig"; sourceTree = "<group>"; };
 		8416AB1030575CC12D855FE4 /* Pods_RGB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -604,6 +606,7 @@
 			isa = PBXGroup;
 			children = (
 				0EF69C2A29275EF300C36DAC /* CategoryViewController.swift */,
+				0EF69C5D292A587200C36DAC /* CateforyCollectionViewCell.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -933,6 +936,7 @@
 				0E61D6952907F0080098A3F5 /* PasswordChangeVC.swift in Sources */,
 				0E23C21E2925BE6F00C467F8 /* ChangeLanguageCell.swift in Sources */,
 				0EEE8D5729126E2800227199 /* GrassSectionDetilVC.swift in Sources */,
+				0EF69C5E292A587200C36DAC /* CateforyCollectionViewCell.swift in Sources */,
 				0E0F94E628FD5FC50004951F /* Signup.swift in Sources */,
 				0E0F94DE28FD5D590004951F /* MyAPI+Request.swift in Sources */,
 				0E23C20B2924BCD800C467F8 /* UserInformationView.swift in Sources */,

@@ -1,0 +1,50 @@
+//
+//  File.swift
+//  RGB
+//
+//  Created by 박준하 on 2022/11/20.
+//
+
+import Foundation
+import Then
+import SnapKit
+
+// Cell
+class CateforyCollectionViewCell : UICollectionViewCell {
+    
+    static let identifier = "cell3"
+    
+    var img = UIImageView().then {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.backgroundColor = .black
+    }
+    
+    var label = UILabel().then {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.text = "상어상어"
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.cellSetting()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func cellSetting() {
+        self.backgroundColor = .gray
+        self.addSubview(img)
+        self.addSubview(label)
+        
+        img.contentMode = .scaleToFill
+        img.snp.makeConstraints {
+            $0.top.leading.trailing.bottom.equalToSuperview()
+        }
+        label.snp.makeConstraints {
+            $0.centerY.equalToSuperview().offset(15.0)
+            $0.centerX.equalToSuperview()
+        }
+    }
+}
