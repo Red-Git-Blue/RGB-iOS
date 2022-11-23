@@ -15,6 +15,7 @@ target 'RGB' do
 	pod 'RxKeyboard'
 	pod 'Charts'
 	pod 'LSHContributionView'
+	pod 'PContributionsView'
 	
   # Pods for RGB
 

@@ -49,15 +49,15 @@ final class UserGraphListSectionView: UIView {
         collectionView.reloadData()
         
         userGraphModelList = [
-            UserGraphListModel(nowCoinPrice: 23456, changePercent: 5000, iTakeCoins: "20개", UserImage: "없음", userName: "박준하"),
-            UserGraphListModel(nowCoinPrice: 3256, changePercent: 75000, iTakeCoins: "12개", UserImage: "없음", userName: "최승우"),
-            UserGraphListModel(nowCoinPrice: 23552, changePercent: 600, iTakeCoins: "1개", UserImage: "없음", userName: "김현석"),
-            UserGraphListModel(nowCoinPrice: 64324, changePercent: 577000, iTakeCoins: "50개", UserImage: "없음", userName: "문성화"),
-            UserGraphListModel(nowCoinPrice: 38234, changePercent: 7000, iTakeCoins: "2개", UserImage: "없음", userName: "임태콘"),
-            UserGraphListModel(nowCoinPrice: 23456, changePercent: 5000, iTakeCoins: "20개", UserImage: "없음", userName: "박준하"),
-            UserGraphListModel(nowCoinPrice: 3256, changePercent: 75000, iTakeCoins: "12개", UserImage: "없음", userName: "최승우"),
-            UserGraphListModel(nowCoinPrice: 23552, changePercent: 600, iTakeCoins: "1개", UserImage: "없음", userName: "김현석"),
-            UserGraphListModel(nowCoinPrice: 64324, changePercent: 577000, iTakeCoins: "50개", UserImage: "없음", userName: "문성화")
+            UserGraphListModel(nowCoinPrice: 23456, changePercent: 5000, iTakeCoins: "20개", userImage: "없음", userName: "박준하"),
+            UserGraphListModel(nowCoinPrice: 3256, changePercent: 75000, iTakeCoins: "12개", userImage: "없음", userName: "최승우"),
+            UserGraphListModel(nowCoinPrice: 23552, changePercent: 600, iTakeCoins: "1개", userImage: "없음", userName: "김현석"),
+            UserGraphListModel(nowCoinPrice: 64324, changePercent: 577000, iTakeCoins: "50개", userImage: "없음", userName: "문성화"),
+            UserGraphListModel(nowCoinPrice: 38234, changePercent: 7000, iTakeCoins: "2개", userImage: "없음", userName: "임태콘"),
+            UserGraphListModel(nowCoinPrice: 23456, changePercent: 5000, iTakeCoins: "20개", userImage: "없음", userName: "박준하"),
+            UserGraphListModel(nowCoinPrice: 3256, changePercent: 75000, iTakeCoins: "12개", userImage: "없음", userName: "최승우"),
+            UserGraphListModel(nowCoinPrice: 23552, changePercent: 600, iTakeCoins: "1개", userImage: "없음", userName: "김현석"),
+            UserGraphListModel(nowCoinPrice: 64324, changePercent: 577000, iTakeCoins: "50개", userImage: "없음", userName: "문성화")
         ]
     }
 
@@ -89,18 +89,17 @@ extension UserGraphListSectionView: UICollectionViewDataSource {
 
 extension UserGraphListSectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //주변의 왼 = 16 // 오른 = 16 == 32 뺴기
+        
         CGSize(width: collectionView.frame.width - 64.0, height: frame.width)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        //주변의 왼 = 16 // 오른 = 16
-        //중앙 정령
+        
         UIEdgeInsets(top: 0.0, left: 32.0, bottom: 0.0, right: 32.0)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        //최소 마진
+
         return 64.0
     }
 }

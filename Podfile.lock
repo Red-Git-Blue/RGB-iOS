@@ -13,6 +13,7 @@ PODS:
   - Moya/RxSwift (15.0.0):
     - Moya/Core
     - RxSwift (~> 6.0)
+  - PContributionsView (0.1.0)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - Kingfisher (~> 5.0)
   - LSHContributionView
   - Moya/RxSwift (~> 15.0)
+  - PContributionsView
   - RxCocoa (= 6.5.0)
   - RxKeyboard
   - RxSwift (= 6.5.0)
@@ -45,6 +47,7 @@ SPEC REPOS:
     - Kingfisher
     - LSHContributionView
     - Moya
+    - PContributionsView
     - RxCocoa
     - RxKeyboard
     - RxRelay
@@ -59,6 +62,7 @@ SPEC CHECKSUMS:
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   LSHContributionView: 8b523e7e8c54159d1ba984fad99970ea3cb0f140
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  PContributionsView: a2ca39d28763d85307c4722ab818c9e742e623e8
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxKeyboard: 4f5863f43b4ff0cbb2a20b94688d6b80c8a43c14
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
@@ -67,6 +71,6 @@ SPEC CHECKSUMS:
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
 
-PODFILE CHECKSUM: 495bfc133df5da4b1eff4e4df88a87abe8361b8b
+PODFILE CHECKSUM: 919dd7e2d90f93dd51e69157f4144be498607a1c
 
 COCOAPODS: 1.11.3
