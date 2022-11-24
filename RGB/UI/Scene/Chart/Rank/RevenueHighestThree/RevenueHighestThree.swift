@@ -99,6 +99,42 @@ extension RevenueHighestThree: UICollectionViewDataSource {
 //        let rankingFeature = rankingFeatureList[indexPath.item]
 //        cell?.setup(rankingFeature: rankingFeature)
         
+        if(indexPath.row == 0) {
+            cell?.setup()
+            cell?.layer.borderWidth = 1
+            cell?.layer.borderColor = UIColor.white.cgColor
+            cell?.layer.shadowColor = UIColor.yellow.cgColor
+            cell?.layer.shadowOpacity = 2
+            cell?.layer.shadowRadius = 10
+            cell?.backgroundColor = UIColor(named: "CollectionViewColor")
+            cell?.layer.cornerRadius = 20
+            return cell!
+        }
+        
+        if(indexPath.row == 1) {
+            cell?.setup()
+            cell?.layer.borderWidth = 1
+            cell?.layer.borderColor = UIColor.white.cgColor
+            cell?.layer.shadowColor = UIColor.white.cgColor
+            cell?.layer.shadowOpacity = 2
+            cell?.layer.shadowRadius = 10
+            cell?.backgroundColor = UIColor(named: "CollectionViewColor")
+            cell?.layer.cornerRadius = 20
+            return cell!
+        }
+        
+        if(indexPath.row == 2) {
+            cell?.setup()
+            cell?.layer.borderWidth = 1
+            cell?.layer.borderColor = UIColor.white.cgColor
+            cell?.layer.shadowColor = UIColor.orange.cgColor
+            cell?.layer.shadowOpacity = 2
+            cell?.layer.shadowRadius = 10
+            cell?.backgroundColor = UIColor(named: "CollectionViewColor")
+            cell?.layer.cornerRadius = 20
+            return cell!
+        }
+        
         cell?.setup()
         cell?.backgroundColor = UIColor(named: "CollectionViewColor")
         cell?.layer.cornerRadius = 20

@@ -23,19 +23,19 @@ class MyRankView: UIView {
     
     private lazy var myRankLabel = UILabel().then {
         $0.text = "내 순위"
-        $0.font = .systemFont(ofSize: 24.0, weight: .black)
+        $0.font = .systemFont(ofSize: 16.0, weight: .black)
         $0.textColor = .white
     }
     
     private lazy var myRankView = UIView().then {
-        $0.backgroundColor = .gray
+        $0.backgroundColor = UIColor(named: "TableViewColor")
         $0.layer.cornerRadius = 20
     }
     
     private lazy var fundsLabel = UILabel().then {
         $0.text = "자금"
         $0.font = .systemFont(ofSize: 14.0, weight: .bold)
-        $0.textColor = .red
+        $0.textColor = UIColor(named: "CoustomGray")
     }
     
     private lazy var fundsRanking = UILabel().then {
@@ -47,7 +47,7 @@ class MyRankView: UIView {
     private lazy var revenueLabel = UILabel().then {
         $0.text = "수익률"
         $0.font = .systemFont(ofSize: 14.0, weight: .bold)
-        $0.textColor = .red
+        $0.textColor = UIColor(named: "CoustomGray")
     }
     
     private lazy var revenueRanking = UILabel().then {
