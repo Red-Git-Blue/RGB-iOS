@@ -8,8 +8,14 @@
 import UIKit
 import Then
 import SnapKit
+import Charts
 
 class StatsViewController: BaseAbstractChart {
+    
+    var pieChartModelList = [MyStatsHoldingsChartView]()
+    
+    var statsChartData = [StatsChartData]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,9 +26,52 @@ class StatsViewController: BaseAbstractChart {
         return 1
     }
     
-    private lazy var piegraphView = UIView().then {
-        $0.backgroundColor = .yellow
+    private lazy var pieChartView = PieChartView().then {
+        $0.delegate = self
+        $0.backgroundColor = .red
     }
+    
+    func statsOverviewList(myStatsHoldingsChartView: MyStatsHoldingsChartView) -> [StatsChartData] {
+      return [
+        myStatsHoldingsChartView.jjunhaa0211,
+//        myStatsHoldingsChartView.hahahaha
+      ]
+    }
+    
+    func configureChartView(statsOverviewListData: [StatsChartData]) {
+        let entries = statsOverviewListData.compactMap { [weak self] overview -> PieChartDataEntry? in
+          guard let self = self else { return nil }
+          return PieChartDataEntry(
+            value: self.removeFormatString(string: overview.holdingsCount),
+            data: overview
+          )
+        }
+        let dataSet = PieChartDataSet(entries: entries, label: "통계")
+        dataSet.sliceSpace = 1
+        dataSet.entryLabelColor = .black
+        dataSet.xValuePosition = .outsideSlice
+        dataSet.valueTextColor = .black
+        dataSet.valueLinePart1OffsetPercentage = 0.8
+        dataSet.valueLinePart1Length = 0.2
+        dataSet.valueLinePart2Length = 0.3
+
+        dataSet.colors = ChartColorTemplates.vordiplom()
+          + ChartColorTemplates.joyful()
+          + ChartColorTemplates.colorful()
+          + ChartColorTemplates.liberty()
+          + ChartColorTemplates.pastel()
+          + ChartColorTemplates.material()
+        
+        self.pieChartView.data = PieChartData(dataSet: dataSet)
+        self.pieChartView.spin(duration: 0.3, fromAngle: pieChartView.rotationAngle, toAngle: pieChartView.rotationAngle + 80)
+    }
+    
+    func removeFormatString(string: String) -> Double {
+      let formatter = NumberFormatter()
+      formatter.numberStyle = .decimal
+      return formatter.number(from: string)?.doubleValue ?? 0
+    }
+    
     
     private lazy var allAssetsLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 14.0, weight: .bold)
@@ -58,7 +107,7 @@ class StatsViewController: BaseAbstractChart {
 extension StatsViewController {
     func setup() {
         [
-            piegraphView,
+            pieChartView,
             allAssetsLabel,
             userAllAsstsLabel,
             allDamageLabel,
@@ -66,14 +115,14 @@ extension StatsViewController {
             percentDamgeLabel
         ].forEach { view.addSubview($0) }
         
-        piegraphView.snp.makeConstraints {
+        pieChartView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             $0.trailing.equalToSuperview().inset(13.0)
             $0.height.width.equalTo(220.0)
         }
         
         allAssetsLabel.snp.makeConstraints {
-            $0.top.equalTo(piegraphView.snp.bottom).offset(42)
+            $0.top.equalTo(pieChartView.snp.bottom).offset(42)
             $0.leading.equalToSuperview().inset(30.0)
         }
         
@@ -98,3 +147,16 @@ extension StatsViewController {
         }
     }
 }
+
+
+extension StatsViewController: ChartViewDelegate {
+//  func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+//    guard let covidDetailViewController = self.storyboard?.instantiateViewController(identifier: "CovidDetailViewController") as? CovidDetailViewController else {
+//         return
+//       }
+//    guard let covidOverview = entry.data as? CovidOverview else { return }
+//    covidDetailViewController.covidOverview = covidOverview
+//    self.navigationController?.pushViewController(covidDetailViewController, animated: true)
+//  }
+}
+

@@ -1,6 +1,7 @@
 import UIKit
 import Then
 import SnapKit
+import PContributionsView
 
 class GrassSectionView: UIView {
     private final var controller: UIViewController
@@ -45,18 +46,6 @@ class GrassSectionView: UIView {
         setupViews()
         collectionView.reloadData()
         
-        grassSection = [
-            GrassSectionModel(yearCommit: "120 Commit (상위 11%)", monthCommit: "34 Commit"),
-            GrassSectionModel(yearCommit: "12012 Commit (상위 1%)", monthCommit: "25 Commit"),
-            GrassSectionModel(yearCommit: "70 Commit (상위 61%)", monthCommit: "2 Commit"),
-            GrassSectionModel(yearCommit: "114 Commit (상위 26%)", monthCommit: "25 Commit"),
-            GrassSectionModel(yearCommit: "64 Commit (상위 67%)", monthCommit: "12 Commit"),
-            GrassSectionModel(yearCommit: "170 Commit (상위 94%)", monthCommit: "12 Commit"),
-            GrassSectionModel(yearCommit: "234 Commit (상위 8%)", monthCommit: "26 Commit"),
-            GrassSectionModel(yearCommit: "623 Commit (상위 1%)", monthCommit: "23 Commit"),
-            GrassSectionModel(yearCommit: "12 Commit (상위 83%)", monthCommit: "32 Commit"),
-            GrassSectionModel(yearCommit: "84 Commit (상위 6%)", monthCommit: "12 Commit"),
-        ]
     }
 
     required init?(coder: NSCoder) {
@@ -70,10 +59,15 @@ extension GrassSectionView: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GrassCollectionViewCell", for: indexPath)
-        cell.backgroundColor = UIColor(named: "CollectionViewColor")
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "GrassCollectionViewCell",
+            for: indexPath
+        )
         
-        return cell
+        cell.backgroundColor = UIColor(named: "CollectionViewColor")
+//        cell?.setup()
+        
+        return cell ?? UICollectionViewCell()
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedSuggesion = grassSection[indexPath.row]
