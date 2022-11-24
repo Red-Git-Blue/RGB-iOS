@@ -9,8 +9,13 @@ import UIKit
 import Then
 import SnapKit
 import Charts
+import RxSwift
 
 class StatsViewController: BaseAbstractChart {
+    
+    let data = Observable<[String]>.just(["first","second","third",])
+    
+    let disposeBag = DisposeBag()
     
     var pieChartModelList = [MyStatsHoldingsChartView]()
     
@@ -20,6 +25,13 @@ class StatsViewController: BaseAbstractChart {
         super.viewDidLoad()
         
         setup()
+
+        data.bind(to: tableView.rx.items(cellIdentifier: StatsUserTableViewCell.identifier, cellType: StatsUserTableViewCell.self)) {
+            index, item, cell in
+            cell.img.image = UIImage(named: "MainBage")
+            cell.userName.text = "view \(index)"
+        }
+        .disposed(by: disposeBag)
     }
     
     override func viewIndex() -> Int {
@@ -72,6 +84,10 @@ class StatsViewController: BaseAbstractChart {
       return formatter.number(from: string)?.doubleValue ?? 0
     }
     
+    private lazy var tableView = UITableView().then {
+        $0.register(StatsUserTableViewCell.self, forCellReuseIdentifier: StatsUserTableViewCell.identifier)
+        $0.delegate = self
+    }
     
     private lazy var allAssetsLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 14.0, weight: .bold)
@@ -107,6 +123,7 @@ class StatsViewController: BaseAbstractChart {
 extension StatsViewController {
     func setup() {
         [
+            tableView,
             pieChartView,
             allAssetsLabel,
             userAllAsstsLabel,
@@ -115,9 +132,19 @@ extension StatsViewController {
             percentDamgeLabel
         ].forEach { view.addSubview($0) }
         
-        pieChartView.snp.makeConstraints {
+        tableView.snp.makeConstraints {
+//            $0.edges.equalTo(view.safeAreaLayoutGuide).inset(UIEdgeInsets(top: 0, left: 0, bottom: 200, right: 0))
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            $0.leading.equalToSuperview().inset(30.0)
+            $0.height.equalTo(220)
+            $0.width.equalTo(150)
+        }
+        
+        pieChartView.snp.makeConstraints {
+//            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            $0.top.equalTo(tableView.snp.top)
             $0.trailing.equalToSuperview().inset(13.0)
+//            $0.trailing.equalTo(tableView.snp.leading).inset(17.0)
             $0.height.width.equalTo(220.0)
         }
         
@@ -160,3 +187,11 @@ extension StatsViewController: ChartViewDelegate {
 //  }
 }
 
+
+
+extension StatsViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+}
