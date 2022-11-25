@@ -45,21 +45,10 @@ class NewBadgesView: UIView {
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
         super.init(frame: frame)
-        setup()
-        collectionView.reloadData()
         
-        bagesList = [
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원")
-        ]
+        attribute()
+        layout()
+        collectionView.reloadData()
     }
     
     required init?(coder: NSCoder) {
@@ -109,7 +98,27 @@ extension NewBadgesView: UICollectionViewDataSource {
 }
 
 extension NewBadgesView {
-    func setup() {
+    
+    func bind(_ viewModel: NewBadgesViewModel) {
+        
+    }
+    
+    func attribute() {
+        bagesList = [
+            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
+            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
+            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
+            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
+            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
+            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
+            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
+            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
+            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
+            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원")
+        ]
+    }
+    
+    func layout() {
         [
             newBadgeLabel,
             collectionView,

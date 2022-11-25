@@ -41,6 +41,10 @@
 		0E2CBE3029307FF8001667BE /* IncreaseCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE2F29307FF8001667BE /* IncreaseCoinViewModel.swift */; };
 		0E2CBE3429308090001667BE /* DrapCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE3329308090001667BE /* DrapCoinViewModel.swift */; };
 		0E2CBE3C293082C0001667BE /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE3B293082C0001667BE /* StatsViewModel.swift */; };
+		0E2CBE402930ADD1001667BE /* AdvertiosementSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE3F2930ADD1001667BE /* AdvertiosementSectionViewModel.swift */; };
+		0E2CBE462930AF2F001667BE /* CategorySectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE452930AF2F001667BE /* CategorySectionViewModel.swift */; };
+		0E2CBE492930B049001667BE /* PopularBadgesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE482930B049001667BE /* PopularBadgesViewModel.swift */; };
+		0E2CBE4D2930B0CB001667BE /* NewBadgesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE4C2930B0CB001667BE /* NewBadgesViewModel.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
 		0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B26290FDF2E005E379E /* SuggestionModel.swift */; };
@@ -148,6 +152,10 @@
 		0E2CBE2F29307FF8001667BE /* IncreaseCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncreaseCoinViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE3329308090001667BE /* DrapCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrapCoinViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE3B293082C0001667BE /* StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModel.swift; sourceTree = "<group>"; };
+		0E2CBE3F2930ADD1001667BE /* AdvertiosementSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertiosementSectionViewModel.swift; sourceTree = "<group>"; };
+		0E2CBE452930AF2F001667BE /* CategorySectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySectionViewModel.swift; sourceTree = "<group>"; };
+		0E2CBE482930B049001667BE /* PopularBadgesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularBadgesViewModel.swift; sourceTree = "<group>"; };
+		0E2CBE4C2930B0CB001667BE /* NewBadgesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBadgesViewModel.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
 		0E555B26290FDF2E005E379E /* SuggestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionModel.swift; sourceTree = "<group>"; };
@@ -538,6 +546,78 @@
 			path = MainRankViewController;
 			sourceTree = "<group>";
 		};
+		0E2CBE412930AE0D001667BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EAFF92E29211D0D00162DD0 /* AdvertisementSectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E2CBE422930AE18001667BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E2CBE3F2930ADD1001667BE /* AdvertiosementSectionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0E2CBE432930AF01001667BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EAFF9342921335D00162DD0 /* CategorySectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E2CBE442930AF0D001667BE /* CategoryCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0EAFF9382921B49700162DD0 /* CategorySectionViewCell.swift */,
+			);
+			path = CategoryCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		0E2CBE472930AF34001667BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E2CBE452930AF2F001667BE /* CategorySectionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0E2CBE4A2930B07D001667BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EAFF93A2921E0E600162DD0 /* PopularBadgesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E2CBE4B2930B082001667BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E2CBE482930B049001667BE /* PopularBadgesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0E2CBE4E2930B0DF001667BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EAFF9402921F10E00162DD0 /* NewBadgesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E2CBE4F2930B0EF001667BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E2CBE4C2930B0CB001667BE /* NewBadgesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		0E555B25290FC004005E379E /* BGroundBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -641,19 +721,21 @@
 			path = PasswordCompletion;
 			sourceTree = "<group>";
 		};
-		0EAFF93029211D1300162DD0 /* Advertisement */ = {
+		0EAFF93029211D1300162DD0 /* AdvertisementView */ = {
 			isa = PBXGroup;
 			children = (
-				0EAFF92E29211D0D00162DD0 /* AdvertisementSectionView.swift */,
+				0E2CBE412930AE0D001667BE /* View */,
+				0E2CBE422930AE18001667BE /* ViewModel */,
 			);
-			path = Advertisement;
+			path = AdvertisementView;
 			sourceTree = "<group>";
 		};
 		0EAFF9332921332600162DD0 /* CategoryView */ = {
 			isa = PBXGroup;
 			children = (
-				0EAFF9342921335D00162DD0 /* CategorySectionView.swift */,
-				0EAFF9382921B49700162DD0 /* CategorySectionViewCell.swift */,
+				0E2CBE432930AF01001667BE /* View */,
+				0E2CBE472930AF34001667BE /* ViewModel */,
+				0E2CBE442930AF0D001667BE /* CategoryCollectionViewCell */,
 			);
 			path = CategoryView;
 			sourceTree = "<group>";
@@ -661,15 +743,14 @@
 		0EAFF93C2921E0EB00162DD0 /* BadgesShopView */ = {
 			isa = PBXGroup;
 			children = (
-				0EAFF9332921332600162DD0 /* CategoryView */,
+				0EAFF93F2921F0E200162DD0 /* PopularBadges */,
+				0EAFF94229221B6B00162DD0 /* NewBadges */,
+				0EAFF94529221BD700162DD0 /* LastTextView */,
 				0E23C207292477B200C467F8 /* BagesDetail */,
 				0EAFF93D2921E30600162DD0 /* BadgesCell.swift */,
 				0E23C2052923BFAC00C467F8 /* BagesTapView.swift */,
 				0EAFF94829222E6100162DD0 /* BagesListModel.swift */,
 				0EAFF95529239C3600162DD0 /* PurchaseAndGiftButtonView.swift */,
-				0EAFF94529221BD700162DD0 /* LastTextView */,
-				0EAFF94229221B6B00162DD0 /* NewBadges */,
-				0EAFF93F2921F0E200162DD0 /* PopularBadges */,
 			);
 			path = BadgesShopView;
 			sourceTree = "<group>";
@@ -677,7 +758,8 @@
 		0EAFF93F2921F0E200162DD0 /* PopularBadges */ = {
 			isa = PBXGroup;
 			children = (
-				0EAFF93A2921E0E600162DD0 /* PopularBadgesView.swift */,
+				0E2CBE4A2930B07D001667BE /* View */,
+				0E2CBE4B2930B082001667BE /* ViewModel */,
 			);
 			path = PopularBadges;
 			sourceTree = "<group>";
@@ -685,7 +767,8 @@
 		0EAFF94229221B6B00162DD0 /* NewBadges */ = {
 			isa = PBXGroup;
 			children = (
-				0EAFF9402921F10E00162DD0 /* NewBadgesView.swift */,
+				0E2CBE4E2930B0DF001667BE /* View */,
+				0E2CBE4F2930B0EF001667BE /* ViewModel */,
 			);
 			path = NewBadges;
 			sourceTree = "<group>";
@@ -849,7 +932,8 @@
 			isa = PBXGroup;
 			children = (
 				0EF59ADE29097AE6003FEA03 /* ShopVC.swift */,
-				0EAFF93029211D1300162DD0 /* Advertisement */,
+				0EAFF93029211D1300162DD0 /* AdvertisementView */,
+				0EAFF9332921332600162DD0 /* CategoryView */,
 				0EAFF93C2921E0EB00162DD0 /* BadgesShopView */,
 			);
 			path = Main;
@@ -1216,6 +1300,7 @@
 				0E2CBE2129307C63001667BE /* SuggesionDetailViewModel.swift in Sources */,
 				0EF59AF92909994F003FEA03 /* SuggestionFeatureCollectionViewCell.swift in Sources */,
 				0E9BC15A28FEB7B700B8DB56 /* StartViewController.swift in Sources */,
+				0E2CBE402930ADD1001667BE /* AdvertiosementSectionViewModel.swift in Sources */,
 				0EAFF9412921F10E00162DD0 /* NewBadgesView.swift in Sources */,
 				0E9BC16228FEC46100B8DB56 /* LoginVC.swift in Sources */,
 				0EF69C5B29291F3000C36DAC /* UserSearchView.swift in Sources */,
@@ -1223,12 +1308,14 @@
 				0EF59AD429096081003FEA03 /* CertificationCompletionVC.swift in Sources */,
 				0EF69C4729289D5F00C36DAC /* IncreaseCoinView.swift in Sources */,
 				0EF69C322927911400C36DAC /* BaseAbstractShop.swift in Sources */,
+				0E2CBE492930B049001667BE /* PopularBadgesViewModel.swift in Sources */,
 				0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */,
 				0EF69C3C29285F2300C36DAC /* BaseAbstractChart.swift in Sources */,
 				0EF69C372927973D00C36DAC /* GrassGatchaVC.swift in Sources */,
 				0EF711682906A419005D62EE /* LoginView.swift in Sources */,
 				0EE4352428F4476F00CA7E58 /* AppDelegate.swift in Sources */,
 				0E2CBE14293076C7001667BE /* UserGraphListDetileViewModel.swift in Sources */,
+				0E2CBE4D2930B0CB001667BE /* NewBadgesViewModel.swift in Sources */,
 				0E99736D2908A52400B95BC6 /* CertificationVC.swift in Sources */,
 				0E23C222292618C000C467F8 /* ThemeVC.swift in Sources */,
 				0EF69C60292AF25E00C36DAC /* ListCollectionViewCell.swift in Sources */,
@@ -1258,6 +1345,7 @@
 				0EF59AD6290978E2003FEA03 /* TapBarVC.swift in Sources */,
 				0E7929C42926428A00C0D188 /* ThemeListCell.swift in Sources */,
 				0E856A592906880400F2A258 /* BaseSignView.swift in Sources */,
+				0E2CBE462930AF2F001667BE /* CategorySectionViewModel.swift in Sources */,
 				0E0F94E328FD5DFF0004951F /* RequestModel.swift in Sources */,
 				0E9973772908E3C100B95BC6 /* PasswordCompletionView.swift in Sources */,
 				F211DB7D48C4AEBE76C7FC00 /* UserVC.swift in Sources */,

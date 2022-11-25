@@ -1,13 +1,15 @@
 import UIKit
-import SnapKit
 import Then
+import SnapKit
 
-class CategorySectionView: UIView {
+class PopularBadgesView: UIView {
     private final var controller: UIViewController
     
-    private lazy var categoryLabel = UILabel().then {
+    var bagesList = [BagesListModel]()
+    
+    private lazy var popularBadgeLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 24.0, weight: .black)
-        $0.text = "카테고리"
+        $0.text = "인기 배지"
     }
     
     private lazy var collectionView: UICollectionView = {
@@ -29,8 +31,8 @@ class CategorySectionView: UIView {
 
         
         collectionView.register(
-            CategorySectionViewCell.self,
-            forCellWithReuseIdentifier: "CategoryCollectionViewCell"
+            BadgesCell.self,
+            forCellWithReuseIdentifier: "PopularBadgesCollectionViewCell"
         )
         
       return collectionView
@@ -43,9 +45,10 @@ class CategorySectionView: UIView {
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
         super.init(frame: frame)
-        setup()
+        
+        attribute()
+        layout()
         collectionView.reloadData()
-//        collectionView.layer.cornerRadius = 20
     }
     
     required init?(coder: NSCoder) {
@@ -53,50 +56,59 @@ class CategorySectionView: UIView {
     }
 }
 
-extension CategorySectionView: UICollectionViewDelegateFlowLayout {
+extension PopularBadgesView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(
-            width: CategorySectionViewCell.width,
-            height: CategorySectionViewCell.height
+            width: BadgesCell.width,
+            height: BadgesCell.height
         )
     }
 }
 
-  extension CategorySectionView: UICollectionViewDataSource {
+  extension PopularBadgesView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
       
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "CategoryCollectionViewCell",
+            withReuseIdentifier: "PopularBadgesCollectionViewCell",
             for: indexPath
-        ) as? CategorySectionViewCell
-        cell!.backgroundColor = UIColor(named: "CollectionViewColor")
-        cell!.layer.cornerRadius = 20
+        ) as? BadgesCell
+        cell!.setup()
+        cell!.backgroundColor = .clear
         return cell ?? UICollectionViewCell()
     }
   }
 
-extension CategorySectionView {
-    func setup() {
+extension PopularBadgesView {
+    
+    func bind(_ viewModel: PopularBadgesViewModel) {
+        
+    }
+    
+    func attribute() {
+        
+    }
+    
+    func layout() {
         [
-            categoryLabel,
+            popularBadgeLabel,
             collectionView,
             separator
         ].forEach { self.addSubview($0) }
         
-        categoryLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(30.0)
+        popularBadgeLabel.snp.makeConstraints {
+            $0.top.equalToSuperview()
             $0.leading.equalToSuperview().inset(30.0)
         }
         
         collectionView.snp.makeConstraints {
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
-            $0.top.equalTo(categoryLabel.snp.bottom).offset(20.0)
-            $0.height.equalTo(100)
-            $0.width.equalTo(100)
+            $0.top.equalTo(popularBadgeLabel.snp.bottom).offset(20.0)
+            $0.height.equalTo(310)
+            $0.width.equalTo(220)
             $0.bottom.equalToSuperview()
         }
         

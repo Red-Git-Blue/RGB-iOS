@@ -33,7 +33,9 @@ final class AdvertisementSectionView: UIView {
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
         super.init(frame: frame)
-        setupViews()
+        
+        attribute()
+        layout()
         collectionView.reloadData()
         
 //        collectionView.layer.cornerRadius = 20
@@ -83,7 +85,16 @@ extension AdvertisementSectionView: UICollectionViewDelegateFlowLayout {
 }
 
 private extension AdvertisementSectionView {
-    func setupViews() {
+    
+    func bind(_ viewModel: AdvertiosementSectionViewModel) {
+        
+    }
+    
+    func attribute() {
+        
+    }
+    
+    func layout() {
         [
             collectionView
         ].forEach { addSubview($0) }

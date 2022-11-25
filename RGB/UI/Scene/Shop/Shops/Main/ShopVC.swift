@@ -52,7 +52,7 @@ final class ShopViewController: BaseAbstractShop {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLayout()
+        layout()
     }
     
     override func viewIndex() -> Int {
@@ -62,7 +62,7 @@ final class ShopViewController: BaseAbstractShop {
 
 private extension ShopViewController {
 
-    func setupLayout() {
+    func layout() {
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
