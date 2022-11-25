@@ -19,17 +19,8 @@ class UserGraphListDetileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .systemBackground
-        if let sheetPresentationController = sheetPresentationController {
-            sheetPresentationController.largestUndimmedDetentIdentifier = .large
-            let id = UISheetPresentationController.Detent.Identifier("DetailCustom")
-            let DetailCustomDetent = UISheetPresentationController.Detent.custom(identifier: id) { context in
-                return 780
-            }
-            sheetPresentationController.detents = [DetailCustomDetent]
-            self.isModalInPresentation = true
-        }
-        setup()
+        attribute()
+        layout()
     }
     
     internal lazy var downButton = UIButton().then {
@@ -170,7 +161,25 @@ class UserGraphListDetileViewController: UIViewController {
 
 
 extension UserGraphListDetileViewController {
-    func setup() {
+    
+    func bind() {
+        
+    }
+    
+    func attribute() {
+        view.backgroundColor = .systemBackground
+        if let sheetPresentationController = sheetPresentationController {
+            sheetPresentationController.largestUndimmedDetentIdentifier = .large
+            let id = UISheetPresentationController.Detent.Identifier("DetailCustom")
+            let DetailCustomDetent = UISheetPresentationController.Detent.custom(identifier: id) { context in
+                return 780
+            }
+            sheetPresentationController.detents = [DetailCustomDetent]
+            self.isModalInPresentation = true
+        }
+    }
+    
+    func layout() {
         [
             downButton,
             titleLabel,

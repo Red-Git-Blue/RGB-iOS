@@ -45,20 +45,9 @@ final class UserGraphListSectionView: UIView {
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
         super.init(frame: frame)
-        setupViews()
+        layout()
+        attribute()
         collectionView.reloadData()
-        
-        userGraphModelList = [
-            UserGraphListModel(nowCoinPrice: 23456, changePercent: 5000, iTakeCoins: "20개", userImage: "없음", userName: "박준하"),
-            UserGraphListModel(nowCoinPrice: 3256, changePercent: 75000, iTakeCoins: "12개", userImage: "없음", userName: "최승우"),
-            UserGraphListModel(nowCoinPrice: 23552, changePercent: 600, iTakeCoins: "1개", userImage: "없음", userName: "김현석"),
-            UserGraphListModel(nowCoinPrice: 64324, changePercent: 577000, iTakeCoins: "50개", userImage: "없음", userName: "문성화"),
-            UserGraphListModel(nowCoinPrice: 38234, changePercent: 7000, iTakeCoins: "2개", userImage: "없음", userName: "임태콘"),
-            UserGraphListModel(nowCoinPrice: 23456, changePercent: 5000, iTakeCoins: "20개", userImage: "없음", userName: "박준하"),
-            UserGraphListModel(nowCoinPrice: 3256, changePercent: 75000, iTakeCoins: "12개", userImage: "없음", userName: "최승우"),
-            UserGraphListModel(nowCoinPrice: 23552, changePercent: 600, iTakeCoins: "1개", userImage: "없음", userName: "김현석"),
-            UserGraphListModel(nowCoinPrice: 64324, changePercent: 577000, iTakeCoins: "50개", userImage: "없음", userName: "문성화")
-        ]
     }
 
     required init?(coder: NSCoder) {
@@ -105,7 +94,27 @@ extension UserGraphListSectionView: UICollectionViewDelegateFlowLayout {
 }
 
 private extension UserGraphListSectionView {
-    func setupViews() {
+    
+    func bind(_ viewModel: UserGraphListSectionViewModel) {
+        
+    }
+    
+    func attribute() {
+        userGraphModelList = [
+            UserGraphListModel(nowCoinPrice: 23456, changePercent: 5000, iTakeCoins: "20개", userImage: "없음", userName: "박준하"),
+            UserGraphListModel(nowCoinPrice: 3256, changePercent: 75000, iTakeCoins: "12개", userImage: "없음", userName: "최승우"),
+            UserGraphListModel(nowCoinPrice: 23552, changePercent: 600, iTakeCoins: "1개", userImage: "없음", userName: "김현석"),
+            UserGraphListModel(nowCoinPrice: 64324, changePercent: 577000, iTakeCoins: "50개", userImage: "없음", userName: "문성화"),
+            UserGraphListModel(nowCoinPrice: 38234, changePercent: 7000, iTakeCoins: "2개", userImage: "없음", userName: "임태콘"),
+            UserGraphListModel(nowCoinPrice: 23456, changePercent: 5000, iTakeCoins: "20개", userImage: "없음", userName: "박준하"),
+            UserGraphListModel(nowCoinPrice: 3256, changePercent: 75000, iTakeCoins: "12개", userImage: "없음", userName: "최승우"),
+            UserGraphListModel(nowCoinPrice: 23552, changePercent: 600, iTakeCoins: "1개", userImage: "없음", userName: "김현석"),
+            UserGraphListModel(nowCoinPrice: 64324, changePercent: 577000, iTakeCoins: "50개", userImage: "없음", userName: "문성화")
+        ]
+
+    }
+    
+    func layout() {
         [
             titleLabel,
             showAllAppsButton,

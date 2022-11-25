@@ -32,6 +32,8 @@
 		0E2CBDCB292E0518001667BE /* GrasscollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBDCA292E0518001667BE /* GrasscollectionViewCell.swift */; };
 		0E2CBDD6292F0E27001667BE /* MyStatsHoldingsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBDD5292F0E27001667BE /* MyStatsHoldingsChartView.swift */; };
 		0E2CBDD8292F550C001667BE /* StatsUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBDD7292F550C001667BE /* StatsUserTableViewCell.swift */; };
+		0E2CBE11293074D9001667BE /* UserGraphListSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE10293074D9001667BE /* UserGraphListSectionViewModel.swift */; };
+		0E2CBE14293076C7001667BE /* UserGraphListDetileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE13293076C7001667BE /* UserGraphListDetileViewModel.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
 		0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B26290FDF2E005E379E /* SuggestionModel.swift */; };
@@ -131,6 +133,8 @@
 		0E2CBDCA292E0518001667BE /* GrasscollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrasscollectionViewCell.swift; sourceTree = "<group>"; };
 		0E2CBDD5292F0E27001667BE /* MyStatsHoldingsChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStatsHoldingsChartView.swift; sourceTree = "<group>"; };
 		0E2CBDD7292F550C001667BE /* StatsUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsUserTableViewCell.swift; sourceTree = "<group>"; };
+		0E2CBE10293074D9001667BE /* UserGraphListSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGraphListSectionViewModel.swift; sourceTree = "<group>"; };
+		0E2CBE13293076C7001667BE /* UserGraphListDetileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGraphListDetileViewModel.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
 		0E555B26290FDF2E005E379E /* SuggestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionModel.swift; sourceTree = "<group>"; };
@@ -294,6 +298,15 @@
 				0E23C21F2925BE9E00C467F8 /* AccountSettingCell.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		0E2CBE1229307506001667BE /* UserGraphListDetile */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE8D3B2911093700227199 /* UserGraphListDetileVC.swift */,
+				0E2CBE13293076C7001667BE /* UserGraphListDetileViewModel.swift */,
+			);
+			path = UserGraphListDetile;
 			sourceTree = "<group>";
 		};
 		0E555B25290FC004005E379E /* BGroundBase */ = {
@@ -596,7 +609,8 @@
 			children = (
 				0EEE8D3F29110A7600227199 /* GraphListModel */,
 				0EF59AEE29099246003FEA03 /* UserGraphListSectionView.swift */,
-				0EEE8D3B2911093700227199 /* UserGraphListDetileVC.swift */,
+				0E2CBE10293074D9001667BE /* UserGraphListSectionViewModel.swift */,
+				0E2CBE1229307506001667BE /* UserGraphListDetile */,
 			);
 			path = UserGraphListView;
 			sourceTree = "<group>";
@@ -922,6 +936,7 @@
 				0E0F94DB28FD5D590004951F /* MyAPI.swift in Sources */,
 				0E0F94DD28FD5D590004951F /* MyAPI+Path.swift in Sources */,
 				0E555B29290FE0EC005E379E /* SuggesionDetailViewController.swift in Sources */,
+				0E2CBE11293074D9001667BE /* UserGraphListSectionViewModel.swift in Sources */,
 				0EF59AD929097ABA003FEA03 /* HomeVC.swift in Sources */,
 				0E23C2062923BFAC00C467F8 /* BagesTapView.swift in Sources */,
 				0EF69C4A2928A2D100C36DAC /* DropCoinView.swift in Sources */,
@@ -975,6 +990,7 @@
 				0EF69C372927973D00C36DAC /* GrassGatchaVC.swift in Sources */,
 				0EF711682906A419005D62EE /* LoginView.swift in Sources */,
 				0EE4352428F4476F00CA7E58 /* AppDelegate.swift in Sources */,
+				0E2CBE14293076C7001667BE /* UserGraphListDetileViewModel.swift in Sources */,
 				0E99736D2908A52400B95BC6 /* CertificationVC.swift in Sources */,
 				0E23C222292618C000C467F8 /* ThemeVC.swift in Sources */,
 				0EF69C60292AF25E00C36DAC /* ListCollectionViewCell.swift in Sources */,
