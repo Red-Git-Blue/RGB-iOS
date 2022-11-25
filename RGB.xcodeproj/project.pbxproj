@@ -530,6 +530,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		0E2CBE3E2930847A001667BE /* MainRankViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0EF69C40292863BE00C36DAC /* RankVC.swift */,
+			);
+			path = MainRankViewController;
+			sourceTree = "<group>";
+		};
 		0E555B25290FC004005E379E /* BGroundBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -953,7 +961,7 @@
 		0EF69C4D2928D0BD00C36DAC /* Rank */ = {
 			isa = PBXGroup;
 			children = (
-				0EF69C40292863BE00C36DAC /* RankVC.swift */,
+				0E2CBE3E2930847A001667BE /* MainRankViewController */,
 				0EF69C502928E4A300C36DAC /* myRank */,
 				0EF69C532928E63D00C36DAC /* fundsHighestThree */,
 				0EF69C562928EC7700C36DAC /* RevenueHighestThree */,

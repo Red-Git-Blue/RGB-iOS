@@ -14,7 +14,7 @@ class MyRankView: UIView {
         controller = viewController
         super.init(frame: frame)
         
-        setup()
+        layout()
     }
 
     required init?(coder: NSCoder) {
@@ -58,7 +58,7 @@ class MyRankView: UIView {
 }
 
 extension MyRankView {
-    func setup() {
+    func layout() {
         [
             myRankLabel,
             myRankView,
