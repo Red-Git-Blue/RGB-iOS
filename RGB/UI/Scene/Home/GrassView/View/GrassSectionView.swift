@@ -43,7 +43,8 @@ class GrassSectionView: UIView {
         controller = viewController
         super.init(frame: frame)
 
-        setupViews()
+        attribute()
+        layout()
         collectionView.reloadData()
         
     }
@@ -97,7 +98,12 @@ extension GrassSectionView: UICollectionViewDelegateFlowLayout {
 }
 
 private extension GrassSectionView {
-    func setupViews() {
+    
+    func attribute() {
+        
+    }
+    
+    func layout() {
         [
             titleLabel,
             collectionView,

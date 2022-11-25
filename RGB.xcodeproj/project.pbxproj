@@ -394,6 +394,38 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0E2CBE2529307D7F001667BE /* GrassViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0E2CBDCA292E0518001667BE /* GrasscollectionViewCell.swift */,
+			);
+			path = GrassViewCell;
+			sourceTree = "<group>";
+		};
+		0E2CBE2629307D95001667BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE8D5829126E9500227199 /* GrassSectionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E2CBE2729307D9F001667BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EF59B03290CD7EF003FEA03 /* GrassSectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E2CBE2829307DD2001667BE /* GrassSectionDetil */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE8D5629126E2800227199 /* GrassSectionDetilVC.swift */,
+			);
+			path = GrassSectionDetil;
+			sourceTree = "<group>";
+		};
 		0E555B25290FC004005E379E /* BGroundBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -682,10 +714,10 @@
 		0EF59B05290CD81C003FEA03 /* GrassView */ = {
 			isa = PBXGroup;
 			children = (
-				0EF59B03290CD7EF003FEA03 /* GrassSectionView.swift */,
-				0EEE8D5829126E9500227199 /* GrassSectionModel.swift */,
-				0E2CBDCA292E0518001667BE /* GrasscollectionViewCell.swift */,
-				0EEE8D5629126E2800227199 /* GrassSectionDetilVC.swift */,
+				0E2CBE2629307D95001667BE /* Model */,
+				0E2CBE2729307D9F001667BE /* View */,
+				0E2CBE2529307D7F001667BE /* GrassViewCell */,
+				0E2CBE2829307DD2001667BE /* GrassSectionDetil */,
 			);
 			path = GrassView;
 			sourceTree = "<group>";
