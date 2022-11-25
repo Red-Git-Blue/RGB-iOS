@@ -58,8 +58,9 @@ class UserInformationView: UIView {
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
         super.init(frame: frame)
+        
+        attribute()
         setup()
-        userProfileImage.layer.cornerRadius = 70
     }
 
     required init?(coder: NSCoder) {
@@ -68,6 +69,15 @@ class UserInformationView: UIView {
 }
 
 extension UserInformationView {
+    
+    func bind(_ viewModel: UserInformationViewModel) {
+        
+    }
+    
+    func attribute() {
+        userProfileImage.layer.cornerRadius = 70
+    }
+    
     func setup() {
         [
             userProfileImage,

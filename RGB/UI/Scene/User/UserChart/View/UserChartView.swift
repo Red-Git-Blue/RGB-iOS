@@ -74,9 +74,9 @@ class UserChartView: UIView {
         controller = viewController
         super.init(frame: frame)
         
-        setup()
-        backgroundView.layer.cornerRadius = 20
-        chartView.layer.cornerRadius = 20
+        attribute()
+        layout()
+
     }
 
     required init?(coder: NSCoder) {
@@ -86,7 +86,17 @@ class UserChartView: UIView {
 }
 
 extension UserChartView {
-    func setup() {
+    
+    func bind(_ viewModel: UserChartViewModel) {
+        
+    }
+    
+    func attribute() {
+        backgroundView.layer.cornerRadius = 20
+        chartView.layer.cornerRadius = 20
+    }
+    
+    func layout() {
         [
             coinLabel,
             backgroundView,

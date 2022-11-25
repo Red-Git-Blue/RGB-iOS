@@ -35,8 +35,8 @@ class CategoryViewController: BaseAbstractShop {
         data.asObservable()
             .bind(to: collectionView.rx
                     .items(
-                        cellIdentifier: CateforyCollectionViewCell.identifier,
-                        cellType: CateforyCollectionViewCell.self)
+                        cellIdentifier: CategoryCollectionViewCell.identifier,
+                        cellType: CategoryCollectionViewCell.self)
             ) { index, recommend, cell in
                 cell.img.image = UIImage(named: "CateforyCollectionViewCell")
                 cell.label.text = "index \(index)"
@@ -79,7 +79,7 @@ extension CategoryViewController {
         view.addSubview(collectionView)
         collectionView.delegate = self
         
-        collectionView.register(CateforyCollectionViewCell.self, forCellWithReuseIdentifier: CateforyCollectionViewCell.identifier)
+        collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
     }
     
     private func layout() {

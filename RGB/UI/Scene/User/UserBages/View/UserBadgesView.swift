@@ -39,8 +39,9 @@ class UserBadgesView: UIView {
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
         super.init(frame: frame)
-        setup()
-        badgesCollectionView.layer.cornerRadius = 20
+        
+        attribute()
+        layout()
     }
 
     required init?(coder: NSCoder) {
@@ -50,7 +51,16 @@ class UserBadgesView: UIView {
 }
 
 extension UserBadgesView {
-    func setup() {
+    
+    func bind(_ viewModel: UserBadgesViewModel) {
+        
+    }
+    
+    func attribute() {
+        badgesCollectionView.layer.cornerRadius = 20
+    }
+    
+    func layout() {
         [
             badgesLabel,
             badgesCountLabel,

@@ -34,8 +34,8 @@ class UserGrassColorView: UIView {
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
         super.init(frame: frame)
-        setup()
-        grassColorCollectionView.layer.cornerRadius = 20
+        attribute()
+        layout()
     }
 
     required init?(coder: NSCoder) {
@@ -45,7 +45,12 @@ class UserGrassColorView: UIView {
 }
 
 extension UserGrassColorView {
-    func setup() {
+    
+    func attribute() {
+        grassColorCollectionView.layer.cornerRadius = 20
+    }
+    
+    func layout() {
         [
             grassLabel,
             glassCountLabel,
