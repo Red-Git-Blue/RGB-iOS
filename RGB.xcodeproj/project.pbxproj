@@ -261,6 +261,7 @@
 		0E0F94E128FD5D640004951F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				0E0F94E428FD5E080004951F /* Model */,
 				0E0F94D228FD5D590004951F /* ModelType.swift */,
 				0E0F94D428FD5D590004951F /* Moya+NetworkError.swift */,
 				0E0F94D328FD5D590004951F /* MyAPI.swift */,
@@ -462,17 +463,17 @@
 		0E2CBE2929307ED7001667BE /* MainHomeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				0EF59AD829097ABA003FEA03 /* HomeVC.swift */,
+				0E2CBE7B2930BBE6001667BE /* MainHomeStackView */,
 			);
 			path = MainHomeViewController;
 			sourceTree = "<group>";
 		};
-		0E2CBE2A29307EF7001667BE /* MainCoinViewController */ = {
+		0E2CBE2A29307EF7001667BE /* MainCoinStackView */ = {
 			isa = PBXGroup;
 			children = (
 				0EF59ADA29097ACF003FEA03 /* CoinVC.swift */,
 			);
-			path = MainCoinViewController;
+			path = MainCoinStackView;
 			sourceTree = "<group>";
 		};
 		0E2CBE2D29307F93001667BE /* View */ = {
@@ -555,12 +556,12 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		0E2CBE3E2930847A001667BE /* MainRankViewController */ = {
+		0E2CBE3E2930847A001667BE /* MainRankStackView */ = {
 			isa = PBXGroup;
 			children = (
 				0EF69C40292863BE00C36DAC /* RankVC.swift */,
 			);
-			path = MainRankViewController;
+			path = MainRankStackView;
 			sourceTree = "<group>";
 		};
 		0E2CBE412930AE0D001667BE /* View */ = {
@@ -839,6 +840,30 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		0E2CBE7A2930BBAE001667BE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0EF69C2C29278E4D00C36DAC /* ControllerManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		0E2CBE7B2930BBE6001667BE /* MainHomeStackView */ = {
+			isa = PBXGroup;
+			children = (
+				0EF59AD829097ABA003FEA03 /* HomeVC.swift */,
+			);
+			path = MainHomeStackView;
+			sourceTree = "<group>";
+		};
+		0E2CBE7C2930BCA3001667BE /* MainShopStackView */ = {
+			isa = PBXGroup;
+			children = (
+				0EF59ADE29097AE6003FEA03 /* ShopVC.swift */,
+			);
+			path = MainShopStackView;
+			sourceTree = "<group>";
+		};
 		0E555B25290FC004005E379E /* BGroundBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -888,7 +913,6 @@
 				0EF7116B2907ACA8005D62EE /* Login */,
 				0E61D68C2907D3780098A3F5 /* Signup */,
 				0E23C2182925B5AA00C467F8 /* Setting */,
-				0EF69C2C29278E4D00C36DAC /* ControllerManager.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -1023,12 +1047,12 @@
 			children = (
 				0E61D68D2907D3B20098A3F5 /* App */,
 				0E61D68F2907D4710098A3F5 /* UI */,
-				0E0F94E428FD5E080004951F /* Model */,
+				0E2CBE7A2930BBAE001667BE /* Manager */,
 				0E0F94E128FD5D640004951F /* Networking */,
 				0EF711662906A2F7005D62EE /* textFile */,
-				0EE4352E28F4477000CA7E58 /* LaunchScreen.storyboard */,
 				0EEE8D422911E99500227199 /* Font */,
 				0EE4352C28F4477000CA7E58 /* Images.xcassets */,
+				0EE4352E28F4477000CA7E58 /* LaunchScreen.storyboard */,
 				0E555B2D29108CE6005E379E /* Colors.xcassets */,
 				0EE4353128F4477000CA7E58 /* Info.plist */,
 			);
@@ -1150,7 +1174,7 @@
 		0EF69C2E2927904D00C36DAC /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				0EF59ADE29097AE6003FEA03 /* ShopVC.swift */,
+				0E2CBE7C2930BCA3001667BE /* MainShopStackView */,
 				0EAFF93029211D1300162DD0 /* AdvertisementView */,
 				0EAFF9332921332600162DD0 /* CategoryView */,
 				0EAFF93C2921E0EB00162DD0 /* BadgesShopView */,
@@ -1217,39 +1241,39 @@
 		0EF69C4229288F2E00C36DAC /* Coin */ = {
 			isa = PBXGroup;
 			children = (
-				0E2CBE2A29307EF7001667BE /* MainCoinViewController */,
-				0EF69C4529289D3800C36DAC /* PopularCoin */,
-				0EF69C4829289D6400C36DAC /* IncreaseCoin */,
-				0EF69C4B2928A2D700C36DAC /* DropCoin */,
+				0E2CBE2A29307EF7001667BE /* MainCoinStackView */,
+				0EF69C4529289D3800C36DAC /* PopularCoinView */,
+				0EF69C4829289D6400C36DAC /* IncreaseCoinView */,
+				0EF69C4B2928A2D700C36DAC /* DropCoinView */,
 			);
 			path = Coin;
 			sourceTree = "<group>";
 		};
-		0EF69C4529289D3800C36DAC /* PopularCoin */ = {
+		0EF69C4529289D3800C36DAC /* PopularCoinView */ = {
 			isa = PBXGroup;
 			children = (
 				0E2CBE2D29307F93001667BE /* View */,
 				0E2CBE2E29307F9B001667BE /* ViewModel */,
 			);
-			path = PopularCoin;
+			path = PopularCoinView;
 			sourceTree = "<group>";
 		};
-		0EF69C4829289D6400C36DAC /* IncreaseCoin */ = {
+		0EF69C4829289D6400C36DAC /* IncreaseCoinView */ = {
 			isa = PBXGroup;
 			children = (
 				0E2CBE312930802D001667BE /* View */,
 				0E2CBE3229308035001667BE /* ViewModel */,
 			);
-			path = IncreaseCoin;
+			path = IncreaseCoinView;
 			sourceTree = "<group>";
 		};
-		0EF69C4B2928A2D700C36DAC /* DropCoin */ = {
+		0EF69C4B2928A2D700C36DAC /* DropCoinView */ = {
 			isa = PBXGroup;
 			children = (
 				0E2CBE35293080AC001667BE /* View */,
 				0E2CBE36293080B4001667BE /* ViewModel */,
 			);
-			path = DropCoin;
+			path = DropCoinView;
 			sourceTree = "<group>";
 		};
 		0EF69C4C2928A7A300C36DAC /* Stats */ = {
@@ -1266,36 +1290,36 @@
 		0EF69C4D2928D0BD00C36DAC /* Rank */ = {
 			isa = PBXGroup;
 			children = (
-				0E2CBE3E2930847A001667BE /* MainRankViewController */,
-				0EF69C502928E4A300C36DAC /* myRank */,
-				0EF69C532928E63D00C36DAC /* fundsHighestThree */,
-				0EF69C562928EC7700C36DAC /* RevenueHighestThree */,
+				0E2CBE3E2930847A001667BE /* MainRankStackView */,
+				0EF69C502928E4A300C36DAC /* myRankView */,
+				0EF69C532928E63D00C36DAC /* fundsHighestThreeView */,
+				0EF69C562928EC7700C36DAC /* RevenueHighestThreeView */,
 			);
 			path = Rank;
 			sourceTree = "<group>";
 		};
-		0EF69C502928E4A300C36DAC /* myRank */ = {
+		0EF69C502928E4A300C36DAC /* myRankView */ = {
 			isa = PBXGroup;
 			children = (
 				0EF69C4E2928D34B00C36DAC /* MyRankView.swift */,
 			);
-			path = myRank;
+			path = myRankView;
 			sourceTree = "<group>";
 		};
-		0EF69C532928E63D00C36DAC /* fundsHighestThree */ = {
+		0EF69C532928E63D00C36DAC /* fundsHighestThreeView */ = {
 			isa = PBXGroup;
 			children = (
 				0EF69C512928E53B00C36DAC /* HighestThreeView.swift */,
 			);
-			path = fundsHighestThree;
+			path = fundsHighestThreeView;
 			sourceTree = "<group>";
 		};
-		0EF69C562928EC7700C36DAC /* RevenueHighestThree */ = {
+		0EF69C562928EC7700C36DAC /* RevenueHighestThreeView */ = {
 			isa = PBXGroup;
 			children = (
 				0EF69C542928EC7100C36DAC /* RevenueHighestThree.swift */,
 			);
-			path = RevenueHighestThree;
+			path = RevenueHighestThreeView;
 			sourceTree = "<group>";
 		};
 		0EF69C5929291F1500C36DAC /* CoinSearch */ = {
