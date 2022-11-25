@@ -10,7 +10,7 @@ import Then
 import SnapKit
 import RxSwift
 
-class UserGraphListDetileViewController: UIViewController {
+class UserGraphListDetailViewController: UIViewController {
     
     var userGraphList: UserGraphListModel?
     
@@ -160,9 +160,9 @@ class UserGraphListDetileViewController: UIViewController {
 }
 
 
-extension UserGraphListDetileViewController {
+extension UserGraphListDetailViewController {
     
-    func bind() {
+    func bind(_ viewModel: UserGraphListDetileViewModel) {
         
     }
     

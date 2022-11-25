@@ -70,7 +70,7 @@ extension UserGraphListSectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedSuggesion = userGraphModelList[indexPath.row]
         print(userGraphModelList[indexPath.row])
-        let detailViewController = UserGraphListDetileViewController()
+        let detailViewController = UserGraphListDetailViewController()
         detailViewController.userGraphList = selectedSuggesion
         controller.present(detailViewController, animated: true)
     }

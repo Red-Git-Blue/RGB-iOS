@@ -18,30 +18,14 @@ class SuggesionDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .systemBackground
-        if let sheetPresentationController = sheetPresentationController {
-            sheetPresentationController.largestUndimmedDetentIdentifier = .large
-            let id = UISheetPresentationController.Detent.Identifier("DetailCustom")
-            let DetailCustomDetent = UISheetPresentationController.Detent.custom(identifier: id) { context in
-                return 730
-            }
-            sheetPresentationController.detents = [DetailCustomDetent]
-            self.isModalInPresentation = true
-        }
-        setup()
+        
+        attribute()
+        layout()
     }
     
     internal lazy var downButton = UIButton().then {
         let image = UIImage(named: "downButton")
         $0.setBackgroundImage(image, for: UIControl.State.normal)
-        $0.rx.tap
-            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] in
-                print("💠downButton")
-                self!.dismiss(animated: true, completion: nil)
-            })
-            .disposed(by: disposeBag)
     }
     
     internal lazy var titleLabel = UILabel().then {
@@ -53,7 +37,31 @@ class SuggesionDetailViewController: UIViewController {
 
 
 extension SuggesionDetailViewController {
-    func setup() {
+    
+    func bind(_ viewModel: SuggesionDetailViewModel) {
+        downButton.rx.tap
+            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+                print("💠downButton")
+                self!.dismiss(animated: true, completion: nil)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func attribute() {
+        view.backgroundColor = .systemBackground
+        if let sheetPresentationController = sheetPresentationController {
+            sheetPresentationController.largestUndimmedDetentIdentifier = .large
+            let id = UISheetPresentationController.Detent.Identifier("DetailCustom")
+            let DetailCustomDetent = UISheetPresentationController.Detent.custom(identifier: id) { context in
+                return 730
+            }
+            sheetPresentationController.detents = [DetailCustomDetent]
+            self.isModalInPresentation = true
+        }
+    }
+    
+    func layout() {
         [
             downButton,
             titleLabel

@@ -35,17 +35,22 @@ final class SuggestionFeatureCollectionViewCell: UICollectionViewCell {
     }
 
     func setup() {
-        setupLayout()
-        titleLabel.text = "PEACH&NIGA"
-        descriptionLabel.text = "027849"
-        inDecreaseLabel.text = "+12.8%"
-        coinPriceLabel.text = "23,904"
+        attribute()
+        layout()
     }
 }
 
 // MARK: Private
 private extension SuggestionFeatureCollectionViewCell {
-    func setupLayout() {
+    
+    func attribute() {
+        titleLabel.text = "PEACH&NIGA"
+        descriptionLabel.text = "027849"
+        inDecreaseLabel.text = "+12.8%"
+        coinPriceLabel.text = "23,904"
+    }
+    
+    func layout() {
         [
             imageView,
             titleLabel,
