@@ -17,21 +17,22 @@ class StatsViewController: BaseAbstractChart {
     
     let disposeBag = DisposeBag()
     
-    var pieChartModelList = [MyStatsHoldingsChartView]()
+    var pieChartModelList = [MyStatsHoldingsChartModel]()
     
     var statsChartData = [StatsChartData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setup()
-
         data.bind(to: tableView.rx.items(cellIdentifier: StatsUserTableViewCell.identifier, cellType: StatsUserTableViewCell.self)) {
             index, item, cell in
             cell.img.image = UIImage(named: "MainBage")
             cell.userName.text = "view \(index)"
         }
         .disposed(by: disposeBag)
+        
+        layout()
+        attribute()
     }
     
     override func viewIndex() -> Int {
@@ -41,47 +42,6 @@ class StatsViewController: BaseAbstractChart {
     private lazy var pieChartView = PieChartView().then {
         $0.delegate = self
         $0.backgroundColor = .red
-    }
-    
-    func statsOverviewList(myStatsHoldingsChartView: MyStatsHoldingsChartView) -> [StatsChartData] {
-      return [
-        myStatsHoldingsChartView.jjunhaa0211,
-//        myStatsHoldingsChartView.hahahaha
-      ]
-    }
-    
-    func configureChartView(statsOverviewListData: [StatsChartData]) {
-        let entries = statsOverviewListData.compactMap { [weak self] overview -> PieChartDataEntry? in
-          guard let self = self else { return nil }
-          return PieChartDataEntry(
-            value: self.removeFormatString(string: overview.holdingsCount),
-            data: overview
-          )
-        }
-        let dataSet = PieChartDataSet(entries: entries, label: "통계")
-        dataSet.sliceSpace = 1
-        dataSet.entryLabelColor = .black
-        dataSet.xValuePosition = .outsideSlice
-        dataSet.valueTextColor = .black
-        dataSet.valueLinePart1OffsetPercentage = 0.8
-        dataSet.valueLinePart1Length = 0.2
-        dataSet.valueLinePart2Length = 0.3
-
-        dataSet.colors = ChartColorTemplates.vordiplom()
-          + ChartColorTemplates.joyful()
-          + ChartColorTemplates.colorful()
-          + ChartColorTemplates.liberty()
-          + ChartColorTemplates.pastel()
-          + ChartColorTemplates.material()
-        
-        self.pieChartView.data = PieChartData(dataSet: dataSet)
-        self.pieChartView.spin(duration: 0.3, fromAngle: pieChartView.rotationAngle, toAngle: pieChartView.rotationAngle + 80)
-    }
-    
-    func removeFormatString(string: String) -> Double {
-      let formatter = NumberFormatter()
-      formatter.numberStyle = .decimal
-      return formatter.number(from: string)?.doubleValue ?? 0
     }
     
     private lazy var tableView = UITableView().then {
@@ -121,7 +81,59 @@ class StatsViewController: BaseAbstractChart {
 }
 
 extension StatsViewController {
-    func setup() {
+    func statsOverviewList(myStatsHoldingsChartView: MyStatsHoldingsChartModel) -> [StatsChartData] {
+      return [
+        myStatsHoldingsChartView.jjunhaa0211,
+//        myStatsHoldingsChartView.hahahaha
+      ]
+    }
+    
+    func configureChartView(statsOverviewListData: [StatsChartData]) {
+        let entries = statsOverviewListData.compactMap { [weak self] overview -> PieChartDataEntry? in
+          guard let self = self else { return nil }
+          return PieChartDataEntry(
+            value: self.removeFormatString(string: overview.holdingsCount),
+            data: overview
+          )
+        }
+        let dataSet = PieChartDataSet(entries: entries, label: "통계")
+        dataSet.sliceSpace = 1
+        dataSet.entryLabelColor = .black
+        dataSet.xValuePosition = .outsideSlice
+        dataSet.valueTextColor = .black
+        dataSet.valueLinePart1OffsetPercentage = 0.8
+        dataSet.valueLinePart1Length = 0.2
+        dataSet.valueLinePart2Length = 0.3
+
+        dataSet.colors = ChartColorTemplates.vordiplom()
+          + ChartColorTemplates.joyful()
+          + ChartColorTemplates.colorful()
+          + ChartColorTemplates.liberty()
+          + ChartColorTemplates.pastel()
+          + ChartColorTemplates.material()
+        
+        self.pieChartView.data = PieChartData(dataSet: dataSet)
+        self.pieChartView.spin(duration: 0.3, fromAngle: pieChartView.rotationAngle, toAngle: pieChartView.rotationAngle + 80)
+    }
+    
+    func removeFormatString(string: String) -> Double {
+      let formatter = NumberFormatter()
+      formatter.numberStyle = .decimal
+      return formatter.number(from: string)?.doubleValue ?? 0
+    }
+}
+
+extension StatsViewController {
+    
+    func bind(_ viewModel: StatsViewModel) {
+        
+    }
+    
+    func attribute() {
+        
+    }
+    
+    func layout() {
         [
             tableView,
             pieChartView,

@@ -30,7 +30,7 @@
 		0E23C2202925BE9E00C467F8 /* AccountSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C21F2925BE9E00C467F8 /* AccountSettingCell.swift */; };
 		0E23C222292618C000C467F8 /* ThemeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C221292618C000C467F8 /* ThemeVC.swift */; };
 		0E2CBDCB292E0518001667BE /* GrasscollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBDCA292E0518001667BE /* GrasscollectionViewCell.swift */; };
-		0E2CBDD6292F0E27001667BE /* MyStatsHoldingsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBDD5292F0E27001667BE /* MyStatsHoldingsChartView.swift */; };
+		0E2CBDD6292F0E27001667BE /* MyStatsHoldingsChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBDD5292F0E27001667BE /* MyStatsHoldingsChartModel.swift */; };
 		0E2CBDD8292F550C001667BE /* StatsUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBDD7292F550C001667BE /* StatsUserTableViewCell.swift */; };
 		0E2CBE11293074D9001667BE /* UserGraphListSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE10293074D9001667BE /* UserGraphListSectionViewModel.swift */; };
 		0E2CBE14293076C7001667BE /* UserGraphListDetileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE13293076C7001667BE /* UserGraphListDetileViewModel.swift */; };
@@ -40,6 +40,7 @@
 		0E2CBE2C29307F63001667BE /* PopularCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE2B29307F63001667BE /* PopularCoinViewModel.swift */; };
 		0E2CBE3029307FF8001667BE /* IncreaseCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE2F29307FF8001667BE /* IncreaseCoinViewModel.swift */; };
 		0E2CBE3429308090001667BE /* DrapCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE3329308090001667BE /* DrapCoinViewModel.swift */; };
+		0E2CBE3C293082C0001667BE /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE3B293082C0001667BE /* StatsViewModel.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
 		0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B26290FDF2E005E379E /* SuggestionModel.swift */; };
@@ -136,7 +137,7 @@
 		0E23C21F2925BE9E00C467F8 /* AccountSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingCell.swift; sourceTree = "<group>"; };
 		0E23C221292618C000C467F8 /* ThemeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeVC.swift; sourceTree = "<group>"; };
 		0E2CBDCA292E0518001667BE /* GrasscollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrasscollectionViewCell.swift; sourceTree = "<group>"; };
-		0E2CBDD5292F0E27001667BE /* MyStatsHoldingsChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStatsHoldingsChartView.swift; sourceTree = "<group>"; };
+		0E2CBDD5292F0E27001667BE /* MyStatsHoldingsChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStatsHoldingsChartModel.swift; sourceTree = "<group>"; };
 		0E2CBDD7292F550C001667BE /* StatsUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsUserTableViewCell.swift; sourceTree = "<group>"; };
 		0E2CBE10293074D9001667BE /* UserGraphListSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGraphListSectionViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE13293076C7001667BE /* UserGraphListDetileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGraphListDetileViewModel.swift; sourceTree = "<group>"; };
@@ -146,6 +147,7 @@
 		0E2CBE2B29307F63001667BE /* PopularCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCoinViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE2F29307FF8001667BE /* IncreaseCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncreaseCoinViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE3329308090001667BE /* DrapCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrapCoinViewModel.swift; sourceTree = "<group>"; };
+		0E2CBE3B293082C0001667BE /* StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModel.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
 		0E555B26290FDF2E005E379E /* SuggestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionModel.swift; sourceTree = "<group>"; };
@@ -492,6 +494,38 @@
 			isa = PBXGroup;
 			children = (
 				0E2CBE3329308090001667BE /* DrapCoinViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0E2CBE382930821D001667BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E2CBDD5292F0E27001667BE /* MyStatsHoldingsChartModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E2CBE3929308253001667BE /* StatsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0E2CBDD7292F550C001667BE /* StatsUserTableViewCell.swift */,
+			);
+			path = StatsTableViewCell;
+			sourceTree = "<group>";
+		};
+		0E2CBE3A29308269001667BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EF69C3E2928637500C36DAC /* StatsVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E2CBE3D293082C3001667BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E2CBE3B293082C0001667BE /* StatsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -908,9 +942,10 @@
 		0EF69C4C2928A7A300C36DAC /* Stats */ = {
 			isa = PBXGroup;
 			children = (
-				0EF69C3E2928637500C36DAC /* StatsVC.swift */,
-				0E2CBDD7292F550C001667BE /* StatsUserTableViewCell.swift */,
-				0E2CBDD5292F0E27001667BE /* MyStatsHoldingsChartView.swift */,
+				0E2CBE382930821D001667BE /* Model */,
+				0E2CBE3A29308269001667BE /* View */,
+				0E2CBE3D293082C3001667BE /* ViewModel */,
+				0E2CBE3929308253001667BE /* StatsTableViewCell */,
 			);
 			path = Stats;
 			sourceTree = "<group>";
@@ -1168,6 +1203,7 @@
 				0EAFF93B2921E0E600162DD0 /* PopularBadgesView.swift in Sources */,
 				0EAFF94429221BD000162DD0 /* LastTextView.swift in Sources */,
 				0EF69C4F2928D34B00C36DAC /* MyRankView.swift in Sources */,
+				0E2CBE3C293082C0001667BE /* StatsViewModel.swift in Sources */,
 				0EAFF94929222E6100162DD0 /* BagesListModel.swift in Sources */,
 				0E2CBE2129307C63001667BE /* SuggesionDetailViewModel.swift in Sources */,
 				0EF59AF92909994F003FEA03 /* SuggestionFeatureCollectionViewCell.swift in Sources */,
@@ -1206,7 +1242,7 @@
 				0EAFF94B2922444500162DD0 /* BagesDetailVC.swift in Sources */,
 				0EF69C552928EC7100C36DAC /* RevenueHighestThree.swift in Sources */,
 				0E23C21429250CA300C467F8 /* UserGrassColorView.swift in Sources */,
-				0E2CBDD6292F0E27001667BE /* MyStatsHoldingsChartView.swift in Sources */,
+				0E2CBDD6292F0E27001667BE /* MyStatsHoldingsChartModel.swift in Sources */,
 				0EE4352628F4476F00CA7E58 /* SceneDelegate.swift in Sources */,
 				0E9973702908A58F00B95BC6 /* CertificationView.swift in Sources */,
 				0EF59AEF29099246003FEA03 /* UserGraphListSectionView.swift in Sources */,

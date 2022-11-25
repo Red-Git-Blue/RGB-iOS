@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MyStatsHoldingsChartView: Codable {
+struct MyStatsHoldingsChartModel: Codable {
   let jjunhaa0211: StatsChartData
 }
 
