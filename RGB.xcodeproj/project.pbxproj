@@ -37,6 +37,9 @@
 		0E2CBE1729307894001667BE /* SuggestionCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE1629307894001667BE /* SuggestionCoinViewModel.swift */; };
 		0E2CBE1E29307B3F001667BE /* UserGraphListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE1D29307B3F001667BE /* UserGraphListModel.swift */; };
 		0E2CBE2129307C63001667BE /* SuggesionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE2029307C63001667BE /* SuggesionDetailViewModel.swift */; };
+		0E2CBE2C29307F63001667BE /* PopularCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE2B29307F63001667BE /* PopularCoinViewModel.swift */; };
+		0E2CBE3029307FF8001667BE /* IncreaseCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE2F29307FF8001667BE /* IncreaseCoinViewModel.swift */; };
+		0E2CBE3429308090001667BE /* DrapCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE3329308090001667BE /* DrapCoinViewModel.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
 		0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B26290FDF2E005E379E /* SuggestionModel.swift */; };
@@ -77,7 +80,7 @@
 		0EF59AD429096081003FEA03 /* CertificationCompletionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59AD329096081003FEA03 /* CertificationCompletionVC.swift */; };
 		0EF59AD6290978E2003FEA03 /* TapBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59AD5290978E2003FEA03 /* TapBarVC.swift */; };
 		0EF59AD929097ABA003FEA03 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59AD829097ABA003FEA03 /* HomeVC.swift */; };
-		0EF59ADB29097ACF003FEA03 /* CointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59ADA29097ACF003FEA03 /* CointVC.swift */; };
+		0EF59ADB29097ACF003FEA03 /* CoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59ADA29097ACF003FEA03 /* CoinVC.swift */; };
 		0EF59ADD29097AD9003FEA03 /* CoinSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59ADC29097AD9003FEA03 /* CoinSearchVC.swift */; };
 		0EF59ADF29097AE6003FEA03 /* ShopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59ADE29097AE6003FEA03 /* ShopVC.swift */; };
 		0EF59AEF29099246003FEA03 /* UserGraphListSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF59AEE29099246003FEA03 /* UserGraphListSectionView.swift */; };
@@ -140,6 +143,9 @@
 		0E2CBE1629307894001667BE /* SuggestionCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCoinViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE1D29307B3F001667BE /* UserGraphListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGraphListModel.swift; sourceTree = "<group>"; };
 		0E2CBE2029307C63001667BE /* SuggesionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggesionDetailViewModel.swift; sourceTree = "<group>"; };
+		0E2CBE2B29307F63001667BE /* PopularCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCoinViewModel.swift; sourceTree = "<group>"; };
+		0E2CBE2F29307FF8001667BE /* IncreaseCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncreaseCoinViewModel.swift; sourceTree = "<group>"; };
+		0E2CBE3329308090001667BE /* DrapCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrapCoinViewModel.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
 		0E555B26290FDF2E005E379E /* SuggestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionModel.swift; sourceTree = "<group>"; };
@@ -182,7 +188,7 @@
 		0EF59AD329096081003FEA03 /* CertificationCompletionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationCompletionVC.swift; sourceTree = "<group>"; };
 		0EF59AD5290978E2003FEA03 /* TapBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarVC.swift; sourceTree = "<group>"; };
 		0EF59AD829097ABA003FEA03 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		0EF59ADA29097ACF003FEA03 /* CointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CointVC.swift; sourceTree = "<group>"; };
+		0EF59ADA29097ACF003FEA03 /* CoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinVC.swift; sourceTree = "<group>"; };
 		0EF59ADC29097AD9003FEA03 /* CoinSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSearchVC.swift; sourceTree = "<group>"; };
 		0EF59ADE29097AE6003FEA03 /* ShopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopVC.swift; sourceTree = "<group>"; };
 		0EF59AEE29099246003FEA03 /* UserGraphListSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGraphListSectionView.swift; sourceTree = "<group>"; };
@@ -426,6 +432,70 @@
 			path = GrassSectionDetil;
 			sourceTree = "<group>";
 		};
+		0E2CBE2929307ED7001667BE /* MainHomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0EF59AD829097ABA003FEA03 /* HomeVC.swift */,
+			);
+			path = MainHomeViewController;
+			sourceTree = "<group>";
+		};
+		0E2CBE2A29307EF7001667BE /* MainCoinViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0EF59ADA29097ACF003FEA03 /* CoinVC.swift */,
+			);
+			path = MainCoinViewController;
+			sourceTree = "<group>";
+		};
+		0E2CBE2D29307F93001667BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EF69C4329288F8500C36DAC /* PopularCoinView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E2CBE2E29307F9B001667BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E2CBE2B29307F63001667BE /* PopularCoinViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0E2CBE312930802D001667BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EF69C4629289D5F00C36DAC /* IncreaseCoinView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E2CBE3229308035001667BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E2CBE2F29307FF8001667BE /* IncreaseCoinViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0E2CBE35293080AC001667BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EF69C492928A2D100C36DAC /* DropCoinView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E2CBE36293080B4001667BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E2CBE3329308090001667BE /* DrapCoinViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		0E555B25290FC004005E379E /* BGroundBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -650,7 +720,7 @@
 		0EF59AE229097B84003FEA03 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				0EF59AD829097ABA003FEA03 /* HomeVC.swift */,
+				0E2CBE2929307ED7001667BE /* MainHomeViewController */,
 				0EF59B06290CD876003FEA03 /* UserGraphListView */,
 				0EF59B00290A07E8003FEA03 /* SuggestionView */,
 				0EF59B05290CD81C003FEA03 /* GrassView */,
@@ -800,7 +870,7 @@
 		0EF69C4229288F2E00C36DAC /* Coin */ = {
 			isa = PBXGroup;
 			children = (
-				0EF59ADA29097ACF003FEA03 /* CointVC.swift */,
+				0E2CBE2A29307EF7001667BE /* MainCoinViewController */,
 				0EF69C4529289D3800C36DAC /* PopularCoin */,
 				0EF69C4829289D6400C36DAC /* IncreaseCoin */,
 				0EF69C4B2928A2D700C36DAC /* DropCoin */,
@@ -811,7 +881,8 @@
 		0EF69C4529289D3800C36DAC /* PopularCoin */ = {
 			isa = PBXGroup;
 			children = (
-				0EF69C4329288F8500C36DAC /* PopularCoinView.swift */,
+				0E2CBE2D29307F93001667BE /* View */,
+				0E2CBE2E29307F9B001667BE /* ViewModel */,
 			);
 			path = PopularCoin;
 			sourceTree = "<group>";
@@ -819,7 +890,8 @@
 		0EF69C4829289D6400C36DAC /* IncreaseCoin */ = {
 			isa = PBXGroup;
 			children = (
-				0EF69C4629289D5F00C36DAC /* IncreaseCoinView.swift */,
+				0E2CBE312930802D001667BE /* View */,
+				0E2CBE3229308035001667BE /* ViewModel */,
 			);
 			path = IncreaseCoin;
 			sourceTree = "<group>";
@@ -827,7 +899,8 @@
 		0EF69C4B2928A2D700C36DAC /* DropCoin */ = {
 			isa = PBXGroup;
 			children = (
-				0EF69C492928A2D100C36DAC /* DropCoinView.swift */,
+				0E2CBE35293080AC001667BE /* View */,
+				0E2CBE36293080B4001667BE /* ViewModel */,
 			);
 			path = DropCoin;
 			sourceTree = "<group>";
@@ -1060,6 +1133,7 @@
 				0EF69C4A2928A2D100C36DAC /* DropCoinView.swift in Sources */,
 				0EF69C4429288F8500C36DAC /* PopularCoinView.swift in Sources */,
 				0EF59ADF29097AE6003FEA03 /* ShopVC.swift in Sources */,
+				0E2CBE3429308090001667BE /* DrapCoinViewModel.swift in Sources */,
 				0EAFF92F29211D0D00162DD0 /* AdvertisementSectionView.swift in Sources */,
 				0E0F94D928FD5D590004951F /* MyAPI+Method.swift in Sources */,
 				0E23C21A2925BDB600C467F8 /* ChangeThemeCell.swift in Sources */,
@@ -1119,14 +1193,16 @@
 				0E0F94E028FD5D590004951F /* MyAPI+BaseURL.swift in Sources */,
 				0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */,
 				0E61D6912907E6250098A3F5 /* SignupVC.swift in Sources */,
-				0EF59ADB29097ACF003FEA03 /* CointVC.swift in Sources */,
+				0EF59ADB29097ACF003FEA03 /* CoinVC.swift in Sources */,
 				0E61D69A2907F0E20098A3F5 /* PasswordView.swift in Sources */,
 				0E23C2202925BE9E00C467F8 /* AccountSettingCell.swift in Sources */,
 				0EF69C41292863BE00C36DAC /* RankVC.swift in Sources */,
+				0E2CBE2C29307F63001667BE /* PopularCoinViewModel.swift in Sources */,
 				0E23C21C2925BE3E00C467F8 /* NotificationSettingsCell.swift in Sources */,
 				0EF69C342927970800C36DAC /* LIstVC.swift in Sources */,
 				0EF59B04290CD7EF003FEA03 /* GrassSectionView.swift in Sources */,
 				0EAFF95629239C3600162DD0 /* PurchaseAndGiftButtonView.swift in Sources */,
+				0E2CBE3029307FF8001667BE /* IncreaseCoinViewModel.swift in Sources */,
 				0EAFF94B2922444500162DD0 /* BagesDetailVC.swift in Sources */,
 				0EF69C552928EC7100C36DAC /* RevenueHighestThree.swift in Sources */,
 				0E23C21429250CA300C467F8 /* UserGrassColorView.swift in Sources */,

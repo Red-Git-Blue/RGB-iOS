@@ -17,7 +17,9 @@ class DropCoinView: UIView {
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
         super.init(frame: frame)
-        setup()
+        
+        attribute()
+        layout()
         collectionView.reloadData()
     }
     
@@ -97,7 +99,16 @@ extension DropCoinView: UICollectionViewDataSource {
 }
 
 extension DropCoinView {
-    func setup() {
+    
+    func bind(_ viewModel: DrapCoinViewModel) {
+        
+    }
+    
+    func attribute() {
+        
+    }
+    
+    func layout() {
         [
             IncreaseCoinText,
             collectionView

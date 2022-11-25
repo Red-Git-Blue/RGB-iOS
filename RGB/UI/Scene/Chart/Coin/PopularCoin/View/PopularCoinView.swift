@@ -1,5 +1,5 @@
 //
-//  IncreaseCoinView.swift
+//  PopularCoinView.swift
 //  RGB
 //
 //  Created by 박준하 on 2022/11/19.
@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-class IncreaseCoinView: UIView {
+class PopularCoinView: UIView {
     private final var controller: UIViewController
     
     var suggesionModelList = [SuggesionModel]()
@@ -17,7 +17,9 @@ class IncreaseCoinView: UIView {
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
         super.init(frame: frame)
-        setup()
+        
+        attribute()
+        layout()
         collectionView.reloadData()
     }
     
@@ -25,10 +27,10 @@ class IncreaseCoinView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private lazy var IncreaseCoinText = UILabel().then {
+    private lazy var popularCoinText = UILabel().then {
         $0.font = .systemFont(ofSize: 16.0, weight: .bold)
         $0.textColor = .white
-        $0.text = "상승 코인"
+        $0.text = "인기 코인"
     }
     
     private lazy var collectionView: UICollectionView = {
@@ -60,7 +62,7 @@ class IncreaseCoinView: UIView {
 
 }
 
-extension IncreaseCoinView: UICollectionViewDelegateFlowLayout {
+extension PopularCoinView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(
             width: collectionView.frame.width - 60.0,
@@ -69,7 +71,7 @@ extension IncreaseCoinView: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension IncreaseCoinView: UICollectionViewDataSource {
+extension PopularCoinView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 9
     }
@@ -96,20 +98,29 @@ extension IncreaseCoinView: UICollectionViewDataSource {
     }
 }
 
-extension IncreaseCoinView {
-    func setup() {
+extension PopularCoinView {
+    
+    func bind(_ viewModel: PopularCoinViewModel) {
+        
+    }
+    
+    func attribute() {
+        
+    }
+    
+    func layout() {
         [
-            IncreaseCoinText,
+            popularCoinText,
             collectionView
         ].forEach { self.addSubview($0) }
         
-        IncreaseCoinText.snp.makeConstraints {
-            $0.top.equalToSuperview()
+        popularCoinText.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(10.0)
             $0.leading.equalToSuperview().inset(30.0)
         }
         
         collectionView.snp.makeConstraints {
-            $0.top.equalTo(IncreaseCoinText.snp.bottom).offset(12.0)
+            $0.top.equalTo(popularCoinText.snp.bottom).offset(12.0)
             $0.height.equalTo(SuggestionFeatureCollectionViewCell.height * 5)
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
