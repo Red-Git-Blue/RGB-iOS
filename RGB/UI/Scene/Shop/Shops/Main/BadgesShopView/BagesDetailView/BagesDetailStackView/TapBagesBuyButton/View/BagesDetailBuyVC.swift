@@ -9,22 +9,9 @@ class BagesDetailBuyViewController: UIViewController {
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
-        view.backgroundColor = .black
         
-        if let sheetPresentationController = sheetPresentationController {
-            sheetPresentationController.largestUndimmedDetentIdentifier = .large
-            let id = UISheetPresentationController.Detent.Identifier("buyCustom")
-            let buyCustomDetent = UISheetPresentationController.Detent.custom(identifier: id) { context in
-                return 240
-            }
-            sheetPresentationController.detents = [buyCustomDetent]
-        }
-        self.isModalInPresentation = true
-        
-        setup()
-        bagesImage.layer.cornerRadius = 20
-        purchaseButton.layer.cornerRadius = 20
-        cancelButton.layer.cornerRadius = 20
+        attributes()
+        layout()
         
         purchaseButton.rx.tap
             .bind {
@@ -76,7 +63,30 @@ class BagesDetailBuyViewController: UIViewController {
 }
 
 extension BagesDetailBuyViewController {
-    func setup() {
+    
+    func bind(_ viewModel: BagesDetailBuyViewModel) {
+        
+    }
+    
+    func attributes() {
+        view.backgroundColor = .black
+        
+        if let sheetPresentationController = sheetPresentationController {
+            sheetPresentationController.largestUndimmedDetentIdentifier = .large
+            let id = UISheetPresentationController.Detent.Identifier("buyCustom")
+            let buyCustomDetent = UISheetPresentationController.Detent.custom(identifier: id) { context in
+                return 240
+            }
+            sheetPresentationController.detents = [buyCustomDetent]
+        }
+        self.isModalInPresentation = true
+        
+        bagesImage.layer.cornerRadius = 20
+        purchaseButton.layer.cornerRadius = 20
+        cancelButton.layer.cornerRadius = 20
+    }
+    
+    func layout() {
         [
             bagesImage,
             bagesName,

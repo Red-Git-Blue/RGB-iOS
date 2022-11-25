@@ -2,7 +2,7 @@ import UIKit
 import Then
 import SnapKit
 
-class BagesTapView: UIView {
+class BagesIntroduceView: UIView {
     private final var controller: UIViewController
     
     private lazy var mainBagesImage = UIImageView().then {
@@ -48,7 +48,7 @@ class BagesTapView: UIView {
     }
 }
 
-extension BagesTapView {
+extension BagesIntroduceView {
     func setup() {
         [
             mainBagesImage,

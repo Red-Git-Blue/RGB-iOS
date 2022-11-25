@@ -16,7 +16,7 @@ class BagesDetailViewController: UIViewController {
         stackView.distribution = .equalSpacing
         stackView.spacing = 0.0
         
-        let bagesTapSectionView = BagesTapView(frame: .zero, viewController: self)
+        let bagesTapSectionView = BagesIntroduceView(frame: .zero, viewController: self)
         
         let newBagesSectionView = NewBadgesView(frame: .zero, viewController: self)
         
@@ -64,14 +64,10 @@ class BagesDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupLayout()
-        setup()
-//        navBarSetup()
-        
-        view.backgroundColor = .systemBackground
-        
-        purchaseButton.layer.cornerRadius = 20
-        giftButton.layer.cornerRadius = 20
+        attribute()
+        layout()
         
         purchaseButton.rx.tap
             .bind {
@@ -83,6 +79,7 @@ class BagesDetailViewController: UIViewController {
             .bind {
                 print("🎁:: 선물하기!!")
             }.disposed(by: disposeBag)
+        
     }
 }
 private extension BagesDetailViewController {
@@ -108,7 +105,17 @@ private extension BagesDetailViewController {
         }
     }
     
-    func setup() {
+    func bind(_ viewModel: BagesDetailViewModel) {
+    }
+    
+    func attribute() {
+        view.backgroundColor = .systemBackground
+        
+        purchaseButton.layer.cornerRadius = 20
+        giftButton.layer.cornerRadius = 20
+    }
+    
+    func layout() {
         [
             buttonView,
             purchaseButton,

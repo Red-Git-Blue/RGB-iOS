@@ -33,7 +33,9 @@ class LastTextView: UIView {
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
         super.init(frame: frame)
-        setup()
+        
+        attribute()
+        layout()
     }
     
     required init?(coder: NSCoder) {
@@ -42,7 +44,15 @@ class LastTextView: UIView {
 }
 
 extension LastTextView {
-    func setup() {
+    
+    func bind(_ viewModel: LastTextViewModel) {
+        
+    }
+    
+    func attribute() {
+    }
+    
+    func layout() {
         [
             rgbLabel,
             dateLabel,
