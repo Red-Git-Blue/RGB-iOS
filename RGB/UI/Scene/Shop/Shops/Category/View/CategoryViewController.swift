@@ -27,15 +27,10 @@ class CategoryViewController: BaseAbstractShop {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let data = Observable<[String]>.of(self.array)
-        
-        view.addSubview(collectionView)
-        collectionView.delegate = self
-        
-        autoLayout()
-        collectionView.register(CateforyCollectionViewCell.self, forCellWithReuseIdentifier: CateforyCollectionViewCell.identifier)
-        
+
+        attribute()
+        layout()
         
         data.asObservable()
             .bind(to: collectionView.rx
@@ -47,7 +42,6 @@ class CategoryViewController: BaseAbstractShop {
                 cell.label.text = "index \(index)"
                 cell.layer.cornerRadius = 10
             }
-        
     }
 }
 
@@ -76,7 +70,19 @@ extension CategoryViewController : UICollectionViewDelegateFlowLayout {
 
 extension CategoryViewController {
     
-    private func autoLayout() {
+    func bind(_ viewModel: CategotyViewModel) {
+        
+    }
+    
+    private func attribute() {
+        
+        view.addSubview(collectionView)
+        collectionView.delegate = self
+        
+        collectionView.register(CateforyCollectionViewCell.self, forCellWithReuseIdentifier: CateforyCollectionViewCell.identifier)
+    }
+    
+    private func layout() {
         collectionView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview().inset(30.0)

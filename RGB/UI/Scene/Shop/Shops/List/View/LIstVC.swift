@@ -29,12 +29,8 @@ class ListViewController: BaseAbstractShop {
         
         let data = Observable<[String]>.of(self.array)
         
-        view.addSubview(collectionView)
-        collectionView.delegate = self
-        
-        autoLayout()
-        collectionView.register(ListCollectionViewCell.self, forCellWithReuseIdentifier: ListCollectionViewCell.identifier)
-        
+        attribute()
+        layout()
         
         data.asObservable()
             .bind(to: collectionView.rx
@@ -73,7 +69,19 @@ extension ListViewController : UICollectionViewDelegateFlowLayout {
 
 extension ListViewController {
     
-    private func autoLayout() {
+    private func bind(_ viewModel: ListViewModel) {
+        
+    }
+    
+    private func attribute() {
+        view.addSubview(collectionView)
+        collectionView.delegate = self
+        
+        collectionView.register(ListCollectionViewCell.self, forCellWithReuseIdentifier: ListCollectionViewCell.identifier)
+        
+    }
+    
+    private func layout() {
         collectionView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview().inset(15.0)

@@ -10,7 +10,7 @@ import Then
 import SnapKit
 
 // Cell
-class CateforyCollectionViewCell : UICollectionViewCell {
+class CategoryCollectionViewCell : UICollectionViewCell {
     
     static let identifier = "cell3"
     
