@@ -129,14 +129,14 @@ private extension BagesDetailViewController {
         }
         
         purchaseButton.snp.makeConstraints {
-            $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-50)
+            $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-60)
             $0.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(20)
             $0.height.equalTo(50.0)
             $0.width.equalTo(172.0)
         }
         
         giftButton.snp.makeConstraints {
-            $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-50)
+            $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-60)
             $0.trailing.equalTo(self.view.safeAreaLayoutGuide.snp.trailing).inset(20)
             $0.height.equalTo(50.0)
             $0.width.equalTo(172.0)
