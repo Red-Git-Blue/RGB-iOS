@@ -78,6 +78,7 @@ class BagesDetailViewController: UIViewController {
         giftButton.rx.tap
             .bind {
                 print("🎁:: 선물하기!!")
+                self.detailGiftViewController()
             }.disposed(by: disposeBag)
         
     }
@@ -167,6 +168,13 @@ private extension BagesDetailViewController {
     
     @objc func dismissTap(sender: UIButton!){
         self.dismiss(animated: true)
+    }
+    
+    func detailGiftViewController() {
+        
+        let DetailGiftVC = BagesDetailGiftViewController()
+        
+        navigationController?.pushViewController(DetailGiftVC, animated: true)
     }
     
     func upView() {

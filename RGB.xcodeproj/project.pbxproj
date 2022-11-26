@@ -72,6 +72,8 @@
 		0E9BC15A28FEB7B700B8DB56 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC15928FEB7B700B8DB56 /* StartViewController.swift */; };
 		0E9BC16228FEC46100B8DB56 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC16128FEC46100B8DB56 /* LoginVC.swift */; };
 		0E9BC16428FEC49B00B8DB56 /* MainSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC16328FEC49B00B8DB56 /* MainSignupVC.swift */; };
+		0EA56B112931B62600967A99 /* BagesDetailGiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B102931B62600967A99 /* BagesDetailGiftViewController.swift */; };
+		0EA56B142931B95500967A99 /* GiftCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B132931B95500967A99 /* GiftCollectionViewCell.swift */; };
 		0EAFF92F29211D0D00162DD0 /* AdvertisementSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF92E29211D0D00162DD0 /* AdvertisementSectionView.swift */; };
 		0EAFF9352921335D00162DD0 /* CategorySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF9342921335D00162DD0 /* CategorySectionView.swift */; };
 		0EAFF9392921B49700162DD0 /* CategorySectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF9382921B49700162DD0 /* CategorySectionViewCell.swift */; };
@@ -190,6 +192,8 @@
 		0E9BC15928FEB7B700B8DB56 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		0E9BC16128FEC46100B8DB56 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0E9BC16328FEC49B00B8DB56 /* MainSignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSignupVC.swift; sourceTree = "<group>"; };
+		0EA56B102931B62600967A99 /* BagesDetailGiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailGiftViewController.swift; sourceTree = "<group>"; };
+		0EA56B132931B95500967A99 /* GiftCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCollectionViewCell.swift; sourceTree = "<group>"; };
 		0EAFF92E29211D0D00162DD0 /* AdvertisementSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementSectionView.swift; sourceTree = "<group>"; };
 		0EAFF9342921335D00162DD0 /* CategorySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySectionView.swift; sourceTree = "<group>"; };
 		0EAFF9382921B49700162DD0 /* CategorySectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySectionViewCell.swift; sourceTree = "<group>"; };
@@ -682,6 +686,7 @@
 			children = (
 				0E2CBE582930B4C5001667BE /* View */,
 				0E2CBE5B2930B591001667BE /* ViewModel */,
+				0EA56B0F2931B61200967A99 /* TapBagesGiftButton */,
 				0E2CBE5C2930B5BB001667BE /* TapBagesBuyButton */,
 			);
 			path = BagesDetailStackView;
@@ -964,6 +969,23 @@
 				0E9973762908E3C100B95BC6 /* PasswordCompletionView.swift */,
 			);
 			path = PasswordCompletion;
+			sourceTree = "<group>";
+		};
+		0EA56B0F2931B61200967A99 /* TapBagesGiftButton */ = {
+			isa = PBXGroup;
+			children = (
+				0EA56B122931B62900967A99 /* View */,
+				0EA56B132931B95500967A99 /* GiftCollectionViewCell.swift */,
+			);
+			path = TapBagesGiftButton;
+			sourceTree = "<group>";
+		};
+		0EA56B122931B62900967A99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EA56B102931B62600967A99 /* BagesDetailGiftViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		0EAFF93029211D1300162DD0 /* AdvertisementView */ = {
@@ -1499,6 +1521,7 @@
 				0E0F94DB28FD5D590004951F /* MyAPI.swift in Sources */,
 				0E0F94DD28FD5D590004951F /* MyAPI+Path.swift in Sources */,
 				0E555B29290FE0EC005E379E /* SuggesionDetailViewController.swift in Sources */,
+				0EA56B142931B95500967A99 /* GiftCollectionViewCell.swift in Sources */,
 				0E2CBE11293074D9001667BE /* UserGraphListSectionViewModel.swift in Sources */,
 				0EF59AD929097ABA003FEA03 /* HomeVC.swift in Sources */,
 				0E23C2062923BFAC00C467F8 /* BagesIntroduceView.swift in Sources */,
@@ -1592,6 +1615,7 @@
 				0E2CBDD6292F0E27001667BE /* MyStatsHoldingsChartModel.swift in Sources */,
 				0EE4352628F4476F00CA7E58 /* SceneDelegate.swift in Sources */,
 				0E9973702908A58F00B95BC6 /* CertificationView.swift in Sources */,
+				0EA56B112931B62600967A99 /* BagesDetailGiftViewController.swift in Sources */,
 				0EF59AEF29099246003FEA03 /* UserGraphListSectionView.swift in Sources */,
 				0EF69C5829291D3600C36DAC /* BaseAbstractSearch.swift in Sources */,
 				0EF59AD6290978E2003FEA03 /* TapBarVC.swift in Sources */,
