@@ -62,7 +62,7 @@ class BagesDetailGiftViewController: UIViewController {
         $0.setTitle("선물하기", for: .normal)
         $0.setTitleColor(UIColor(ciColor: .white), for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 20.0, weight: .bold)
-        $0.backgroundColor = .red
+        $0.backgroundColor = .green
     }
 
     override func viewDidLoad() {
@@ -118,6 +118,7 @@ private extension BagesDetailGiftViewController {
     func attribute() {
         title = "선물하기"
         bagesImage.layer.cornerRadius = 20
+        giftButton.layer.cornerRadius = 20
     }
     
     func layout() {
@@ -134,7 +135,7 @@ private extension BagesDetailGiftViewController {
 //            $0.height.equalTo(GiftCollectionViewCell.height)
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
-            $0.height.equalTo(700)
+            $0.height.equalTo(650)
 //            $0.bottom.equalToSuperview()
         }
         

@@ -975,7 +975,7 @@
 			isa = PBXGroup;
 			children = (
 				0EA56B122931B62900967A99 /* View */,
-				0EA56B132931B95500967A99 /* GiftCollectionViewCell.swift */,
+				0EA56B152931C43D00967A99 /* GiftCollectionCell */,
 			);
 			path = TapBagesGiftButton;
 			sourceTree = "<group>";
@@ -986,6 +986,14 @@
 				0EA56B102931B62600967A99 /* BagesDetailGiftViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0EA56B152931C43D00967A99 /* GiftCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				0EA56B132931B95500967A99 /* GiftCollectionViewCell.swift */,
+			);
+			path = GiftCollectionCell;
 			sourceTree = "<group>";
 		};
 		0EAFF93029211D1300162DD0 /* AdvertisementView */ = {
