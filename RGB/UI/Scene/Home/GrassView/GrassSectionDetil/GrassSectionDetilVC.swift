@@ -1,10 +1,3 @@
-//
-//  Grass.swift
-//  RGB
-//
-//  Created by 박준하 on 2022/11/02.
-//
-
 import UIKit
 import RxCocoa
 import RxSwift

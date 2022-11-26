@@ -1,10 +1,3 @@
-//
-//  ListCell.swift
-//  RGB
-//
-//  Created by 박준하 on 2022/11/21.
-//
-
 import Foundation
 import Then
 import SnapKit

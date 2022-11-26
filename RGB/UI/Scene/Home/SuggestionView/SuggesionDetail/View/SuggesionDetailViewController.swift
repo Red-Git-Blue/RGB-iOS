@@ -1,10 +1,3 @@
-//
-//  SuggesionDetailVC.swift
-//  RGB
-//
-//  Created by 박준하 on 2022/10/31.
-//
-
 import UIKit
 import Then
 import SnapKit

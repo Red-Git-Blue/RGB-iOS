@@ -1,9 +1,3 @@
-//
-//  GrasscollectionViewCell.swift
-//  RGB
-//
-//  Created by 박준하 on 2022/11/23.
-//
 import SnapKit
 import UIKit
 import PContributionsView
