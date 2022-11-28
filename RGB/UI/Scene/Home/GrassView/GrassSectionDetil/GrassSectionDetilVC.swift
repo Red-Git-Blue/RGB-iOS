@@ -3,6 +3,7 @@ import RxCocoa
 import RxSwift
 import Then
 import SnapKit
+import PContributionsView
 
 class GrassSectionDetilViewController: UIViewController {
     
@@ -10,11 +11,36 @@ class GrassSectionDetilViewController: UIViewController {
     
     var disposeBag = DisposeBag()
     
+    private var data: [[Int]] = []
+    
+    private lazy var mainGrassView = PContributionsView().then {
+        $0.backgroundColor = .systemPink
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         attribute()
         layout()
+        
+        mainGrassView.userCustomColor(ColorMap("#F4F4F4", "#72FFFF", "#00D7FF", "#0096FF", "#5800FF"))
+    }
+    
+    public func updateData(_ section: GrassSectionModel) {
+        grassSection = section
+        
+        var list = [[Int]]()
+        var tmpList = [Int]()
+        
+        for i in 0...grassSection!.contributions.count - 1 {
+            tmpList.append(grassSection!.contributions[i].level)
+            if(i % 5 == 4) {
+                list.append(tmpList)
+                tmpList = [Int]()
+            }
+        }
+        
+        mainGrassView.contrilbutionsData = list
     }
     
     internal lazy var downButton = UIButton().then {
@@ -54,7 +80,9 @@ extension GrassSectionDetilViewController {
     func layout() {
         [
             downButton,
-            titleLabel
+            titleLabel,
+            mainGrassView
+            
         ].forEach { view.addSubview($0) }
         
         let buttonSize = 24
@@ -69,6 +97,13 @@ extension GrassSectionDetilViewController {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(downButton.snp.top)
             $0.centerX.equalToSuperview()
+        }
+        
+        mainGrassView.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(200)
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(202)
+            $0.width.equalTo(208)
         }
     }
 }

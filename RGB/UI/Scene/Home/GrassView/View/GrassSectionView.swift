@@ -30,8 +30,8 @@ class GrassSectionView: UIView {
         collectionView.showsHorizontalScrollIndicator = false
 
         collectionView.register(
-            UICollectionViewCell.self,
-            forCellWithReuseIdentifier: "GrassCollectionViewCell"
+            GrasscollectionViewCell.self,
+            forCellWithReuseIdentifier: "GrasscollectionViewCell"
         )
 
         return collectionView
@@ -47,6 +47,12 @@ class GrassSectionView: UIView {
         layout()
         collectionView.reloadData()
         
+        var contents = [Contribution]()
+        for _ in 0...31 {
+            contents.append(Contribution(date: "1024-13-42", count: Int.random(in: 0...100), level: Int.random(in: 0...4)))
+        }
+        
+        grassSection.append(GrassSectionModel(userName: "kjhgfd`", contributions: contents))
     }
 
     required init?(coder: NSCoder) {
@@ -61,20 +67,34 @@ extension GrassSectionView: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "GrassCollectionViewCell",
+            withReuseIdentifier: "GrasscollectionViewCell",
             for: indexPath
-        )
+        ) as! GrasscollectionViewCell
+        
+        let modal = grassSection[0]
+        
+        var list = [[Int]]()
+        var tmpList = [Int]()
+        
+        for i in 0...modal.contributions.count - 1 {
+            tmpList.append(modal.contributions[i].level)
+            if(i % 5 == 4) {
+                list.append(tmpList)
+                tmpList = [Int]()
+            }
+        }
+        cell.setup(data: list)
+        print(list)
         
         cell.backgroundColor = UIColor(named: "CollectionViewColor")
-//        cell?.setup()
         
-        return cell ?? UICollectionViewCell()
+        return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedSuggesion = grassSection[indexPath.row]
         print(grassSection[indexPath.row])
         let detailViewController = GrassSectionDetilViewController()
-        detailViewController.grassSection = selectedSuggesion
+        detailViewController.updateData(selectedSuggesion)
         controller.present(detailViewController, animated: true)
     }
 }

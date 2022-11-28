@@ -16,7 +16,6 @@ target 'RGB' do
 	pod 'Charts'
 	pod 'LSHContributionView'
 	pod 'PContributionsView'
-	
   # Pods for RGB
 
 end
