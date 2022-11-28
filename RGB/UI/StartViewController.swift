@@ -13,10 +13,9 @@ class StartViewController : UIViewController {
         setupLayout()
     }
     
-    private lazy var mainImageView = UIImageView().then {_ in 
+    private lazy var mainImageView = UIImageView().then {
         let imageName = "MainBackground"
-        let image = UIImage(named: imageName)
-        let imageView = UIImageView(image: image!)
+        $0.image = UIImage(named: imageName)
     }
     
     private lazy var mainLoginButton = UIButton().then {

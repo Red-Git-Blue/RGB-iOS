@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
                 self.provider.rx.request(.postSignIn(LoginRequest(email: view.firstTextField.text!, password: view.seconedTextField.text!))).subscribe { response in
                     switch response {
                     case .success(let response):
-                        print(response.data)
+                        print(response.statusCode)
                         break
                     case .failure(let error):
                         print("펑! \(error)")

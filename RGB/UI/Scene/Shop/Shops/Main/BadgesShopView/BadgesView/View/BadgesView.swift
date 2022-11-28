@@ -2,8 +2,9 @@ import UIKit
 import Then
 import SnapKit
 
-class NewBadgesView: UIView {
+class BadgesView: UIView {
     private final var controller: UIViewController
+    private final var viewName: String
     
     var bagesList = [BagesListModel]()
     
@@ -42,9 +43,11 @@ class NewBadgesView: UIView {
         $0.backgroundColor = .separator
     }
     
-    init(frame: CGRect, viewController: UIViewController) {
+    init(frame: CGRect, viewController: UIViewController, viewName: String) {
         controller = viewController
+        self.viewName = viewName
         super.init(frame: frame)
+        newBadgeLabel.text = viewName
         
         attribute()
         layout()
@@ -56,7 +59,7 @@ class NewBadgesView: UIView {
     }
 }
 
-extension NewBadgesView: UICollectionViewDelegateFlowLayout {
+extension BadgesView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(
             width: BadgesCell.width,
@@ -65,7 +68,7 @@ extension NewBadgesView: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension NewBadgesView: UICollectionViewDataSource {
+extension BadgesView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
@@ -97,9 +100,9 @@ extension NewBadgesView: UICollectionViewDataSource {
     }
 }
 
-extension NewBadgesView {
+extension BadgesView {
     
-    func bind(_ viewModel: NewBadgesViewModel) {
+    func bind(_ viewModel: BadgesViewModel) {
         
     }
     

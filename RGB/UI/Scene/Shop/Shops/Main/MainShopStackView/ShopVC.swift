@@ -15,9 +15,9 @@ final class ShopViewController: BaseAbstractShop {
         
         let categorySectionView = CategorySectionView(frame: .zero, viewController: self)
         
-        let popularBadgesView = PopularBadgesView(frame: .zero, viewController: self)
+        let popularBadgesView = BadgesView(frame: .zero, viewController: self, viewName: "인기배지")
         
-        let newBadgesView = NewBadgesView(frame: .zero, viewController: self)
+        let newBadgesView = BadgesView(frame: .zero, viewController: self, viewName: "신규배지")
         
         let lastTextView = LastTextView(frame: .zero, viewController: self)
         

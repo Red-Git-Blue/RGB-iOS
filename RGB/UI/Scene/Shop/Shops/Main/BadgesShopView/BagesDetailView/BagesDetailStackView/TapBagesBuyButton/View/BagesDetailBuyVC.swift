@@ -8,21 +8,14 @@ class BagesDetailBuyViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     
+    let viewModel = BagesDetailBuyViewModel()
+    
     override func viewDidLoad() {
         
         attributes()
         layout()
+        bind(viewModel)
         
-        purchaseButton.rx.tap
-            .bind {
-                print("🤑:: 구매구매!")
-            }.disposed(by: disposeBag)
-        
-        cancelButton.rx.tap
-            .bind {
-                self.dismiss(animated: true)
-                print("↩️:: cancel!")
-            }.disposed(by: disposeBag)
     }
     
     private lazy var bagesImage = UIImageView().then {
@@ -66,6 +59,16 @@ extension BagesDetailBuyViewController {
     
     func bind(_ viewModel: BagesDetailBuyViewModel) {
         
+        purchaseButton.rx.tap
+            .bind {
+                print("🤑:: 구매구매!")
+            }.disposed(by: disposeBag)
+        
+        cancelButton.rx.tap
+            .bind {
+                self.dismiss(animated: true)
+                print("↩️:: cancel!")
+            }.disposed(by: disposeBag)
     }
     
     func attributes() {

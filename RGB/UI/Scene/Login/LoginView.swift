@@ -45,6 +45,9 @@ class LoginView: BaseSignView {
             goSignupButton
             
         ].forEach { controller.view.addSubview($0) }
+        
+        let width = controller.view.frame.width / 430.0
+        let height = controller.view.frame.height / 932.0
     
         areYouUserLable.snp.makeConstraints {
             $0.top.equalTo(seconedTextField.snp.bottom).offset(130.0)
@@ -54,8 +57,8 @@ class LoginView: BaseSignView {
         forgetPasswordButton.snp.makeConstraints {
             $0.top.equalTo(areYouUserLable.snp.bottom).offset(14.0)
             $0.centerX.equalTo(controller.view)
-            $0.height.equalTo(50.0)
-            $0.width.equalTo(390.0)
+            $0.height.equalTo(50.0 * height)
+            $0.width.equalTo(390.0 * width)
         }
         
         goSignupButton.snp.makeConstraints {

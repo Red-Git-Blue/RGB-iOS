@@ -1,11 +1,13 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Moya
 import Then
 import SnapKit
 import RxRelay
 
 class SignupViewController: UIViewController {
+    let provider = MoyaProvider<MyAPI>()
     
     let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5),
                       .font : UIFont.systemFont(ofSize: 14, weight: .bold)]
@@ -35,6 +37,31 @@ class SignupViewController: UIViewController {
                 let SigninViewContoller = BackGroundViewController(type: .Login)
                 SigninViewContoller.modalPresentationStyle = .fullScreen
                 self.present(SigninViewContoller, animated: false)
+            }
+        
+        
+        view.mainButton.rx.tap
+            .bind {
+                if(view.firstTextField.text == nil || view.firstTextField.text!.isEmpty) {
+                    print("닉네임 없서")
+                    return
+                }
+                if(view.seconedTextField.text == nil || view.seconedTextField.text!.isEmpty) {
+                    print("비밀번호 없서")
+                    return
+                }
+                
+                self.provider.rx.request(.postSignUp(SignRequest(email: view.seconedTextField.text!, password: view.passwordTextField.text!, name: view.firstTextField.text!))).subscribe {
+                    response in
+                    switch response {
+                    case .success(let response):
+                        print(response.statusCode)
+                        
+                        break
+                    case .failure(let error):
+                        print("this error is \(error)")
+                    }
+                }
             }
         
         view.updateWith(self)

@@ -11,8 +11,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.windowScene = windowScene
         
 //        let homeViewController = AppViewController()
-        let tapbarViewController = TapBarViewController()
-        let rootNavigationController = UINavigationController(rootViewController: tapbarViewController)
+        let loginViewController = StartViewController()
+//        let tapbarViewController = TapBarViewController()
+        let rootNavigationController = UINavigationController(rootViewController: loginViewController)
         
         self.window?.rootViewController = rootNavigationController
         self.window?.makeKeyAndVisible()

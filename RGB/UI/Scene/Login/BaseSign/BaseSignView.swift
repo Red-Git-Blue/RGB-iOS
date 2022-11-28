@@ -81,9 +81,12 @@ class BaseSignView {
             mainButton
         ].forEach { controller.view.addSubview($0)}
         
+        let width = controller.view.frame.width / 430.0
+        let height = controller.view.frame.height / 932.0
+        
         firstText.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(80.0)
-            $0.leading.equalToSuperview().inset(44.0)
+            $0.top.equalToSuperview().inset(80.0 * height)
+            $0.leading.equalToSuperview().inset(44.0 * width)
         }
         
         seconedText.snp.makeConstraints {
@@ -99,8 +102,8 @@ class BaseSignView {
         firstTextField.snp.makeConstraints {
             $0.top.equalTo(firstTextFieldLable.snp.bottom).offset(13.0)
             $0.centerX.equalTo(controller.view)
-            $0.height.equalTo(50.0)
-            $0.width.equalTo(390.0)
+            $0.height.equalTo(50.0 * height)
+            $0.width.equalTo(390.0 * width)
         }
         
         seconedTextFieldLable.snp.makeConstraints {
@@ -111,15 +114,15 @@ class BaseSignView {
         seconedTextField.snp.makeConstraints {
             $0.top.equalTo(seconedTextFieldLable.snp.bottom).offset(13.0)
             $0.centerX.equalTo(controller.view)
-            $0.height.equalTo(50.0)
-            $0.width.equalTo(390.0)
+            $0.height.equalTo(50.0 * height)
+            $0.width.equalTo(390.0 * width)
         }
         
         mainButton.snp.makeConstraints {
             $0.top.equalTo(seconedTextField.snp.bottom).offset(228.0)
             $0.centerX.equalTo(controller.view)
-            $0.height.equalTo(50.0)
-            $0.width.equalTo(390.0)
+            $0.height.equalTo(50.0 * height)
+            $0.width.equalTo(390.0 * width)
         }
     }
 }

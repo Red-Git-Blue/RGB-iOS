@@ -18,7 +18,7 @@ class BagesDetailViewController: UIViewController {
         
         let bagesTapSectionView = BagesIntroduceView(frame: .zero, viewController: self)
         
-        let newBagesSectionView = NewBadgesView(frame: .zero, viewController: self)
+        let newBagesSectionView = BadgesView(frame: .zero, viewController: self, viewName: "신규배지")
         
         let lastTextView = LastTextView(frame: .zero, viewController: self)
         
@@ -172,9 +172,9 @@ private extension BagesDetailViewController {
     
     func detailGiftViewController() {
         
-        let DetailGiftVC = BagesDetailGiftViewController()
+        let detailGiftVC = BagesDetailGiftViewController()
         
-        navigationController?.pushViewController(DetailGiftVC, animated: true)
+        navigationController?.pushViewController(detailGiftVC, animated: true)
     }
     
     func upView() {

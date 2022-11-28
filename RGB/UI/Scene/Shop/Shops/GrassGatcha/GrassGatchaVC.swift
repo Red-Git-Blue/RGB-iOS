@@ -11,14 +11,23 @@ class GrassGatchaViewController: BaseAbstractShop {
         
         let advertisementSectionView = AdvertisementSectionView(frame: .zero, viewController: self)
         
+        let grassGatchaView = GrassGatchaView(frame: .zero, viewController: self)
+        
         let spacingView = UIView()
         spacingView.snp.makeConstraints {
             $0.height.equalTo(60.0)
         }
         
+        let spacingView2 = UIView()
+        spacingView2.snp.makeConstraints {
+            $0.height.equalTo(60.0)
+        }
+        
         [
             advertisementSectionView,
-            spacingView
+            spacingView,
+            grassGatchaView,
+            spacingView2
         ].forEach {
             stackView.addArrangedSubview($0)
         }
