@@ -75,6 +75,7 @@
 		0EA56B142931B95500967A99 /* GiftCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B132931B95500967A99 /* GiftCollectionViewCell.swift */; };
 		0EA56B61293443DC00967A99 /* GrassGatchaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B60293443DC00967A99 /* GrassGatchaView.swift */; };
 		0EA56B852936115500967A99 /* UserGraphListSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B842936115500967A99 /* UserGraphListSectionCell.swift */; };
+		0EA56B8929361DDA00967A99 /* FundsHighestListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B8829361DDA00967A99 /* FundsHighestListVC.swift */; };
 		0EAFF92F29211D0D00162DD0 /* AdvertisementSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF92E29211D0D00162DD0 /* AdvertisementSectionView.swift */; };
 		0EAFF9352921335D00162DD0 /* CategorySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF9342921335D00162DD0 /* CategorySectionView.swift */; };
 		0EAFF9392921B49700162DD0 /* CategorySectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF9382921B49700162DD0 /* CategorySectionViewCell.swift */; };
@@ -195,6 +196,7 @@
 		0EA56B132931B95500967A99 /* GiftCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCollectionViewCell.swift; sourceTree = "<group>"; };
 		0EA56B60293443DC00967A99 /* GrassGatchaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassGatchaView.swift; sourceTree = "<group>"; };
 		0EA56B842936115500967A99 /* UserGraphListSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGraphListSectionCell.swift; sourceTree = "<group>"; };
+		0EA56B8829361DDA00967A99 /* FundsHighestListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsHighestListVC.swift; sourceTree = "<group>"; };
 		0EAFF92E29211D0D00162DD0 /* AdvertisementSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementSectionView.swift; sourceTree = "<group>"; };
 		0EAFF9342921335D00162DD0 /* CategorySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySectionView.swift; sourceTree = "<group>"; };
 		0EAFF9382921B49700162DD0 /* CategorySectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySectionViewCell.swift; sourceTree = "<group>"; };
@@ -989,6 +991,14 @@
 			path = UserGraphListSectionCollectionCell;
 			sourceTree = "<group>";
 		};
+		0EA56B8729361DA300967A99 /* FundsHighestListVC */ = {
+			isa = PBXGroup;
+			children = (
+				0EA56B8829361DDA00967A99 /* FundsHighestListVC.swift */,
+			);
+			path = FundsHighestListVC;
+			sourceTree = "<group>";
+		};
 		0EAFF93029211D1300162DD0 /* AdvertisementView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1306,6 +1316,7 @@
 		0EF69C4D2928D0BD00C36DAC /* Rank */ = {
 			isa = PBXGroup;
 			children = (
+				0EA56B8729361DA300967A99 /* FundsHighestListVC */,
 				0E2CBE3E2930847A001667BE /* MainRankStackView */,
 				0EF69C502928E4A300C36DAC /* myRankView */,
 				0EF69C532928E63D00C36DAC /* fundsHighestThreeView */,
@@ -1539,6 +1550,7 @@
 				0EAFF9392921B49700162DD0 /* CategorySectionViewCell.swift in Sources */,
 				0EF59AFD2909997A003FEA03 /* SuggestionFeature.swift in Sources */,
 				0EF69C522928E53B00C36DAC /* HighestThreeView.swift in Sources */,
+				0EA56B8929361DDA00967A99 /* FundsHighestListVC.swift in Sources */,
 				0EF69C3F2928637500C36DAC /* StatsVC.swift in Sources */,
 				0EAFF9352921335D00162DD0 /* CategorySectionView.swift in Sources */,
 				0E2CBDCB292E0518001667BE /* GrasscollectionViewCell.swift in Sources */,

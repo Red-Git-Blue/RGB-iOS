@@ -1,11 +1,15 @@
 import SnapKit
 import Then
 import UIKit
+import RxCocoa
+import RxSwift
 
-final class fundsHighestThreeView: UIView {
+final class FundsHighestThreeView: UIView {
     private final var controller: UIViewController
     
     var suggesionModelList = [SuggesionModel]()
+    
+    let disposeBag = DisposeBag()
 
     private lazy var titleLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 24.0, weight: .black)
@@ -37,7 +41,7 @@ final class fundsHighestThreeView: UIView {
 
         collectionView.register(
             SuggestionFeatureCollectionViewCell.self,
-            forCellWithReuseIdentifier: "RankingFeatureCollectionViewCell"
+            forCellWithReuseIdentifier: "SuggestionFeatureCollectionViewCell"
         )
 
         return collectionView
@@ -51,6 +55,15 @@ final class fundsHighestThreeView: UIView {
 
         attribute()
         layout()
+        
+        showAllAppsButton.rx.tap
+            .bind {
+                let fundsHighestListVC = FundsHighestListViewController()
+                fundsHighestListVC.modalPresentationStyle = .fullScreen
+                self.controller.navigationController?.pushViewController(fundsHighestListVC, animated: true)
+            }
+            .disposed(by: disposeBag)
+        
         collectionView.reloadData()
     }
 
@@ -59,7 +72,7 @@ final class fundsHighestThreeView: UIView {
     }
 }
 
-extension fundsHighestThreeView: UICollectionViewDelegateFlowLayout {
+extension FundsHighestThreeView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(
             width: collectionView.frame.width - 60.0,
@@ -68,14 +81,14 @@ extension fundsHighestThreeView: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension fundsHighestThreeView: UICollectionViewDataSource {
+extension FundsHighestThreeView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 9
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "RankingFeatureCollectionViewCell",
+            withReuseIdentifier: "SuggestionFeatureCollectionViewCell",
             for: indexPath
         ) as? SuggestionFeatureCollectionViewCell
 //        let rankingFeature = rankingFeatureList[indexPath.item]
@@ -132,7 +145,7 @@ extension fundsHighestThreeView: UICollectionViewDataSource {
 }
 
 // MARK: Private method
-private extension fundsHighestThreeView {
+private extension FundsHighestThreeView {
     
     func attribute() {
         suggesionModelList = [

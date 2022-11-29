@@ -13,7 +13,7 @@ final class RankViewController: BaseAbstractChart {
         
         let myRankView = MyRankView(frame: .zero, viewController: self)
         
-        let highestThreeView = fundsHighestThreeView(frame: .zero, viewController: self)
+        let highestThreeView = FundsHighestThreeView(frame: .zero, viewController: self)
         
         let revenueHighestThree = RevenueHighestThree(frame: .zero, viewController: self)
         
