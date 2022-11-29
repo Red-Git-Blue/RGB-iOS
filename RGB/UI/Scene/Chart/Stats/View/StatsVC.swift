@@ -26,6 +26,13 @@ class StatsViewController: BaseAbstractChart {
         
         layout()
         attribute()
+        
+        var data = [Double]()
+        for _ in 0...8 {
+            data.append(Double.random(in: 0...100))
+        }
+        
+        configureChartView(data)
     }
     
     override func viewIndex() -> Int {
@@ -76,27 +83,18 @@ class StatsViewController: BaseAbstractChart {
 extension StatsViewController {
     func statsOverviewList(myStatsHoldingsChartView: MyStatsHoldingsChartModel) -> [StatsChartData] {
       return [
-        myStatsHoldingsChartView.jjunhaa0211,
-//        myStatsHoldingsChartView.hahahaha
+        myStatsHoldingsChartView.jjunhaa0211
       ]
     }
     
-    func configureChartView(statsOverviewListData: [StatsChartData]) {
-        let entries = statsOverviewListData.compactMap { [weak self] overview -> PieChartDataEntry? in
-          guard let self = self else { return nil }
-          return PieChartDataEntry(
-            value: self.removeFormatString(string: overview.holdingsCount),
-            data: overview
-          )
+    func configureChartView(_ data: [Double]) {
+        var entries = [PieChartDataEntry]()
+        data.forEach {
+            entries.append(PieChartDataEntry(value: $0))
         }
         let dataSet = PieChartDataSet(entries: entries, label: "통계")
-        dataSet.sliceSpace = 1
+        dataSet.sliceSpace = 2
         dataSet.entryLabelColor = .black
-        dataSet.xValuePosition = .outsideSlice
-        dataSet.valueTextColor = .black
-        dataSet.valueLinePart1OffsetPercentage = 0.8
-        dataSet.valueLinePart1Length = 0.2
-        dataSet.valueLinePart2Length = 0.3
 
         dataSet.colors = ChartColorTemplates.vordiplom()
           + ChartColorTemplates.joyful()
@@ -106,7 +104,7 @@ extension StatsViewController {
           + ChartColorTemplates.material()
         
         self.pieChartView.data = PieChartData(dataSet: dataSet)
-        self.pieChartView.spin(duration: 0.3, fromAngle: pieChartView.rotationAngle, toAngle: pieChartView.rotationAngle + 80)
+        self.pieChartView.spin(duration: 0.5, fromAngle: pieChartView.rotationAngle, toAngle: pieChartView.rotationAngle + 80)
     }
     
     func removeFormatString(string: String) -> Double {

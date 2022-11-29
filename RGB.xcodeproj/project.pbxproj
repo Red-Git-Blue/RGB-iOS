@@ -74,6 +74,7 @@
 		0EA56B112931B62600967A99 /* BagesDetailGiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B102931B62600967A99 /* BagesDetailGiftViewController.swift */; };
 		0EA56B142931B95500967A99 /* GiftCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B132931B95500967A99 /* GiftCollectionViewCell.swift */; };
 		0EA56B61293443DC00967A99 /* GrassGatchaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B60293443DC00967A99 /* GrassGatchaView.swift */; };
+		0EA56B852936115500967A99 /* UserGraphListSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B842936115500967A99 /* UserGraphListSectionCell.swift */; };
 		0EAFF92F29211D0D00162DD0 /* AdvertisementSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF92E29211D0D00162DD0 /* AdvertisementSectionView.swift */; };
 		0EAFF9352921335D00162DD0 /* CategorySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF9342921335D00162DD0 /* CategorySectionView.swift */; };
 		0EAFF9392921B49700162DD0 /* CategorySectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF9382921B49700162DD0 /* CategorySectionViewCell.swift */; };
@@ -193,6 +194,7 @@
 		0EA56B102931B62600967A99 /* BagesDetailGiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailGiftViewController.swift; sourceTree = "<group>"; };
 		0EA56B132931B95500967A99 /* GiftCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCollectionViewCell.swift; sourceTree = "<group>"; };
 		0EA56B60293443DC00967A99 /* GrassGatchaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassGatchaView.swift; sourceTree = "<group>"; };
+		0EA56B842936115500967A99 /* UserGraphListSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGraphListSectionCell.swift; sourceTree = "<group>"; };
 		0EAFF92E29211D0D00162DD0 /* AdvertisementSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementSectionView.swift; sourceTree = "<group>"; };
 		0EAFF9342921335D00162DD0 /* CategorySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySectionView.swift; sourceTree = "<group>"; };
 		0EAFF9382921B49700162DD0 /* CategorySectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySectionViewCell.swift; sourceTree = "<group>"; };
@@ -344,8 +346,6 @@
 		0E2CBE1229307506001667BE /* UserGraphListDetailView */ = {
 			isa = PBXGroup;
 			children = (
-				0E2CBE2429307CD6001667BE /* View */,
-				0E2CBE2329307CCA001667BE /* ViewModel */,
 			);
 			path = UserGraphListDetailView;
 			sourceTree = "<group>";
@@ -420,7 +420,8 @@
 			children = (
 				0E2CBE13293076C7001667BE /* UserGraphListDetileViewModel.swift */,
 			);
-			path = ViewModel;
+			name = ViewModel;
+			path = UserGraphListDetailView/ViewModel;
 			sourceTree = "<group>";
 		};
 		0E2CBE2429307CD6001667BE /* View */ = {
@@ -428,7 +429,8 @@
 			children = (
 				0EEE8D3B2911093700227199 /* UserGraphListDetileVC.swift */,
 			);
-			path = View;
+			name = View;
+			path = UserGraphListDetailView/View;
 			sourceTree = "<group>";
 		};
 		0E2CBE2529307D7F001667BE /* GrassViewCell */ = {
@@ -979,6 +981,14 @@
 			path = GiftCollectionCell;
 			sourceTree = "<group>";
 		};
+		0EA56B862936115E00967A99 /* UserGraphListSectionCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				0EA56B842936115500967A99 /* UserGraphListSectionCell.swift */,
+			);
+			path = UserGraphListSectionCollectionCell;
+			sourceTree = "<group>";
+		};
 		0EAFF93029211D1300162DD0 /* AdvertisementView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1168,6 +1178,9 @@
 				0EEE8D3F29110A7600227199 /* Model */,
 				0E2CBE1929307929001667BE /* View */,
 				0E2CBE1A29307936001667BE /* ViewModel */,
+				0EA56B862936115E00967A99 /* UserGraphListSectionCollectionCell */,
+				0E2CBE2429307CD6001667BE /* View */,
+				0E2CBE2329307CCA001667BE /* ViewModel */,
 				0E2CBE1229307506001667BE /* UserGraphListDetailView */,
 			);
 			path = UserGraphListView;
@@ -1585,6 +1598,7 @@
 				0E2CBE2C29307F63001667BE /* PopularCoinViewModel.swift in Sources */,
 				0E23C21C2925BE3E00C467F8 /* NotificationSettingsCell.swift in Sources */,
 				0EF69C342927970800C36DAC /* LIstVC.swift in Sources */,
+				0EA56B852936115500967A99 /* UserGraphListSectionCell.swift in Sources */,
 				0EF59B04290CD7EF003FEA03 /* GrassSectionView.swift in Sources */,
 				0E2CBE6E2930B9E1001667BE /* UserInformationViewModel.swift in Sources */,
 				0E2CBE512930B15D001667BE /* LastTextViewModel.swift in Sources */,

@@ -5,5 +5,5 @@ struct MyStatsHoldingsChartModel: Codable {
 }
 
 struct StatsChartData: Codable {
-  let holdingsCount: String
+  let holdingsCount: Int
 }

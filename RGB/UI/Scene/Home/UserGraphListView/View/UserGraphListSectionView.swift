@@ -33,8 +33,8 @@ final class UserGraphListSectionView: UIView {
         collectionView.showsHorizontalScrollIndicator = false
 
         collectionView.register(
-            UICollectionViewCell.self,
-            forCellWithReuseIdentifier: "FeatureSectionCollectionViewCell"
+            UserGraphListSectionCell.self,
+            forCellWithReuseIdentifier: "UserGraphListSectionCell"
         )
 
         return collectionView
@@ -61,7 +61,9 @@ extension UserGraphListSectionView: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureSectionCollectionViewCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserGraphListSectionCell", for: indexPath) as! UserGraphListSectionCell
+        
+        cell.setup()
         cell.backgroundColor = UIColor(named: "CollectionViewColor")
         
         return cell

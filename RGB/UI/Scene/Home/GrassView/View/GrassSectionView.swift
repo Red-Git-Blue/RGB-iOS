@@ -52,7 +52,7 @@ class GrassSectionView: UIView {
             contents.append(Contribution(date: "1024-13-42", count: Int.random(in: 0...100), level: Int.random(in: 0...4)))
         }
         
-        grassSection.append(GrassSectionModel(userName: "kjhgfd`", contributions: contents))
+        grassSection.append(GrassSectionModel(userName: "kjhgfd", contributions: contents))
     }
 
     required init?(coder: NSCoder) {
@@ -76,7 +76,7 @@ extension GrassSectionView: UICollectionViewDataSource {
         var list = [[Int]]()
         var tmpList = [Int]()
         
-        for i in 0...modal.contributions.count - 1 {
+        for i in 0..<modal.contributions.count - 1 {
             tmpList.append(modal.contributions[i].level)
             if(i % 5 == 4) {
                 list.append(tmpList)

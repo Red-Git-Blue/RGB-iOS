@@ -8,12 +8,23 @@ final class GrasscollectionViewCell: UICollectionViewCell {
     private lazy var mainGrassView = PContributionsView().then {
         $0.backgroundColor = .clear
     }
+    
+    private lazy var dateLabel = UILabel().then {
+        $0.text = "September"
+        $0.font = .systemFont(ofSize: 16.0, weight: .medium)
+        $0.textColor = .red
+    }
+    
+    private lazy var commitLabel = UILabel().then {
+        $0.text = "32 Commit"
+        $0.font = .systemFont(ofSize: 14.0, weight: .regular)
+        $0.textColor = .green
+    }
 
     func setup(data: [[Int]]) {
         setupLayout()
         
         mainGrassView.contrilbutionsData = data
-        mainGrassView.userCustomColor(ColorMap("#F4F4F4", "#72FFFF", "#00D7FF", "#0096FF", "#5800FF"))
         mainGrassView.cellCornerRadius(4)
         mainGrassView.spacing = 2
     }
@@ -23,8 +34,23 @@ final class GrasscollectionViewCell: UICollectionViewCell {
 private extension GrasscollectionViewCell {
     func setupLayout() {
         [
-            mainGrassView
+            dateLabel,
+            mainGrassView,
+            commitLabel
         ].forEach { addSubview($0) }
+        
+        dateLabel.snp.makeConstraints {
+//            $0.top.equalToSuperview()
+//            $0.leading.equalToSuperview()
+//            $0.centerY.equalToSuperview().inset(60.0)
+            $0.centerY.equalToSuperview().inset(50)
+            $0.leading.equalToSuperview().inset(30.0)
+        }
+        
+        commitLabel.snp.makeConstraints {
+            $0.top.equalTo(dateLabel.snp.bottom).offset(14.0)
+            $0.leading.equalToSuperview().inset(30.0)
+        }
 
         mainGrassView.snp.makeConstraints {
             $0.trailing.equalToSuperview()
