@@ -13,7 +13,7 @@ final class FundsHighestThreeView: UIView {
 
     private lazy var titleLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 24.0, weight: .black)
-        $0.text = "지금 TOP 3"
+        $0.text = "자금 TOP 3"
     }
 
     private lazy var showAllAppsButton = UIButton().then {
@@ -58,9 +58,9 @@ final class FundsHighestThreeView: UIView {
         
         showAllAppsButton.rx.tap
             .bind {
-                let fundsHighestListVC = FundsHighestListViewController()
-                fundsHighestListVC.modalPresentationStyle = .fullScreen
-                self.controller.navigationController?.pushViewController(fundsHighestListVC, animated: true)
+                let fundsHighestThreePlusVC = FundsHighestThreePlusViewController()
+                fundsHighestThreePlusVC.modalPresentationStyle = .fullScreen
+                self.controller.navigationController?.pushViewController(fundsHighestThreePlusVC, animated: true)
             }
             .disposed(by: disposeBag)
         

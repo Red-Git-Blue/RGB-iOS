@@ -11,7 +11,7 @@ import RxCocoa
 import Then
 import SnapKit
 
-class FundsHighestListViewController: UIViewController {
+class FundsHighestThreePlusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,7 +45,7 @@ class FundsHighestListViewController: UIViewController {
         return collectionView
     }()
 }
-extension FundsHighestListViewController: UICollectionViewDelegateFlowLayout {
+extension FundsHighestThreePlusViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(
             width: 370,
@@ -55,7 +55,7 @@ extension FundsHighestListViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension FundsHighestListViewController: UICollectionViewDataSource {
+extension FundsHighestThreePlusViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 50
     }
@@ -71,6 +71,7 @@ extension FundsHighestListViewController: UICollectionViewDataSource {
         cell?.setup()
         cell?.backgroundColor = UIColor(named: "CollectionViewColor")
         cell?.layer.cornerRadius = 20
+
         return cell ?? UICollectionViewCell()
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -78,7 +79,7 @@ extension FundsHighestListViewController: UICollectionViewDataSource {
     }
 }
 
-private extension FundsHighestListViewController {
+private extension FundsHighestThreePlusViewController {
     
 //    func bind(_ viewModel: SuggestionCoinViewModel) {
 //
