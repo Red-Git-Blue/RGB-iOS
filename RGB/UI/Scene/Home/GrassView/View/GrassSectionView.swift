@@ -48,7 +48,7 @@ class GrassSectionView: UIView {
         collectionView.reloadData()
         
         var contents = [Contribution]()
-        for _ in 0...31 {
+        for _ in 0...34 {
             contents.append(Contribution(date: "1024-13-42", count: Int.random(in: 0...100), level: Int.random(in: 0...4)))
         }
         
@@ -82,6 +82,12 @@ extension GrassSectionView: UICollectionViewDataSource {
                 list.append(tmpList)
                 tmpList = [Int]()
             }
+        }
+        if(!tmpList.isEmpty) {
+            while(tmpList.count >= 5) {
+                tmpList.append(-1)
+            }
+            list.append(tmpList)
         }
         cell.setup(data: list)
         print(list)

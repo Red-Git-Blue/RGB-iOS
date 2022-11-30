@@ -76,6 +76,7 @@
 		0EA56B61293443DC00967A99 /* GrassGatchaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B60293443DC00967A99 /* GrassGatchaView.swift */; };
 		0EA56B852936115500967A99 /* UserGraphListSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B842936115500967A99 /* UserGraphListSectionCell.swift */; };
 		0EA56B8929361DDA00967A99 /* FundsHighestThreePlusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B8829361DDA00967A99 /* FundsHighestThreePlusVC.swift */; };
+		0EA56B8E2937437300967A99 /* GrassSectionDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B8D2937437300967A99 /* GrassSectionDateView.swift */; };
 		0EAFF92F29211D0D00162DD0 /* AdvertisementSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF92E29211D0D00162DD0 /* AdvertisementSectionView.swift */; };
 		0EAFF9352921335D00162DD0 /* CategorySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF9342921335D00162DD0 /* CategorySectionView.swift */; };
 		0EAFF9392921B49700162DD0 /* CategorySectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF9382921B49700162DD0 /* CategorySectionViewCell.swift */; };
@@ -197,6 +198,7 @@
 		0EA56B60293443DC00967A99 /* GrassGatchaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassGatchaView.swift; sourceTree = "<group>"; };
 		0EA56B842936115500967A99 /* UserGraphListSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGraphListSectionCell.swift; sourceTree = "<group>"; };
 		0EA56B8829361DDA00967A99 /* FundsHighestThreePlusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsHighestThreePlusVC.swift; sourceTree = "<group>"; };
+		0EA56B8D2937437300967A99 /* GrassSectionDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassSectionDateView.swift; sourceTree = "<group>"; };
 		0EAFF92E29211D0D00162DD0 /* AdvertisementSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementSectionView.swift; sourceTree = "<group>"; };
 		0EAFF9342921335D00162DD0 /* CategorySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySectionView.swift; sourceTree = "<group>"; };
 		0EAFF9382921B49700162DD0 /* CategorySectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySectionViewCell.swift; sourceTree = "<group>"; };
@@ -463,6 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				0EEE8D5629126E2800227199 /* GrassSectionDetilVC.swift */,
+				0EA56B8D2937437300967A99 /* GrassSectionDateView.swift */,
 			);
 			path = GrassSectionDetil;
 			sourceTree = "<group>";
@@ -1529,6 +1532,7 @@
 				0EA56B142931B95500967A99 /* GiftCollectionViewCell.swift in Sources */,
 				0E2CBE11293074D9001667BE /* UserGraphListSectionViewModel.swift in Sources */,
 				0EF59AD929097ABA003FEA03 /* HomeVC.swift in Sources */,
+				0EA56B8E2937437300967A99 /* GrassSectionDateView.swift in Sources */,
 				0E23C2062923BFAC00C467F8 /* BagesIntroduceView.swift in Sources */,
 				0EF69C4A2928A2D100C36DAC /* DropCoinView.swift in Sources */,
 				0EF69C4429288F8500C36DAC /* PopularCoinView.swift in Sources */,

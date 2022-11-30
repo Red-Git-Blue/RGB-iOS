@@ -44,7 +44,7 @@ final class SuggestionFeatureCollectionViewCell: UICollectionViewCell {
 private extension SuggestionFeatureCollectionViewCell {
     
     func attribute() {
-        titleLabel.text = "PEACH&NIGA"
+        titleLabel.text = "jjunhaa0211"
         descriptionLabel.text = "027849"
         inDecreaseLabel.text = "+12.8%"
         coinPriceLabel.text = "23,904"

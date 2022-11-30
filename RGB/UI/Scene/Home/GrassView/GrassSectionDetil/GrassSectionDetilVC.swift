@@ -7,15 +7,20 @@ import PContributionsView
 
 class GrassSectionDetilViewController: UIViewController {
     
-    var grassSection: GrassSectionModel?
+    private let scrollView = UIScrollView()
+    private let contentView = UIView()
+
+    private lazy var stackView = UIStackView().then { stackView in
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        stackView.spacing = 0.0
+    }
     
     var disposeBag = DisposeBag()
     
-    private var data: [[Int]] = []
+    var grassSection: GrassSectionModel?
     
-    private lazy var mainGrassView = PContributionsView().then {
-        $0.backgroundColor = .clear
-    }
+    private var data: [[Int]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +28,22 @@ class GrassSectionDetilViewController: UIViewController {
         attribute()
         layout()
         
-        mainGrassView.spacing = 5
-        mainGrassView.cellCornerRadius(5.0)
+        for _ in 0...3 {
+            appendGrassDate()
+        }
+        
+        downButton.rx.tap
+            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+                print("💠downButton")
+                self!.dismiss(animated: true, completion: nil)
+            })
+            .dispose()
+            
+    }
+    
+    private lazy var mainGrassView = PContributionsView().then {
+        $0.backgroundColor = .clear
     }
     
     public func updateData(_ section: GrassSectionModel) {
@@ -47,13 +66,6 @@ class GrassSectionDetilViewController: UIViewController {
     internal lazy var downButton = UIButton().then {
         let image = UIImage(named: "downButton")
         $0.setBackgroundImage(image, for: UIControl.State.normal)
-        $0.rx.tap
-            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] in
-                print("💠downButton")
-                self!.dismiss(animated: true, completion: nil)
-            })
-            .disposed(by: disposeBag)
     }
     
     internal lazy var titleLabel = UILabel().then {
@@ -74,27 +86,8 @@ class GrassSectionDetilViewController: UIViewController {
         $0.textColor = .white
     }
     
-    internal lazy var grassBackgroundView = UIView().then {
-        $0.backgroundColor = .darkGray
-        $0.layer.cornerRadius = 10
-    }
-    
-    internal lazy var monLabel = UILabel().then {
-        $0.text = "Mon"
-        $0.font = .systemFont(ofSize: 14.0, weight: .regular)
-        $0.textColor = .secondaryLabel
-    }
-    
-    internal lazy var wedLabel = UILabel().then {
-        $0.text = "Wed"
-        $0.font = .systemFont(ofSize: 14.0, weight: .regular)
-        $0.textColor = .secondaryLabel
-    }
-    
-    internal lazy var friLabel = UILabel().then {
-        $0.text = "Fri"
-        $0.font = .systemFont(ofSize: 14.0, weight: .regular)
-        $0.textColor = .secondaryLabel
+    internal lazy var divisionLine = UIView().then {
+        $0.backgroundColor = .secondaryLabel
     }
 }
 
@@ -119,11 +112,7 @@ extension GrassSectionDetilViewController {
             titleLabel,
             averageCommit,
             userAverageCommit,
-            grassBackgroundView,
-            monLabel,
-            wedLabel,
-            friLabel,
-            mainGrassView
+            divisionLine
             
         ].forEach { view.addSubview($0) }
         
@@ -151,34 +140,53 @@ extension GrassSectionDetilViewController {
             $0.leading.equalTo(downButton.snp.leading)
         }
         
-        grassBackgroundView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(192)
-            $0.trailing.equalToSuperview().inset(30.0)
-            $0.height.equalTo(202)
-            $0.width.equalTo(208)
+        divisionLine.snp.makeConstraints {
+            $0.top.equalTo(userAverageCommit.snp.bottom).offset(10.0)
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(3)
+            $0.width.equalTo(370.0)
         }
         
-        monLabel.snp.makeConstraints {
-            $0.leading.equalTo(grassBackgroundView.snp.leading).inset(20.0)
-            $0.top.equalTo(grassBackgroundView.snp.top).offset(56.0)
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints {
+            $0.top.equalTo(divisionLine.snp.top)
+            $0.bottom.equalToSuperview()
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
+        }
+
+        scrollView.addSubview(contentView)
+        contentView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+            $0.width.equalToSuperview()
+        }
+
+        contentView.addSubview(stackView)
+        stackView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+    }
+    
+    func appendGrassDate() {
+        let grassSectionDateView = GrassSectionDateView(frame: .zero, viewController: self)
+        
+        grassSectionDateView.updateData(grassSection!)
+        
+        let spacingView = UIView()
+        spacingView.snp.makeConstraints {
+            $0.height.equalTo(250.0)
         }
         
-        wedLabel.snp.makeConstraints {
-            $0.top.equalTo(monLabel.snp.bottom).offset(30.0)
-            $0.leading.equalTo(monLabel.snp.leading)
+        let spacingView2 = UIView()
+        spacingView2.snp.makeConstraints {
+            $0.height.equalTo(250.0)
         }
         
-        friLabel.snp.makeConstraints {
-            $0.top.equalTo(wedLabel.snp.bottom).offset(35.0)
-            $0.leading.equalTo(wedLabel.snp.leading)
-        }
-        
-        mainGrassView.snp.makeConstraints {
-            
-            $0.height.equalTo(182)
-            $0.width.equalTo(188)
-            $0.top.equalTo(grassBackgroundView.snp.top).offset(10.0)
-            $0.trailing.equalToSuperview().inset(5.0)
+        [
+            grassSectionDateView,
+            spacingView
+        ].forEach {
+            stackView.addArrangedSubview($0)
         }
     }
 }
