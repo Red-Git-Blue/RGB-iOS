@@ -12,12 +12,6 @@ final class SuggestionCoinSectionView: UIView {
         $0.text = "추천 코인"
     }
 
-    private lazy var showAllAppsButton = UIButton().then {
-        $0.setTitle("더보기 >", for: .normal)
-        $0.setTitleColor(UIColor(named: "errorColor"), for: .normal)
-        $0.titleLabel?.font = .systemFont(ofSize: 16.0, weight: .bold)
-    }
-
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -118,18 +112,13 @@ private extension SuggestionCoinSectionView {
     }
     
     func layout() {
-        [titleLabel, showAllAppsButton,collectionView, separatorView]
+        [titleLabel, collectionView, separatorView]
             .forEach { addSubview($0) }
 
         titleLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(40.0)
             $0.top.equalToSuperview().inset(30.0)
-            $0.trailing.equalTo(showAllAppsButton.snp.leading).offset(8.0)
-        }
-
-        showAllAppsButton.snp.makeConstraints {
-            $0.trailing.equalToSuperview().inset(30.0)
-            $0.bottom.equalTo(titleLabel.snp.bottom)
+            $0.trailing.equalToSuperview()
         }
 
         collectionView.snp.makeConstraints {

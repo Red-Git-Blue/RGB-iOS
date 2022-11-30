@@ -11,13 +11,6 @@ final class UserGraphListSectionView: UIView {
         $0.font = .systemFont(ofSize: 24.0, weight: .black)
         $0.text = "내 보유 코인"
     }
-
-    private lazy var showAllAppsButton = UIButton().then {
-        $0.setTitle("더보기 >", for: .normal)
-        $0.setTitleColor(UIColor(named: "errorColor"), for: .normal)
-        $0.titleLabel?.font = .systemFont(ofSize: 16.0, weight: .bold)
-    }
-    
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -119,7 +112,6 @@ private extension UserGraphListSectionView {
     func layout() {
         [
             titleLabel,
-            showAllAppsButton,
             collectionView,
             separatorView
         ].forEach { addSubview($0) }
@@ -129,11 +121,6 @@ private extension UserGraphListSectionView {
             $0.leading.equalToSuperview().inset(30.0)
         }
         
-        showAllAppsButton.snp.makeConstraints {
-            $0.trailing.equalToSuperview().inset(30.0)
-            $0.bottom.equalTo(titleLabel.snp.bottom)
-        }
-
         collectionView.snp.makeConstraints {
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
