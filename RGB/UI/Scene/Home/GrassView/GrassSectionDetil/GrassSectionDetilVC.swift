@@ -16,6 +16,9 @@ class GrassSectionDetilViewController: UIViewController {
         stackView.spacing = 0.0
     }
     
+    
+    private var items: Int = 0
+    
     var disposeBag = DisposeBag()
     
     var grassSection: GrassSectionModel?
@@ -28,7 +31,7 @@ class GrassSectionDetilViewController: UIViewController {
         attribute()
         layout()
         
-        for _ in 0...3 {
+        for _ in 0...11 {
             appendGrassDate()
         }
         
@@ -38,7 +41,7 @@ class GrassSectionDetilViewController: UIViewController {
                 print("💠downButton")
                 self!.dismiss(animated: true, completion: nil)
             })
-            .dispose()
+            .disposed(by: disposeBag)
             
     }
     
@@ -130,29 +133,32 @@ extension GrassSectionDetilViewController {
             $0.centerX.equalToSuperview()
         }
         
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints {
+            $0.top.equalTo(downButton.snp.bottom)
+            $0.bottom.equalToSuperview()
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
+        }
+        
+        scrollView.addSubview(averageCommit)
         averageCommit.snp.makeConstraints {
-            $0.top.equalTo(downButton.snp.bottom).offset(28.0)
+            $0.top.equalToSuperview().offset(28.0)
             $0.leading.equalTo(downButton.snp.leading)
         }
         
+        scrollView.addSubview(userAverageCommit)
         userAverageCommit.snp.makeConstraints {
             $0.top.equalTo(averageCommit.snp.bottom).offset(13.0)
-            $0.leading.equalTo(downButton.snp.leading)
+            $0.leading.equalTo(averageCommit.snp.leading)
         }
         
+        scrollView.addSubview(divisionLine)
         divisionLine.snp.makeConstraints {
             $0.top.equalTo(userAverageCommit.snp.bottom).offset(10.0)
             $0.centerX.equalToSuperview()
             $0.height.equalTo(3)
             $0.width.equalTo(370.0)
-        }
-        
-        view.addSubview(scrollView)
-        scrollView.snp.makeConstraints {
-            $0.top.equalTo(divisionLine.snp.top)
-            $0.bottom.equalToSuperview()
-            $0.leading.equalToSuperview()
-            $0.trailing.equalToSuperview()
         }
 
         scrollView.addSubview(contentView)
@@ -167,26 +173,28 @@ extension GrassSectionDetilViewController {
         }
     }
     
+    private func createSpacingView() -> UIView {
+        return UIView().then {
+            $0.snp.makeConstraints {
+                $0.height.equalTo(230.0)
+            }
+        }
+    }
+    
     func appendGrassDate() {
         let grassSectionDateView = GrassSectionDateView(frame: .zero, viewController: self)
-        
         grassSectionDateView.updateData(grassSection!)
         
-        let spacingView = UIView()
-        spacingView.snp.makeConstraints {
-            $0.height.equalTo(250.0)
-        }
-        
-        let spacingView2 = UIView()
-        spacingView2.snp.makeConstraints {
-            $0.height.equalTo(250.0)
-        }
-        
-        [
-            grassSectionDateView,
-            spacingView
-        ].forEach {
-            stackView.addArrangedSubview($0)
+        stackView.addArrangedSubview(grassSectionDateView)
+        items += 1
+        switch(items) {
+        case 1:
+            return
+        case 12:
+            stackView.addArrangedSubview(createSpacingView())
+            stackView.addArrangedSubview(createSpacingView())
+        default:
+            stackView.addArrangedSubview(createSpacingView())
         }
     }
 }

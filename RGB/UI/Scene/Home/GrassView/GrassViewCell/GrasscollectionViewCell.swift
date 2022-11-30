@@ -40,11 +40,7 @@ private extension GrasscollectionViewCell {
         ].forEach { addSubview($0) }
         
         dateLabel.snp.makeConstraints {
-//            $0.top.equalToSuperview()
-//            $0.leading.equalToSuperview()
-//            $0.centerY.equalToSuperview().inset(60.0)
-            $0.centerY.equalToSuperview().inset(50)
-            $0.leading.equalToSuperview().inset(30.0)
+            $0.centerX.centerY.equalToSuperview()
         }
         
         commitLabel.snp.makeConstraints {
