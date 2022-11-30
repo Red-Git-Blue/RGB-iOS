@@ -12,7 +12,7 @@ final class GrasscollectionViewCell: UICollectionViewCell {
     private lazy var dateLabel = UILabel().then {
         $0.text = "September"
         $0.font = .systemFont(ofSize: 16.0, weight: .medium)
-        $0.textColor = .red
+        $0.textColor = .white
     }
     
     private lazy var commitLabel = UILabel().then {

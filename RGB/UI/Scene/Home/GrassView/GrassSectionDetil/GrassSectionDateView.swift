@@ -4,6 +4,8 @@ import UIKit
 import PContributionsView
 
 final class GrassSectionDateView: UIView {
+    private static var months: [String] = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    
     private final var controller: UIViewController
     
     var grassSection: GrassSectionModel?
@@ -35,6 +37,18 @@ final class GrassSectionDateView: UIView {
         $0.textColor = .secondaryLabel
     }
     
+    internal lazy var dateLabel = UILabel().then {
+        $0.text = "September"
+        $0.font = .systemFont(ofSize: 20.0, weight: .bold)
+        $0.textColor = .white
+    }
+    
+    internal lazy var userCommitLabel = UILabel().then {
+        $0.text = "32 Commit"
+        $0.font = .systemFont(ofSize: 16.0, weight: .regular)
+        $0.textColor = .secondaryLabel
+    }
+    
     
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
@@ -47,8 +61,10 @@ final class GrassSectionDateView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func updateData(_ section: GrassSectionModel) {
+    public func updateData(_ section: GrassSectionModel,_ month: Int) {
         grassSection = section
+        
+        dateLabel.text = GrassSectionDateView.months[month]
         
         var list = [[Int]]()
         var tmpList = [Int]()
@@ -82,7 +98,9 @@ private extension GrassSectionDateView {
             monLabel,
             wedLabel,
             friLabel,
-            mainGrassView
+            mainGrassView,
+            dateLabel,
+            userCommitLabel
         ].forEach { self.addSubview($0) }
         
         grassBackgroundView.snp.makeConstraints {
@@ -112,6 +130,16 @@ private extension GrassSectionDateView {
             $0.width.equalTo(188)
             $0.top.equalTo(grassBackgroundView.snp.top).offset(10.0)
             $0.trailing.equalToSuperview().inset(5.0)
+        }
+        
+        dateLabel.snp.makeConstraints {
+            $0.top.equalTo(grassBackgroundView.snp.top)
+            $0.leading.equalToSuperview().inset(30.0)
+        }
+        
+        userCommitLabel.snp.makeConstraints {
+            $0.top.equalTo(dateLabel.snp.bottom).offset(10.0)
+            $0.leading.equalTo(dateLabel.snp.leading)
         }
     }
 }

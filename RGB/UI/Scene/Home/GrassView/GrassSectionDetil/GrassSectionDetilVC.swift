@@ -157,7 +157,7 @@ extension GrassSectionDetilViewController {
         divisionLine.snp.makeConstraints {
             $0.top.equalTo(userAverageCommit.snp.bottom).offset(10.0)
             $0.centerX.equalToSuperview()
-            $0.height.equalTo(3)
+            $0.height.equalTo(1)
             $0.width.equalTo(370.0)
         }
 
@@ -183,13 +183,11 @@ extension GrassSectionDetilViewController {
     
     func appendGrassDate() {
         let grassSectionDateView = GrassSectionDateView(frame: .zero, viewController: self)
-        grassSectionDateView.updateData(grassSection!)
+        grassSectionDateView.updateData(grassSection!, items)
         
         stackView.addArrangedSubview(grassSectionDateView)
         items += 1
         switch(items) {
-        case 1:
-            return
         case 12:
             stackView.addArrangedSubview(createSpacingView())
             stackView.addArrangedSubview(createSpacingView())
