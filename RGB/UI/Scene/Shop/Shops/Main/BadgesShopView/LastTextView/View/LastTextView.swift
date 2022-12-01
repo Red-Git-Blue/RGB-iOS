@@ -15,7 +15,7 @@ class LastTextView: UIView {
     private lazy var dateLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 12.0, weight: .thin)
         $0.textColor = .systemGray2
-        $0.text = "@ 2022 red git blue"
+        $0.text = "© 2022. Red Git Blue All rights reserved."
     }
     
     private lazy var inquiryLabel = UILabel().then {
