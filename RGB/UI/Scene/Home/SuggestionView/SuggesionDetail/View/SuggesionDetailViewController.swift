@@ -14,6 +14,14 @@ class SuggesionDetailViewController: UIViewController {
         
         attribute()
         layout()
+        
+        downButton.rx.tap
+            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+                print("💠downButton")
+                self!.dismiss(animated: true, completion: nil)
+            })
+            .disposed(by: disposeBag)
     }
     
     internal lazy var downButton = UIButton().then {
@@ -32,13 +40,7 @@ class SuggesionDetailViewController: UIViewController {
 extension SuggesionDetailViewController {
     
     func bind(_ viewModel: SuggesionDetailViewModel) {
-        downButton.rx.tap
-            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] in
-                print("💠downButton")
-                self!.dismiss(animated: true, completion: nil)
-            })
-            .disposed(by: disposeBag)
+        
     }
     
     func attribute() {

@@ -27,6 +27,7 @@ final class GrasscollectionViewCell: UICollectionViewCell {
         mainGrassView.contrilbutionsData = data
         mainGrassView.cellCornerRadius(4)
         mainGrassView.spacing = 2
+        
     }
 }
 
@@ -40,18 +41,21 @@ private extension GrasscollectionViewCell {
         ].forEach { addSubview($0) }
         
         dateLabel.snp.makeConstraints {
-            $0.centerX.centerY.equalToSuperview()
+            $0.top.equalToSuperview()
+            $0.leading.equalToSuperview().inset(30.0)
+            $0.bottom.equalToSuperview().inset(60)
         }
         
         commitLabel.snp.makeConstraints {
-            $0.top.equalTo(dateLabel.snp.bottom).offset(14.0)
+            $0.top.equalToSuperview()
             $0.leading.equalToSuperview().inset(30.0)
+            $0.bottom.equalToSuperview().inset(5)
         }
 
         mainGrassView.snp.makeConstraints {
             $0.trailing.equalToSuperview()
             $0.centerY.equalToSuperview()
-            
+
             $0.width.equalTo(120.0)
             $0.height.equalTo(128.0)
         }

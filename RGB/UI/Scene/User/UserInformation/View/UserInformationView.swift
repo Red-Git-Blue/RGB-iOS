@@ -18,13 +18,13 @@ class UserInformationView: UIView {
     
     private lazy var userNickname = UILabel().then {
         $0.font = .systemFont(ofSize: 24.0, weight: .black)
-        $0.text = "POKABOOK"
+        $0.text = "JJUNHAA"
         $0.textColor = .white
     }
     
     private lazy var userName = UILabel().then {
         $0.font = .systemFont(ofSize: 15.0, weight: .black)
-        $0.text = "김현석"
+        $0.text = "박준하"
         $0.textColor = .gray
     }
     
@@ -36,7 +36,7 @@ class UserInformationView: UIView {
     
     private lazy var mailLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 12.0, weight: .regular)
-        $0.text = "pokabook@jjangji.com"
+        $0.text = "goodjunha@gmail.com"
         $0.textColor = .white
     }
     

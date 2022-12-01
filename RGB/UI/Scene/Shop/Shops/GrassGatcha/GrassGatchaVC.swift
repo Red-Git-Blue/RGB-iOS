@@ -3,7 +3,7 @@ import UIKit
 class GrassGatchaViewController: BaseAbstractShop {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
-
+    
     private lazy var stackView = UIStackView().then { stackView in
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
