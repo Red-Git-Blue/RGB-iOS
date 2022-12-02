@@ -42,7 +42,6 @@ final class CoinViewController: BaseAbstractChart {
         ].forEach {
             stackView.addArrangedSubview($0)
         }
-        
     }
 
     override func viewDidLoad() {

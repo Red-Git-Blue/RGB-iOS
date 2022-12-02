@@ -52,6 +52,7 @@
 		0E2CBE6E2930B9E1001667BE /* UserInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE6D2930B9E1001667BE /* UserInformationViewModel.swift */; };
 		0E2CBE732930BAB8001667BE /* UserChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE722930BAB7001667BE /* UserChartViewModel.swift */; };
 		0E2CBE772930BB0D001667BE /* UserBadgesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE762930BB0D001667BE /* UserBadgesViewModel.swift */; };
+		0E47A485293A11D300215CE7 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A484293A11D300215CE7 /* Header.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
 		0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B26290FDF2E005E379E /* SuggestionModel.swift */; };
@@ -174,6 +175,7 @@
 		0E2CBE6D2930B9E1001667BE /* UserInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE722930BAB7001667BE /* UserChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChartViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE762930BB0D001667BE /* UserBadgesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBadgesViewModel.swift; sourceTree = "<group>"; };
+		0E47A484293A11D300215CE7 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
 		0E555B26290FDF2E005E379E /* SuggestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionModel.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				0E0F94E428FD5E080004951F /* Model */,
+				0E47A484293A11D300215CE7 /* Header.swift */,
 				0E0F94D228FD5D590004951F /* ModelType.swift */,
 				0E0F94D428FD5D590004951F /* Moya+NetworkError.swift */,
 				0E0F94D328FD5D590004951F /* MyAPI.swift */,
@@ -1606,6 +1609,7 @@
 				0E0F94E028FD5D590004951F /* MyAPI+BaseURL.swift in Sources */,
 				0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */,
 				0E61D6912907E6250098A3F5 /* SignupVC.swift in Sources */,
+				0E47A485293A11D300215CE7 /* Header.swift in Sources */,
 				0EF59ADB29097ACF003FEA03 /* CoinVC.swift in Sources */,
 				0E61D69A2907F0E20098A3F5 /* PasswordView.swift in Sources */,
 				0E23C2202925BE9E00C467F8 /* AccountSettingCell.swift in Sources */,
