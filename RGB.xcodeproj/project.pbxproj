@@ -53,6 +53,7 @@
 		0E2CBE732930BAB8001667BE /* UserChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE722930BAB7001667BE /* UserChartViewModel.swift */; };
 		0E2CBE772930BB0D001667BE /* UserBadgesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE762930BB0D001667BE /* UserBadgesViewModel.swift */; };
 		0E47A485293A11D300215CE7 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A484293A11D300215CE7 /* Header.swift */; };
+		0E47A487293A12D200215CE7 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A486293A12D200215CE7 /* TokenModel.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
 		0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B26290FDF2E005E379E /* SuggestionModel.swift */; };
@@ -176,6 +177,7 @@
 		0E2CBE722930BAB7001667BE /* UserChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChartViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE762930BB0D001667BE /* UserBadgesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBadgesViewModel.swift; sourceTree = "<group>"; };
 		0E47A484293A11D300215CE7 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		0E47A486293A12D200215CE7 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
 		0E555B26290FDF2E005E379E /* SuggestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionModel.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				0E0F94E228FD5DFF0004951F /* RequestModel.swift */,
+				0E47A486293A12D200215CE7 /* TokenModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1581,6 +1584,7 @@
 				0EAFF94929222E6100162DD0 /* BagesListModel.swift in Sources */,
 				0E2CBE642930B7E2001667BE /* CategotyViewModel.swift in Sources */,
 				0E2CBE2129307C63001667BE /* SuggesionDetailViewModel.swift in Sources */,
+				0E47A487293A12D200215CE7 /* TokenModel.swift in Sources */,
 				0EF59AF92909994F003FEA03 /* SuggestionFeatureCollectionViewCell.swift in Sources */,
 				0E9BC15A28FEB7B700B8DB56 /* StartViewController.swift in Sources */,
 				0E2CBE5A2930B511001667BE /* BagesDetailViewModel.swift in Sources */,

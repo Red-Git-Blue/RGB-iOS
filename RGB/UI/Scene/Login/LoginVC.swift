@@ -42,6 +42,14 @@ class LoginViewController: UIViewController {
                     switch response {
                     case .success(let response):
                         print(response.statusCode)
+                        print(String(data: response.data, encoding: .utf8))
+                        if let userDate = try? JSONDecoder().decode(TokenModel.self, from: response.data) {
+                            KeyChain.create(key: Token.accessToken, token: userDate.accessToken)
+                            KeyChain.create(key: Token.refreshToken, token: userDate.refreshToken)
+                            print("🥹안녕")
+                        } else {
+                            print("🔨")
+                        }
                         let appVC = TapBarViewController()
                         appVC.modalPresentationStyle = .fullScreen
                         self.present(appVC, animated: false)
