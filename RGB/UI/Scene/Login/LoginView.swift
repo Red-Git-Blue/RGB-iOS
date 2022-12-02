@@ -31,13 +31,13 @@ class LoginView: BaseSignView {
         mainButton.setBackgroundImage(image, for: UIControl.State.normal)
         firstText.text = "로그인"
         seconedText.text = "로그인 후 서비스를 이용해보세요."
-        firstTextFieldLable.text = "닉네임 또는 이메일"
+        firstTextFieldLable.text = "이메일"
         seconedTextFieldLable.text = "비밀번호"
         
-        firstTextField.attributedPlaceholder = NSAttributedString(string: "닉네임 또는 이메일을 입력해주세요.", attributes: attributes)
+        firstTextField.attributedPlaceholder = NSAttributedString(string: "이메일을 입력해주세요.", attributes: attributes)
         seconedTextField.attributedPlaceholder = NSAttributedString(string: "비밀번호를 입력해주세요.", attributes: attributes)
         seconedTextField.textContentType = .password
-        seconedTextField.isSecureTextEntry = true
+//        seconedTextField.isSecureTextEntry = true
         
         [
             areYouUserLable,

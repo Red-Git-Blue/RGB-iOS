@@ -36,6 +36,7 @@ final class AppViewController: UIViewController {
         
         setupNavigationController()
         setupLayout()
+        view.backgroundColor = .black
     }
 }
 

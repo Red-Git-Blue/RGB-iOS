@@ -87,7 +87,7 @@ extension CategorySectionView {
     }
     
     func attribute() {
-        
+        self.backgroundColor = .black
     }
     
     func layout() {

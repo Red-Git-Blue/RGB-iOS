@@ -57,6 +57,8 @@ final class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .black
+        
         setupNavigationController()
         setupLayout()
     }

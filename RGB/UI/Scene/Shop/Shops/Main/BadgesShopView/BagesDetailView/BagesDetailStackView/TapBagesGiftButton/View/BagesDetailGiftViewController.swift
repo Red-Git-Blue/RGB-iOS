@@ -61,6 +61,7 @@ class BagesDetailGiftViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .black
         attribute()
         layout()
         collectionView.reloadData()

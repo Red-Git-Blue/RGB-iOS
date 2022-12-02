@@ -195,6 +195,7 @@ extension UserGraphListDetailViewController {
             toDayRevenuePrice,
             toDayPricePercent,
             dealButton
+            
         ].forEach { view.addSubview($0) }
         
         let buttonSize = 24

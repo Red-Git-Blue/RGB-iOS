@@ -15,7 +15,7 @@ final class GrassSectionDateView: UIView {
     }
     
     internal lazy var grassBackgroundView = UIView().then {
-        $0.backgroundColor = .darkGray
+        $0.backgroundColor = UIColor(named: "CollectionViewColor")
         $0.layer.cornerRadius = 10
     }
     

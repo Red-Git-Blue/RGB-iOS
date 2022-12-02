@@ -42,6 +42,9 @@ class LoginViewController: UIViewController {
                     switch response {
                     case .success(let response):
                         print(response.statusCode)
+                        let appVC = TapBarViewController()
+                        appVC.modalPresentationStyle = .fullScreen
+                        self.present(appVC, animated: false)
                         break
                     case .failure(let error):
                         print("펑! \(error)")

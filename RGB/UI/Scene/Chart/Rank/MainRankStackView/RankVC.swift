@@ -47,6 +47,7 @@ final class RankViewController: BaseAbstractChart {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
         setupLayout()
     }
     

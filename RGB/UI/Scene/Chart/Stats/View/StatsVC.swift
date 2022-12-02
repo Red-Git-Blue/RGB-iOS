@@ -17,6 +17,8 @@ class StatsViewController: BaseAbstractChart {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .black
+        
         data.bind(to: tableView.rx.items(cellIdentifier: StatsUserTableViewCell.identifier, cellType: StatsUserTableViewCell.self)) {
             index, item, cell in
             cell.img.image = UIImage(named: "MainBage")

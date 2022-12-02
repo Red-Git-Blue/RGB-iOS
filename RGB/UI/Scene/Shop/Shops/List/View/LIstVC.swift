@@ -27,6 +27,8 @@ class ListViewController: BaseAbstractShop {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .black
+        
         let data = Observable<[String]>.of(self.array)
         
         attribute()

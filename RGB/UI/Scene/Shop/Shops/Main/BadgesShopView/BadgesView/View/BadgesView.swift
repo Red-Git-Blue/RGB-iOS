@@ -107,6 +107,7 @@ extension BadgesView {
     }
     
     func attribute() {
+        self.backgroundColor = .black
         bagesList = [
             BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
             BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),

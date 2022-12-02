@@ -52,6 +52,8 @@ final class ShopViewController: BaseAbstractShop {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .black
         layout()
     }
     

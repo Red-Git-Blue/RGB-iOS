@@ -76,6 +76,8 @@ extension CategoryViewController {
     
     private func attribute() {
         
+        view.backgroundColor = .black
+        
         view.addSubview(collectionView)
         collectionView.delegate = self
         
