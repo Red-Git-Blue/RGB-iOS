@@ -16,6 +16,9 @@ target 'RGB' do
 	pod 'Charts'
 	pod 'LSHContributionView'
 	pod 'PContributionsView'
+	pod "TTGTagCollectionView"
+	pod 'ReusableKit'
+
   # Pods for RGB
 
 end

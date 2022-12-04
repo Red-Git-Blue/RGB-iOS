@@ -52,6 +52,7 @@
 		0E2CBE6E2930B9E1001667BE /* UserInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE6D2930B9E1001667BE /* UserInformationViewModel.swift */; };
 		0E2CBE732930BAB8001667BE /* UserChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE722930BAB7001667BE /* UserChartViewModel.swift */; };
 		0E2CBE772930BB0D001667BE /* UserBadgesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE762930BB0D001667BE /* UserBadgesViewModel.swift */; };
+		0E31E358293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E357293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift */; };
 		0E47A485293A11D300215CE7 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A484293A11D300215CE7 /* Header.swift */; };
 		0E47A487293A12D200215CE7 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A486293A12D200215CE7 /* TokenModel.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
@@ -64,6 +65,8 @@
 		0E61D6952907F0080098A3F5 /* PasswordChangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61D6942907F0080098A3F5 /* PasswordChangeVC.swift */; };
 		0E61D69A2907F0E20098A3F5 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61D6992907F0E20098A3F5 /* PasswordView.swift */; };
 		0E7929C42926428A00C0D188 /* ThemeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7929C32926428A00C0D188 /* ThemeListCell.swift */; };
+		0E7AB8F8293CB3970089D461 /* TTGTags in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7AB8F7293CB3970089D461 /* TTGTags */; };
+		0E7AB8FA293CB7AC0089D461 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7AB8F9293CB7AC0089D461 /* TagCell.swift */; };
 		0E856A592906880400F2A258 /* BaseSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E856A582906880400F2A258 /* BaseSignView.swift */; };
 		0E99736D2908A52400B95BC6 /* CertificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99736C2908A52400B95BC6 /* CertificationVC.swift */; };
 		0E9973702908A58F00B95BC6 /* CertificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99736F2908A58F00B95BC6 /* CertificationView.swift */; };
@@ -87,6 +90,7 @@
 		0EAFF94429221BD000162DD0 /* LastTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF94329221BD000162DD0 /* LastTextView.swift */; };
 		0EAFF94929222E6100162DD0 /* BagesListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF94829222E6100162DD0 /* BagesListModel.swift */; };
 		0EAFF94B2922444500162DD0 /* BagesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF94A2922444500162DD0 /* BagesDetailVC.swift */; };
+		0EC67F6F293C9792002FBF8F /* CoinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC67F6E293C9792002FBF8F /* CoinDetailViewController.swift */; };
 		0EE4352428F4476F00CA7E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4352328F4476F00CA7E58 /* AppDelegate.swift */; };
 		0EE4352628F4476F00CA7E58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4352528F4476F00CA7E58 /* SceneDelegate.swift */; };
 		0EE4352D28F4477000CA7E58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EE4352C28F4477000CA7E58 /* Images.xcassets */; };
@@ -176,6 +180,7 @@
 		0E2CBE6D2930B9E1001667BE /* UserInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE722930BAB7001667BE /* UserChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChartViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE762930BB0D001667BE /* UserBadgesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBadgesViewModel.swift; sourceTree = "<group>"; };
+		0E31E357293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		0E47A484293A11D300215CE7 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		0E47A486293A12D200215CE7 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
@@ -188,6 +193,7 @@
 		0E61D6942907F0080098A3F5 /* PasswordChangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeVC.swift; sourceTree = "<group>"; };
 		0E61D6992907F0E20098A3F5 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		0E7929C32926428A00C0D188 /* ThemeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeListCell.swift; sourceTree = "<group>"; };
+		0E7AB8F9293CB7AC0089D461 /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		0E856A582906880400F2A258 /* BaseSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSignView.swift; sourceTree = "<group>"; };
 		0E99736C2908A52400B95BC6 /* CertificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationVC.swift; sourceTree = "<group>"; };
 		0E99736F2908A58F00B95BC6 /* CertificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationView.swift; sourceTree = "<group>"; };
@@ -211,6 +217,7 @@
 		0EAFF94329221BD000162DD0 /* LastTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTextView.swift; sourceTree = "<group>"; };
 		0EAFF94829222E6100162DD0 /* BagesListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesListModel.swift; sourceTree = "<group>"; };
 		0EAFF94A2922444500162DD0 /* BagesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailVC.swift; sourceTree = "<group>"; };
+		0EC67F6E293C9792002FBF8F /* CoinDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailViewController.swift; sourceTree = "<group>"; };
 		0EE4352028F4476F00CA7E58 /* RGB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE4352328F4476F00CA7E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EE4352528F4476F00CA7E58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -264,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FAB5117A39FCDD46D18402F /* Pods_RGB.framework in Frameworks */,
+				0E7AB8F8293CB3970089D461 /* TTGTags in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1056,6 +1064,16 @@
 			path = LastTextView;
 			sourceTree = "<group>";
 		};
+		0EC67F6C293C9769002FBF8F /* CoinDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				0EC67F6E293C9792002FBF8F /* CoinDetailViewController.swift */,
+				0E31E357293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift */,
+				0E7AB8F9293CB7AC0089D461 /* TagCell.swift */,
+			);
+			path = CoinDetailView;
+			sourceTree = "<group>";
+		};
 		0EE4351728F4476F00CA7E58 = {
 			isa = PBXGroup;
 			children = (
@@ -1276,6 +1294,7 @@
 		0EF69C4229288F2E00C36DAC /* Coin */ = {
 			isa = PBXGroup;
 			children = (
+				0EC67F6C293C9769002FBF8F /* CoinDetailView */,
 				0E2CBE2A29307EF7001667BE /* MainCoinStackView */,
 				0EF69C4529289D3800C36DAC /* PopularCoinView */,
 				0EF69C4829289D6400C36DAC /* IncreaseCoinView */,
@@ -1429,6 +1448,9 @@
 			dependencies = (
 			);
 			name = RGB;
+			packageProductDependencies = (
+				0E7AB8F7293CB3970089D461 /* TTGTags */,
+			);
 			productName = RGB;
 			productReference = 0EE4352028F4476F00CA7E58 /* RGB.app */;
 			productType = "com.apple.product-type.application";
@@ -1457,6 +1479,9 @@
 				Base,
 			);
 			mainGroup = 0EE4351728F4476F00CA7E58;
+			packageReferences = (
+				0E7AB8F6293CB3970089D461 /* XCRemoteSwiftPackageReference "TTGTagCollectionView" */,
+			);
 			productRefGroup = 0EE4352128F4476F00CA7E58 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1530,6 +1555,7 @@
 				0E23C209292477E200C467F8 /* BagesDetailBuyVC.swift in Sources */,
 				0EF59AFF2909FE01003FEA03 /* Separator.swift in Sources */,
 				0E23C2112924EDCE00C467F8 /* UserBadgesView.swift in Sources */,
+				0E31E358293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				0E61D6932907E6310098A3F5 /* SignupView.swift in Sources */,
 				0E0F94DA28FD5D590004951F /* ModelType.swift in Sources */,
 				0E0F94DB28FD5D590004951F /* MyAPI.swift in Sources */,
@@ -1576,6 +1602,7 @@
 				0EF69C2D29278E4D00C36DAC /* ControllerManager.swift in Sources */,
 				0E0F94DF28FD5D590004951F /* MyAPI+Task.swift in Sources */,
 				0EAFF93E2921E30600162DD0 /* BadgesCell.swift in Sources */,
+				0EC67F6F293C9792002FBF8F /* CoinDetailViewController.swift in Sources */,
 				0E23C2172925B5A500C467F8 /* SettingVC.swift in Sources */,
 				0E2CBE5F2930B64A001667BE /* BagesDetailBuyViewModel.swift in Sources */,
 				0EAFF94429221BD000162DD0 /* LastTextView.swift in Sources */,
@@ -1620,6 +1647,7 @@
 				0EF69C41292863BE00C36DAC /* RankVC.swift in Sources */,
 				0E2CBE732930BAB8001667BE /* UserChartViewModel.swift in Sources */,
 				0E2CBE2C29307F63001667BE /* PopularCoinViewModel.swift in Sources */,
+				0E7AB8FA293CB7AC0089D461 /* TagCell.swift in Sources */,
 				0E23C21C2925BE3E00C467F8 /* NotificationSettingsCell.swift in Sources */,
 				0EF69C342927970800C36DAC /* LIstVC.swift in Sources */,
 				0EA56B852936115500967A99 /* UserGraphListSectionCell.swift in Sources */,
@@ -1854,6 +1882,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0E7AB8F6293CB3970089D461 /* XCRemoteSwiftPackageReference "TTGTagCollectionView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zekunyan/TTGTagCollectionView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0E7AB8F7293CB3970089D461 /* TTGTags */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E7AB8F6293CB3970089D461 /* XCRemoteSwiftPackageReference "TTGTagCollectionView" */;
+			productName = TTGTags;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0EE4351828F4476F00CA7E58 /* Project object */;
 }

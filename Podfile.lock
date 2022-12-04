@@ -14,6 +14,9 @@ PODS:
     - Moya/Core
     - RxSwift (~> 6.0)
   - PContributionsView (0.1.0)
+  - ReusableKit (3.0.0):
+    - ReusableKit/Core (= 3.0.0)
+  - ReusableKit/Core (3.0.0)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -26,6 +29,7 @@ PODS:
   - SnapKit (5.6.0)
   - SwiftAlgorithms (1.0.0)
   - Then (3.0.0)
+  - TTGTagCollectionView (2.3.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -34,11 +38,13 @@ DEPENDENCIES:
   - LSHContributionView
   - Moya/RxSwift (~> 15.0)
   - PContributionsView
+  - ReusableKit
   - RxCocoa (= 6.5.0)
   - RxKeyboard
   - RxSwift (= 6.5.0)
   - SnapKit (~> 5.6.0)
   - Then
+  - TTGTagCollectionView
 
 SPEC REPOS:
   trunk:
@@ -48,6 +54,7 @@ SPEC REPOS:
     - LSHContributionView
     - Moya
     - PContributionsView
+    - ReusableKit
     - RxCocoa
     - RxKeyboard
     - RxRelay
@@ -55,6 +62,7 @@ SPEC REPOS:
     - SnapKit
     - SwiftAlgorithms
     - Then
+    - TTGTagCollectionView
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
@@ -63,6 +71,7 @@ SPEC CHECKSUMS:
   LSHContributionView: 8b523e7e8c54159d1ba984fad99970ea3cb0f140
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   PContributionsView: a2ca39d28763d85307c4722ab818c9e742e623e8
+  ReusableKit: e5f853ad4652e411f96b6119b2488afa12929be6
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxKeyboard: 4f5863f43b4ff0cbb2a20b94688d6b80c8a43c14
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
@@ -70,7 +79,8 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
+  TTGTagCollectionView: 4104f93281097eae5adbf4444811e32f5e52dc95
 
-PODFILE CHECKSUM: 2d9385b090a5a97dcfca8dc560d5cbf28d100d76
+PODFILE CHECKSUM: 1f7e14f635addf869447ea2d706c89a21b776de9
 
 COCOAPODS: 1.11.3
