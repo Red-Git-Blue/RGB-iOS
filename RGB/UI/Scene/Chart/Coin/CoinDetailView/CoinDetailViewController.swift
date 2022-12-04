@@ -34,26 +34,14 @@ class CoinDetailViewController: UIViewController {
         layout()
         attribute()
         title = "코인 거래"
-        
-        self.collectionView.delegate = self
-        
-        self.view.addSubview(collectionView)
-        
-        setConstraint()
-        self.collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
     override func loadView() {
       let view = UIView()
       view.backgroundColor = .systemBackground
       self.view = view
-    }
-    
-    func setConstraint() {
-      collectionView.snp.makeConstraints {
-        $0.center.width.equalToSuperview()
-        $0.height.equalTo(100)
-      }
     }
 
     private lazy var imageView = UIImageView().then {
@@ -139,7 +127,8 @@ extension CoinDetailViewController {
             descriptionLabel,
             coinPriceLabel,
             inDecreaseLabel,
-            chartView
+            chartView,
+            collectionView
         ].forEach { view.addSubview($0) }
 
         imageView.snp.makeConstraints {
@@ -174,6 +163,13 @@ extension CoinDetailViewController {
             $0.centerX.equalToSuperview()
             $0.height.equalTo(200.0)
             $0.width.equalTo(430.0)
+        }
+        
+        collectionView.snp.makeConstraints {
+            $0.top.equalTo(chartView.snp.bottom).offset(20.0)
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(100)
+            $0.width.equalToSuperview()
         }
     }
 }
