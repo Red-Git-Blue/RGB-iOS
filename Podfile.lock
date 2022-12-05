@@ -29,7 +29,6 @@ PODS:
   - SnapKit (5.6.0)
   - SwiftAlgorithms (1.0.0)
   - Then (3.0.0)
-  - TTGTagCollectionView (2.3.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -44,7 +43,6 @@ DEPENDENCIES:
   - RxSwift (= 6.5.0)
   - SnapKit (~> 5.6.0)
   - Then
-  - TTGTagCollectionView
 
 SPEC REPOS:
   trunk:
@@ -62,7 +60,6 @@ SPEC REPOS:
     - SnapKit
     - SwiftAlgorithms
     - Then
-    - TTGTagCollectionView
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
@@ -79,8 +76,7 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
-  TTGTagCollectionView: 4104f93281097eae5adbf4444811e32f5e52dc95
 
-PODFILE CHECKSUM: 1f7e14f635addf869447ea2d706c89a21b776de9
+PODFILE CHECKSUM: 0ff726308b415728d19aa70fb83d62a27df70768
 
 COCOAPODS: 1.11.3

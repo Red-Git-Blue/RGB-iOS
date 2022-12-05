@@ -9,6 +9,7 @@ class BadgesView: UIView {
     private final var controller: UIViewController
     private final var viewName: String
     let provider = MoyaProvider<MyAPI>()
+    let disposeBag = DisposeBag()
     
     var bagesList = [BagesListModel]()
     
@@ -74,8 +75,7 @@ class BadgesView: UIView {
                         print("🔨 API Request Failed\nError: ")
                         print(error)
                 }
-            }
-            .dispose()
+            }.disposed(by: disposeBag)
     }
     
     required init?(coder: NSCoder) {
@@ -133,9 +133,6 @@ extension BadgesView {
     
     func attribute() {
         self.backgroundColor = .black
-//        bagesList = [
-//            BagesListModel(totalPages: <#T##Int#>, totalElements: <#T##Int#>, size: <#T##Int#>, content: <#T##[Content]#>, number: <#T##Int#>, sort: <#T##Sort#>, first: <#T##Bool#>, last: <#T##Bool#>, numberOfElements: <#T##Int#>, pageable: <#T##Pageable#>, empty: <#T##Bool#>)
-//        ]
     }
     
     func layout() {
