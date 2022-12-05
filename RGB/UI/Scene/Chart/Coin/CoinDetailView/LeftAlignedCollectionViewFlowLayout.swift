@@ -16,7 +16,7 @@ class LeftAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     // contentView의 left 여백
     var leftMargin = sectionInset.left
-    var maxY: CGFloat = -1.0 // cell라인의 y값의 디폴트값
+    var maxY: CGFloat = 0 // cell라인의 y값의 디폴트값
     attributes?.forEach { layoutAttribute in
         // cell일경우
       if layoutAttribute.representedElementCategory == .cell {

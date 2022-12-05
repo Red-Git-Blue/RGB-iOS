@@ -1,96 +1,101 @@
 //
-//  ViewController.swift
+//  VIewController.swift
 //  RGB
 //
-//  Created by 박준하 on 2022/12/04.
+//  Created by 박준하 on 2022/12/05.
 //
 
 import UIKit
-
-import Then
 import SnapKit
-import ReusableKit
+import Then
 
-class ViewController: UIViewController {
-  
-  // MARK: - Constants
-  
-  enum Reusable {
-    static let tagCell = ReusableCell<TagCell>()
+class ViewController: UIView {
+    private final var controller: UIViewController
+  // MARK: Constant
+  private enum Constant {
+    static let collectionViewCellSize = CGSize(width: 80, height: 80)
+    static let collectionViewCellSpacing = 18.0
+    static let collectionViewContentInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+    static let collectionViewHeight = 195.0
   }
   
-  // MARK: - Property
-  
-  // 뿌려줄 데이터
-    private var tagList: [String] = ["1일", "1주", "1달", "1년", "최대"]
-  
-  // MARK: - View
-  
-  let collectionView = UICollectionView(frame: .zero, collectionViewLayout: .init()).then {
-    let layout = LeftAlignedCollectionViewFlowLayout()
-    layout.minimumLineSpacing = 3
-    layout.minimumInteritemSpacing = 3
-    layout.sectionInset = UIEdgeInsets(top: 5, left: 2, bottom: 5, right: 2)
-    
-    $0.isScrollEnabled = false
-    $0.collectionViewLayout = layout
-    $0.backgroundColor = .systemBackground
-    $0.register(Reusable.tagCell)
-  }
-
-  // MARK: - View Life Cycle
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    self.collectionView.delegate = self
-    
-    self.view.addSubview(collectionView)
-    
-    setConstraint()
-    self.collectionView.dataSource = self
-  }
-
-  override func loadView() {
-    let view = UIView()
-    view.backgroundColor = .systemBackground
-    self.view = view
-  }
-  
-  func setConstraint() {
-    collectionView.snp.makeConstraints {
-      $0.center.width.equalToSuperview()
-      $0.height.equalTo(100)
+  // MARK: UI
+  private let collectionView = UICollectionView(
+    frame: .zero,
+    collectionViewLayout: UICollectionViewFlowLayout().then {
+      $0.scrollDirection = .horizontal
+      $0.minimumLineSpacing = Constant.collectionViewCellSpacing
+      $0.minimumInteritemSpacing = Constant.collectionViewCellSpacing
+      $0.itemSize = Constant.collectionViewCellSize
     }
+  ).then {
+    $0.isScrollEnabled = true
+    $0.showsHorizontalScrollIndicator = false
+    $0.contentInset = Constant.collectionViewContentInset
+    $0.backgroundColor = .lightGray.withAlphaComponent(0.3)
+    $0.register(MyCell.self, forCellWithReuseIdentifier: MyCell.id)
   }
+  private let indicatorView = IndicatorView()
+  
+  // MARK: Properties
+  private var items = (1...22)
+    .map(String.init)
+    .map { MyModel(image: UIImage(named: $0), name: "이름\($0)") }
+    
+    init(frame: CGRect, viewController: UIViewController) {
+        controller = viewController
+        super.init(frame: frame)
+        
+        let allWidth = self.collectionView.contentSize.width + self.collectionView.contentInset.left + self.collectionView.contentInset.right
+        let showingWidth = self.collectionView.bounds.width
+        self.indicatorView.widthRatio = showingWidth / allWidth
+        self.indicatorView.layoutIfNeeded()
+        
+        controller.view.addSubview(self.collectionView)
+        controller.view.addSubview(self.indicatorView)
+        
+        self.collectionView.snp.makeConstraints {
+          $0.centerY.equalToSuperview().offset(190.0)
+          $0.left.right.equalToSuperview()
+          $0.height.equalTo(Constant.collectionViewHeight)
+        }
+        self.indicatorView.snp.makeConstraints {
+          $0.top.equalTo(self.collectionView.snp.bottom).offset(4)
+          $0.left.right.equalTo(self.collectionView).inset(100)
+          $0.height.equalTo(4)
+        }
+        
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 extension ViewController: UICollectionViewDataSource {
-  // cell갯수
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return tagList.count
+    self.items.count
   }
-  
-  // cell 선언
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeue(Reusable.tagCell, for: indexPath)
-    
-    cell.tagLabel.text = tagList[indexPath.item]
-    
-    return cell
+    (collectionView.dequeueReusableCell(withReuseIdentifier: MyCell.id, for: indexPath) as! MyCell).then {
+      let item = self.items[indexPath.item]
+      $0.prepare(image: item.image, name: item.name)
+    }
   }
 }
 
-extension ViewController: UICollectionViewDelegateFlowLayout {
-  // 셀 크기설정
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+extension ViewController: UICollectionViewDelegate {
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    // contentOffset: 스크롤한 길이
+    // contentInset: collectionView의 테두리 부분과의 여백 (4곳만 존재)
+    // contentSize: 스크롤 가능한 콘텐츠 사이즈 (주의 - contentInset 값을 합해야, collectionView 전체 콘텐트 사이즈)
     
-    let label = UILabel().then {
-        $0.font = .systemFont(ofSize: 14)
-        $0.text = tagList[indexPath.item]
-        $0.sizeToFit()
-    }
-    let size = label.frame.size
+    let scroll = scrollView.contentOffset.x + scrollView.contentInset.left
+    let width = scrollView.contentSize.width + scrollView.contentInset.left + scrollView.contentInset.right
+    let scrollRatio = scroll / width
     
-    return CGSize(width: size.width + 16, height: size.height + 10)
+    self.indicatorView.leftOffsetRatio = scrollRatio
   }
 }
