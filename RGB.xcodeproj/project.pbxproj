@@ -54,10 +54,6 @@
 		0E2CBE772930BB0D001667BE /* UserBadgesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE762930BB0D001667BE /* UserBadgesViewModel.swift */; };
 		0E31E358293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E357293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift */; };
 		0E31E35E293DDA7C002A6A82 /* ChartUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E35D293DDA7C002A6A82 /* ChartUserView.swift */; };
-		0E31E364293DE000002A6A82 /* VIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E363293DE000002A6A82 /* VIewController.swift */; };
-		0E31E366293DE00E002A6A82 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E365293DE00E002A6A82 /* IndicatorView.swift */; };
-		0E31E368293DE02C002A6A82 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E367293DE02C002A6A82 /* MyCell.swift */; };
-		0E31E36A293DE039002A6A82 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E369293DE039002A6A82 /* MyModel.swift */; };
 		0E47A485293A11D300215CE7 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A484293A11D300215CE7 /* Header.swift */; };
 		0E47A487293A12D200215CE7 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A486293A12D200215CE7 /* TokenModel.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
@@ -93,7 +89,6 @@
 		0EAFF93E2921E30600162DD0 /* BadgesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF93D2921E30600162DD0 /* BadgesCell.swift */; };
 		0EAFF9412921F10E00162DD0 /* BadgesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF9402921F10E00162DD0 /* BadgesView.swift */; };
 		0EAFF94429221BD000162DD0 /* LastTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF94329221BD000162DD0 /* LastTextView.swift */; };
-		0EAFF94929222E6100162DD0 /* BagesListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF94829222E6100162DD0 /* BagesListModel.swift */; };
 		0EAFF94B2922444500162DD0 /* BagesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF94A2922444500162DD0 /* BagesDetailVC.swift */; };
 		0EC67F6F293C9792002FBF8F /* CoinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC67F6E293C9792002FBF8F /* CoinDetailViewController.swift */; };
 		0EE4352428F4476F00CA7E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4352328F4476F00CA7E58 /* AppDelegate.swift */; };
@@ -187,10 +182,6 @@
 		0E2CBE762930BB0D001667BE /* UserBadgesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBadgesViewModel.swift; sourceTree = "<group>"; };
 		0E31E357293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		0E31E35D293DDA7C002A6A82 /* ChartUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartUserView.swift; sourceTree = "<group>"; };
-		0E31E363293DE000002A6A82 /* VIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewController.swift; sourceTree = "<group>"; };
-		0E31E365293DE00E002A6A82 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
-		0E31E367293DE02C002A6A82 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
-		0E31E369293DE039002A6A82 /* MyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
 		0E47A484293A11D300215CE7 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		0E47A486293A12D200215CE7 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
@@ -225,7 +216,6 @@
 		0EAFF93D2921E30600162DD0 /* BadgesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesCell.swift; sourceTree = "<group>"; };
 		0EAFF9402921F10E00162DD0 /* BadgesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesView.swift; sourceTree = "<group>"; };
 		0EAFF94329221BD000162DD0 /* LastTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTextView.swift; sourceTree = "<group>"; };
-		0EAFF94829222E6100162DD0 /* BagesListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesListModel.swift; sourceTree = "<group>"; };
 		0EAFF94A2922444500162DD0 /* BagesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailVC.swift; sourceTree = "<group>"; };
 		0EC67F6E293C9792002FBF8F /* CoinDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailViewController.swift; sourceTree = "<group>"; };
 		0EE4352028F4476F00CA7E58 /* RGB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -673,18 +663,9 @@
 		0E2CBE542930B1F7001667BE /* BaseBadges */ = {
 			isa = PBXGroup;
 			children = (
-				0E2CBE552930B368001667BE /* Model */,
 				0E2CBE562930B37A001667BE /* BadgesCollectionCell */,
 			);
 			path = BaseBadges;
-			sourceTree = "<group>";
-		};
-		0E2CBE552930B368001667BE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				0EAFF94829222E6100162DD0 /* BagesListModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		0E2CBE562930B37A001667BE /* BadgesCollectionCell */ = {
@@ -1081,10 +1062,6 @@
 				0E31E357293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift */,
 				0E7AB8F9293CB7AC0089D461 /* TagCell.swift */,
 				0E31E35D293DDA7C002A6A82 /* ChartUserView.swift */,
-				0E31E363293DE000002A6A82 /* VIewController.swift */,
-				0E31E365293DE00E002A6A82 /* IndicatorView.swift */,
-				0E31E367293DE02C002A6A82 /* MyCell.swift */,
-				0E31E369293DE039002A6A82 /* MyModel.swift */,
 			);
 			path = CoinDetailView;
 			sourceTree = "<group>";
@@ -1595,7 +1572,6 @@
 				0EEE8D3C2911093700227199 /* UserGraphListDetileVC.swift in Sources */,
 				0E99737B2908E44C00B95BC6 /* PasswordCompletionVC.swift in Sources */,
 				0E2CBDD8292F550C001667BE /* StatsUserTableViewCell.swift in Sources */,
-				0E31E364293DE000002A6A82 /* VIewController.swift in Sources */,
 				0E0F94DC28FD5D590004951F /* Moya+NetworkError.swift in Sources */,
 				0E9BC16428FEC49B00B8DB56 /* MainSignupVC.swift in Sources */,
 				0E9973742908A8F700B95BC6 /* BaseCompletionView.swift in Sources */,
@@ -1625,7 +1601,6 @@
 				0EAFF94429221BD000162DD0 /* LastTextView.swift in Sources */,
 				0EF69C4F2928D34B00C36DAC /* MyRankView.swift in Sources */,
 				0E2CBE3C293082C0001667BE /* StatsViewModel.swift in Sources */,
-				0EAFF94929222E6100162DD0 /* BagesListModel.swift in Sources */,
 				0E2CBE642930B7E2001667BE /* CategotyViewModel.swift in Sources */,
 				0E2CBE2129307C63001667BE /* SuggesionDetailViewModel.swift in Sources */,
 				0E47A487293A12D200215CE7 /* TokenModel.swift in Sources */,
@@ -1638,7 +1613,6 @@
 				0E2CBE772930BB0D001667BE /* UserBadgesViewModel.swift in Sources */,
 				0EF69C5B29291F3000C36DAC /* UserSearchView.swift in Sources */,
 				0EA56B61293443DC00967A99 /* GrassGatchaView.swift in Sources */,
-				0E31E36A293DE039002A6A82 /* MyModel.swift in Sources */,
 				0E2CBE1E29307B3F001667BE /* UserGraphListModel.swift in Sources */,
 				0EF59AD429096081003FEA03 /* CertificationCompletionVC.swift in Sources */,
 				0EF69C4729289D5F00C36DAC /* IncreaseCoinView.swift in Sources */,
@@ -1676,7 +1650,6 @@
 				0EAFF94B2922444500162DD0 /* BagesDetailVC.swift in Sources */,
 				0EF69C552928EC7100C36DAC /* RevenueHighestThree.swift in Sources */,
 				0E23C21429250CA300C467F8 /* UserGrassColorView.swift in Sources */,
-				0E31E368293DE02C002A6A82 /* MyCell.swift in Sources */,
 				0E2CBDD6292F0E27001667BE /* MyStatsHoldingsChartModel.swift in Sources */,
 				0EE4352628F4476F00CA7E58 /* SceneDelegate.swift in Sources */,
 				0E9973702908A58F00B95BC6 /* CertificationView.swift in Sources */,
@@ -1687,7 +1660,6 @@
 				0E7929C42926428A00C0D188 /* ThemeListCell.swift in Sources */,
 				0E856A592906880400F2A258 /* BaseSignView.swift in Sources */,
 				0E2CBE462930AF2F001667BE /* CategorySectionViewModel.swift in Sources */,
-				0E31E366293DE00E002A6A82 /* IndicatorView.swift in Sources */,
 				0E0F94E328FD5DFF0004951F /* RequestModel.swift in Sources */,
 				0E9973772908E3C100B95BC6 /* PasswordCompletionView.swift in Sources */,
 				F211DB7D48C4AEBE76C7FC00 /* UserVC.swift in Sources */,

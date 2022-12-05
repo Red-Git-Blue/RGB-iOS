@@ -14,7 +14,6 @@ final class CoinDetailViewController: UIViewController {
         stackView.spacing = 0.0
             
         let chartUserView = ChartUserView(frame: .zero, viewController: self)
-        let ViewController = ViewController(frame: .zero, viewController: self)
         
         let spacingView = UIView()
         spacingView.snp.makeConstraints {
@@ -28,8 +27,6 @@ final class CoinDetailViewController: UIViewController {
         
         [
             chartUserView,
-            spacingView1,
-            ViewController,
             spacingView
         ].forEach {
             stackView.addArrangedSubview($0)

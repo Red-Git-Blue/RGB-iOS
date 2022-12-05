@@ -14,6 +14,11 @@ extension MyAPI {
                 parameters: body.toDictionary(),
                 encoding: JSONEncoding.default
             )
+        case .getBagesList(let body):
+            return .requestParameters(
+                parameters: body.toDictionary(),
+                encoding: JSONEncoding.default
+            )
         }
     }
 }

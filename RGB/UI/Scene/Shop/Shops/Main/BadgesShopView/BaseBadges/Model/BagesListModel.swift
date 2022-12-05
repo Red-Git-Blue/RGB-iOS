@@ -1,5 +1,5 @@
 import Foundation
 
-struct BagesListModel {
-    let imageURL, bagesname, bagesdescription, bagesprice: String?
-}
+import Foundation
+
+// MARK: - BagesListModel

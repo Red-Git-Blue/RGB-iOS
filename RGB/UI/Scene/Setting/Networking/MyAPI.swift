@@ -4,6 +4,7 @@ import Moya
 enum MyAPI {
     case postSignUp(SignRequest)
     case postSignIn(LoginRequest)
+    case getBagesList(BagesListRequest)
 }
 
 // MARK: MyAPI+TargetType

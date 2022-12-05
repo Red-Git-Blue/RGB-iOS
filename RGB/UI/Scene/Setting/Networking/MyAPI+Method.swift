@@ -6,7 +6,7 @@ extension MyAPI {
     switch self {
     case .postSignUp: return .post
     case .postSignIn: return .post
-        
+    case .getBagesList: return .get
     }
   }
 }

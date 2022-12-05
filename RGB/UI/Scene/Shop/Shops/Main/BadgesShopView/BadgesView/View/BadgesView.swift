@@ -1,10 +1,14 @@
 import UIKit
+import Moya
 import Then
 import SnapKit
+import RxCocoa
+import RxSwift
 
 class BadgesView: UIView {
     private final var controller: UIViewController
     private final var viewName: String
+    let provider = MoyaProvider<MyAPI>()
     
     var bagesList = [BagesListModel]()
     
@@ -52,12 +56,33 @@ class BadgesView: UIView {
         attribute()
         layout()
         collectionView.reloadData()
+        
+        self.provider.rx
+            .request(MyAPI.getBagesList(BagesListRequest(idx: 0, size: 10)))
+            .subscribe { result in
+                switch result {
+                    case let .success(moyaResponse):
+                        let statusCode = moyaResponse.statusCode
+                        if (statusCode == 200) {
+                            print("API Request Succeeded")
+                            let data = moyaResponse.data
+                            print(data)
+                        } else {
+                            print("❤️‍🔥 API Request Failed: " + String(statusCode))
+                        }
+                    case let .failure(error):
+                        print("🔨 API Request Failed\nError: ")
+                        print(error)
+                }
+            }
+            .dispose()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
 
 extension BadgesView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -108,18 +133,9 @@ extension BadgesView {
     
     func attribute() {
         self.backgroundColor = .black
-        bagesList = [
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원"),
-            BagesListModel(imageURL: "대충 주소", bagesname: "고급스러운 무의 배지", bagesdescription: "고급스러운 색감과 무의 예술적인 감각을 살린 배지", bagesprice: "12,000원")
-        ]
+//        bagesList = [
+//            BagesListModel(totalPages: <#T##Int#>, totalElements: <#T##Int#>, size: <#T##Int#>, content: <#T##[Content]#>, number: <#T##Int#>, sort: <#T##Sort#>, first: <#T##Bool#>, last: <#T##Bool#>, numberOfElements: <#T##Int#>, pageable: <#T##Pageable#>, empty: <#T##Bool#>)
+//        ]
     }
     
     func layout() {
