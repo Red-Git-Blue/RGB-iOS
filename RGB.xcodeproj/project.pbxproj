@@ -623,7 +623,6 @@
 		0E2CBE472930AF34001667BE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				0E2CBE452930AF2F001667BE /* CategorySectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1271,6 +1270,7 @@
 			isa = PBXGroup;
 			children = (
 				0EF69C312927911400C36DAC /* BaseAbstractShop.swift */,
+				0E2CBE452930AF2F001667BE /* CategorySectionViewModel.swift */,
 			);
 			path = BaseShop;
 			sourceTree = "<group>";
