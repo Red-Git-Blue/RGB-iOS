@@ -54,6 +54,11 @@
 		0E2CBE772930BB0D001667BE /* UserBadgesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE762930BB0D001667BE /* UserBadgesViewModel.swift */; };
 		0E31E358293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E357293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift */; };
 		0E31E35E293DDA7C002A6A82 /* ChartUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E35D293DDA7C002A6A82 /* ChartUserView.swift */; };
+		0E31E36C29415262002A6A82 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E36B29415262002A6A82 /* SlideView.swift */; };
+		0E31E36F2941529C002A6A82 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E36E2941529C002A6A82 /* IndicatorView.swift */; };
+		0E31E371294152B2002A6A82 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E370294152B2002A6A82 /* MyModel.swift */; };
+		0E31E373294152C0002A6A82 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E372294152C0002A6A82 /* MyCell.swift */; };
+		0E31E37529416E39002A6A82 /* TowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E37429416E39002A6A82 /* TowCell.swift */; };
 		0E47A485293A11D300215CE7 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A484293A11D300215CE7 /* Header.swift */; };
 		0E47A487293A12D200215CE7 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A486293A12D200215CE7 /* TokenModel.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
@@ -182,6 +187,11 @@
 		0E2CBE762930BB0D001667BE /* UserBadgesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBadgesViewModel.swift; sourceTree = "<group>"; };
 		0E31E357293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		0E31E35D293DDA7C002A6A82 /* ChartUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartUserView.swift; sourceTree = "<group>"; };
+		0E31E36B29415262002A6A82 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
+		0E31E36E2941529C002A6A82 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		0E31E370294152B2002A6A82 /* MyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
+		0E31E372294152C0002A6A82 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		0E31E37429416E39002A6A82 /* TowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowCell.swift; sourceTree = "<group>"; };
 		0E47A484293A11D300215CE7 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		0E47A486293A12D200215CE7 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
@@ -863,6 +873,18 @@
 			path = MainShopStackView;
 			sourceTree = "<group>";
 		};
+		0E31E36D29415287002A6A82 /* SlideView */ = {
+			isa = PBXGroup;
+			children = (
+				0E31E36B29415262002A6A82 /* SlideView.swift */,
+				0E31E36E2941529C002A6A82 /* IndicatorView.swift */,
+				0E31E370294152B2002A6A82 /* MyModel.swift */,
+				0E31E372294152C0002A6A82 /* MyCell.swift */,
+				0E31E37429416E39002A6A82 /* TowCell.swift */,
+			);
+			path = SlideView;
+			sourceTree = "<group>";
+		};
 		0E555B25290FC004005E379E /* BGroundBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -1061,6 +1083,7 @@
 				0E31E357293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift */,
 				0E7AB8F9293CB7AC0089D461 /* TagCell.swift */,
 				0E31E35D293DDA7C002A6A82 /* ChartUserView.swift */,
+				0E31E36D29415287002A6A82 /* SlideView */,
 			);
 			path = CoinDetailView;
 			sourceTree = "<group>";
@@ -1548,6 +1571,7 @@
 				0EF59AFF2909FE01003FEA03 /* Separator.swift in Sources */,
 				0E23C2112924EDCE00C467F8 /* UserBadgesView.swift in Sources */,
 				0E31E358293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
+				0E31E36F2941529C002A6A82 /* IndicatorView.swift in Sources */,
 				0E61D6932907E6310098A3F5 /* SignupView.swift in Sources */,
 				0E0F94DA28FD5D590004951F /* ModelType.swift in Sources */,
 				0E0F94DB28FD5D590004951F /* MyAPI.swift in Sources */,
@@ -1580,6 +1604,7 @@
 				0EF69C522928E53B00C36DAC /* FundsHighestThreeView..swift in Sources */,
 				0EA56B8929361DDA00967A99 /* FundsHighestThreePlusVC.swift in Sources */,
 				0EF69C3F2928637500C36DAC /* StatsVC.swift in Sources */,
+				0E31E371294152B2002A6A82 /* MyModel.swift in Sources */,
 				0EAFF9352921335D00162DD0 /* CategorySectionView.swift in Sources */,
 				0E2CBDCB292E0518001667BE /* GrasscollectionViewCell.swift in Sources */,
 				0EF59ADD29097AD9003FEA03 /* CoinSearchVC.swift in Sources */,
@@ -1598,6 +1623,7 @@
 				0EC67F6F293C9792002FBF8F /* CoinDetailViewController.swift in Sources */,
 				0E23C2172925B5A500C467F8 /* SettingVC.swift in Sources */,
 				0E2CBE5F2930B64A001667BE /* BagesDetailBuyViewModel.swift in Sources */,
+				0E31E36C29415262002A6A82 /* SlideView.swift in Sources */,
 				0EAFF94429221BD000162DD0 /* LastTextView.swift in Sources */,
 				0EF69C4F2928D34B00C36DAC /* MyRankView.swift in Sources */,
 				0E2CBE3C293082C0001667BE /* StatsViewModel.swift in Sources */,
@@ -1635,6 +1661,7 @@
 				0E47A485293A11D300215CE7 /* Header.swift in Sources */,
 				0EF59ADB29097ACF003FEA03 /* CoinVC.swift in Sources */,
 				0E61D69A2907F0E20098A3F5 /* PasswordView.swift in Sources */,
+				0E31E37529416E39002A6A82 /* TowCell.swift in Sources */,
 				0E23C2202925BE9E00C467F8 /* AccountSettingCell.swift in Sources */,
 				0EF69C41292863BE00C36DAC /* RankVC.swift in Sources */,
 				0E2CBE732930BAB8001667BE /* UserChartViewModel.swift in Sources */,
@@ -1649,6 +1676,7 @@
 				0E2CBE3029307FF8001667BE /* IncreaseCoinViewModel.swift in Sources */,
 				0EAFF94B2922444500162DD0 /* BagesDetailVC.swift in Sources */,
 				0EF69C552928EC7100C36DAC /* RevenueHighestThree.swift in Sources */,
+				0E31E373294152C0002A6A82 /* MyCell.swift in Sources */,
 				0E23C21429250CA300C467F8 /* UserGrassColorView.swift in Sources */,
 				0E2CBDD6292F0E27001667BE /* MyStatsHoldingsChartModel.swift in Sources */,
 				0EE4352628F4476F00CA7E58 /* SceneDelegate.swift in Sources */,

@@ -15,9 +15,11 @@ final class CoinDetailViewController: UIViewController {
             
         let chartUserView = ChartUserView(frame: .zero, viewController: self)
         
+        let slideView = SlideView(frame: .zero, viewController: self)
+        
         let spacingView = UIView()
         spacingView.snp.makeConstraints {
-            $0.height.equalTo(100.0)
+            $0.height.equalTo(800.0)
         }
         
         let spacingView1 = UIView()
@@ -25,9 +27,16 @@ final class CoinDetailViewController: UIViewController {
             $0.height.equalTo(800.0)
         }
         
+        let spacingView2 = UIView()
+        spacingView1.snp.makeConstraints {
+            $0.height.equalTo(800.0)
+        }
+        
         [
             chartUserView,
-            spacingView
+            spacingView,
+            slideView
+            
         ].forEach {
             stackView.addArrangedSubview($0)
         }
@@ -63,11 +72,6 @@ private extension CoinDetailViewController {
         stackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
-    }
-    
-    @objc func tapSettingButton() {
-        self.navigationController?.pushViewController(SettingViewController(), animated: true)
-        print("설정 버튼이 클릭됨")
     }
 }
 
