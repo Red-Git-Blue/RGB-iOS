@@ -12,10 +12,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
 //        let homeViewController = AppViewController()
         let loginViewController = StartViewController()
-//        let tapbarViewController = TapBarViewController()
+        let tapbarViewController = TapBarViewController()
         let coinDetailVC = CoinDetailViewController()
 
-        let rootNavigationController = UINavigationController(rootViewController: coinDetailVC)
+        let rootNavigationController = UINavigationController(rootViewController: tapbarViewController)
         
         self.window?.rootViewController = rootNavigationController
         self.window?.makeKeyAndVisible()

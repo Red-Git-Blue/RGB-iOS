@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class MyCell: UICollectionViewCell {
+final class BuySellCell: UICollectionViewCell {
     // MARK: Constants
     static var id = "MyCell"
     static var color: UIColor = .black

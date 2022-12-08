@@ -57,8 +57,8 @@
 		0E31E36C29415262002A6A82 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E36B29415262002A6A82 /* SlideView.swift */; };
 		0E31E36F2941529C002A6A82 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E36E2941529C002A6A82 /* IndicatorView.swift */; };
 		0E31E371294152B2002A6A82 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E370294152B2002A6A82 /* MyModel.swift */; };
-		0E31E373294152C0002A6A82 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E372294152C0002A6A82 /* MyCell.swift */; };
-		0E31E37529416E39002A6A82 /* TowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E37429416E39002A6A82 /* TowCell.swift */; };
+		0E31E373294152C0002A6A82 /* BuySellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E372294152C0002A6A82 /* BuySellCell.swift */; };
+		0E31E37529416E39002A6A82 /* DetailCoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E37429416E39002A6A82 /* DetailCoinCell.swift */; };
 		0E47A485293A11D300215CE7 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A484293A11D300215CE7 /* Header.swift */; };
 		0E47A487293A12D200215CE7 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A486293A12D200215CE7 /* TokenModel.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
@@ -190,8 +190,8 @@
 		0E31E36B29415262002A6A82 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
 		0E31E36E2941529C002A6A82 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		0E31E370294152B2002A6A82 /* MyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
-		0E31E372294152C0002A6A82 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
-		0E31E37429416E39002A6A82 /* TowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowCell.swift; sourceTree = "<group>"; };
+		0E31E372294152C0002A6A82 /* BuySellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySellCell.swift; sourceTree = "<group>"; };
+		0E31E37429416E39002A6A82 /* DetailCoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoinCell.swift; sourceTree = "<group>"; };
 		0E47A484293A11D300215CE7 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		0E47A486293A12D200215CE7 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
@@ -879,8 +879,8 @@
 				0E31E36B29415262002A6A82 /* SlideView.swift */,
 				0E31E36E2941529C002A6A82 /* IndicatorView.swift */,
 				0E31E370294152B2002A6A82 /* MyModel.swift */,
-				0E31E372294152C0002A6A82 /* MyCell.swift */,
-				0E31E37429416E39002A6A82 /* TowCell.swift */,
+				0E31E372294152C0002A6A82 /* BuySellCell.swift */,
+				0E31E37429416E39002A6A82 /* DetailCoinCell.swift */,
 			);
 			path = SlideView;
 			sourceTree = "<group>";
@@ -1661,7 +1661,7 @@
 				0E47A485293A11D300215CE7 /* Header.swift in Sources */,
 				0EF59ADB29097ACF003FEA03 /* CoinVC.swift in Sources */,
 				0E61D69A2907F0E20098A3F5 /* PasswordView.swift in Sources */,
-				0E31E37529416E39002A6A82 /* TowCell.swift in Sources */,
+				0E31E37529416E39002A6A82 /* DetailCoinCell.swift in Sources */,
 				0E23C2202925BE9E00C467F8 /* AccountSettingCell.swift in Sources */,
 				0EF69C41292863BE00C36DAC /* RankVC.swift in Sources */,
 				0E2CBE732930BAB8001667BE /* UserChartViewModel.swift in Sources */,
@@ -1676,7 +1676,7 @@
 				0E2CBE3029307FF8001667BE /* IncreaseCoinViewModel.swift in Sources */,
 				0EAFF94B2922444500162DD0 /* BagesDetailVC.swift in Sources */,
 				0EF69C552928EC7100C36DAC /* RevenueHighestThree.swift in Sources */,
-				0E31E373294152C0002A6A82 /* MyCell.swift in Sources */,
+				0E31E373294152C0002A6A82 /* BuySellCell.swift in Sources */,
 				0E23C21429250CA300C467F8 /* UserGrassColorView.swift in Sources */,
 				0E2CBDD6292F0E27001667BE /* MyStatsHoldingsChartModel.swift in Sources */,
 				0EE4352628F4476F00CA7E58 /* SceneDelegate.swift in Sources */,

@@ -35,8 +35,8 @@ class SlideView: UIView {
         $0.showsHorizontalScrollIndicator = false
         $0.contentInset = Constant.collectionViewContentInset
         $0.backgroundColor = .black
-        $0.register(MyCell.self, forCellWithReuseIdentifier: MyCell.id)
-        $0.register(TowCell.self, forCellWithReuseIdentifier: TowCell.id)
+        $0.register(BuySellCell.self, forCellWithReuseIdentifier: BuySellCell.id)
+        $0.register(DetailCoinCell.self, forCellWithReuseIdentifier: DetailCoinCell.id)
         $0.isPagingEnabled = true
     }
 //    private let indicatorView = IndicatorView()
@@ -64,9 +64,9 @@ extension SlideView: UICollectionViewDataSource {
         self.items.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: MyCell.id, for: indexPath) as! MyCell
+        let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: BuySellCell.id, for: indexPath) as! BuySellCell
         
-        var cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: TowCell.id, for: indexPath) as! TowCell
+        var cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: DetailCoinCell.id, for: indexPath) as! DetailCoinCell
         
         if indexPath.row == 0 {
             return cell1

@@ -81,11 +81,11 @@ extension SuggestionCoinSectionView: UICollectionViewDataSource {
         return cell ?? UICollectionViewCell()
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedSuggesion = suggesionModelList[indexPath.row]
+//        let selectedSuggesion = suggesionModelList[indexPath.row]
         print(suggesionModelList[indexPath.row])
-        let detailViewController = SuggesionDetailViewController()
-        detailViewController.suggestion = selectedSuggesion
-        controller.present(detailViewController, animated: true)
+        let detailViewController = CoinDetailViewController()
+        detailViewController.modalPresentationStyle = .fullScreen
+        controller.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 

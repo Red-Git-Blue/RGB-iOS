@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class TowCell: UICollectionViewCell {
+final class DetailCoinCell: UICollectionViewCell {
     // MARK: Constants
     static var id = "TowCell"
     static var color: UIColor = .black

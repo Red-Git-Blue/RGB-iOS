@@ -75,7 +75,11 @@ extension FundsHighestThreePlusViewController: UICollectionViewDataSource {
         return cell ?? UICollectionViewCell()
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         print(indexPath.row)
+        let detailViewController = CoinDetailViewController()
+        detailViewController.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 
