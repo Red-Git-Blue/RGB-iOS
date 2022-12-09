@@ -19,6 +19,9 @@ extension MyAPI {
                 parameters: body.toDictionary(),
                 encoding: JSONEncoding.default
             )
+            
+        case .getMeInfo:
+            return .requestPlain
         }
     }
 }

@@ -10,7 +10,8 @@ extension MyAPI {
         return "/auth/sign-in"
     case .getBagesList:
         return "item/badge"
-        
+    case .getMeInfo:
+        return "user/me"
     }
   }
 }

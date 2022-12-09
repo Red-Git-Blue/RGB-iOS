@@ -5,6 +5,7 @@ enum MyAPI {
     case postSignUp(SignRequest)
     case postSignIn(LoginRequest)
     case getBagesList(BagesListRequest)
+    case getMeInfo
 }
 
 // MARK: MyAPI+TargetType
@@ -15,15 +16,6 @@ extension MyAPI: Moya.TargetType {
     var sampleData: Data { Data() }
     var task: Task { self.getTask() }
     var headers: [String : String]? { ["Content-Type": "application/json"] }
-    
-//    func getHeader() -> [String : String]? {
-//        var header = self.headers!
-//        let token = KeyChain.read(key: Token.accessToken)
-//        if(token != nil) {
-//            header["Authorization"] = "Bearer \(token!)"
-//        }
-//        return header
-//    }
 }
 
 extension Encodable {

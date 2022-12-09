@@ -68,3 +68,59 @@ struct Sort: Codable {
 }
 
 
+// MARK: - UserMeInfoModel
+struct UserMeInfoModel: Codable {
+    let id: Int
+    let name, userName: String
+    let money: Int
+    let representBadge, profile: Profile
+    let badgeInfo: BadgeInfo
+    let grassInfo: GrassInfo
+    let github: Bool
+}
+
+// MARK: - BadgeInfo
+struct BadgeInfo: Codable {
+    let badgeQuantity: Int
+    let slot: [Slot]
+}
+
+// MARK: - Slot
+struct Slot: Codable {
+    let id: Int
+    let badgeMainFile: Profile
+}
+
+// MARK: - Profile
+struct Profile: Codable {
+    let fileID: Int
+    let fileURL, fileType, profileExtension, fileName: String
+
+    enum CodingKeys: String, CodingKey {
+        case fileID = "fileId"
+        case fileURL = "fileUrl"
+        case fileType
+        case profileExtension = "extension"
+        case fileName
+    }
+}
+
+// MARK: - GrassInfo
+struct GrassInfo: Codable {
+    let grassQuantity: Int
+    let currentGrass: CurrentGrass
+    let grassList: [CurrentGrass]
+}
+
+// MARK: - CurrentGrass
+struct CurrentGrass: Codable {
+    let id: Int
+    let name, rarityType: String
+    let color: Color
+}
+
+// MARK: - Color
+struct Color: Codable {
+    let less, low, normal, high: String
+    let max, background: String
+}

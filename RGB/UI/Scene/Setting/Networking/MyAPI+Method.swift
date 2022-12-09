@@ -7,6 +7,7 @@ extension MyAPI {
     case .postSignUp: return .post
     case .postSignIn: return .post
     case .getBagesList: return .get
+    case .getMeInfo: return .get
     }
   }
 }

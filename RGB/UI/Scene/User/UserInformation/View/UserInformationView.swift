@@ -8,9 +8,16 @@
 import UIKit
 import SnapKit
 import Then
+import RxCocoa
+import RxSwift
+import Moya
 
 class UserInformationView: UIView {
     private final var controller: UIViewController
+//    let provider = MoyaProvider<MyAPI>()
+ 
+    
+    let disposeBag = DisposeBag()
     
     private lazy var userProfileImage = UIImageView().then {
         $0.backgroundColor = .red
@@ -61,6 +68,36 @@ class UserInformationView: UIView {
         
         attribute()
         setup()
+        
+//        self.provider.rx
+//            .request(.getMeInfo())
+//            .subscribe { result in
+//                if let acToken = KeyChain.read(key: Header.accesstoken.header()) {
+//
+//                }
+//            }
+        print("provider: \(provider)")
+        let a = KeyChain.read(key: Token.accessToken)
+        print("keyChain read accessToken : \(a)")
+        
+        self.provider.rx
+            .request(MyAPI.getMeInfo)
+            .subscribe { result in
+                switch result {
+                case let .success(moyaResponse):
+                    let statusCode = moyaResponse.statusCode
+                    print(result)
+                    if(statusCode == 200) {
+                        let data = moyaResponse.data
+                        print(data)
+                    } else {
+                        print(moyaResponse.request?.headers)
+                        print("🪓" + "\(statusCode)" + "fuck")
+                    }
+                case let .failure(error):
+                    print(error)
+                }
+            }.disposed(by: disposeBag)
     }
 
     required init?(coder: NSCoder) {
