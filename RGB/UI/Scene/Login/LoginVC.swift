@@ -7,7 +7,7 @@ import SnapKit
 import RxRelay
 
 class LoginViewController: UIViewController {
-//    let provider = MoyaProvider<MyAPI>()
+    let provider = MoyaProvider<API>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,29 @@ class LoginViewController: UIViewController {
         opacityView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(opacityView)
         let view = LoginView()
+
+        view.mainButton.rx.tap
+            .bind {
+                self.provider.rx.request(.login(LoginRequest(email: view.firstTextField.text!, password: view.seconedTextField.text!)))
+                    .subscribe { response in
+                        switch response {
+                        case .success(let response):
+                            print(response.statusCode)
+                            if let userDate = try? JSONDecoder().decode(TokenModel.self, from: response.data) {
+                                print("성공")
+                            } else {
+                                print("🔨")
+                            }
+                            let appVC = TapBarViewController()
+                            appVC.modalPresentationStyle = .fullScreen
+                            self.present(appVC, animated: false)
+                            break
+                        case .failure(let error):
+                            print(error)
+                            print("시발")
+                        }
+                    }.disposed(by: view.disposeBag)
+            }
         
 //        view.mainButton.rx.tap
 //            .bind {

@@ -11,10 +11,13 @@ import Moya
 enum API {
     
     // login
-    case login
+    case login(LoginRequest)
     
     //Signup
-    case signup
+    case signup(SignRequest)
+    
+    //user
+    case getMeInfo
     
     // Commit
     
@@ -43,8 +46,20 @@ extension API: Moya.TargetType {
     var path: String { self.getPath() }
     var method: Moya.Method { self.getMethod() }
     var sampleData: Data { Data() }
-    var task: Task {  return .requestPlain }
+    var task: Task { self.getTask() }
     var headers: [String : String]? { ["Content-Type": "application/json"] }
 }
 
+extension Encodable {
+     func toDictionary() -> [String: Any] {
+         do {
+             let encoder = JSONEncoder()
+             let data = try encoder.encode(self)
+
+             return try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] ?? [:]
+         } catch {
+             return [:]
+         }
+     }
+ }
 

@@ -42,6 +42,40 @@ class SignupViewController: UIViewController {
         
 //        view.mainButton.rx.tap
 //            .bind {
+//                API.login(LoginRequest(email: view.firstTextField.text!, password: view.seconedTextField.text!)).request()
+//                    .subscribe { response in
+//                        switch response {
+//                        case .success(let response):
+//                            print(response.statusCode)
+//                            print("성공")
+//                        case .failure(let error):
+//                            print(error)
+//                            print("시발")
+//                        }
+//                    }.disposed(by: view.disposeBag)
+//            }
+        
+        view.mainButton.rx.tap
+            .bind {
+                API.signup(SignRequest(email: view.seconedTextField.text!, password: view.passwordTextField.text!, name: view.firstTextField.text!)).request()
+                    .subscribe { response in
+                        switch response {
+                            
+                        case .success(let response):
+                            print(response.statusCode)
+                            print("성공")
+                        case .failure(let error):
+                            print(error)
+                            print("시발")
+                        }
+                    }.disposed(by: view.disposeBag)
+            }
+        
+        view.updateWith(self)
+    }
+        
+//        view.mainButton.rx.tap
+//            .bind {
 //                if(view.firstTextField.text == nil || view.firstTextField.text!.isEmpty) {
 //                    print("닉네임 없서")
 //                    return
@@ -64,6 +98,5 @@ class SignupViewController: UIViewController {
 //                }
 //            }
         
-        view.updateWith(self)
-    }
 }
+

@@ -14,8 +14,9 @@ import Moya
 
 class UserInformationView: UIView {
     private final var controller: UIViewController
-//    let provider = MoyaProvider<MyAPI>()
+    let provider = MoyaProvider<API>()
  
+    let getUserInfo = PublishRelay<UserMeInfoModel>()
     
     let disposeBag = DisposeBag()
     
@@ -76,6 +77,19 @@ class UserInformationView: UIView {
 //
 //                }
 //            }
+        print("안녕!@~")
+        API.getMeInfo.request()
+            .subscribe { result in
+                switch result {
+                case .success(let response):
+                    guard let data = try? JSONDecoder().decode(UserMeInfoModel.self, from: response.data) else {
+                        return
+                    }
+                    self.getUserInfo.accept(data)
+                case .failure(let error):
+                    print(error)
+                }
+            }.disposed(by: disposeBag)
     }
 
     required init?(coder: NSCoder) {
@@ -91,6 +105,7 @@ extension UserInformationView {
     
     func attribute() {
         userProfileImage.layer.cornerRadius = 70
+        
     }
     
     func setup() {
