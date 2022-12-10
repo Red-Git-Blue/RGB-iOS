@@ -1,17 +1,17 @@
 import Foundation
 
-struct SignRequest: ModelType {
+struct SignRequest: Codable {
     var email: String
     var password: String
     var name: String
 }
 
-struct LoginRequest: ModelType {
+struct LoginRequest: Codable {
     var email: String
     var password: String
 }
 
-struct BagesListRequest: ModelType {
+struct BagesListRequest: Codable {
     var idx: Int
     var size: Int
 }

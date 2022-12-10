@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E0F94D928FD5D590004951F /* MyAPI+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94D128FD5D590004951F /* MyAPI+Method.swift */; };
-		0E0F94DA28FD5D590004951F /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94D228FD5D590004951F /* ModelType.swift */; };
-		0E0F94DB28FD5D590004951F /* MyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94D328FD5D590004951F /* MyAPI.swift */; };
-		0E0F94DC28FD5D590004951F /* Moya+NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94D428FD5D590004951F /* Moya+NetworkError.swift */; };
-		0E0F94DD28FD5D590004951F /* MyAPI+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94D528FD5D590004951F /* MyAPI+Path.swift */; };
-		0E0F94DE28FD5D590004951F /* MyAPI+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94D628FD5D590004951F /* MyAPI+Request.swift */; };
-		0E0F94DF28FD5D590004951F /* MyAPI+Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94D728FD5D590004951F /* MyAPI+Task.swift */; };
-		0E0F94E028FD5D590004951F /* MyAPI+BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94D828FD5D590004951F /* MyAPI+BaseURL.swift */; };
 		0E0F94E328FD5DFF0004951F /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94E228FD5DFF0004951F /* RequestModel.swift */; };
 		0E0F94E628FD5FC50004951F /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94E528FD5FC50004951F /* Signup.swift */; };
 		0E23C2062923BFAC00C467F8 /* BagesIntroduceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C2052923BFAC00C467F8 /* BagesIntroduceView.swift */; };
@@ -59,7 +51,10 @@
 		0E31E371294152B2002A6A82 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E370294152B2002A6A82 /* MyModel.swift */; };
 		0E31E373294152C0002A6A82 /* BuySellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E372294152C0002A6A82 /* BuySellCell.swift */; };
 		0E31E37529416E39002A6A82 /* DetailCoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E37429416E39002A6A82 /* DetailCoinCell.swift */; };
-		0E47A485293A11D300215CE7 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A484293A11D300215CE7 /* Header.swift */; };
+		0E31E37729444EBB002A6A82 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E37629444EBB002A6A82 /* BaseURL.swift */; };
+		0E31E37929444EDD002A6A82 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E37829444EDD002A6A82 /* Api.swift */; };
+		0E31E37B29444EF1002A6A82 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E37A29444EF1002A6A82 /* TargetType.swift */; };
+		0E31E37D29444F06002A6A82 /* MyAPI+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E37C29444F06002A6A82 /* MyAPI+Request.swift */; };
 		0E47A487293A12D200215CE7 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A486293A12D200215CE7 /* TokenModel.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
@@ -140,14 +135,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E0F94D128FD5D590004951F /* MyAPI+Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyAPI+Method.swift"; sourceTree = "<group>"; };
-		0E0F94D228FD5D590004951F /* ModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
-		0E0F94D328FD5D590004951F /* MyAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAPI.swift; sourceTree = "<group>"; };
-		0E0F94D428FD5D590004951F /* Moya+NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Moya+NetworkError.swift"; sourceTree = "<group>"; };
-		0E0F94D528FD5D590004951F /* MyAPI+Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyAPI+Path.swift"; sourceTree = "<group>"; };
-		0E0F94D628FD5D590004951F /* MyAPI+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyAPI+Request.swift"; sourceTree = "<group>"; };
-		0E0F94D728FD5D590004951F /* MyAPI+Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyAPI+Task.swift"; sourceTree = "<group>"; };
-		0E0F94D828FD5D590004951F /* MyAPI+BaseURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyAPI+BaseURL.swift"; sourceTree = "<group>"; };
 		0E0F94E228FD5DFF0004951F /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		0E0F94E528FD5FC50004951F /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		0E23C2052923BFAC00C467F8 /* BagesIntroduceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesIntroduceView.swift; sourceTree = "<group>"; };
@@ -192,7 +179,10 @@
 		0E31E370294152B2002A6A82 /* MyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
 		0E31E372294152C0002A6A82 /* BuySellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySellCell.swift; sourceTree = "<group>"; };
 		0E31E37429416E39002A6A82 /* DetailCoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoinCell.swift; sourceTree = "<group>"; };
-		0E47A484293A11D300215CE7 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		0E31E37629444EBB002A6A82 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		0E31E37829444EDD002A6A82 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		0E31E37A29444EF1002A6A82 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		0E31E37C29444F06002A6A82 /* MyAPI+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyAPI+Request.swift"; sourceTree = "<group>"; };
 		0E47A486293A12D200215CE7 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
@@ -292,15 +282,10 @@
 			isa = PBXGroup;
 			children = (
 				0E0F94E428FD5E080004951F /* Model */,
-				0E47A484293A11D300215CE7 /* Header.swift */,
-				0E0F94D228FD5D590004951F /* ModelType.swift */,
-				0E0F94D428FD5D590004951F /* Moya+NetworkError.swift */,
-				0E0F94D328FD5D590004951F /* MyAPI.swift */,
-				0E0F94D828FD5D590004951F /* MyAPI+BaseURL.swift */,
-				0E0F94D128FD5D590004951F /* MyAPI+Method.swift */,
-				0E0F94D528FD5D590004951F /* MyAPI+Path.swift */,
-				0E0F94D628FD5D590004951F /* MyAPI+Request.swift */,
-				0E0F94D728FD5D590004951F /* MyAPI+Task.swift */,
+				0E31E37629444EBB002A6A82 /* BaseURL.swift */,
+				0E31E37829444EDD002A6A82 /* Api.swift */,
+				0E31E37A29444EF1002A6A82 /* TargetType.swift */,
+				0E31E37C29444F06002A6A82 /* MyAPI+Request.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -361,8 +346,8 @@
 		0E23C2182925B5AA00C467F8 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				0E0F94E128FD5D640004951F /* Networking */,
 				0E23C2162925B5A500C467F8 /* SettingVC.swift */,
+				0E0F94E128FD5D640004951F /* Networking */,
 				0E7929C229263B8300C0D188 /* Theme */,
 				0E23C21B2925BE3E00C467F8 /* NotificationSettingsCell.swift */,
 				0E23C21D2925BE6F00C467F8 /* ChangeLanguageCell.swift */,
@@ -1573,9 +1558,6 @@
 				0E31E358293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				0E31E36F2941529C002A6A82 /* IndicatorView.swift in Sources */,
 				0E61D6932907E6310098A3F5 /* SignupView.swift in Sources */,
-				0E0F94DA28FD5D590004951F /* ModelType.swift in Sources */,
-				0E0F94DB28FD5D590004951F /* MyAPI.swift in Sources */,
-				0E0F94DD28FD5D590004951F /* MyAPI+Path.swift in Sources */,
 				0E555B29290FE0EC005E379E /* SuggesionDetailViewController.swift in Sources */,
 				0EA56B142931B95500967A99 /* GiftCollectionViewCell.swift in Sources */,
 				0E2CBE11293074D9001667BE /* UserGraphListSectionViewModel.swift in Sources */,
@@ -1584,19 +1566,19 @@
 				0E23C2062923BFAC00C467F8 /* BagesIntroduceView.swift in Sources */,
 				0EF69C4A2928A2D100C36DAC /* DropCoinView.swift in Sources */,
 				0EF69C4429288F8500C36DAC /* PopularCoinView.swift in Sources */,
+				0E31E37B29444EF1002A6A82 /* TargetType.swift in Sources */,
 				0EF59ADF29097AE6003FEA03 /* ShopVC.swift in Sources */,
 				0E2CBE3429308090001667BE /* DrapCoinViewModel.swift in Sources */,
 				0EAFF92F29211D0D00162DD0 /* AdvertisementSectionView.swift in Sources */,
-				0E0F94D928FD5D590004951F /* MyAPI+Method.swift in Sources */,
 				0E23C21A2925BDB600C467F8 /* ChangeThemeCell.swift in Sources */,
 				0E2CBE1729307894001667BE /* SuggestionCoinViewModel.swift in Sources */,
 				0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */,
 				0EF59AF72909993A003FEA03 /* SuggestionCoinSectionView.swift in Sources */,
 				0E23C20E2924D14D00C467F8 /* UserChartView.swift in Sources */,
+				0E31E37729444EBB002A6A82 /* BaseURL.swift in Sources */,
 				0EEE8D3C2911093700227199 /* UserGraphListDetileVC.swift in Sources */,
 				0E99737B2908E44C00B95BC6 /* PasswordCompletionVC.swift in Sources */,
 				0E2CBDD8292F550C001667BE /* StatsUserTableViewCell.swift in Sources */,
-				0E0F94DC28FD5D590004951F /* Moya+NetworkError.swift in Sources */,
 				0E9BC16428FEC49B00B8DB56 /* MainSignupVC.swift in Sources */,
 				0E9973742908A8F700B95BC6 /* BaseCompletionView.swift in Sources */,
 				0EAFF9392921B49700162DD0 /* CategorySectionViewCell.swift in Sources */,
@@ -1615,10 +1597,9 @@
 				0E31E35E293DDA7C002A6A82 /* ChartUserView.swift in Sources */,
 				0E2CBE692930B8C5001667BE /* ListViewModel.swift in Sources */,
 				0E0F94E628FD5FC50004951F /* Signup.swift in Sources */,
-				0E0F94DE28FD5D590004951F /* MyAPI+Request.swift in Sources */,
 				0E23C20B2924BCD800C467F8 /* UserInformationView.swift in Sources */,
+				0E31E37929444EDD002A6A82 /* Api.swift in Sources */,
 				0EF69C2D29278E4D00C36DAC /* ControllerManager.swift in Sources */,
-				0E0F94DF28FD5D590004951F /* MyAPI+Task.swift in Sources */,
 				0EAFF93E2921E30600162DD0 /* BadgesCell.swift in Sources */,
 				0EC67F6F293C9792002FBF8F /* CoinDetailViewController.swift in Sources */,
 				0E23C2172925B5A500C467F8 /* SettingVC.swift in Sources */,
@@ -1652,13 +1633,12 @@
 				0E2CBE4D2930B0CB001667BE /* NewBadgesViewModel.swift in Sources */,
 				0E99736D2908A52400B95BC6 /* CertificationVC.swift in Sources */,
 				0E23C222292618C000C467F8 /* ThemeVC.swift in Sources */,
+				0E31E37D29444F06002A6A82 /* MyAPI+Request.swift in Sources */,
 				0EF69C60292AF25E00C36DAC /* ListCollectionViewCell.swift in Sources */,
 				0EEE8D5929126E9500227199 /* GrassSectionModel.swift in Sources */,
 				0EF69C2B29275EF300C36DAC /* CategoryViewController.swift in Sources */,
-				0E0F94E028FD5D590004951F /* MyAPI+BaseURL.swift in Sources */,
 				0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */,
 				0E61D6912907E6250098A3F5 /* SignupVC.swift in Sources */,
-				0E47A485293A11D300215CE7 /* Header.swift in Sources */,
 				0EF59ADB29097ACF003FEA03 /* CoinVC.swift in Sources */,
 				0E61D69A2907F0E20098A3F5 /* PasswordView.swift in Sources */,
 				0E31E37529416E39002A6A82 /* DetailCoinCell.swift in Sources */,

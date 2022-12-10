@@ -8,7 +8,7 @@ import RxSwift
 class BadgesView: UIView {
     private final var controller: UIViewController
     private final var viewName: String
-    let provider = MoyaProvider<MyAPI>()
+//    let provider = MoyaProvider<MyAPI>()
     let disposeBag = DisposeBag()
     
     var bagesList = [BagesListModel]()
@@ -58,24 +58,24 @@ class BadgesView: UIView {
         layout()
         collectionView.reloadData()
         
-        self.provider.rx
-            .request(MyAPI.getBagesList(BagesListRequest(idx: 0, size: 10)))
-            .subscribe { result in
-                switch result {
-                    case let .success(moyaResponse):
-                        let statusCode = moyaResponse.statusCode
-                        if (statusCode == 200) {
-                            print("API Request Succeeded")
-                            let data = moyaResponse.data
-                            print(data)
-                        } else {
-                            print("❤️‍🔥 API Request Failed: " + String(statusCode))
-                        }
-                    case let .failure(error):
-                        print("🔨 API Request Failed\nError: ")
-                        print(error)
-                }
-            }.disposed(by: disposeBag)
+//        self.provider.rx
+//            .request(MyAPI.getBagesList(BagesListRequest(idx: 0, size: 10)))
+//            .subscribe { result in
+//                switch result {
+//                    case let .success(moyaResponse):
+//                        let statusCode = moyaResponse.statusCode
+//                        if (statusCode == 200) {
+//                            print("API Request Succeeded")
+//                            let data = moyaResponse.data
+//                            print(data)
+//                        } else {
+//                            print("❤️‍🔥 API Request Failed: " + String(statusCode))
+//                        }
+//                    case let .failure(error):
+//                        print("🔨 API Request Failed\nError: ")
+//                        print(error)
+//                }
+//            }.disposed(by: disposeBag)
     }
     
     required init?(coder: NSCoder) {
