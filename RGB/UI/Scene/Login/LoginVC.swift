@@ -7,8 +7,8 @@ import SnapKit
 import RxRelay
 
 class LoginViewController: UIViewController {
-    let provider = MoyaProvider<API>()
-
+//    let provider = MoyaProvider<API>()
+    let viewModel = LoginViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,62 +27,24 @@ class LoginViewController: UIViewController {
         opacityView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(opacityView)
         let view = LoginView()
-
-        view.mainButton.rx.tap
-            .bind {
-                self.provider.rx.request(.login(LoginRequest(email: view.firstTextField.text!, password: view.seconedTextField.text!)))
-                    .subscribe { response in
-                        switch response {
-                        case .success(let response):
-                            print(response.statusCode)
-                            if let userDate = try? JSONDecoder().decode(TokenModel.self, from: response.data) {
-                                print("성공")
-                            } else {
-                                print("🔨")
-                            }
-                            let appVC = TapBarViewController()
-                            appVC.modalPresentationStyle = .fullScreen
-                            self.present(appVC, animated: false)
-                            break
-                        case .failure(let error):
-                            print(error)
-                            print("시발")
-                        }
-                    }.disposed(by: view.disposeBag)
-            }
         
-//        view.mainButton.rx.tap
-//            .bind {
-//                if(view.firstTextField.text == nil || view.firstTextField.text!.isEmpty) {
-//                    print("닉네임 없서")
-//                    return
-//                }
-//                if(view.seconedTextField.text == nil || view.seconedTextField.text!.isEmpty) {
-//                    print("비밀번호 없서")
-//                    return
-//                }
-//                self.provider.rx.request(.postSignIn(LoginRequest(email: view.firstTextField.text!, password: view.seconedTextField.text!))).subscribe { response in
-//                    switch response {
-//                    case .success(let response):
-//                        print(response.statusCode)
-//                        print(String(data: response.data, encoding: .utf8))
-//                        if let userDate = try? JSONDecoder().decode(TokenModel.self, from: response.data) {
-////                            KeyChain.create(key: Token.accessToken, token: userDate.accessToken)
-////                            KeyChain.create(key: Token.refreshToken, token: userDate.refreshToken)
-//                            print("🥹안녕")
-//                        } else {
-//                            print("🔨")
-//                        }
-//                        let appVC = TapBarViewController()
-//                        appVC.modalPresentationStyle = .fullScreen
-//                        self.present(appVC, animated: false)
-//                        break
-//                    case .failure(let error):
-//                        print("펑! \(error)")
-//                    }
-//                }.disposed(by: view.disposeBag)
-//                print("🐊:: LoginButton!")
-//            }
+        let input = LoginViewModel.Input(email: view.firstTextField.rx.text.orEmpty.asDriver(), password: view.seconedTextField.rx.text.orEmpty.asDriver(), loginButtonDidTap: view.mainButton.rx.tap.asSignal())
+        
+        let output = viewModel.returnData(input)
+        print("안녕")
+        output.result.subscribe(onNext: {
+            
+            switch $0 {
+            case true:
+                print("login 성공")
+                let appVC = TapBarViewController()
+                appVC.modalPresentationStyle = .fullScreen
+                self.present(appVC, animated: false)
+            case false:
+                print("login 실패")
+            }
+        })
+
         
         view.forgetPasswordButton.rx.tap
             .bind {

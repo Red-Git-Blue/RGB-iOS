@@ -19,6 +19,9 @@ enum API {
     //user
     case getMeInfo
     
+    //토큰 재발급
+    case reissue(TokenModel)
+    
     // Commit
     
     case allCommit(_ name : String)

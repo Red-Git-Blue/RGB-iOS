@@ -27,6 +27,9 @@ extension API {
             
         case .getMeInfo:
             return URL(string: url)!
+            
+        case .reissue:
+            return URL(string: url)!
         }
     }
     func getPath() -> String {
@@ -59,12 +62,15 @@ extension API {
             return "/auth/sign-up"
         case .getMeInfo:
             return "/user/me"
+        case .reissue:
+            return "auth/reissue"
         }
     }
     func getMethod() -> Moya.Method {
         switch self {
         case .login: return .post
         case .signup: return .post
+        case .reissue: return .post
         default: return .get
         }
     }
@@ -84,6 +90,18 @@ extension API {
             )
         default:
             return .requestPlain
+        }
+    }
+    
+    var header: [String : String]? {
+        switch self {
+        case .login, .signup:
+            return Header.tokenIsEmpty.header()
+        case .getMeInfo:
+            return Header.accessToken.header()
+        
+        default:
+            return Header.refreshToken.header()
         }
     }
 }

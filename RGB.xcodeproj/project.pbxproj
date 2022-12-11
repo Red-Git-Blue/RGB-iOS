@@ -56,6 +56,11 @@
 		0E31E37B29444EF1002A6A82 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E37A29444EF1002A6A82 /* TargetType.swift */; };
 		0E31E37D29444F06002A6A82 /* MyAPI+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E37C29444F06002A6A82 /* MyAPI+Request.swift */; };
 		0E31E37F294485FC002A6A82 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E37E294485FC002A6A82 /* Header.swift */; };
+		0E31E38129456CF6002A6A82 /* MoyaLoggingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E38029456CF6002A6A82 /* MoyaLoggingPlugin.swift */; };
+		0E31E38329457689002A6A82 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E38229457689002A6A82 /* Service.swift */; };
+		0E31E385294576E6002A6A82 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E384294576E6002A6A82 /* ServiceType.swift */; };
+		0E31E3872945845D002A6A82 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E3862945845D002A6A82 /* LoginViewModel.swift */; };
+		0E31E38929458513002A6A82 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E38829458513002A6A82 /* BaseVM.swift */; };
 		0E47A487293A12D200215CE7 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A486293A12D200215CE7 /* TokenModel.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
@@ -185,6 +190,11 @@
 		0E31E37A29444EF1002A6A82 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		0E31E37C29444F06002A6A82 /* MyAPI+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyAPI+Request.swift"; sourceTree = "<group>"; };
 		0E31E37E294485FC002A6A82 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		0E31E38029456CF6002A6A82 /* MoyaLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggingPlugin.swift; sourceTree = "<group>"; };
+		0E31E38229457689002A6A82 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		0E31E384294576E6002A6A82 /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServiceType.swift; path = "/Users/junha/Desktop/RGB/RGB-iOS/RGB/UI/Scene/Setting/Networking/ServiceType.swift"; sourceTree = "<absolute>"; };
+		0E31E3862945845D002A6A82 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		0E31E38829458513002A6A82 /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
 		0E47A486293A12D200215CE7 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
@@ -287,7 +297,10 @@
 				0E31E37629444EBB002A6A82 /* BaseURL.swift */,
 				0E31E37829444EDD002A6A82 /* Api.swift */,
 				0E31E37A29444EF1002A6A82 /* TargetType.swift */,
+				0E31E38029456CF6002A6A82 /* MoyaLoggingPlugin.swift */,
 				0E31E37C29444F06002A6A82 /* MyAPI+Request.swift */,
+				0E31E38229457689002A6A82 /* Service.swift */,
+				0E31E384294576E6002A6A82 /* ServiceType.swift */,
 				0E31E37E294485FC002A6A82 /* Header.swift */,
 			);
 			path = Networking;
@@ -931,6 +944,7 @@
 			children = (
 				0EF59AD5290978E2003FEA03 /* TapBarVC.swift */,
 				0E9BC15928FEB7B700B8DB56 /* StartViewController.swift */,
+				0E31E38829458513002A6A82 /* BaseVM.swift */,
 				0E61D68E2907D4420098A3F5 /* Scene */,
 			);
 			path = UI;
@@ -1411,6 +1425,7 @@
 				0EF59AD72909791E003FEA03 /* BaseSign */,
 				0E9BC16128FEC46100B8DB56 /* LoginVC.swift */,
 				0EF711672906A419005D62EE /* LoginView.swift */,
+				0E31E3862945845D002A6A82 /* LoginViewModel.swift */,
 				0E61D6962907F0710098A3F5 /* Password related */,
 			);
 			path = Login;
@@ -1559,9 +1574,12 @@
 				0EF59AFF2909FE01003FEA03 /* Separator.swift in Sources */,
 				0E23C2112924EDCE00C467F8 /* UserBadgesView.swift in Sources */,
 				0E31E358293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
+				0E31E38129456CF6002A6A82 /* MoyaLoggingPlugin.swift in Sources */,
+				0E31E385294576E6002A6A82 /* ServiceType.swift in Sources */,
 				0E31E36F2941529C002A6A82 /* IndicatorView.swift in Sources */,
 				0E61D6932907E6310098A3F5 /* SignupView.swift in Sources */,
 				0E555B29290FE0EC005E379E /* SuggesionDetailViewController.swift in Sources */,
+				0E31E38929458513002A6A82 /* BaseVM.swift in Sources */,
 				0EA56B142931B95500967A99 /* GiftCollectionViewCell.swift in Sources */,
 				0E2CBE11293074D9001667BE /* UserGraphListSectionViewModel.swift in Sources */,
 				0EF59AD929097ABA003FEA03 /* HomeVC.swift in Sources */,
@@ -1587,6 +1605,7 @@
 				0EAFF9392921B49700162DD0 /* CategorySectionViewCell.swift in Sources */,
 				0EF59AFD2909997A003FEA03 /* SuggestionFeature.swift in Sources */,
 				0EF69C522928E53B00C36DAC /* FundsHighestThreeView..swift in Sources */,
+				0E31E38329457689002A6A82 /* Service.swift in Sources */,
 				0EA56B8929361DDA00967A99 /* FundsHighestThreePlusVC.swift in Sources */,
 				0EF69C3F2928637500C36DAC /* StatsVC.swift in Sources */,
 				0E31E371294152B2002A6A82 /* MyModel.swift in Sources */,
@@ -1643,6 +1662,7 @@
 				0EF69C2B29275EF300C36DAC /* CategoryViewController.swift in Sources */,
 				0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */,
 				0E61D6912907E6250098A3F5 /* SignupVC.swift in Sources */,
+				0E31E3872945845D002A6A82 /* LoginViewModel.swift in Sources */,
 				0EF59ADB29097ACF003FEA03 /* CoinVC.swift in Sources */,
 				0E61D69A2907F0E20098A3F5 /* PasswordView.swift in Sources */,
 				0E31E37529416E39002A6A82 /* DetailCoinCell.swift in Sources */,
