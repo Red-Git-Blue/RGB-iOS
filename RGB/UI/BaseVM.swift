@@ -11,5 +11,5 @@ protocol BaseVM {
     associatedtype Input
     associatedtype Output
 
-    func returnData(_ input: Input) -> Output
+    func trans(_ input: Input) -> Output
 }

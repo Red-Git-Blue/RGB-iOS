@@ -62,7 +62,6 @@ class UserChartView: UIView {
     private lazy var separator = UIView().then {
         $0.backgroundColor = .separator
     }
-    
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
         super.init(frame: frame)

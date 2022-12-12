@@ -26,11 +26,15 @@ class LoginViewController: UIViewController {
         opacityView.frame = view.bounds
         opacityView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(opacityView)
+        
+        
         let view = LoginView()
+        view.firstTextField.text = "goodjunha@gmail.com"
+        view.seconedTextField.text = "Junha85817469!"
         
         let input = LoginViewModel.Input(email: view.firstTextField.rx.text.orEmpty.asDriver(), password: view.seconedTextField.rx.text.orEmpty.asDriver(), loginButtonDidTap: view.mainButton.rx.tap.asSignal())
         
-        let output = viewModel.returnData(input)
+        let output = viewModel.trans(input)
         print("안녕")
         output.result.subscribe(onNext: {
             

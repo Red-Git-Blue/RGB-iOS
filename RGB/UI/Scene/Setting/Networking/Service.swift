@@ -27,16 +27,17 @@ final class Service {
             .catch {[unowned self] in return .just(setNetworkError($0))}
     }
     
-//    func loadMyPage() -> Single<(MyPageModel?, networkingResult)> {
-//        return provider.rx.request(.loadMyPage)
+    func myPageLoad() -> Single<(UserMeInfoModel?, networkingResult)> {
+        print("들어온12345678ㅑ9ㅐ0게 없어!!")
+        return provider.rx.request(.getMeInfo)
 //            .filterSuccessfulStatusCodes()
-//            .map(MyPageModel.self)
-//            .map{return ($0, .ok)}
-//            .catch { error in
-//                print(error)
-//                return .just((nil, .fault))
-//            }
-//    }
+            .map(UserMeInfoModel.self)
+            .map{return ($0, .ok)}
+            .catch { error in
+                print(error)
+                return .just((nil, .fault))
+            }
+    }
     
     func setNetworkError(_ error: Error) -> networkingResult {
             print(error)

@@ -4,7 +4,6 @@
 //
 //  Created by 박준하 on 2022/11/16.
 //
-
 import UIKit
 import SnapKit
 import Then
@@ -14,8 +13,8 @@ import Moya
 
 class UserInformationView: UIView {
     private final var controller: UIViewController
-    let provider = MoyaProvider<API>()
- 
+    private let viewReceive = PublishRelay<Void>()
+//    let provider = MoyaProvider<API>()
     let getUserInfo = PublishRelay<UserMeInfoModel>()
     
     let disposeBag = DisposeBag()
@@ -62,34 +61,18 @@ class UserInformationView: UIView {
     private lazy var separator = UIView().then {
         $0.backgroundColor = .separator
     }
-    
+    override func layoutSubviews() {
+        viewReceive.accept(())
+        bind(UserInformationViewModel())
+
+    }
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
         super.init(frame: frame)
-        
+//        viewReceive.accept(())
         attribute()
         setup()
         
-//        self.provider.rx
-//            .request(.getMeInfo())
-//            .subscribe { result in
-//                if let acToken = KeyChain.read(key: Header.accesstoken.header()) {
-//
-//                }
-//            }
-        print("안녕!@~")
-        API.getMeInfo.request()
-            .subscribe { result in
-                switch result {
-                case .success(let response):
-                    guard let data = try? JSONDecoder().decode(UserMeInfoModel.self, from: response.data) else {
-                        return
-                    }
-                    self.getUserInfo.accept(data)
-                case .failure(let error):
-                    print(error)
-                }
-            }.disposed(by: disposeBag)
     }
 
     required init?(coder: NSCoder) {
@@ -100,6 +83,19 @@ class UserInformationView: UIView {
 extension UserInformationView {
     
     func bind(_ viewModel: UserInformationViewModel) {
+        print("UserInformationView viewModel입니다")
+        
+        let input = UserInformationViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()))
+                                                   
+        let output = viewModel.trans(input)
+        
+        output.myPage.subscribe(onNext: { date in
+            self.userNickname.text = date.name
+            self.userName.text = date.userName
+            self.mailLabel.text = date.email
+            self.moneyLabel.text = "\(date.money)"
+            print("dkdkd")
+        }).disposed(by: disposeBag)
         
     }
     

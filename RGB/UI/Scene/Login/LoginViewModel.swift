@@ -23,7 +23,7 @@ class LoginViewModel: BaseVM {
         let result : PublishRelay<Bool>
     }
     
-    func returnData(_ input: Input) -> Output {
+    func trans(_ input: Input) -> Output {
         let api = Service()
         let info = Driver.combineLatest(input.email, input.password)
         let result = PublishRelay<Bool>()

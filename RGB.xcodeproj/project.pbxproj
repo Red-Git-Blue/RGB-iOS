@@ -296,12 +296,12 @@
 				0E0F94E428FD5E080004951F /* Model */,
 				0E31E37629444EBB002A6A82 /* BaseURL.swift */,
 				0E31E37829444EDD002A6A82 /* Api.swift */,
-				0E31E37A29444EF1002A6A82 /* TargetType.swift */,
 				0E31E38029456CF6002A6A82 /* MoyaLoggingPlugin.swift */,
 				0E31E37C29444F06002A6A82 /* MyAPI+Request.swift */,
 				0E31E38229457689002A6A82 /* Service.swift */,
 				0E31E384294576E6002A6A82 /* ServiceType.swift */,
 				0E31E37E294485FC002A6A82 /* Header.swift */,
+				0E31E37A29444EF1002A6A82 /* TargetType.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";

@@ -97,11 +97,15 @@ extension API {
         switch self {
         case .login, .signup:
             return Header.tokenIsEmpty.header()
+            
+        case .reissue:
+            return Header.refreshToken.header()
+            
         case .getMeInfo:
             return Header.accessToken.header()
-        
+            
         default:
-            return Header.refreshToken.header()
+            return Header.accessToken.header()
         }
     }
 }

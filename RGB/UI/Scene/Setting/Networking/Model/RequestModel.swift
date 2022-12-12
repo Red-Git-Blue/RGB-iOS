@@ -71,7 +71,7 @@ struct Sort: Codable {
 // MARK: - UserMeInfoModel
 struct UserMeInfoModel: Codable {
     let id: Int
-    let name, userName: String
+    let email, name, userName: String
     let money: Int
     let representBadge, profile: Profile
     let badgeInfo: BadgeInfo
