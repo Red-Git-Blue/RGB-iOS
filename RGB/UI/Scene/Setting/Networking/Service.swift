@@ -28,11 +28,14 @@ final class Service {
     }
     
     func myPageLoad() -> Single<(UserMeInfoModel?, networkingResult)> {
-        print("들어온12345678ㅑ9ㅐ0게 없어!!")
+        print("ㅗㅗㅗㅗㅗ")
         return provider.rx.request(.getMeInfo)
-//            .filterSuccessfulStatusCodes()
+            .filterSuccessfulStatusCodes()
             .map(UserMeInfoModel.self)
-            .map{return ($0, .ok)}
+            .map{
+                print($0)
+                return ($0, .ok)
+            }
             .catch { error in
                 print(error)
                 return .just((nil, .fault))

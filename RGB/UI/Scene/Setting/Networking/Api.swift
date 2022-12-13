@@ -50,8 +50,7 @@ extension API: Moya.TargetType {
     var method: Moya.Method { self.getMethod() }
     var sampleData: Data { Data() }
     var task: Task { self.getTask() }
-    var headers: [String : String]? { ["Content-Type": "application/json"]
-    }
+    var headers: [String : String]? { self.header }
 }
 
 extension Encodable {

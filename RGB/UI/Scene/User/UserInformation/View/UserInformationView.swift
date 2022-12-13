@@ -91,7 +91,7 @@ extension UserInformationView {
         
         output.myPage.subscribe(onNext: { date in
             self.userNickname.text = date.name
-            self.userName.text = date.userName
+            self.userName.text = date.nickName
             self.mailLabel.text = date.email
             self.moneyLabel.text = "\(date.money)"
             print("dkdkd")

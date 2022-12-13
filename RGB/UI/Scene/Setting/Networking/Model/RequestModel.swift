@@ -71,12 +71,12 @@ struct Sort: Codable {
 // MARK: - UserMeInfoModel
 struct UserMeInfoModel: Codable {
     let id: Int
-    let email, name, userName: String
+    let email, name, nickName: String
     let money: Int
-    let representBadge, profile: Profile
+    let representBadge, profile: Profile?
     let badgeInfo: BadgeInfo
     let grassInfo: GrassInfo
-    let github: Bool
+    let isGithub: Bool
 }
 
 // MARK: - BadgeInfo
@@ -108,7 +108,7 @@ struct Profile: Codable {
 // MARK: - GrassInfo
 struct GrassInfo: Codable {
     let grassQuantity: Int
-    let currentGrass: CurrentGrass
+    let currentGrass: CurrentGrass?
     let grassList: [CurrentGrass]
 }
 
