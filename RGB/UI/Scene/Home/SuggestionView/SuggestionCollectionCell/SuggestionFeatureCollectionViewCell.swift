@@ -3,8 +3,10 @@ import UIKit
 
 final class SuggestionFeatureCollectionViewCell: UICollectionViewCell {
     static var height: CGFloat { 75.0 }
+    
+    static let identifier = "SuggestionFeatureCollectionViewCell"
 
-    private lazy var imageView = UIImageView().then {
+    var imageView = UIImageView().then {
         $0.backgroundColor = .red
         $0.layer.borderColor = UIColor.tertiaryLabel.cgColor
         //        옆에 imageview 테두리 만들기
@@ -12,23 +14,23 @@ final class SuggestionFeatureCollectionViewCell: UICollectionViewCell {
         $0.layer.cornerRadius = 15
     }
 
-    private lazy var titleLabel = UILabel().then {
+    var titleLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 14.0, weight: .bold)
         $0.textColor = .label
         $0.numberOfLines = 2
     }
 
-    private lazy var descriptionLabel = UILabel().then {
+    var descriptionLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 12.0, weight: .semibold)
         $0.textColor = .secondaryLabel
     }
 
-    private lazy var coinPriceLabel = UILabel().then {
+    var coinPriceLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 14.0, weight: .bold)
         $0.textColor = .white
     }
 
-    private var inDecreaseLabel = UILabel().then {
+    var inDecreaseLabel = UILabel().then {
         $0.text = ""
         $0.font = .systemFont(ofSize: 12.0, weight: .semibold)
         $0.textColor = .red

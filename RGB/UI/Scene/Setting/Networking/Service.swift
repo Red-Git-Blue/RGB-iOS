@@ -19,10 +19,11 @@ final class Service {
             .catch {[unowned self] in return .just(setNetworkError($0))}
     }
     func signup(_ email: String, _ password: String, _ name: String) -> Single<networkingResult> {
+        
         return provider.rx.request(.signup(SignRequest(email: email, password: password, name: name)))
             .filterSuccessfulStatusCodes()
             .map{ response -> networkingResult in
-                return .createOk
+                return .ok
             }
             .catch {[unowned self] in return .just(setNetworkError($0))}
     }
@@ -47,5 +48,20 @@ final class Service {
             print(error.localizedDescription)
             guard let status = (error as? MoyaError)?.response?.statusCode else { return (.fault) }
             return (networkingResult(rawValue: status) ?? .fault)
+    }
+    
+    func coinLists() -> Single<(GetCoinListModel?, networkingResult)> {
+        print("코인 리스트 가져오는 중!")
+        return provider.rx.request(.getMeInfo)
+            .filterSuccessfulStatusCodes()
+            .map(GetCoinListModel.self)
+            .map{
+                print($0)
+                return ($0, .ok)
+            }
+            .catch { error in
+                print(error)
+                return .just((nil, .fault))
+            }
     }
 }

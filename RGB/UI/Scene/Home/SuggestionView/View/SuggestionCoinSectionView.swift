@@ -1,11 +1,20 @@
 import SnapKit
 import Then
 import UIKit
+import RxCocoa
+import RxSwift
+import CoreLocation
 
 final class SuggestionCoinSectionView: UIView {    
     private final var controller: UIViewController
+    private let viewReceive = PublishRelay<Void>()
+    let getCoinList = PublishRelay<GetCoinListModel>()
+    
+    let disposeBag = DisposeBag()
     
     var suggesionModelList = [SuggesionModel]()
+    
+    var array = ["first","second","third","fourth","fifth","6","7","8","9","10","11","12"]
 
     private lazy var titleLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 24.0, weight: .black)
@@ -42,9 +51,11 @@ final class SuggestionCoinSectionView: UIView {
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
         super.init(frame: frame)
-
+        
         attribute()
         layout()
+        viewReceive.accept(())
+        bind(SuggestionCoinViewModel())
         collectionView.reloadData()
     }
 
@@ -74,7 +85,7 @@ extension SuggestionCoinSectionView: UICollectionViewDataSource {
         ) as? SuggestionFeatureCollectionViewCell
 //        let rankingFeature = rankingFeatureList[indexPath.item]
 //        cell?.setup(rankingFeature: rankingFeature)
-        
+
         cell?.setup()
         cell?.backgroundColor = UIColor(named: "CollectionViewColor")
         cell?.layer.cornerRadius = 20
@@ -93,7 +104,27 @@ extension SuggestionCoinSectionView: UICollectionViewDataSource {
 private extension SuggestionCoinSectionView {
     
     func bind(_ viewModel: SuggestionCoinViewModel) {
+        print("SuggestionCoinSectionView ViewModel 입니다")
         
+        let cell = SuggestionFeatureCollectionViewCell()
+        
+        let input = SuggestionCoinViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()))
+        
+        let output = viewModel.trans(input)
+        
+        let data = Observable<[String]>.of(self.array)
+        
+        data.asObservable()
+            .bind(to: collectionView.rx
+                    .items(
+                        cellIdentifier: SuggestionFeatureCollectionViewCell.identifier,
+                        cellType: SuggestionFeatureCollectionViewCell.self)
+            ) { index, recommend, cell in
+                output.coinList.subscribe(onNext: { data in
+                    cell.titleLabel.text = data.content[index].name
+                    cell.coinPriceLabel
+                })
+            }
     }
     
     func attribute() {

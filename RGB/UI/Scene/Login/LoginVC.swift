@@ -41,13 +41,13 @@ class LoginViewController: UIViewController {
             switch $0 {
             case true:
                 print("login 성공")
-                let appVC = TapBarViewController()
-                appVC.modalPresentationStyle = .fullScreen
-                self.present(appVC, animated: false)
+                let tabBarVC = TapBarViewController()
+                tabBarVC.modalPresentationStyle = .fullScreen
+                self.present(tabBarVC, animated: false)
             case false:
                 print("login 실패")
             }
-        })
+        }).disposed(by: view.disposeBag)
 
         
         view.forgetPasswordButton.rx.tap

@@ -7,13 +7,14 @@ import SnapKit
 import RxRelay
 
 class SignupViewController: UIViewController {
-//    let provider = MoyaProvider<MyAPI>()
+    //    let provider = MoyaProvider<MyAPI>()
     
     let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5),
                       .font : UIFont.systemFont(ofSize: 14, weight: .bold)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         if let sheetPresentationController = sheetPresentationController {
             sheetPresentationController.largestUndimmedDetentIdentifier = .large
@@ -30,73 +31,32 @@ class SignupViewController: UIViewController {
         opacityView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(opacityView)
         
+        print("viewModel Signup")
+        
         let view = SignupView()
+        let viewModel = SignupViewModel()
         
-        view.goLoginButton.rx.tap
-            .bind {
-                let SigninViewContoller = BackGroundViewController(type: .Login)
-                SigninViewContoller.modalPresentationStyle = .fullScreen
-                self.present(SigninViewContoller, animated: false)
+        view.seconedTextField.text = "goodjunha@gmail.com"
+        view.passwordTextField.text = "Junha85817469!"
+        view.firstTextField.text = "박준하"
+        
+        let input = SignupViewModel.Input(email: view.seconedTextField.rx.text.orEmpty.asDriver(), password: view.passwordTextField.rx.text.orEmpty.asDriver(), name: view.firstTextField.rx.text.orEmpty.asDriver(), signupButtonDidTap: view.mainButton.rx.tap.asSingle())
+        
+        let output = viewModel.trans(input)
+        print("아녕아냥")
+        output.result.subscribe(onNext: {
+            print("전")
+            switch $0 {
+            case true:
+                print("회원가입 성공")
+                let appVC = AppViewController()
+                appVC.modalPresentationStyle = .fullScreen
+                self.present(appVC, animated: false)
+            case false:
+                print("회원가입 실패")
             }
-        
-        
-//        view.mainButton.rx.tap
-//            .bind {
-//                API.login(LoginRequest(email: view.firstTextField.text!, password: view.seconedTextField.text!)).request()
-//                    .subscribe { response in
-//                        switch response {
-//                        case .success(let response):
-//                            print(response.statusCode)
-//                            print("성공")
-//                        case .failure(let error):
-//                            print(error)
-//                            print("시발")
-//                        }
-//                    }.disposed(by: view.disposeBag)
-//            }
-        
-        view.mainButton.rx.tap
-            .bind {
-                API.signup(SignRequest(email: view.seconedTextField.text!, password: view.passwordTextField.text!, name: view.firstTextField.text!)).request()
-                    .subscribe { response in
-                        switch response {
-                            
-                        case .success(let response):
-                            print(response.statusCode)
-                            print("성공")
-                        case .failure(let error):
-                            print(error)
-                            print("시발")
-                        }
-                    }.disposed(by: view.disposeBag)
-            }
+        }).disposed(by: view.disposeBag)
         
         view.updateWith(self)
     }
-        
-//        view.mainButton.rx.tap
-//            .bind {
-//                if(view.firstTextField.text == nil || view.firstTextField.text!.isEmpty) {
-//                    print("닉네임 없서")
-//                    return
-//                }
-//                if(view.seconedTextField.text == nil || view.seconedTextField.text!.isEmpty) {
-//                    print("비밀번호 없서")
-//                    return
-//                }
-//                
-//                self.provider.rx.request(.postSignUp(SignRequest(email: view.seconedTextField.text!, password: view.passwordTextField.text!, name: view.firstTextField.text!))).subscribe {
-//                    response in
-//                    switch response {
-//                    case .success(let response):
-//                        print(response.statusCode)
-//                        
-//                        break
-//                    case .failure(let error):
-//                        print("this error is \(error)")
-//                    }
-//                }
-//            }
-        
 }
-

@@ -30,7 +30,11 @@ extension API {
             
         case .reissue:
             return URL(string: url)!
+            
+        case .coinList:
+            return URL(string: url)!
         }
+        
     }
     func getPath() -> String {
         switch self {
@@ -64,6 +68,8 @@ extension API {
             return "/user/me"
         case .reissue:
             return "auth/reissue"
+        case .coinList:
+            return "/coin/list"
         }
     }
     func getMethod() -> Moya.Method {

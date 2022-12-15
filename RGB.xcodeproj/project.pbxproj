@@ -61,6 +61,8 @@
 		0E31E385294576E6002A6A82 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E384294576E6002A6A82 /* ServiceType.swift */; };
 		0E31E3872945845D002A6A82 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E3862945845D002A6A82 /* LoginViewModel.swift */; };
 		0E31E38929458513002A6A82 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E38829458513002A6A82 /* BaseVM.swift */; };
+		0E436E662949B70E009E6791 /* GetCoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E436E652949B70E009E6791 /* GetCoinModel.swift */; };
+		0E436E682949D7F4009E6791 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E436E672949D7F4009E6791 /* SignupViewModel.swift */; };
 		0E47A487293A12D200215CE7 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A486293A12D200215CE7 /* TokenModel.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
@@ -195,6 +197,8 @@
 		0E31E384294576E6002A6A82 /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServiceType.swift; path = "/Users/junha/Desktop/RGB/RGB-iOS/RGB/UI/Scene/Setting/Networking/ServiceType.swift"; sourceTree = "<absolute>"; };
 		0E31E3862945845D002A6A82 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0E31E38829458513002A6A82 /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
+		0E436E652949B70E009E6791 /* GetCoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoinModel.swift; sourceTree = "<group>"; };
+		0E436E672949D7F4009E6791 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		0E47A486293A12D200215CE7 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
@@ -310,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				0E0F94E228FD5DFF0004951F /* RequestModel.swift */,
+				0E436E652949B70E009E6791 /* GetCoinModel.swift */,
 				0E47A486293A12D200215CE7 /* TokenModel.swift */,
 			);
 			path = Model;
@@ -908,6 +913,7 @@
 			isa = PBXGroup;
 			children = (
 				0E61D6902907E6250098A3F5 /* SignupVC.swift */,
+				0E436E672949D7F4009E6791 /* SignupViewModel.swift */,
 				0E61D6922907E6310098A3F5 /* SignupView.swift */,
 				0E99736E2908A52B00B95BC6 /* Certification */,
 			);
@@ -1675,10 +1681,12 @@
 				0EF69C342927970800C36DAC /* LIstVC.swift in Sources */,
 				0EA56B852936115500967A99 /* UserGraphListSectionCell.swift in Sources */,
 				0EF59B04290CD7EF003FEA03 /* GrassSectionView.swift in Sources */,
+				0E436E682949D7F4009E6791 /* SignupViewModel.swift in Sources */,
 				0E2CBE6E2930B9E1001667BE /* UserInformationViewModel.swift in Sources */,
 				0E2CBE512930B15D001667BE /* LastTextViewModel.swift in Sources */,
 				0E2CBE3029307FF8001667BE /* IncreaseCoinViewModel.swift in Sources */,
 				0EAFF94B2922444500162DD0 /* BagesDetailVC.swift in Sources */,
+				0E436E662949B70E009E6791 /* GetCoinModel.swift in Sources */,
 				0EF69C552928EC7100C36DAC /* RevenueHighestThree.swift in Sources */,
 				0E31E373294152C0002A6A82 /* BuySellCell.swift in Sources */,
 				0E23C21429250CA300C467F8 /* UserGrassColorView.swift in Sources */,
