@@ -7,7 +7,6 @@ import SnapKit
 import RxRelay
 
 class LoginViewController: UIViewController {
-//    let provider = MoyaProvider<API>()
     let viewModel = LoginViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
