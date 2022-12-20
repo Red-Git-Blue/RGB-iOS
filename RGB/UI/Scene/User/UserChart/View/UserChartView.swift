@@ -79,10 +79,6 @@ class UserChartView: UIView {
 
 extension UserChartView {
     
-    func bind(_ viewModel: UserChartViewModel) {
-        
-    }
-    
     func attribute() {
         backgroundView.layer.cornerRadius = 20
         chartView.layer.cornerRadius = 20

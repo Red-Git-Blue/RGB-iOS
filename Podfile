@@ -13,7 +13,7 @@ target 'RGB' do
 	pod 'RxCocoa', '6.5.0'
 	pod 'Moya/RxSwift', '~> 15.0'
 	pod 'RxKeyboard'
-	pod 'Charts'
+	pod 'Charts', '~> 4.1.0'
 	pod 'LSHContributionView'
 	pod 'PContributionsView'
 	pod 'ReusableKit'

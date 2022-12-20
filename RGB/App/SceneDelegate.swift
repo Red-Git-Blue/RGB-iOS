@@ -10,7 +10,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.windowScene = windowScene
         
-//        let homeViewController = AppViewController()
+        let homeViewController = AppViewController()
         let loginViewController = StartViewController()
         let tapbarViewController = TapBarViewController()
         let coinDetailVC = CoinDetailViewController()

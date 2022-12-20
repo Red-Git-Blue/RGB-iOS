@@ -112,19 +112,6 @@ private extension SuggestionCoinSectionView {
         
         let output = viewModel.trans(input)
         
-        let data = Observable<[String]>.of(self.array)
-        
-        data.asObservable()
-            .bind(to: collectionView.rx
-                    .items(
-                        cellIdentifier: SuggestionFeatureCollectionViewCell.identifier,
-                        cellType: SuggestionFeatureCollectionViewCell.self)
-            ) { index, recommend, cell in
-                output.coinList.subscribe(onNext: { data in
-                    cell.titleLabel.text = data.content[index].name
-                    cell.coinPriceLabel
-                })
-            }
     }
     
     func attribute() {

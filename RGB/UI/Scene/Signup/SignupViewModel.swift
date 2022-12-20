@@ -14,26 +14,28 @@ class SignupViewModel: BaseVM {
     private let disposeBag = DisposeBag()
     
     struct Input {
+        let name: Driver<String>
         let email: Driver<String>
         let password: Driver<String>
-        let name: Driver<String>
-        let signupButtonDidTap: Single<Void>
+        let signupButtonDidTap: ControlEvent<Void>
     }
     
     struct Output {
-        let result: PublishRelay<Bool>
+        let result : PublishRelay<Bool>
     }
     
     func trans(_ input: Input) -> Output {
         let api = Service()
-        let info = Driver.combineLatest(input.email, input.password, input.name)
+        let info = Driver.combineLatest(input.name, input.email, input.password)
         let result = PublishRelay<Bool>()
-        input.signupButtonDidTap
+        print("Aaaaaaaaaaaaaaaaaaaaaaaaaasdf")
+        print(input.signupButtonDidTap
             .asObservable()
             .withLatestFrom(info)
-            .flatMap { email, password, name in
-                api.signup(email, password, name)
-            }.subscribe(onNext: { r in
+            .flatMap { n, e, p in
+                return api.signup(n, e, p)
+            }
+            .subscribe (onNext: { r in
                 print("버튼이 클릭 됨")
                 switch r {
                 case .ok:
@@ -41,7 +43,8 @@ class SignupViewModel: BaseVM {
                 default:
                     result.accept(false)
                 }
-            }).disposed(by: disposeBag)
+            })
+        )
         
         return Output(result: result)
     }

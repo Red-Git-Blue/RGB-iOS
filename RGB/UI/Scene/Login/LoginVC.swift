@@ -32,22 +32,24 @@ class LoginViewController: UIViewController {
         view.firstTextField.text = "goodjunha@gmail.com"
         view.seconedTextField.text = "Junha85817469!"
         
-        let input = LoginViewModel.Input(email: view.firstTextField.rx.text.orEmpty.asDriver(), password: view.seconedTextField.rx.text.orEmpty.asDriver(), loginButtonDidTap: view.mainButton.rx.tap.asSignal())
+        let input = LoginViewModel.Input(
+            email: view.firstTextField.rx.text.orEmpty.asDriver(),
+            password: view.seconedTextField.rx.text.orEmpty.asDriver(),
+            loginButtonDidTap: view.mainButton.rx.tap.asSignal())
         
         let output = viewModel.trans(input)
         print("안녕")
         output.result.subscribe(onNext: {
-            
             switch $0 {
             case true:
-                print("login 성공")
+                print("우와 축하드려요")
                 let tabBarVC = TapBarViewController()
                 tabBarVC.modalPresentationStyle = .fullScreen
                 self.present(tabBarVC, animated: false)
             case false:
                 print("login 실패")
             }
-        }).disposed(by: view.disposeBag)
+        })
 
         
         view.forgetPasswordButton.rx.tap

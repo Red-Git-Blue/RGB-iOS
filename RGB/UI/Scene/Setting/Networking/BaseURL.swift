@@ -7,7 +7,7 @@
 import Foundation
 import Moya
 
-let url = "http://local.lite24.net:8080/api/rgb/v1"
+let url = "http://local.lite24.net/api/rgb/v1"
 
 extension API {
     
