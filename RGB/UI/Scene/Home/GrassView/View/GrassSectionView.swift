@@ -23,10 +23,8 @@ class GrassSectionView: UIView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
-        //딱딱하나씩 끈어질 수 있도록하는 것
         collectionView.isPagingEnabled = true
         collectionView.backgroundColor = .systemBackground
-        //스크롤바 표시
         collectionView.showsHorizontalScrollIndicator = false
 
         collectionView.register(
@@ -107,18 +105,14 @@ extension GrassSectionView: UICollectionViewDataSource {
 
 extension GrassSectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //주변의 왼 = 16 // 오른 = 16 == 32 뺴기
         CGSize(width: collectionView.frame.width - 64.0, height: frame.width)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        //주변의 왼 = 16 // 오른 = 16
-        //중앙 정령
         UIEdgeInsets(top: 0.0, left: 30.0, bottom: 0.0, right: 30.0)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        //최소 마진
         return 64.0
     }
 }

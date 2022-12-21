@@ -6,7 +6,6 @@ import RxSwift
 class UserGraphListDetailViewController: UIViewController {
     
     var userGraphList: UserGraphListModel?
-    
     var disposeBag = DisposeBag()
     
     override func viewDidLoad() {

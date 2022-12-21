@@ -16,6 +16,7 @@ final class AppViewController: UIViewController {
         let grassSectionView = GrassSectionView(frame: .zero, viewController: self)
         
         let spacingView = UIView()
+        
         spacingView.snp.makeConstraints {
             $0.height.equalTo(100.0)
         }

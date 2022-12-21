@@ -19,10 +19,10 @@ final class UserGraphListSectionView: UIView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
-        //딱딱하나씩 끈어질 수 있도록하는 것
+
         collectionView.isPagingEnabled = true
         collectionView.backgroundColor = .systemBackground
-        //스크롤바 표시
+
         collectionView.showsHorizontalScrollIndicator = false
 
         collectionView.register(
@@ -55,7 +55,6 @@ extension UserGraphListSectionView: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserGraphListSectionCell", for: indexPath) as! UserGraphListSectionCell
-        
         cell.setup()
         cell.backgroundColor = UIColor(named: "CollectionViewColor")
         
@@ -73,17 +72,14 @@ extension UserGraphListSectionView: UICollectionViewDataSource {
 
 extension UserGraphListSectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         CGSize(width: collectionView.frame.width - 64.0, height: frame.width)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        
         UIEdgeInsets(top: 0.0, left: 32.0, bottom: 0.0, right: 32.0)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-
         return 64.0
     }
 }

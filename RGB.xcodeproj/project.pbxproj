@@ -374,13 +374,6 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
-		0E2CBE1229307506001667BE /* UserGraphListDetailView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UserGraphListDetailView;
-			sourceTree = "<group>";
-		};
 		0E2CBE152930785C001667BE /* SuggesionDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -1221,7 +1214,6 @@
 				0EA56B862936115E00967A99 /* UserGraphListSectionCollectionCell */,
 				0E2CBE2429307CD6001667BE /* View */,
 				0E2CBE2329307CCA001667BE /* ViewModel */,
-				0E2CBE1229307506001667BE /* UserGraphListDetailView */,
 			);
 			path = UserGraphListView;
 			sourceTree = "<group>";

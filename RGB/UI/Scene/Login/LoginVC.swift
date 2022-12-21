@@ -6,7 +6,7 @@ import Then
 import SnapKit
 import RxRelay
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController { 
     let viewModel = LoginViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()

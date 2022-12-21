@@ -14,7 +14,7 @@ final class SuggestionCoinSectionView: UIView {
     
     var suggesionModelList = [SuggesionModel]()
     
-    var array = ["first","second","third","fourth","fifth","6","7","8","9","10","11","12"]
+    var array = ["1","2","3","4","5","6","7","8","9","10","11","12"]
 
     private lazy var titleLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 24.0, weight: .black)
@@ -92,7 +92,6 @@ extension SuggestionCoinSectionView: UICollectionViewDataSource {
         return cell ?? UICollectionViewCell()
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let selectedSuggesion = suggesionModelList[indexPath.row]
         print(suggesionModelList[indexPath.row])
         let detailViewController = CoinDetailViewController()
         detailViewController.modalPresentationStyle = .fullScreen
@@ -105,13 +104,11 @@ private extension SuggestionCoinSectionView {
     
     func bind(_ viewModel: SuggestionCoinViewModel) {
         print("SuggestionCoinSectionView ViewModel 입니다")
-        
-        let cell = SuggestionFeatureCollectionViewCell()
-        
-        let input = SuggestionCoinViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()))
-        
-        let output = viewModel.trans(input)
-        
+//        let cell = SuggestionFeatureCollectionViewCell()
+//
+//        let input = SuggestionCoinViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()))
+//
+//        let output = viewModel.trans(input)
     }
     
     func attribute() {
