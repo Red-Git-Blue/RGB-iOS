@@ -33,7 +33,11 @@ extension API {
             
         case .coinList:
             return URL(string: url)!
+            
+        case .getBadgeList:
+            return URL(string: url)!
         }
+        
         
     }
     func getPath() -> String {
@@ -70,6 +74,8 @@ extension API {
             return "auth/reissue"
         case .coinList:
             return "/coin/list"
+        case .getBadgeList:
+            return "/item/badge"
         }
     }
     func getMethod() -> Moya.Method {
@@ -106,9 +112,6 @@ extension API {
             
         case .reissue:
             return Header.refreshToken.header()
-            
-        case .getMeInfo:
-            return Header.accessToken.header()
             
         default:
             return Header.accessToken.header()

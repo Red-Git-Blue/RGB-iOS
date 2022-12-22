@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E0F94E328FD5DFF0004951F /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94E228FD5DFF0004951F /* RequestModel.swift */; };
 		0E0F94E628FD5FC50004951F /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94E528FD5FC50004951F /* Signup.swift */; };
+		0E14E8702954102900A8643D /* GetBadgeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14E86F2954102900A8643D /* GetBadgeListModel.swift */; };
 		0E17AC0E29519D7500EC8A21 /* GetCoinListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E17AC0D29519D7500EC8A21 /* GetCoinListModel.swift */; };
 		0E23C2062923BFAC00C467F8 /* BagesIntroduceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C2052923BFAC00C467F8 /* BagesIntroduceView.swift */; };
 		0E23C209292477E200C467F8 /* BagesDetailBuyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C208292477E200C467F8 /* BagesDetailBuyVC.swift */; };
@@ -144,6 +145,7 @@
 /* Begin PBXFileReference section */
 		0E0F94E228FD5DFF0004951F /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		0E0F94E528FD5FC50004951F /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
+		0E14E86F2954102900A8643D /* GetBadgeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBadgeListModel.swift; sourceTree = "<group>"; };
 		0E17AC0D29519D7500EC8A21 /* GetCoinListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoinListModel.swift; sourceTree = "<group>"; };
 		0E23C2052923BFAC00C467F8 /* BagesIntroduceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesIntroduceView.swift; sourceTree = "<group>"; };
 		0E23C208292477E200C467F8 /* BagesDetailBuyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailBuyVC.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				0E0F94E228FD5DFF0004951F /* RequestModel.swift */,
 				0E47A486293A12D200215CE7 /* TokenModel.swift */,
 				0E17AC0D29519D7500EC8A21 /* GetCoinListModel.swift */,
+				0E14E86F2954102900A8643D /* GetBadgeListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1551,6 +1554,7 @@
 			files = (
 				0E23C209292477E200C467F8 /* BagesDetailBuyVC.swift in Sources */,
 				0EF59AFF2909FE01003FEA03 /* Separator.swift in Sources */,
+				0E14E8702954102900A8643D /* GetBadgeListModel.swift in Sources */,
 				0E23C2112924EDCE00C467F8 /* UserBadgesView.swift in Sources */,
 				0E31E358293CBC17002A6A82 /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				0E31E38129456CF6002A6A82 /* MoyaLoggingPlugin.swift in Sources */,

@@ -8,7 +8,8 @@ import RxSwift
 class BadgesView: UIView {
     private final var controller: UIViewController
     private final var viewName: String
-//    let provider = MoyaProvider<MyAPI>()
+    private let viewReceive = PublishRelay<Void>()
+    let getUserInfo = PublishRelay<UserMeInfoModel>()
     let disposeBag = DisposeBag()
     
     var bagesList = [BagesListModel]()
@@ -48,6 +49,11 @@ class BadgesView: UIView {
         $0.backgroundColor = .separator
     }
     
+    override func layoutSubviews() {
+        viewReceive.accept(())
+        bind(BadgesViewModel())
+    }
+    
     init(frame: CGRect, viewController: UIViewController, viewName: String) {
         controller = viewController
         self.viewName = viewName
@@ -57,25 +63,6 @@ class BadgesView: UIView {
         attribute()
         layout()
         collectionView.reloadData()
-        
-//        self.provider.rx
-//            .request(MyAPI.getBagesList(BagesListRequest(idx: 0, size: 10)))
-//            .subscribe { result in
-//                switch result {
-//                    case let .success(moyaResponse):
-//                        let statusCode = moyaResponse.statusCode
-//                        if (statusCode == 200) {
-//                            print("API Request Succeeded")
-//                            let data = moyaResponse.data
-//                            print(data)
-//                        } else {
-//                            print("❤️‍🔥 API Request Failed: " + String(statusCode))
-//                        }
-//                    case let .failure(error):
-//                        print("🔨 API Request Failed\nError: ")
-//                        print(error)
-//                }
-//            }.disposed(by: disposeBag)
     }
     
     required init?(coder: NSCoder) {
@@ -129,6 +116,21 @@ extension BadgesView {
     
     func bind(_ viewModel: BadgesViewModel) {
         
+        let input = BadgesViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()))
+                                                   
+        let output = viewModel.trans(input)
+        
+        output.ShopBadgeView.subscribe(onNext: { data in
+            print("하하하하")
+        }).disposed(by: disposeBag)
+        
+//        output.myPage.subscribe(onNext: { date in
+//            self.userNickname.text = date.name
+//            self.userName.text = date.nickName
+//            self.mailLabel.text = date.email
+//            self.moneyLabel.text = "\(date.money)"
+//            print("dkdkd")
+//        }).disposed(by: disposeBag)
     }
     
     func attribute() {

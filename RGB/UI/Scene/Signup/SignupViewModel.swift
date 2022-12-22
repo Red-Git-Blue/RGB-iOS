@@ -26,7 +26,7 @@ class SignupViewModel: BaseVM {
     
     func trans(_ input: Input) -> Output {
         let api = Service()
-        let info = Driver.combineLatest(input.name, input.email, input.password)
+        let info = Driver.combineLatest(input.email, input.password, input.name)
         let result = PublishRelay<Bool>()
         print("Aaaaaaaaaaaaaaaaaaaaaaaaaasdf")
         print(input.signupButtonDidTap

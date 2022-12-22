@@ -24,6 +24,9 @@ enum API {
     //토큰 재발급
     case reissue(TokenModel)
     
+    //shop
+    case getBadgeList
+    
     // Commit
     
     case allCommit(_ name : String)

@@ -43,6 +43,20 @@ final class Service {
             }
     }
     
+    func shopPageLoadBadge() -> Single<(GetBadgeListModel?, networkingResult)> {
+        return provider.rx.request(.getBadgeList)
+            .filterSuccessfulStatusCodes()
+            .map(GetBadgeListModel.self)
+            .map {
+                print($0)
+                return ($0, .ok)
+            }
+            .catch { error in
+                print(error)
+                return .just((nil, .fault))
+            }
+    }
+    
     func setNetworkError(_ error: Error) -> networkingResult {
             print(error)
             print(error.localizedDescription)

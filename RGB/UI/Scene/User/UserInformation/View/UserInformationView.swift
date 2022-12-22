@@ -14,7 +14,6 @@ import Moya
 class UserInformationView: UIView {
     private final var controller: UIViewController
     private let viewReceive = PublishRelay<Void>()
-//    let provider = MoyaProvider<API>()
     let getUserInfo = PublishRelay<UserMeInfoModel>()
     
     let disposeBag = DisposeBag()
@@ -64,7 +63,6 @@ class UserInformationView: UIView {
     override func layoutSubviews() {
         viewReceive.accept(())
         bind(UserInformationViewModel())
-
     }
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
