@@ -9,10 +9,13 @@ class BadgesView: UIView {
     private final var controller: UIViewController
     private final var viewName: String
     private let viewReceive = PublishRelay<Void>()
-    let getUserInfo = PublishRelay<UserMeInfoModel>()
+    
+    var array = ["1","2","3","4","5"]
+    
+    var getBadgeList: GetBadgeListModel?
     let disposeBag = DisposeBag()
     
-    var bagesList = [BagesListModel]()
+    var bagesList = [GetBadgeListModel]()
     
     private lazy var newBadgeLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 24.0, weight: .black)
@@ -31,7 +34,6 @@ class BadgesView: UIView {
             collectionViewLayout: layout
         )
         collectionView.delegate = self
-        collectionView.dataSource = self
 //        collectionView.isPagingEnabled = true
         collectionView.backgroundColor = .systemBackground
         collectionView.showsHorizontalScrollIndicator = false
@@ -39,7 +41,7 @@ class BadgesView: UIView {
         
         collectionView.register(
             BadgesCell.self,
-            forCellWithReuseIdentifier: "NewBadgesCollectionViewCell"
+            forCellWithReuseIdentifier: BadgesCell.identifier
         )
         
       return collectionView
@@ -59,10 +61,9 @@ class BadgesView: UIView {
         self.viewName = viewName
         super.init(frame: frame)
         newBadgeLabel.text = viewName
-        
+                
         attribute()
         layout()
-        collectionView.reloadData()
     }
     
     required init?(coder: NSCoder) {
@@ -80,20 +81,17 @@ extension BadgesView: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension BadgesView: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
       
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "NewBadgesCollectionViewCell",
-            for: indexPath
-        ) as? BadgesCell
-        cell!.setup()
-        cell!.backgroundColor = .clear
-        return cell ?? UICollectionViewCell()
-    }
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(
+//            withReuseIdentifier: "NewBadgesCollectionViewCell",
+//            for: indexPath
+//        ) as? BadgesCell
+//        print(indexPath.row)
+//        cell!.setup()
+//        cell!.backgroundColor = .clear
+//        return cell ?? UICollectionViewCell()
+//    }
     
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        let selectedSuggesion = bagesList[indexPath.row]
@@ -102,15 +100,18 @@ extension BadgesView: UICollectionViewDataSource {
 //        detailViewController.suggestion = selectedSuggesion
 //        controller.present(detailViewController, animated: true)
 //    }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedSuggesion = bagesList[indexPath.row]
-        print(bagesList[indexPath.row])
-        let detailViewController = BagesDetailViewController()
-        detailViewController.bageList = selectedSuggesion
-        detailViewController.modalPresentationStyle = .fullScreen
-        controller.navigationController?.pushViewController(detailViewController, animated: true)
-    }
-}
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+//        let selectedSuggesion = bagesList[indexPath.row]
+//        print(selectedSuggesion)
+//        let selectedSuggesion = bagesList[indexPath.row]
+//        print(bagesList[indexPath.row])
+//        let detailViewController = BagesDetailViewController()
+//        detailViewController.bageList = selectedSuggesion
+//        detailViewController.modalPresentationStyle = .fullScreen
+//        controller.navigationController?.pushViewController(detailViewController, animated: true)
+//    }
+//}
 
 extension BadgesView {
     
@@ -120,17 +121,25 @@ extension BadgesView {
                                                    
         let output = viewModel.trans(input)
         
-        output.ShopBadgeView.subscribe(onNext: { data in
-            print("하하하하")
-        }).disposed(by: disposeBag)
-        
-//        output.myPage.subscribe(onNext: { date in
-//            self.userNickname.text = date.name
-//            self.userName.text = date.nickName
-//            self.mailLabel.text = date.email
-//            self.moneyLabel.text = "\(date.money)"
-//            print("dkdkd")
-//        }).disposed(by: disposeBag)
+        output.shopBadgeView.subscribe(onNext: { data in
+            self.getBadgeList = data
+            
+            let data = Observable<[String]>.of(self.array)
+            
+            data.asObservable()
+                .bind(to: self.collectionView.rx
+                        .items(
+                            cellIdentifier: BadgesCell.identifier,
+                            cellType: BadgesCell.self)
+                ) { [self] index, recommend, cell in
+                    cell.setup()
+                    cell.configure(with: getBadgeList!, index)
+                    cell.backgroundColor = .clear
+                }
+            
+            print("print 결과 :\(self.getBadgeList!)")
+        })
+
     }
     
     func attribute() {

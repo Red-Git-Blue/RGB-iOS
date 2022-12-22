@@ -1,8 +1,12 @@
 import SnapKit
 import Then
 import UIKit
+import Kingfisher
 
 final class BadgesCell: UICollectionViewCell {
+    
+    static let identifier = "NewBadgesCollectionViewCell"
+    
     static var height: CGFloat { 310.0 }
     static var width: CGFloat { 220.0 }
 
@@ -32,8 +36,19 @@ final class BadgesCell: UICollectionViewCell {
         $0.textColor = .white
         $0.text = "12,000원"
     }
+    
+    func configure(with badgeImage: GetBadgeListModel,_ index: Int) {
+        let imageURL = URL(string: "\(badgeImage.content[index].badgeMainFile.fileURL)")
+        imageView.kf.setImage(with: imageURL, placeholder: #imageLiteral(resourceName: "RGBLogo"))
+    }
 
     func setup() {
+        
+//        imageView.image = imageData.image
+//        imageView.tintColor = imageData.tintColor
+//        titleLabel.text = titleData.text
+//        descriptionLabel.text = descriptionData.text
+//        coinPriceLabel.text = coinPriceData.text
         setupLayout()
     }
 }

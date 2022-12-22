@@ -12,7 +12,7 @@ class BadgesViewModel: BaseVM {
     }
     
     struct Output {
-        let ShopBadgeView: PublishRelay<GetBadgeListModel>
+        let shopBadgeView: PublishRelay<GetBadgeListModel>
         let result: PublishRelay<Bool>
     }
     
@@ -30,17 +30,17 @@ class BadgesViewModel: BaseVM {
                         case .ok:
                             shopBadgeList.accept(data!)
                             result.accept(true)
-                            print("샵을 드디어 끝냈다")
+                            print("shopPageLoadBadge 성공")
                             
                         default:
                             result.accept(false)
-                            print("다시해야 할 듯(고쳐 터짐)")
+                            print("shopPageLoadBadge가 터짐")
                         }
                     }.disposed(by: self.disposeBag)
                 }
             }.disposed(by: disposeBag)
         
-        return Output(ShopBadgeView: shopBadgeList, result: result)
+        return Output(shopBadgeView: shopBadgeList, result: result)
     }
     
 }
