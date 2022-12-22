@@ -4,7 +4,7 @@ import UIKit
 
 final class AdvertisementSectionView: UIView {
     private final var controller: UIViewController
-    
+    var array = ["1","2","3","4","5"]
 //    var userGraphModelList = [UserGraphListModel]()
     
     private lazy var collectionView: UICollectionView = {

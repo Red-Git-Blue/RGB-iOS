@@ -81,37 +81,11 @@ extension BadgesView: UICollectionViewDelegateFlowLayout {
     }
 }
 
-      
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(
-//            withReuseIdentifier: "NewBadgesCollectionViewCell",
-//            for: indexPath
-//        ) as? BadgesCell
-//        print(indexPath.row)
-//        cell!.setup()
-//        cell!.backgroundColor = .clear
-//        return cell ?? UICollectionViewCell()
-//    }
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let selectedSuggesion = bagesList[indexPath.row]
-//        print(bagesList[indexPath.row])
-//        let detailViewController = SuggesionDetailViewController()
-//        detailViewController.suggestion = selectedSuggesion
-//        controller.present(detailViewController, animated: true)
-//    }
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-//        let selectedSuggesion = bagesList[indexPath.row]
-//        print(selectedSuggesion)
-//        let selectedSuggesion = bagesList[indexPath.row]
-//        print(bagesList[indexPath.row])
-//        let detailViewController = BagesDetailViewController()
-//        detailViewController.bageList = selectedSuggesion
-//        detailViewController.modalPresentationStyle = .fullScreen
-//        controller.navigationController?.pushViewController(detailViewController, animated: true)
-//    }
-//}
+extension BadgesView {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
+}
 
 extension BadgesView {
     

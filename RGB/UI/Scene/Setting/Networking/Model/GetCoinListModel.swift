@@ -1,10 +1,3 @@
-//
-//  GetCoinListModel.swift
-//  RGB
-//
-//  Created by 박준하 on 2022/12/20.
-//
-
 struct GetCoinListModel: Codable {
     let totalPages, totalElements, size: Int
     let content: [Content]
