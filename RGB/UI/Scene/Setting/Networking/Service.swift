@@ -43,10 +43,25 @@ final class Service {
             }
     }
     
-    func shopPageLoadBadge() -> Single<(GetBadgeListModel?, networkingResult)> {
-        return provider.rx.request(.getBadgeList)
+    func getAdvertiseNowLoad() -> Single<(GetAdvertiseNowModel?, networkingResult)> {
+        return provider.rx.request(.getAdvertiseNow)
             .filterSuccessfulStatusCodes()
-            .map(GetBadgeListModel.self)
+            .map(GetAdvertiseNowModel.self)
+            .map {
+                print($0)
+                print("보냄")
+                return ($0, .ok)
+            }
+            .catch { error in
+                print(error)
+                return .just((nil, .fault))
+            }
+    }
+    
+    func shopPageLoadBadge() -> Single<(GetBadgeShopListModel?, networkingResult)> {
+        return provider.rx.request(.getBadgeShopList)
+            .filterSuccessfulStatusCodes()
+            .map(GetBadgeShopListModel.self)
             .map {
                 print($0)
                 return ($0, .ok)

@@ -10,6 +10,8 @@
 		0E0F94E328FD5DFF0004951F /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94E228FD5DFF0004951F /* RequestModel.swift */; };
 		0E0F94E628FD5FC50004951F /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94E528FD5FC50004951F /* Signup.swift */; };
 		0E14E8702954102900A8643D /* GetBadgeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14E86F2954102900A8643D /* GetBadgeListModel.swift */; };
+		0E14E872295433D300A8643D /* GetAdvertiseNowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14E871295433D300A8643D /* GetAdvertiseNowModel.swift */; };
+		0E14E875295437F100A8643D /* AdvertisementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14E874295437F100A8643D /* AdvertisementCollectionViewCell.swift */; };
 		0E17AC0E29519D7500EC8A21 /* GetCoinListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E17AC0D29519D7500EC8A21 /* GetCoinListModel.swift */; };
 		0E23C2062923BFAC00C467F8 /* BagesIntroduceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C2052923BFAC00C467F8 /* BagesIntroduceView.swift */; };
 		0E23C209292477E200C467F8 /* BagesDetailBuyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C208292477E200C467F8 /* BagesDetailBuyVC.swift */; };
@@ -99,6 +101,7 @@
 		0EAFF94429221BD000162DD0 /* LastTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF94329221BD000162DD0 /* LastTextView.swift */; };
 		0EAFF94B2922444500162DD0 /* BagesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF94A2922444500162DD0 /* BagesDetailVC.swift */; };
 		0EC67F6F293C9792002FBF8F /* CoinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC67F6E293C9792002FBF8F /* CoinDetailViewController.swift */; };
+		0ECA53F82954472200BE76CD /* GetBadgeShopListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECA53F72954472200BE76CD /* GetBadgeShopListModel.swift */; };
 		0EE4352428F4476F00CA7E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4352328F4476F00CA7E58 /* AppDelegate.swift */; };
 		0EE4352628F4476F00CA7E58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4352528F4476F00CA7E58 /* SceneDelegate.swift */; };
 		0EE4352D28F4477000CA7E58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EE4352C28F4477000CA7E58 /* Images.xcassets */; };
@@ -146,6 +149,8 @@
 		0E0F94E228FD5DFF0004951F /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		0E0F94E528FD5FC50004951F /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		0E14E86F2954102900A8643D /* GetBadgeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBadgeListModel.swift; sourceTree = "<group>"; };
+		0E14E871295433D300A8643D /* GetAdvertiseNowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAdvertiseNowModel.swift; sourceTree = "<group>"; };
+		0E14E874295437F100A8643D /* AdvertisementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E17AC0D29519D7500EC8A21 /* GetCoinListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoinListModel.swift; sourceTree = "<group>"; };
 		0E23C2052923BFAC00C467F8 /* BagesIntroduceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesIntroduceView.swift; sourceTree = "<group>"; };
 		0E23C208292477E200C467F8 /* BagesDetailBuyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailBuyVC.swift; sourceTree = "<group>"; };
@@ -234,6 +239,7 @@
 		0EAFF94329221BD000162DD0 /* LastTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTextView.swift; sourceTree = "<group>"; };
 		0EAFF94A2922444500162DD0 /* BagesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailVC.swift; sourceTree = "<group>"; };
 		0EC67F6E293C9792002FBF8F /* CoinDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailViewController.swift; sourceTree = "<group>"; };
+		0ECA53F72954472200BE76CD /* GetBadgeShopListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBadgeShopListModel.swift; sourceTree = "<group>"; };
 		0EE4352028F4476F00CA7E58 /* RGB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE4352328F4476F00CA7E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EE4352528F4476F00CA7E58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -317,8 +323,18 @@
 				0E47A486293A12D200215CE7 /* TokenModel.swift */,
 				0E17AC0D29519D7500EC8A21 /* GetCoinListModel.swift */,
 				0E14E86F2954102900A8643D /* GetBadgeListModel.swift */,
+				0ECA53F72954472200BE76CD /* GetBadgeShopListModel.swift */,
+				0E14E871295433D300A8643D /* GetAdvertiseNowModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0E14E873295437DF00A8643D /* AdvertisementCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0E14E874295437F100A8643D /* AdvertisementCollectionViewCell.swift */,
+			);
+			path = AdvertisementCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		0E23C207292477B200C467F8 /* BagesDetailView */ = {
@@ -1017,6 +1033,7 @@
 		0EAFF93029211D1300162DD0 /* AdvertisementView */ = {
 			isa = PBXGroup;
 			children = (
+				0E14E873295437DF00A8643D /* AdvertisementCollectionViewCell */,
 				0E2CBE412930AE0D001667BE /* View */,
 				0E2CBE422930AE18001667BE /* ViewModel */,
 			);
@@ -1553,6 +1570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E23C209292477E200C467F8 /* BagesDetailBuyVC.swift in Sources */,
+				0E14E872295433D300A8643D /* GetAdvertiseNowModel.swift in Sources */,
 				0EF59AFF2909FE01003FEA03 /* Separator.swift in Sources */,
 				0E14E8702954102900A8643D /* GetBadgeListModel.swift in Sources */,
 				0E23C2112924EDCE00C467F8 /* UserBadgesView.swift in Sources */,
@@ -1587,6 +1605,8 @@
 				0E9BC16428FEC49B00B8DB56 /* MainSignupVC.swift in Sources */,
 				0E9973742908A8F700B95BC6 /* BaseCompletionView.swift in Sources */,
 				0EAFF9392921B49700162DD0 /* CategorySectionViewCell.swift in Sources */,
+				0ECA53F82954472200BE76CD /* GetBadgeShopListModel.swift in Sources */,
+				0E14E875295437F100A8643D /* AdvertisementCollectionViewCell.swift in Sources */,
 				0EF59AFD2909997A003FEA03 /* SuggestionFeature.swift in Sources */,
 				0EF69C522928E53B00C36DAC /* FundsHighestThreeView..swift in Sources */,
 				0E31E38329457689002A6A82 /* Service.swift in Sources */,

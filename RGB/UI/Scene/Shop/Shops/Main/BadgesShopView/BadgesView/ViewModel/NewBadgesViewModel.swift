@@ -12,13 +12,13 @@ class BadgesViewModel: BaseVM {
     }
     
     struct Output {
-        let shopBadgeView: PublishRelay<GetBadgeListModel>
+        let shopBadgeView: PublishRelay<GetBadgeShopListModel>
         let result: PublishRelay<Bool>
     }
     
     func trans(_ input: Input) -> Output {
         let api = Service()
-        let shopBadgeList = PublishRelay<GetBadgeListModel>()
+        let shopBadgeList = PublishRelay<GetBadgeShopListModel>()
         let result = PublishRelay<Bool>()
         
         input.viewReceive.asObservable()

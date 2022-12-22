@@ -1,11 +1,16 @@
 import SnapKit
 import Then
 import UIKit
+import RxSwift
+import RxCocoa
+import RxRelay
 
 final class AdvertisementSectionView: UIView {
     private final var controller: UIViewController
+    private let viewReceive = PublishRelay<Void>()
     var array = ["1","2","3","4","5"]
-//    var userGraphModelList = [UserGraphListModel]()
+    
+    var getAdvertiseNowList: GetAdvertiseNowModel?
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -13,22 +18,24 @@ final class AdvertisementSectionView: UIView {
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.delegate = self
-        collectionView.dataSource = self
-        //딱딱하나씩 끈어질 수 있도록하는 것
         collectionView.isPagingEnabled = true
         collectionView.backgroundColor = .systemBackground
-        //스크롤바 표시
         collectionView.showsHorizontalScrollIndicator = false
 
         collectionView.register(
-            UICollectionViewCell.self,
-            forCellWithReuseIdentifier: "advertisementSectionCollectionViewCell"
+            AdvertisementCollectionViewCell.self,
+            forCellWithReuseIdentifier: AdvertisementCollectionViewCell.identifier
         )
 
         return collectionView
     }()
 
     private let separatorView = SeparatorView(frame: .zero)
+    
+    override func layoutSubviews() {
+        viewReceive.accept(())
+        bind(AdvertiosementSectionViewModel())
+    }
 
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
@@ -37,8 +44,6 @@ final class AdvertisementSectionView: UIView {
         attribute()
         layout()
         collectionView.reloadData()
-        
-//        collectionView.layer.cornerRadius = 20
     }
     
     required init?(coder: NSCoder) {
@@ -46,40 +51,16 @@ final class AdvertisementSectionView: UIView {
     }
 }
 
-extension AdvertisementSectionView: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "advertisementSectionCollectionViewCell", for: indexPath)
-        cell.backgroundColor = UIColor(named: "CollectionViewColor")
-        return cell
-    }
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let selectedSuggesion = userGraphModelList[indexPath.row]
-//        print(userGraphModelList[indexPath.row])
-//        let detailViewController = UserGraphListDetileViewController()
-//        detailViewController.userGraphList = selectedSuggesion
-//        controller.present(detailViewController, animated: true)
-//    }
-}
-
 extension AdvertisementSectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //주변의 왼 = 16 // 오른 = 16 == 32 뺴기
         CGSize(width: collectionView.frame.width - 60.0, height: frame.width)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        //주변의 왼 = 16 // 오른 = 16
-        //중앙 정령
         UIEdgeInsets(top: 0.0, left: 30.0, bottom: 0.0, right: 30.0)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        //최소 마진
         return 60.0
     }
 }
@@ -87,7 +68,28 @@ extension AdvertisementSectionView: UICollectionViewDelegateFlowLayout {
 private extension AdvertisementSectionView {
     
     func bind(_ viewModel: AdvertiosementSectionViewModel) {
+        let input = AdvertiosementSectionViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()))
+                                                   
+        let output = viewModel.trans(input)
         
+        output.advertiseNow.subscribe(onNext: { data in
+            self.getAdvertiseNowList = data
+            
+            let data = Observable<[String]>.of(self.array)
+            
+            data.asObservable()
+                .bind(to: self.collectionView.rx
+                        .items(
+                            cellIdentifier: AdvertisementCollectionViewCell.identifier,
+                            cellType: AdvertisementCollectionViewCell.self)
+                ) { [self] index, recommend, cell in
+                    cell.setupLayout()
+                    cell.configure(with: getAdvertiseNowList!, index)
+                    cell.backgroundColor = UIColor(named: "CollectionViewColor")
+                }
+            
+            print("print 결과 :\(self.getAdvertiseNowList!)")
+        })
     }
     
     func attribute() {

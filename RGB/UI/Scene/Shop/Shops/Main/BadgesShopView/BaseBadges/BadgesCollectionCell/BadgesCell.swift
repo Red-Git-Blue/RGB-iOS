@@ -10,7 +10,7 @@ final class BadgesCell: UICollectionViewCell {
     static var height: CGFloat { 310.0 }
     static var width: CGFloat { 220.0 }
 
-    private lazy var imageView: UIImageView = {
+    internal lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = UIColor(named: "CollectionViewColor")
         imageView.layer.cornerRadius = 20.0
@@ -18,43 +18,36 @@ final class BadgesCell: UICollectionViewCell {
         return imageView
     }()
     
-    private lazy var titleLabel = UILabel().then {
+    internal lazy var titleLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 14.0, weight: .bold)
         $0.textColor = .white
         $0.text = "고급스러운 무의 배지"
     }
     
-    private lazy var descriptionLabel = UILabel().then {
+    internal lazy var descriptionLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 14.0, weight: .regular)
         $0.textColor = .white
         $0.numberOfLines = 0
         $0.text = "고급스러운 색감과 무의 예술적인 \n감각을 살린 배지"
     }
 
-    private lazy var coinPriceLabel = UILabel().then {
+    internal lazy var coinPriceLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 16.0, weight: .bold)
         $0.textColor = .white
         $0.text = "12,000원"
     }
     
-    func configure(with badgeImage: GetBadgeListModel,_ index: Int) {
+    func configure(with badgeImage: GetBadgeShopListModel,_ index: Int) {
         let imageURL = URL(string: "\(badgeImage.content[index].badgeMainFile.fileURL)")
         imageView.kf.setImage(with: imageURL, placeholder: #imageLiteral(resourceName: "RGBLogo"))
     }
-
-    func setup() {
-        
-//        imageView.image = imageData.image
-//        imageView.tintColor = imageData.tintColor
-//        titleLabel.text = titleData.text
-//        descriptionLabel.text = descriptionData.text
-//        coinPriceLabel.text = coinPriceData.text
-        setupLayout()
+    
+    func forceLoadData(_ titleData: String, _ descriptionData: String, _ coinData: Int) {
+        titleLabel.text = titleData
+        descriptionLabel.text = descriptionData
+        coinPriceLabel.text = "\(coinData)원"
     }
-}
-
-// MARK: Private
-private extension BadgesCell {
+    
     func setupLayout() {
         [
             imageView,

@@ -95,8 +95,6 @@ extension SlideView {
     func attributes() {
         let allWidth = self.collectionView.contentSize.width + self.collectionView.contentInset.left + self.collectionView.contentInset.right
         let showingWidth = self.collectionView.bounds.width
-//        self.indicatorView.widthRatio = showingWidth / allWidth
-//        self.indicatorView.layoutIfNeeded()
         
         self.collectionView.dataSource = self
         self.collectionView.delegate = self

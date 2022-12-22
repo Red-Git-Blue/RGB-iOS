@@ -12,11 +12,9 @@ class BadgesView: UIView {
     
     var array = ["1","2","3","4","5"]
     
-    var getBadgeList: GetBadgeListModel?
+    var getBadgeShopList: GetBadgeShopListModel?
     let disposeBag = DisposeBag()
-    
-    var bagesList = [GetBadgeListModel]()
-    
+        
     private lazy var newBadgeLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 24.0, weight: .black)
         $0.text = "신규 배지"
@@ -96,25 +94,23 @@ extension BadgesView {
         let output = viewModel.trans(input)
         
         output.shopBadgeView.subscribe(onNext: { data in
-            self.getBadgeList = data
+            self.getBadgeShopList = data
             
             let data = Observable<[String]>.of(self.array)
             
             data.asObservable()
                 .bind(to: self.collectionView.rx
-                        .items(
-                            cellIdentifier: BadgesCell.identifier,
-                            cellType: BadgesCell.self)
-                ) { [self] index, recommend, cell in
-                    cell.setup()
-                    cell.configure(with: getBadgeList!, index)
+                        .items(cellIdentifier: BadgesCell.identifier,
+                               cellType: BadgesCell.self)
+                ) { index, recommend, cell in
+                    cell.setupLayout()
+                    let item = self.getBadgeShopList?.content[index]
+                    cell.forceLoadData(item!.name, item!.introduction, item!.price)
+                    cell.configure(with: self.getBadgeShopList!, index)
                     cell.backgroundColor = .clear
-                }
-            
-            print("print 결과 :\(self.getBadgeList!)")
-        })
-
-    }
+            }
+    })
+}
     
     func attribute() {
         self.backgroundColor = .black
