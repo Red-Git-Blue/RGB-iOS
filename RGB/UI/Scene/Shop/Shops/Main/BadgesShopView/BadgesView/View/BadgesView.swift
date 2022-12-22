@@ -10,7 +10,7 @@ class BadgesView: UIView {
     private final var viewName: String
     private let viewReceive = PublishRelay<Void>()
     
-    var array = ["1","2","3","4","5"]
+    var array = ["1","2","3","4"]
     
     var getBadgeShopList: GetBadgeShopListModel?
     let disposeBag = DisposeBag()

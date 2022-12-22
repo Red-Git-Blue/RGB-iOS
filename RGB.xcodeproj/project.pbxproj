@@ -71,6 +71,7 @@
 		0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B26290FDF2E005E379E /* SuggestionModel.swift */; };
 		0E555B29290FE0EC005E379E /* SuggesionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B28290FE0EC005E379E /* SuggesionDetailViewController.swift */; };
 		0E555B2E29108CE6005E379E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E555B2D29108CE6005E379E /* Colors.xcassets */; };
+		0E5F13C629548B9900FD2C09 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5F13C529548B9900FD2C09 /* StringUtils.swift */; };
 		0E61D6912907E6250098A3F5 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61D6902907E6250098A3F5 /* SignupVC.swift */; };
 		0E61D6932907E6310098A3F5 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61D6922907E6310098A3F5 /* SignupView.swift */; };
 		0E61D6952907F0080098A3F5 /* PasswordChangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61D6942907F0080098A3F5 /* PasswordChangeVC.swift */; };
@@ -210,6 +211,7 @@
 		0E555B26290FDF2E005E379E /* SuggestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionModel.swift; sourceTree = "<group>"; };
 		0E555B28290FE0EC005E379E /* SuggesionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggesionDetailViewController.swift; sourceTree = "<group>"; };
 		0E555B2D29108CE6005E379E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		0E5F13C529548B9900FD2C09 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		0E61D6902907E6250098A3F5 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		0E61D6922907E6310098A3F5 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		0E61D6942907F0080098A3F5 /* PasswordChangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeVC.swift; sourceTree = "<group>"; };
@@ -853,6 +855,7 @@
 			isa = PBXGroup;
 			children = (
 				0EF69C2C29278E4D00C36DAC /* ControllerManager.swift */,
+				0E5F13C529548B9900FD2C09 /* StringUtils.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1599,6 +1602,7 @@
 				0EF59AF72909993A003FEA03 /* SuggestionCoinSectionView.swift in Sources */,
 				0E23C20E2924D14D00C467F8 /* UserChartView.swift in Sources */,
 				0E31E37729444EBB002A6A82 /* BaseURL.swift in Sources */,
+				0E5F13C629548B9900FD2C09 /* StringUtils.swift in Sources */,
 				0EEE8D3C2911093700227199 /* UserGraphListDetileVC.swift in Sources */,
 				0E99737B2908E44C00B95BC6 /* PasswordCompletionVC.swift in Sources */,
 				0E2CBDD8292F550C001667BE /* StatsUserTableViewCell.swift in Sources */,

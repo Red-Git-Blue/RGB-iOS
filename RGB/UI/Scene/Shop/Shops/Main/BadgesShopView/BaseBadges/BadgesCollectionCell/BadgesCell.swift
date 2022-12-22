@@ -27,7 +27,7 @@ final class BadgesCell: UICollectionViewCell {
     internal lazy var descriptionLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 14.0, weight: .regular)
         $0.textColor = .white
-        $0.numberOfLines = 0
+        $0.numberOfLines = 2
         $0.text = "고급스러운 색감과 무의 예술적인 \n감각을 살린 배지"
     }
 
@@ -45,7 +45,8 @@ final class BadgesCell: UICollectionViewCell {
     func forceLoadData(_ titleData: String, _ descriptionData: String, _ coinData: Int) {
         titleLabel.text = titleData
         descriptionLabel.text = descriptionData
-        coinPriceLabel.text = "\(coinData)원"
+        descriptionLabel.lineBreakMode = .byCharWrapping
+        coinPriceLabel.text = "\(coinData.toDigitString())원"
     }
     
     func setupLayout() {
@@ -69,6 +70,7 @@ final class BadgesCell: UICollectionViewCell {
         }
         descriptionLabel.snp.makeConstraints {
             $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
             $0.top.equalTo(titleLabel.snp.bottom).offset(3.0)
         }
         coinPriceLabel.snp.makeConstraints {
