@@ -11,7 +11,6 @@ enum API {
     
     //user
     case getMeInfo
-    
     case coinList
     
     //토큰 재발급
