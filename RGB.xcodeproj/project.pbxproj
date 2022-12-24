@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0E0F94E328FD5DFF0004951F /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94E228FD5DFF0004951F /* RequestModel.swift */; };
-		0E0F94E628FD5FC50004951F /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F94E528FD5FC50004951F /* Signup.swift */; };
 		0E14E8702954102900A8643D /* GetBadgeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14E86F2954102900A8643D /* GetBadgeListModel.swift */; };
 		0E14E872295433D300A8643D /* GetAdvertiseNowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14E871295433D300A8643D /* GetAdvertiseNowModel.swift */; };
 		0E14E875295437F100A8643D /* AdvertisementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14E874295437F100A8643D /* AdvertisementCollectionViewCell.swift */; };
@@ -87,7 +86,6 @@
 		0E99737B2908E44C00B95BC6 /* PasswordCompletionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99737A2908E44C00B95BC6 /* PasswordCompletionVC.swift */; };
 		0E9BC15A28FEB7B700B8DB56 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC15928FEB7B700B8DB56 /* StartViewController.swift */; };
 		0E9BC16228FEC46100B8DB56 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC16128FEC46100B8DB56 /* LoginVC.swift */; };
-		0E9BC16428FEC49B00B8DB56 /* MainSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC16328FEC49B00B8DB56 /* MainSignupVC.swift */; };
 		0EA56B112931B62600967A99 /* BagesDetailGiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B102931B62600967A99 /* BagesDetailGiftViewController.swift */; };
 		0EA56B142931B95500967A99 /* GiftCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B132931B95500967A99 /* GiftCollectionViewCell.swift */; };
 		0EA56B61293443DC00967A99 /* GrassGatchaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA56B60293443DC00967A99 /* GrassGatchaView.swift */; };
@@ -148,7 +146,6 @@
 
 /* Begin PBXFileReference section */
 		0E0F94E228FD5DFF0004951F /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
-		0E0F94E528FD5FC50004951F /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		0E14E86F2954102900A8643D /* GetBadgeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBadgeListModel.swift; sourceTree = "<group>"; };
 		0E14E871295433D300A8643D /* GetAdvertiseNowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAdvertiseNowModel.swift; sourceTree = "<group>"; };
 		0E14E874295437F100A8643D /* AdvertisementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -226,7 +223,6 @@
 		0E99737A2908E44C00B95BC6 /* PasswordCompletionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCompletionVC.swift; sourceTree = "<group>"; };
 		0E9BC15928FEB7B700B8DB56 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		0E9BC16128FEC46100B8DB56 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		0E9BC16328FEC49B00B8DB56 /* MainSignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSignupVC.swift; sourceTree = "<group>"; };
 		0EA56B102931B62600967A99 /* BagesDetailGiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailGiftViewController.swift; sourceTree = "<group>"; };
 		0EA56B132931B95500967A99 /* GiftCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCollectionViewCell.swift; sourceTree = "<group>"; };
 		0EA56B60293443DC00967A99 /* GrassGatchaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassGatchaView.swift; sourceTree = "<group>"; };
@@ -1117,7 +1113,6 @@
 				0E61D68D2907D3B20098A3F5 /* App */,
 				0E61D68F2907D4710098A3F5 /* UI */,
 				0E2CBE7A2930BBAE001667BE /* Manager */,
-				0EF711662906A2F7005D62EE /* textFile */,
 				0EEE8D422911E99500227199 /* Font */,
 				0EE4352C28F4477000CA7E58 /* Images.xcassets */,
 				0EE4352E28F4477000CA7E58 /* LaunchScreen.storyboard */,
@@ -1412,15 +1407,6 @@
 			path = UserSearch;
 			sourceTree = "<group>";
 		};
-		0EF711662906A2F7005D62EE /* textFile */ = {
-			isa = PBXGroup;
-			children = (
-				0E0F94E528FD5FC50004951F /* Signup.swift */,
-				0E9BC16328FEC49B00B8DB56 /* MainSignupVC.swift */,
-			);
-			path = textFile;
-			sourceTree = "<group>";
-		};
 		0EF7116B2907ACA8005D62EE /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -1606,7 +1592,6 @@
 				0EEE8D3C2911093700227199 /* UserGraphListDetileVC.swift in Sources */,
 				0E99737B2908E44C00B95BC6 /* PasswordCompletionVC.swift in Sources */,
 				0E2CBDD8292F550C001667BE /* StatsUserTableViewCell.swift in Sources */,
-				0E9BC16428FEC49B00B8DB56 /* MainSignupVC.swift in Sources */,
 				0E9973742908A8F700B95BC6 /* BaseCompletionView.swift in Sources */,
 				0EAFF9392921B49700162DD0 /* CategorySectionViewCell.swift in Sources */,
 				0ECA53F82954472200BE76CD /* GetBadgeShopListModel.swift in Sources */,
@@ -1627,7 +1612,6 @@
 				0EF69C5E292A587200C36DAC /* CategoryCollectionViewCell.swift in Sources */,
 				0E31E35E293DDA7C002A6A82 /* ChartUserView.swift in Sources */,
 				0E2CBE692930B8C5001667BE /* ListViewModel.swift in Sources */,
-				0E0F94E628FD5FC50004951F /* Signup.swift in Sources */,
 				0E23C20B2924BCD800C467F8 /* UserInformationView.swift in Sources */,
 				0E31E37929444EDD002A6A82 /* Api.swift in Sources */,
 				0EF69C2D29278E4D00C36DAC /* ControllerManager.swift in Sources */,
