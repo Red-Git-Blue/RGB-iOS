@@ -39,8 +39,7 @@
 		0E2CBE402930ADD1001667BE /* AdvertiosementSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE3F2930ADD1001667BE /* AdvertiosementSectionViewModel.swift */; };
 		0E2CBE462930AF2F001667BE /* CategorySectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE452930AF2F001667BE /* CategorySectionViewModel.swift */; };
 		0E2CBE4D2930B0CB001667BE /* NewBadgesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE4C2930B0CB001667BE /* NewBadgesViewModel.swift */; };
-		0E2CBE512930B15D001667BE /* LastTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE502930B15D001667BE /* LastTextViewModel.swift */; };
-		0E2CBE5A2930B511001667BE /* BagesDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE592930B511001667BE /* BagesDetailViewModel.swift */; };
+		0E2CBE5A2930B511001667BE /* BadgesDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE592930B511001667BE /* BadgesDetailViewModel.swift */; };
 		0E2CBE5F2930B64A001667BE /* BagesDetailBuyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE5E2930B64A001667BE /* BagesDetailBuyViewModel.swift */; };
 		0E2CBE642930B7E2001667BE /* CategotyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE632930B7E2001667BE /* CategotyViewModel.swift */; };
 		0E2CBE692930B8C5001667BE /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE682930B8C5001667BE /* ListViewModel.swift */; };
@@ -99,6 +98,7 @@
 		0EAFF9412921F10E00162DD0 /* BadgesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF9402921F10E00162DD0 /* BadgesView.swift */; };
 		0EAFF94429221BD000162DD0 /* LastTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF94329221BD000162DD0 /* LastTextView.swift */; };
 		0EAFF94B2922444500162DD0 /* BagesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF94A2922444500162DD0 /* BagesDetailVC.swift */; };
+		0EB22D4229581CDA006DBEC4 /* GetBadgeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB22D4129581CDA006DBEC4 /* GetBadgeDetailModel.swift */; };
 		0EC67F6F293C9792002FBF8F /* CoinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC67F6E293C9792002FBF8F /* CoinDetailViewController.swift */; };
 		0ECA53F82954472200BE76CD /* GetBadgeShopListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECA53F72954472200BE76CD /* GetBadgeShopListModel.swift */; };
 		0EE4352428F4476F00CA7E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4352328F4476F00CA7E58 /* AppDelegate.swift */; };
@@ -177,8 +177,7 @@
 		0E2CBE3F2930ADD1001667BE /* AdvertiosementSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertiosementSectionViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE452930AF2F001667BE /* CategorySectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySectionViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE4C2930B0CB001667BE /* NewBadgesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBadgesViewModel.swift; sourceTree = "<group>"; };
-		0E2CBE502930B15D001667BE /* LastTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTextViewModel.swift; sourceTree = "<group>"; };
-		0E2CBE592930B511001667BE /* BagesDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailViewModel.swift; sourceTree = "<group>"; };
+		0E2CBE592930B511001667BE /* BadgesDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesDetailViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE5E2930B64A001667BE /* BagesDetailBuyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailBuyViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE632930B7E2001667BE /* CategotyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategotyViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE682930B8C5001667BE /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
@@ -236,6 +235,7 @@
 		0EAFF9402921F10E00162DD0 /* BadgesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesView.swift; sourceTree = "<group>"; };
 		0EAFF94329221BD000162DD0 /* LastTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTextView.swift; sourceTree = "<group>"; };
 		0EAFF94A2922444500162DD0 /* BagesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailVC.swift; sourceTree = "<group>"; };
+		0EB22D4129581CDA006DBEC4 /* GetBadgeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBadgeDetailModel.swift; sourceTree = "<group>"; };
 		0EC67F6E293C9792002FBF8F /* CoinDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailViewController.swift; sourceTree = "<group>"; };
 		0ECA53F72954472200BE76CD /* GetBadgeShopListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBadgeShopListModel.swift; sourceTree = "<group>"; };
 		0EE4352028F4476F00CA7E58 /* RGB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -302,8 +302,8 @@
 			isa = PBXGroup;
 			children = (
 				0E0F94E428FD5E080004951F /* Model */,
-				0E31E37629444EBB002A6A82 /* BaseURL.swift */,
 				0E31E37829444EDD002A6A82 /* Api.swift */,
+				0E31E37629444EBB002A6A82 /* BaseURL.swift */,
 				0E31E38029456CF6002A6A82 /* MoyaLoggingPlugin.swift */,
 				0E31E37C29444F06002A6A82 /* MyAPI+Request.swift */,
 				0E31E38229457689002A6A82 /* Service.swift */,
@@ -321,6 +321,7 @@
 				0E47A486293A12D200215CE7 /* TokenModel.swift */,
 				0E17AC0D29519D7500EC8A21 /* GetCoinListModel.swift */,
 				0E14E86F2954102900A8643D /* GetBadgeListModel.swift */,
+				0EB22D4129581CDA006DBEC4 /* GetBadgeDetailModel.swift */,
 				0ECA53F72954472200BE76CD /* GetBadgeShopListModel.swift */,
 				0E14E871295433D300A8643D /* GetAdvertiseNowModel.swift */,
 			);
@@ -667,14 +668,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		0E2CBE532930B178001667BE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				0E2CBE502930B15D001667BE /* LastTextViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		0E2CBE542930B1F7001667BE /* BaseBadges */ = {
 			isa = PBXGroup;
 			children = (
@@ -713,7 +706,7 @@
 		0E2CBE5B2930B591001667BE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				0E2CBE592930B511001667BE /* BagesDetailViewModel.swift */,
+				0E2CBE592930B511001667BE /* BadgesDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1072,7 +1065,6 @@
 			isa = PBXGroup;
 			children = (
 				0E2CBE522930B170001667BE /* View */,
-				0E2CBE532930B178001667BE /* ViewModel */,
 			);
 			path = LastTextView;
 			sourceTree = "<group>";
@@ -1619,6 +1611,7 @@
 				0EC67F6F293C9792002FBF8F /* CoinDetailViewController.swift in Sources */,
 				0E23C2172925B5A500C467F8 /* SettingVC.swift in Sources */,
 				0E2CBE5F2930B64A001667BE /* BagesDetailBuyViewModel.swift in Sources */,
+				0EB22D4229581CDA006DBEC4 /* GetBadgeDetailModel.swift in Sources */,
 				0E31E36C29415262002A6A82 /* SlideView.swift in Sources */,
 				0EAFF94429221BD000162DD0 /* LastTextView.swift in Sources */,
 				0EF69C4F2928D34B00C36DAC /* MyRankView.swift in Sources */,
@@ -1628,7 +1621,7 @@
 				0E47A487293A12D200215CE7 /* TokenModel.swift in Sources */,
 				0EF59AF92909994F003FEA03 /* SuggestionFeatureCollectionViewCell.swift in Sources */,
 				0E9BC15A28FEB7B700B8DB56 /* StartViewController.swift in Sources */,
-				0E2CBE5A2930B511001667BE /* BagesDetailViewModel.swift in Sources */,
+				0E2CBE5A2930B511001667BE /* BadgesDetailViewModel.swift in Sources */,
 				0E2CBE402930ADD1001667BE /* AdvertiosementSectionViewModel.swift in Sources */,
 				0EAFF9412921F10E00162DD0 /* BadgesView.swift in Sources */,
 				0E9BC16228FEC46100B8DB56 /* LoginVC.swift in Sources */,
@@ -1668,7 +1661,6 @@
 				0EF59B04290CD7EF003FEA03 /* GrassSectionView.swift in Sources */,
 				0E436E682949D7F4009E6791 /* SignupViewModel.swift in Sources */,
 				0E2CBE6E2930B9E1001667BE /* UserInformationViewModel.swift in Sources */,
-				0E2CBE512930B15D001667BE /* LastTextViewModel.swift in Sources */,
 				0E2CBE3029307FF8001667BE /* IncreaseCoinViewModel.swift in Sources */,
 				0EAFF94B2922444500162DD0 /* BagesDetailVC.swift in Sources */,
 				0EF69C552928EC7100C36DAC /* RevenueHighestThree.swift in Sources */,
