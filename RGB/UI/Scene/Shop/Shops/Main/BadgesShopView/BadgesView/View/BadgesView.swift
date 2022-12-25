@@ -82,6 +82,9 @@ extension BadgesView: UICollectionViewDelegateFlowLayout {
 extension BadgesView {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row)
+        let detailViewController = BagesDetailViewController()
+        detailViewController.modalPresentationStyle = .fullScreen
+        controller.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 

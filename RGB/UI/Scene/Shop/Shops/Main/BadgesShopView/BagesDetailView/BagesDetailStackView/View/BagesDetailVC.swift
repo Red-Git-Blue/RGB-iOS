@@ -7,8 +7,7 @@ import RxCocoa
 class BagesDetailViewController: UIViewController {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
-    
-    var bageList: BagesListModel?
+
     var disposeBag = DisposeBag()
     
     private lazy var stackView = UIStackView().then { stackView in
@@ -104,9 +103,6 @@ private extension BagesDetailViewController {
         stackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
-    }
-    
-    func bind(_ viewModel: BagesDetailViewModel) {
     }
     
     func attribute() {

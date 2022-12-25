@@ -42,10 +42,6 @@ class GrassGatchaView: UIView {
 
 extension GrassGatchaView {
     
-    func bind(_ viewModel: LastTextViewModel) {
-        
-    }
-    
     func attribute() {
         grassView.layer.cornerRadius = 20.0
     }

@@ -45,10 +45,6 @@ class LastTextView: UIView {
 
 extension LastTextView {
     
-    func bind(_ viewModel: LastTextViewModel) {
-        
-    }
-    
     func attribute() {
     }
     
