@@ -24,6 +24,8 @@ extension API {
             
         case .getAdvertiseNow:
             return URL(string: url)!
+        case .getBadgeDetil(_):
+            return URL(string: url)!
         }
     }
     func getPath() -> String {
@@ -42,6 +44,8 @@ extension API {
             return "/item/badge/details"
         case .getAdvertiseNow:
             return "/advertise/now"
+        case .getBadgeDetil(let id):
+            return "//api/rgb/v1/item/badge/\(id)"
         }
     }
     func getMethod() -> Moya.Method {

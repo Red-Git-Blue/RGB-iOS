@@ -27,6 +27,21 @@ final class Service {
             }
             .catch {[unowned self] in return .just(setNetworkError($0))}
     }
+
+    func badgeDetailDataLoad(_ id: Int) -> Single<(GetBadgeDetailModel?, networkingResult)> {
+        
+        return provider.rx.request(.getBadgeDetil(id))
+            .filterSuccessfulStatusCodes()
+            .map(GetBadgeDetailModel.self)
+            .map{
+                print($0)
+                return ($0, .ok)
+            }
+            .catch { error in
+                print(error)
+                return .just((nil, .fault))
+            }
+    }
     
     func myPageLoad() -> Single<(UserMeInfoModel?, networkingResult)> {
         print("ㅗㅗㅗㅗㅗ")

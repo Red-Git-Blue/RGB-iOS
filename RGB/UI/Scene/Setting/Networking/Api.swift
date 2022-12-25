@@ -18,6 +18,7 @@ enum API {
     
     //shop
     case getBadgeShopList
+    case getBadgeDetil(_ name: Int)
     
     //advertise
     case getAdvertiseNow

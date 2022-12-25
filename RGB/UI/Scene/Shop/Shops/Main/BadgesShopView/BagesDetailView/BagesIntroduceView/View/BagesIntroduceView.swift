@@ -1,24 +1,31 @@
 import UIKit
 import Then
 import SnapKit
+import RxSwift
+import RxCocoa
+import RxRelay
 
 class BagesIntroduceView: UIView {
     private final var controller: UIViewController
+    private let viewReceive = PublishRelay<Void>()
+    let disposeBag = DisposeBag()
     
-    private lazy var mainBagesImage = UIImageView().then {
+    var bageDetailList: BagesListModel?
+    
+    private lazy var mainBadgesImage = UIImageView().then {
         let imageName = "MainBage"
         let image = UIImage(named: imageName)
         let imageView = UIImageView(image: image!)
         $0.backgroundColor = .red
     }
     
-    private lazy var bagesName = UILabel().then {
+    private lazy var badgesName = UILabel().then {
         $0.font = .systemFont(ofSize: 24.0, weight: .bold)
         $0.textColor = .white
         $0.text = "고급스러운 무의 배지"
     }
     
-    private lazy var bagesdescriptions = UILabel().then {
+    private lazy var badgesDescriptions = UILabel().then {
         $0.font = .systemFont(ofSize: 14.0, weight: .regular)
         $0.textColor = .white
         $0.numberOfLines = 0
@@ -40,7 +47,9 @@ class BagesIntroduceView: UIView {
         super.init(frame: frame)
         setup()
         
-        mainBagesImage.layer.cornerRadius = 20
+        mainBadgesImage.layer.cornerRadius = 20
+        
+        bind(BadgesDetailViewModel())
     }
 
     required init?(coder: NSCoder) {
@@ -51,33 +60,33 @@ class BagesIntroduceView: UIView {
 extension BagesIntroduceView {
     func setup() {
         [
-            mainBagesImage,
-            bagesName,
-            bagesdescriptions,
+            mainBadgesImage,
+            badgesName,
+            badgesDescriptions,
             coinPriceLabel,
             separator
         ].forEach { self.addSubview($0) }
         
-        mainBagesImage.snp.makeConstraints {
+        mainBadgesImage.snp.makeConstraints {
             $0.top.equalToSuperview().offset(40.0)
             $0.centerX.equalToSuperview()
             $0.height.equalTo(370)
             $0.width.equalTo(370)
         }
         
-        bagesName.snp.makeConstraints {
-            $0.top.equalTo(mainBagesImage.snp.bottom).offset(40.0)
+        badgesName.snp.makeConstraints {
+            $0.top.equalTo(mainBadgesImage.snp.bottom).offset(40.0)
             $0.leading.equalToSuperview().inset(30.0)
         }
         
-        bagesdescriptions.snp.makeConstraints {
-            $0.top.equalTo(bagesName.snp.bottom).offset(20.0)
-            $0.leading.equalTo(bagesName.snp.leading)
+        badgesDescriptions.snp.makeConstraints {
+            $0.top.equalTo(badgesName.snp.bottom).offset(20.0)
+            $0.leading.equalTo(badgesName.snp.leading)
         }
         
         coinPriceLabel.snp.makeConstraints {
-            $0.top.equalTo(bagesdescriptions.snp.bottom).offset(20.0)
-            $0.leading.equalTo(bagesdescriptions.snp.leading)
+            $0.top.equalTo(badgesDescriptions.snp.bottom).offset(20.0)
+            $0.leading.equalTo(badgesDescriptions.snp.leading)
         }
         
         separator.snp.makeConstraints {
@@ -86,5 +95,20 @@ extension BagesIntroduceView {
             $0.width.equalTo(370)
             $0.centerX.equalToSuperview()
         }
+    }
+    
+    func bind(_ viewModel: BadgesDetailViewModel) {
+        let input = BadgesDetailViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()), id: 1)
+        
+        let output = viewModel.trans(input)
+        print(input)
+        print("bind를 거치긴 함")
+        
+        output.badgeDetailData.subscribe(onNext: { data in
+            self.badgesName.text = "\(data.name)"
+            self.badgesDescriptions.text = "\(data.introduction)"
+            self.coinPriceLabel.text = "\(data.price)"
+            print("구독은 됐음")
+        }).disposed(by: disposeBag)
     }
 }
