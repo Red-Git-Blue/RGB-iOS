@@ -5,7 +5,7 @@ import Then
 class IncreaseCoinView: UIView {
     private final var controller: UIViewController
     
-    var suggesionModelList = [SuggesionModel]()
+    var suggesionModelList = [GetCoinUserListModel]()
     
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController

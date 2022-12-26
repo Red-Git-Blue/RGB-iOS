@@ -26,6 +26,10 @@ extension API {
             return URL(string: url)!
         case .getBadgeDetil(_):
             return URL(string: url)!
+        case .getAllBadgesList:
+            return URL(string: url)!
+        case .getCoinUserList:
+            return URL(string: url)!
         }
     }
     func getPath() -> String {
@@ -45,7 +49,11 @@ extension API {
         case .getAdvertiseNow:
             return "/advertise/now"
         case .getBadgeDetil(let id):
-            return "//api/rgb/v1/item/badge/\(id)"
+            return "/api/rgb/v1/item/badge/\(id)"
+        case .getCoinUserList:
+            return "/api/rgb/v1/coin/list"
+        case .getAllBadgesList:
+            return "/api/rgb/v1/item/badge"
         }
     }
     func getMethod() -> Moya.Method {

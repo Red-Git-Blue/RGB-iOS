@@ -7,9 +7,9 @@ class ListCollectionViewCell : UICollectionViewCell {
     
     static let identifier = "ListCollectionViewCell"
     
-    var img = UIImageView().then {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.backgroundColor = .black
+    var imageView = UIImageView().then {
+        
+        $0.backgroundColor = .white
     }
     
     override init(frame: CGRect) {
@@ -23,11 +23,16 @@ class ListCollectionViewCell : UICollectionViewCell {
     
     func cellSetting() {
         self.backgroundColor = .gray
-        self.addSubview(img)
+        self.addSubview(imageView)
         
-        img.contentMode = .scaleToFill
-        img.snp.makeConstraints {
+        imageView.contentMode = .scaleToFill
+        imageView.snp.makeConstraints {
             $0.top.leading.trailing.bottom.equalToSuperview()
         }
+    }
+    
+    func configure(with badgeImage: GetAllBadgesListModel,_ index: Int) {
+        let imageURL = URL(string: "\(badgeImage.content[index].badgeMainFile.fileURL)")
+        imageView.kf.setImage(with: imageURL, placeholder: #imageLiteral(resourceName: "RGBLogo"))
     }
 }

@@ -7,7 +7,7 @@ import RxSwift
 final class FundsHighestThreeView: UIView {
     private final var controller: UIViewController
     
-    var suggesionModelList = [SuggesionModel]()
+    var suggesionModelList = [GetCoinUserListModel]()
     
     let disposeBag = DisposeBag()
 
@@ -148,18 +148,18 @@ extension FundsHighestThreeView: UICollectionViewDataSource {
 private extension FundsHighestThreeView {
     
     func attribute() {
-        suggesionModelList = [
-            SuggesionModel(name: "이름", imageURL: "대충 주소", pk: 3, price: 36789, changePercent: 178),
-            SuggesionModel(name: "이름2", imageURL: "대충 주소2", pk: 4, price: 346789, changePercent: 678),
-            SuggesionModel(name: "이름3", imageURL: "대충 주소3", pk: 64126, price: 336789, changePercent: 178),
-            SuggesionModel(name: "이름4", imageURL: "대충 주소4", pk: 3745, price: 34326789, changePercent: 1478),
-            SuggesionModel(name: "이름5", imageURL: "대충 주소5", pk: 2385, price: 34327, changePercent: 7248),
-            SuggesionModel(name: "이름6", imageURL: "대충 주소6", pk: 234783, price: 3347289, changePercent: 18),
-            SuggesionModel(name: "이름7", imageURL: "대충 주소7", pk: 234783, price: 3347289, changePercent: 18),
-            SuggesionModel(name: "이름8", imageURL: "대충 주소8", pk: 234783, price: 3347289, changePercent: 18),
-            SuggesionModel(name: "이름9", imageURL: "대충 주소6", pk: 2234783, price: 334743289, changePercent: 1318),
-            SuggesionModel(name: "이름10", imageURL: "대충 주소6", pk: 2374783, price: 3347326289, changePercent: 118),
-        ]
+//        suggesionModelList = [
+//            SuggesionModel(name: "이름", imageURL: "대충 주소", pk: 3, price: 36789, changePercent: 178),
+//            SuggesionModel(name: "이름2", imageURL: "대충 주소2", pk: 4, price: 346789, changePercent: 678),
+//            SuggesionModel(name: "이름3", imageURL: "대충 주소3", pk: 64126, price: 336789, changePercent: 178),
+//            SuggesionModel(name: "이름4", imageURL: "대충 주소4", pk: 3745, price: 34326789, changePercent: 1478),
+//            SuggesionModel(name: "이름5", imageURL: "대충 주소5", pk: 2385, price: 34327, changePercent: 7248),
+//            SuggesionModel(name: "이름6", imageURL: "대충 주소6", pk: 234783, price: 3347289, changePercent: 18),
+//            SuggesionModel(name: "이름7", imageURL: "대충 주소7", pk: 234783, price: 3347289, changePercent: 18),
+//            SuggesionModel(name: "이름8", imageURL: "대충 주소8", pk: 234783, price: 3347289, changePercent: 18),
+//            SuggesionModel(name: "이름9", imageURL: "대충 주소6", pk: 2234783, price: 334743289, changePercent: 1318),
+//            SuggesionModel(name: "이름10", imageURL: "대충 주소6", pk: 2374783, price: 3347326289, changePercent: 118),
+//        ]
     }
     
     func layout() {

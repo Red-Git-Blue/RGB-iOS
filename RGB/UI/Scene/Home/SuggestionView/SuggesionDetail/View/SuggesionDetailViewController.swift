@@ -4,7 +4,7 @@ import SnapKit
 import RxSwift
 
 class SuggesionDetailViewController: UIViewController {
-    var suggestion: SuggesionModel?
+    var suggestion: GetCoinUserListModel?
     var disposeBag = DisposeBag()
     
     override func viewDidLoad() {

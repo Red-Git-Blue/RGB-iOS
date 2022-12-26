@@ -5,9 +5,13 @@ import CoreLocation
 import Then
 
 class ListViewController: BaseAbstractShop {
+    private let viewReceive = PublishRelay<Void>()
+
     override func viewIndex() -> Int {
         return 2
     }
+    
+    var getAllBadgeList: GetAllBadgesListModel?
     
     var array = ["first","second","third","fourth","fifth","6","7","8","9","10","11","12","first","second","third","fourth","fifth","6","7","8","9","10","11","12","first","second","third","fourth","fifth","6","7","8","9","10","11","12","first","second","third","fourth","fifth","6","7","8","9","10","11","12","first","second","third","fourth","fifth","6","7","8","9","10","11","12","first","second","third","fourth","fifth","6","7","8","9","10","11","12","first","second","third","fourth","fifth","6","7","8","9","10","11","12","first","second","third","fourth","fifth","6","7","8","9","10","11","12","first","second","third","fourth","fifth","6","7","8","9","10","11","12"]
     
@@ -29,20 +33,10 @@ class ListViewController: BaseAbstractShop {
         
         view.backgroundColor = .black
         
-        let data = Observable<[String]>.of(self.array)
-        
         attribute()
         layout()
-        
-        data.asObservable()
-            .bind(to: collectionView.rx
-                    .items(
-                        cellIdentifier: ListCollectionViewCell.identifier,
-                        cellType: ListCollectionViewCell.self)
-            ) { index, recommend, cell in
-                cell.img.image = UIImage(named: "MainBage")
-                cell.layer.cornerRadius = 10
-            }
+        bind(ListViewModel())
+        print("viewdidlaod 발동")
         
     }
 }
@@ -73,7 +67,30 @@ extension ListViewController {
     
     private func bind(_ viewModel: ListViewModel) {
         
-    }
+        print("bind 발동")
+        
+        let input = ListViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()))
+                                                   
+        let output = viewModel.trans(input)
+        
+        output.allBadgeView.subscribe(onNext: { data in
+            self.getAllBadgeList = data
+            print("output 작동")
+            let data = Observable<[String]>.of(self.array)
+            
+            data.asObservable()
+                .bind(to: self.collectionView.rx
+                    .items(cellIdentifier: ListCollectionViewCell.identifier, cellType: ListCollectionViewCell.self)
+                ) { index, recommend, cell in
+                    
+                    print("cell관련 작동")
+                    cell.cellSetting()
+                    cell.configure(with: self.getAllBadgeList!, index)
+                    cell.backgroundColor = .clear
+                    cell.layer.cornerRadius = 10
+                }
+        })
+}
     
     private func attribute() {
         view.addSubview(collectionView)

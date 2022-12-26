@@ -11,7 +11,6 @@
 		0E14E8702954102900A8643D /* GetBadgeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14E86F2954102900A8643D /* GetBadgeListModel.swift */; };
 		0E14E872295433D300A8643D /* GetAdvertiseNowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14E871295433D300A8643D /* GetAdvertiseNowModel.swift */; };
 		0E14E875295437F100A8643D /* AdvertisementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14E874295437F100A8643D /* AdvertisementCollectionViewCell.swift */; };
-		0E17AC0E29519D7500EC8A21 /* GetCoinListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E17AC0D29519D7500EC8A21 /* GetCoinListModel.swift */; };
 		0E23C2062923BFAC00C467F8 /* BagesIntroduceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C2052923BFAC00C467F8 /* BagesIntroduceView.swift */; };
 		0E23C209292477E200C467F8 /* BagesDetailBuyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C208292477E200C467F8 /* BagesDetailBuyVC.swift */; };
 		0E23C20B2924BCD800C467F8 /* UserInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23C20A2924BCD800C467F8 /* UserInformationView.swift */; };
@@ -66,7 +65,7 @@
 		0E47A487293A12D200215CE7 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A486293A12D200215CE7 /* TokenModel.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
-		0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B26290FDF2E005E379E /* SuggestionModel.swift */; };
+		0E555B27290FDF2E005E379E /* GetCoinUserListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B26290FDF2E005E379E /* GetCoinUserListModel.swift */; };
 		0E555B29290FE0EC005E379E /* SuggesionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B28290FE0EC005E379E /* SuggesionDetailViewController.swift */; };
 		0E555B2E29108CE6005E379E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E555B2D29108CE6005E379E /* Colors.xcassets */; };
 		0E5F13C629548B9900FD2C09 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5F13C529548B9900FD2C09 /* StringUtils.swift */; };
@@ -99,6 +98,7 @@
 		0EAFF94429221BD000162DD0 /* LastTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF94329221BD000162DD0 /* LastTextView.swift */; };
 		0EAFF94B2922444500162DD0 /* BagesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFF94A2922444500162DD0 /* BagesDetailVC.swift */; };
 		0EB22D4229581CDA006DBEC4 /* GetBadgeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB22D4129581CDA006DBEC4 /* GetBadgeDetailModel.swift */; };
+		0EB22D4429583FBF006DBEC4 /* GetAllBadgesListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB22D4329583FBF006DBEC4 /* GetAllBadgesListModel.swift */; };
 		0EC67F6F293C9792002FBF8F /* CoinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC67F6E293C9792002FBF8F /* CoinDetailViewController.swift */; };
 		0ECA53F82954472200BE76CD /* GetBadgeShopListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECA53F72954472200BE76CD /* GetBadgeShopListModel.swift */; };
 		0EE4352428F4476F00CA7E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4352328F4476F00CA7E58 /* AppDelegate.swift */; };
@@ -149,7 +149,6 @@
 		0E14E86F2954102900A8643D /* GetBadgeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBadgeListModel.swift; sourceTree = "<group>"; };
 		0E14E871295433D300A8643D /* GetAdvertiseNowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAdvertiseNowModel.swift; sourceTree = "<group>"; };
 		0E14E874295437F100A8643D /* AdvertisementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCollectionViewCell.swift; sourceTree = "<group>"; };
-		0E17AC0D29519D7500EC8A21 /* GetCoinListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoinListModel.swift; sourceTree = "<group>"; };
 		0E23C2052923BFAC00C467F8 /* BagesIntroduceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesIntroduceView.swift; sourceTree = "<group>"; };
 		0E23C208292477E200C467F8 /* BagesDetailBuyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailBuyVC.swift; sourceTree = "<group>"; };
 		0E23C20A2924BCD800C467F8 /* UserInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationView.swift; sourceTree = "<group>"; };
@@ -204,7 +203,7 @@
 		0E47A486293A12D200215CE7 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
-		0E555B26290FDF2E005E379E /* SuggestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionModel.swift; sourceTree = "<group>"; };
+		0E555B26290FDF2E005E379E /* GetCoinUserListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoinUserListModel.swift; sourceTree = "<group>"; };
 		0E555B28290FE0EC005E379E /* SuggesionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggesionDetailViewController.swift; sourceTree = "<group>"; };
 		0E555B2D29108CE6005E379E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		0E5F13C529548B9900FD2C09 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
@@ -236,6 +235,7 @@
 		0EAFF94329221BD000162DD0 /* LastTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTextView.swift; sourceTree = "<group>"; };
 		0EAFF94A2922444500162DD0 /* BagesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailVC.swift; sourceTree = "<group>"; };
 		0EB22D4129581CDA006DBEC4 /* GetBadgeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBadgeDetailModel.swift; sourceTree = "<group>"; };
+		0EB22D4329583FBF006DBEC4 /* GetAllBadgesListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllBadgesListModel.swift; sourceTree = "<group>"; };
 		0EC67F6E293C9792002FBF8F /* CoinDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailViewController.swift; sourceTree = "<group>"; };
 		0ECA53F72954472200BE76CD /* GetBadgeShopListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBadgeShopListModel.swift; sourceTree = "<group>"; };
 		0EE4352028F4476F00CA7E58 /* RGB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -319,11 +319,11 @@
 			children = (
 				0E0F94E228FD5DFF0004951F /* RequestModel.swift */,
 				0E47A486293A12D200215CE7 /* TokenModel.swift */,
-				0E17AC0D29519D7500EC8A21 /* GetCoinListModel.swift */,
 				0E14E86F2954102900A8643D /* GetBadgeListModel.swift */,
 				0EB22D4129581CDA006DBEC4 /* GetBadgeDetailModel.swift */,
 				0ECA53F72954472200BE76CD /* GetBadgeShopListModel.swift */,
 				0E14E871295433D300A8643D /* GetAdvertiseNowModel.swift */,
+				0EB22D4329583FBF006DBEC4 /* GetAllBadgesListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -889,7 +889,7 @@
 		0E555B2A290FE139005E379E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0E555B26290FDF2E005E379E /* SuggestionModel.swift */,
+				0E555B26290FDF2E005E379E /* GetCoinUserListModel.swift */,
 				0EF59AFC2909997A003FEA03 /* SuggestionFeature.swift */,
 			);
 			path = Model;
@@ -1569,7 +1569,6 @@
 				0E23C2062923BFAC00C467F8 /* BagesIntroduceView.swift in Sources */,
 				0EF69C4A2928A2D100C36DAC /* DropCoinView.swift in Sources */,
 				0EF69C4429288F8500C36DAC /* PopularCoinView.swift in Sources */,
-				0E17AC0E29519D7500EC8A21 /* GetCoinListModel.swift in Sources */,
 				0E31E37B29444EF1002A6A82 /* TargetType.swift in Sources */,
 				0EF59ADF29097AE6003FEA03 /* ShopVC.swift in Sources */,
 				0E2CBE3429308090001667BE /* DrapCoinViewModel.swift in Sources */,
@@ -1640,12 +1639,13 @@
 				0E2CBE14293076C7001667BE /* UserGraphListDetileViewModel.swift in Sources */,
 				0E2CBE4D2930B0CB001667BE /* NewBadgesViewModel.swift in Sources */,
 				0E99736D2908A52400B95BC6 /* CertificationVC.swift in Sources */,
+				0EB22D4429583FBF006DBEC4 /* GetAllBadgesListModel.swift in Sources */,
 				0E23C222292618C000C467F8 /* ThemeVC.swift in Sources */,
 				0E31E37D29444F06002A6A82 /* MyAPI+Request.swift in Sources */,
 				0EF69C60292AF25E00C36DAC /* ListCollectionViewCell.swift in Sources */,
 				0EEE8D5929126E9500227199 /* GrassSectionModel.swift in Sources */,
 				0EF69C2B29275EF300C36DAC /* CategoryViewController.swift in Sources */,
-				0E555B27290FDF2E005E379E /* SuggestionModel.swift in Sources */,
+				0E555B27290FDF2E005E379E /* GetCoinUserListModel.swift in Sources */,
 				0E61D6912907E6250098A3F5 /* SignupVC.swift in Sources */,
 				0E31E3872945845D002A6A82 /* LoginViewModel.swift in Sources */,
 				0EF59ADB29097ACF003FEA03 /* CoinVC.swift in Sources */,

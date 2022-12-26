@@ -43,6 +43,23 @@ final class Service {
             }
     }
     
+    func getAllBadgesListDataLoad() -> Single<(GetAllBadgesListModel?, networkingResult)> {
+        
+        print("getAllBadgesListDataLoad 로드 완료")
+        
+        return provider.rx.request(.getAllBadgesList)
+            .filterSuccessfulStatusCodes()
+            .map(GetAllBadgesListModel.self)
+            .map{
+                print($0)
+                return ($0, .ok)
+            }
+            .catch { error in
+                print(error)
+                return .just((nil, .fault))
+            }
+    }
+    
     func myPageLoad() -> Single<(UserMeInfoModel?, networkingResult)> {
         print("ㅗㅗㅗㅗㅗ")
         return provider.rx.request(.getMeInfo)
@@ -94,11 +111,11 @@ final class Service {
             return (networkingResult(rawValue: status) ?? .fault)
     }
     
-    func coinLists() -> Single<(GetCoinListModel?, networkingResult)> {
+    func coinUserList() -> Single<(GetCoinUserListModel?, networkingResult)> {
         print("코인 리스트 가져오는 중!")
-        return provider.rx.request(.getMeInfo)
+        return provider.rx.request(.getCoinUserList)
             .filterSuccessfulStatusCodes()
-            .map(GetCoinListModel.self)
+            .map(GetCoinUserListModel.self)
             .map{
                 print($0)
                 return ($0, .ok)

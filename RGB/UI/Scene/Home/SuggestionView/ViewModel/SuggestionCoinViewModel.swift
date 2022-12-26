@@ -11,17 +11,17 @@ class SuggestionCoinViewModel: BaseVM {
     }
     
     struct Output {
-        let coinList: PublishRelay<GetCoinListModel>
+        let coinList: PublishRelay<GetCoinUserListModel>
         let result: PublishRelay<Bool>
     }
     
     func trans(_ input: Input) -> Output {
         let api = Service()
-        let coinList = PublishRelay<GetCoinListModel>()
+        let coinList = PublishRelay<GetCoinUserListModel>()
         let result = PublishRelay<Bool>()
         
         input.viewReceive.asObservable()
-            .map { api.coinLists() }
+            .map { api.coinUserList() }
             .subscribe { datas in
                 datas.subscribe { data, res in
                     switch res {

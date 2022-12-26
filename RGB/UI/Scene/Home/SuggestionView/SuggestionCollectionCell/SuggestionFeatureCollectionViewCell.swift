@@ -1,7 +1,7 @@
 import SnapKit
 import UIKit
 
-final class SuggestionFeatureCollectionViewCell: UICollectionViewCell {
+ class SuggestionFeatureCollectionViewCell: UICollectionViewCell {
     static var height: CGFloat { 75.0 }
     
     static let identifier = "SuggestionFeatureCollectionViewCell"
@@ -35,15 +35,20 @@ final class SuggestionFeatureCollectionViewCell: UICollectionViewCell {
         $0.font = .systemFont(ofSize: 12.0, weight: .semibold)
         $0.textColor = .red
     }
-
-    func setup() {
-        attribute()
-        layout()
+    
+    func configure(with userImage: GetCoinUserListModel,_ index: Int) {
+        let imageURL = URL(string: "\(userImage.content[index].imageURL)")
+        imageView.kf.setImage(with: imageURL, placeholder: #imageLiteral(resourceName: "RGBLogo"))
     }
-}
-
-// MARK: Private
-private extension SuggestionFeatureCollectionViewCell {
+    
+    func forceLoadData(_ nicknameData: String, _ nameData: String, _ coinData: Int, _ incrementDara: String) {
+        titleLabel.text = nicknameData
+        descriptionLabel.text = nameData
+        descriptionLabel.lineBreakMode = .byCharWrapping
+        coinPriceLabel.text = "\(coinData.toDigitString())원"
+        inDecreaseLabel.text = incrementDara
+    }
+    
     
     func attribute() {
         titleLabel.text = "jjunhaa0211"

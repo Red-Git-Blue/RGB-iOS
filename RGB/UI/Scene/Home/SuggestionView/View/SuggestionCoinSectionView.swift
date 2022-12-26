@@ -8,11 +8,9 @@ import CoreLocation
 final class SuggestionCoinSectionView: UIView {    
     private final var controller: UIViewController
     private let viewReceive = PublishRelay<Void>()
-    let getCoinList = PublishRelay<GetCoinListModel>()
+    var getCoinList: GetCoinUserListModel?
     
     let disposeBag = DisposeBag()
-    
-    var suggesionModelList = [SuggesionModel]()
     
     var array = ["1","2","3","4","5","6","7","8","9","10","11","12"]
 
@@ -74,25 +72,25 @@ extension SuggestionCoinSectionView: UICollectionViewDelegateFlowLayout {
 }
 
 extension SuggestionCoinSectionView: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "RankingFeatureCollectionViewCell",
-            for: indexPath
-        ) as? SuggestionFeatureCollectionViewCell
-//        let rankingFeature = rankingFeatureList[indexPath.item]
-//        cell?.setup(rankingFeature: rankingFeature)
-
-        cell?.setup()
-        cell?.backgroundColor = UIColor(named: "CollectionViewColor")
-        cell?.layer.cornerRadius = 20
-        return cell ?? UICollectionViewCell()
-    }
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 9
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(
+//            withReuseIdentifier: "RankingFeatureCollectionViewCell",
+//            for: indexPath
+//        ) as? SuggestionFeatureCollectionViewCell
+////        let rankingFeature = rankingFeatureList[indexPath.item]
+////        cell?.setup(rankingFeature: rankingFeature)
+//
+//        cell?.setup()
+//        cell?.backgroundColor = UIColor(named: "CollectionViewColor")
+//        cell?.layer.cornerRadius = 20
+//        return cell ?? UICollectionViewCell()
+//    }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(suggesionModelList[indexPath.row])
+//        print(suggesionModelList[indexPath.row])
         let detailViewController = CoinDetailViewController()
         detailViewController.modalPresentationStyle = .fullScreen
         controller.navigationController?.pushViewController(detailViewController, animated: true)
@@ -105,25 +103,46 @@ private extension SuggestionCoinSectionView {
     func bind(_ viewModel: SuggestionCoinViewModel) {
         print("SuggestionCoinSectionView ViewModel 입니다")
 //        let cell = SuggestionFeatureCollectionViewCell()
-//
-//        let input = SuggestionCoinViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()))
-//
-//        let output = viewModel.trans(input)
+
+        let input = SuggestionCoinViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()))
+
+        let output = viewModel.trans(input)
+        
+        output.coinList.subscribe(onNext: { data in
+            self.getCoinList = data
+            
+            let data = Observable<[String]>.of(self.array)
+            
+            data.asObservable()
+                .bind(to: self.collectionView.rx
+                    .items(cellIdentifier: SuggestionFeatureCollectionViewCell.identifier, cellType: SuggestionFeatureCollectionViewCell.self)
+                ) { index, recommend, cell in
+                    cell.layout()
+                    cell.backgroundColor = UIColor(named: "CollectionViewColor")
+                    cell.layer.cornerRadius = 20
+                    let item = self.getCoinList?.content[index]
+//                    cell.forceLoadData(item!.ownerName, item!.name, item?.price, item?.increment)
+                    cell.configure(with: self.getCoinList!, index)
+                }
+            //성화야 니가 이글을 읽고 있다면 난 에러 떄문에 죽은 거야 고쳐줘!!(이건 그 엄마 몰라 에러야)
+        })
     }
     
     func attribute() {
-        suggesionModelList = [
-            SuggesionModel(name: "이름", imageURL: "대충 주소", pk: 3, price: 36789, changePercent: 178),
-            SuggesionModel(name: "이름2", imageURL: "대충 주소2", pk: 4, price: 346789, changePercent: 678),
-            SuggesionModel(name: "이름3", imageURL: "대충 주소3", pk: 64126, price: 336789, changePercent: 178),
-            SuggesionModel(name: "이름4", imageURL: "대충 주소4", pk: 3745, price: 34326789, changePercent: 1478),
-            SuggesionModel(name: "이름5", imageURL: "대충 주소5", pk: 2385, price: 34327, changePercent: 7248),
-            SuggesionModel(name: "이름6", imageURL: "대충 주소6", pk: 234783, price: 3347289, changePercent: 18),
-            SuggesionModel(name: "이름7", imageURL: "대충 주소7", pk: 234783, price: 3347289, changePercent: 18),
-            SuggesionModel(name: "이름8", imageURL: "대충 주소8", pk: 234783, price: 3347289, changePercent: 18),
-            SuggesionModel(name: "이름9", imageURL: "대충 주소6", pk: 2234783, price: 334743289, changePercent: 1318),
-            SuggesionModel(name: "이름10", imageURL: "대충 주소6", pk: 2374783, price: 3347326289, changePercent: 118),
-        ]
+//        suggesionModelList = [
+//            SuggesionModel(name: "이름", imageURL: "대충 주소", pk: 3, price: 36789, changePercent: 178),
+//            SuggesionModel(name: "이름2", imageURL: "대충 주소2", pk: 4, price: 346789, changePercent: 678),
+//            SuggesionModel(name: "이름3", imageURL: "대충 주소3", pk: 64126, price: 336789, changePercent: 178),
+//            SuggesionModel(name: "이름4", imageURL: "대충 주소4", pk: 3745, price: 34326789, changePercent: 1478),
+//            SuggesionModel(name: "이름5", imageURL: "대충 주소5", pk: 2385, price: 34327, changePercent: 7248),
+//            SuggesionModel(name: "이름6", imageURL: "대충 주소6", pk: 234783, price: 3347289, changePercent: 18),
+//            SuggesionModel(name: "이름7", imageURL: "대충 주소7", pk: 234783, price: 3347289, changePercent: 18),
+//            SuggesionModel(name: "이름8", imageURL: "대충 주소8", pk: 234783, price: 3347289, changePercent: 18),
+//            SuggesionModel(name: "이름9", imageURL: "대충 주소6", pk: 2234783, price: 334743289, changePercent: 1318),
+//            SuggesionModel(name: "이름10", imageURL: "대충 주소6", pk: 2374783, price: 3347326289, changePercent: 118),
+//        ]
+        
+        
     }
     
     func layout() {

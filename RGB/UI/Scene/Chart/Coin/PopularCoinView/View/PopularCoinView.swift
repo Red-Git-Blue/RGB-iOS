@@ -5,7 +5,7 @@ import Then
 class PopularCoinView: UIView {
     private final var controller: UIViewController
     
-    var suggesionModelList = [SuggesionModel]()
+    var suggesionModelList = [GetCoinUserListModel]()
     
     init(frame: CGRect, viewController: UIViewController) {
         controller = viewController
