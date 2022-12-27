@@ -82,7 +82,8 @@ extension BadgesView: UICollectionViewDelegateFlowLayout {
 extension BadgesView {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row)
-        let detailViewController = BagesDetailViewController(id: (getBadgeShopList?.content[indexPath.row].id)!)
+        let detailViewController = BagesDetailViewController(nibName: nil, bundle: nil, id: getBadgeShopList!.content[indexPath.row].id)
+//        detailViewController.setId(getBadgeShopList!.content[indexPath.row].id)
         detailViewController.modalPresentationStyle = .fullScreen
         controller.navigationController?.pushViewController(detailViewController, animated: true)
     }

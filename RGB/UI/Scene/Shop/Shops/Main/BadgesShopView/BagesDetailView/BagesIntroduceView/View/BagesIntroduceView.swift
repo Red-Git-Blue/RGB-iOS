@@ -4,6 +4,7 @@ import SnapKit
 import RxSwift
 import RxCocoa
 import RxRelay
+import Kingfisher
 
 class BagesIntroduceView: UIView {
     private final var controller: UIViewController
@@ -31,6 +32,7 @@ class BagesIntroduceView: UIView {
         $0.textColor = .white
         $0.numberOfLines = 0
         $0.text = "고급스러운 색감과 무의 예술적인 감각을 살린 배지이지만,\n준하가 백만 년 동안 정성스럽게 키웠다."
+        $0.lineBreakMode = .byCharWrapping
     }
     
     private lazy var coinPriceLabel = UILabel().then {
@@ -100,7 +102,7 @@ extension BagesIntroduceView {
     }
     
     func bind(_ viewModel: BadgesDetailViewModel) {
-        let input = BadgesDetailViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()), id: id)
+        let input = BadgesDetailViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()), id: self.id)
         
         let output = viewModel.trans(input)
         print(input)
@@ -110,6 +112,10 @@ extension BagesIntroduceView {
             self.badgesName.text = "\(data.name)"
             self.badgesDescriptions.text = "\(data.introduction)"
             self.coinPriceLabel.text = "\(data.price)"
+            self.badgesDescriptions.lineBreakMode = .byCharWrapping
+            
+            self.mainBadgesImage.kf.setImage(with: URL(string: data.mainImage.fileURL), placeholder: #imageLiteral(resourceName: "RGBLogo"))
+            
             print("구독은 됐음")
         }).disposed(by: disposeBag)
     }

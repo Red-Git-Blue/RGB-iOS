@@ -22,24 +22,35 @@ class SuggestionCoinViewModel: BaseVM {
 
         print("suggestionCoinViewModel은 trans를 거침")
         
-        input.viewReceive.asObservable()
-            .map { api.coinUserList() }
-            .subscribe { data in
-                data.map { datas in
-                    datas.subscribe { data, res in
-                        switch res {
-                        case .ok:
-                            coinList.accept(data!)
-                            result.accept(true)
-                            print("GetCoinUserListModel 성공")
-                            
-                        default:
-                            result.accept(false)
-                            print("GetCoinUserListModel 실패")
-                        }
-                    }.disposed(by: self.disposeBag)
-                }
-            }.disposed(by: disposeBag)
+        api.coinUserList().subscribe(onSuccess: { data, res in
+            switch res {
+            case .ok:
+                coinList.accept(data!)
+                result.accept(true)
+                
+            default:
+                result.accept(false)
+            }
+        })
+        
+//        input.viewReceive.asObservable()
+//            .map { api.coinUserList() }
+//            .subscribe { data in
+//                data.map { datas in
+//                    datas.subscribe { data, res in
+//                        switch res {
+//                        case .ok:
+//                            coinList.accept(data!)
+//                            result.accept(true)
+//                            print("GetCoinUserListModel 성공")
+//
+//                        default:
+//                            result.accept(false)
+//                            print("GetCoinUserListModel 실패")
+//                        }
+//                    }.disposed(by: self.disposeBag)
+//                }
+//            }.disposed(by: disposeBag)
         
         return Output(coinList: coinList, result: result)
     }

@@ -16,7 +16,8 @@ struct GetCoinUserListModel: Codable {
     struct Content: Codable {
         let id: Int
         let name, ownerName: String
-        let startPrice, price, increment: Int
+        let startPrice, price: Int
+        let increment: Double
         let imageURL: ImageURL
 
         enum CodingKeys: String, CodingKey {

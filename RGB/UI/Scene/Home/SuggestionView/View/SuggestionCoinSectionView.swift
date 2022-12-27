@@ -12,7 +12,7 @@ final class SuggestionCoinSectionView: UIView {
     
     let disposeBag = DisposeBag()
     
-    var array = ["1","2","3","4","5","6","7","8","9","10","11","12"]
+    var array: [String] = []
 
     private lazy var titleLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 24.0, weight: .black)
@@ -37,7 +37,7 @@ final class SuggestionCoinSectionView: UIView {
 
         collectionView.register(
             SuggestionFeatureCollectionViewCell.self,
-            forCellWithReuseIdentifier: "RankingFeatureCollectionViewCell"
+            forCellWithReuseIdentifier: SuggestionFeatureCollectionViewCell.identifier
         )
 
         return collectionView
@@ -104,7 +104,7 @@ private extension SuggestionCoinSectionView {
                     cell.backgroundColor = UIColor(named: "CollectionViewColor")
                     cell.layer.cornerRadius = 20
                     let item = self.getCoinList?.content[index]
-//                    cell.forceLoadData(item!.ownerName, item!.name, item?.price, item?.increment)
+                    cell.forceLoadData(item!.ownerName, item!.name, item!.price, item!.increment)
                     cell.configure(with: self.getCoinList!, index)
                 }
         })

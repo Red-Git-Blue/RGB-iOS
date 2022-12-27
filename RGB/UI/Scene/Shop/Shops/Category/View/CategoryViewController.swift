@@ -12,7 +12,7 @@ class CategoryViewController: BaseAbstractShop {
     private let viewReceive = PublishRelay<Void>()
     var getCategoryList: GetCategoryListModel?
     
-    var array = ["first","second","third","fourth","fifth","6","7","8","9","10","11","12"]
+    var array = ["first","second"]
     
     var collectionView : UICollectionView = {
         var layout = UICollectionViewFlowLayout()

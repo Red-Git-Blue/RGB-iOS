@@ -40,12 +40,12 @@ import Kingfisher
         imageView.kf.setImage(with: imageURL, placeholder: #imageLiteral(resourceName: "RGBLogo"))
     }
     
-    func forceLoadData(_ nicknameData: String, _ nameData: String, _ coinData: Int, _ incrementDara: String) {
+    func forceLoadData(_ nicknameData: String, _ nameData: String, _ coinData: Int, _ incrementDara: Double) {
         titleLabel.text = nicknameData
         descriptionLabel.text = nameData
         descriptionLabel.lineBreakMode = .byCharWrapping
         coinPriceLabel.text = "\(coinData.toDigitString())원"
-        inDecreaseLabel.text = incrementDara
+        inDecreaseLabel.text = "\(incrementDara)"
     }
     
     

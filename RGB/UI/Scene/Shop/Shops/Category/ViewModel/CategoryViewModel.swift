@@ -21,27 +21,38 @@ class CategoryViewModel {
         
         print("category trans를 거침")
         
-        input.viewReceive.asObservable()
-            .map { api.getCategoryListLoad() }
-            .subscribe { data in
-                data.map { datas in
-                    datas.subscribe { data, res in
-                        
-                        print("구독도됨")
-                        
-                        switch res {
-                        case .ok:
-                            categoryList.accept(data!)
-                            result.accept(true)
-                            print("shopPageLoadBadge 성공")
-                            
-                        default:
-                            result.accept(false)
-                            print("shopPageLoadBadge가 터짐")
-                        }
-                    }.disposed(by: self.disposeBag)
-                }
-            }.disposed(by: disposeBag)
+        api.getCategoryListLoad().subscribe(onSuccess: { data, res in
+            switch res {
+            case .ok:
+                categoryList.accept(data!)
+                result.accept(true)
+                
+            default:
+                result.accept(false)
+            }
+        })
+        
+//        input.viewReceive.asObservable()
+//            .map { api.getCategoryListLoad() }
+//            .subscribe { data in
+//                data.map { datas in
+//                    datas.subscribe { data, res in
+//
+//                        print("구독도됨")
+//
+//                        switch res {
+//                        case .ok:
+//                            categoryList.accept(data!)
+//                            result.accept(true)
+//                            print("shopPageLoadBadge 성공")
+//
+//                        default:
+//                            result.accept(false)
+//                            print("shopPageLoadBadge가 터짐")
+//                        }
+//                    }.disposed(by: self.disposeBag)
+//                }
+//            }.disposed(by: disposeBag)
         
         return Output(categoryView: categoryList, result: result)
     }

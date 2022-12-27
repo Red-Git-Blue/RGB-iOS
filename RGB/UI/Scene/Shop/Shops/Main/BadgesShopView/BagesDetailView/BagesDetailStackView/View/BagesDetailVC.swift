@@ -7,18 +7,19 @@ import RxCocoa
 class BagesDetailViewController: UIViewController {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
-    private let id: Int
+    private var id: Int = 0
 
     var disposeBag = DisposeBag()
     
-    init(id: Int) {
+    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, id: Int) {
         self.id = id
-        super.init()
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     private lazy var stackView = UIStackView().then { stackView in
         stackView.axis = .vertical
