@@ -44,13 +44,6 @@ class GrassSectionView: UIView {
         attribute()
         layout()
         collectionView.reloadData()
-        
-        var contents = [Contribution]()
-        for _ in 0...34 {
-            contents.append(Contribution(date: "1024-13-42", count: Int.random(in: 0...100), level: Int.random(in: 0...4)))
-        }
-        
-        grassSection.append(GrassSectionModel(userName: "kjhgfd", contributions: contents))
     }
 
     required init?(coder: NSCoder) {
@@ -120,7 +113,7 @@ extension GrassSectionView: UICollectionViewDelegateFlowLayout {
 private extension GrassSectionView {
     
     func attribute() {
-        
+        contentsLoad()
     }
     
     func layout() {
@@ -151,4 +144,15 @@ private extension GrassSectionView {
             $0.bottom.equalToSuperview()
         }
     }
+    
+    func contentsLoad() {
+        var contents = [Contribution]()
+        for _ in 0...34 {
+            contents.append(Contribution(date: "2022-12-14", count: Int.random(in: 0...100), level: Int.random(in: 0...4)))
+            
+        }
+        
+        grassSection.append(GrassSectionModel(userName: "UserName", contributions: contents))
+    }
+    
 }

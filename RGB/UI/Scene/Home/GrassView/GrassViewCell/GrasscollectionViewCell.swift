@@ -25,8 +25,8 @@ final class GrasscollectionViewCell: UICollectionViewCell {
         setupLayout()
         
         mainGrassView.contrilbutionsData = data
-        mainGrassView.cellCornerRadius(4)
-        mainGrassView.spacing = 2
+        mainGrassView.cellCornerRadius(1)
+        mainGrassView.spacing = 1
         
     }
 }
