@@ -13,7 +13,7 @@ class ListViewController: BaseAbstractShop {
     
     var getAllBadgeList: GetAllBadgesListModel?
     
-    var array = ["first","second","third","fourth","fifth","6","7","8","9","10","11","12","first","second","third","fourth","fifth","6","7","8","9","10","11","12","first","second","third","fourth","fifth","6","7","8","9","10","11","12","first","second","third","fourth","fifth","6","7","8","9","10","11","12","first","second","third","fourth","fifth","6","7","8","9","10","11","12","first","second","third","fourth","fifth","6","7","8","9","10","11","12","first","second","third","fourth","fifth","6","7","8","9","10","11","12","first","second","third","fourth","fifth","6","7","8","9","10","11","12","first","second","third","fourth","fifth","6","7","8","9","10","11","12"]
+    var array = ["first","second","third","fourth","fifth"]
     
     var collectionView : UICollectionView = {
         var layout = UICollectionViewFlowLayout()
@@ -67,7 +67,7 @@ extension ListViewController {
     
     private func bind(_ viewModel: ListViewModel) {
         
-        print("bind 발동")
+        print("bind 발동!!!")
         
         let input = ListViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()))
                                                    

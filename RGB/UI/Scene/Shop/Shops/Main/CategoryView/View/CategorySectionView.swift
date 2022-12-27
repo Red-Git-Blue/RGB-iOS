@@ -1,9 +1,16 @@
 import UIKit
 import SnapKit
 import Then
+import RxCocoa
+import RxSwift
+import RxRelay
 
 class CategorySectionView: UIView {
     private final var controller: UIViewController
+    private let viewReceive = PublishRelay<Void>()
+    var getCategoryList: GetCategoryListModel?
+    
+    var array = ["first","second","third","fourth","fifth"]
     
     private lazy var categoryLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 24.0, weight: .black)
@@ -22,7 +29,6 @@ class CategorySectionView: UIView {
             collectionViewLayout: layout
         )
         collectionView.delegate = self
-        collectionView.dataSource = self
 //        collectionView.isPagingEnabled = true
         collectionView.backgroundColor = .systemBackground
         collectionView.showsHorizontalScrollIndicator = false
@@ -64,26 +70,51 @@ extension CategorySectionView: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension CategorySectionView: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-      
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "CategoryCollectionViewCell",
-            for: indexPath
-        ) as? CategorySectionViewCell
-        cell!.backgroundColor = UIColor(named: "CollectionViewColor")
-        cell!.layer.cornerRadius = 20
-        return cell ?? UICollectionViewCell()
-    }
-  }
+//extension CategorySectionView: UICollectionViewDataSource {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 5
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(
+//            withReuseIdentifier: "CategoryCollectionViewCell",
+//            for: indexPath
+//        ) as? CategorySectionViewCell
+//        cell!.backgroundColor = UIColor(named: "CollectionViewColor")
+//        cell!.layer.cornerRadius = 20
+//        return cell ?? UICollectionViewCell()
+//    }
+//  }
 
 extension CategorySectionView {
     
-    func bind(_ viewModel: CategorySectionViewModel) {
+    func bind(_ viewModel: CategoryViewModel) {
         
+        let input = CategoryViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()))
+        
+        let output = viewModel.trans(input)
+        
+        output.categoryView.subscribe(onNext: { dataValue in
+            self.getCategoryList = dataValue
+            
+            let data = Observable<[String]>.of(self.array)
+            
+            data.asObservable()
+                .bind(to: self.collectionView.rx
+                        .items(
+                            cellIdentifier: CategoryCollectionViewCell.identifier,
+                            cellType: CategoryCollectionViewCell.self)
+                ) { index, recommend, cell in
+                    cell.layout()
+                    let item = self.getCategoryList?.content[index]
+                    cell.forceLoadData(item!.categoryName)
+                    cell.configure(with: self.getCategoryList!, index)
+                    cell.imageView.image = UIImage(named: "CateforyCollectionViewCell")
+                    cell.layer.cornerRadius = 10
+                }
+            
+            print("구독이후 터짐")
+        })
     }
     
     func attribute() {

@@ -1,6 +1,7 @@
 import Foundation
 import Then
 import SnapKit
+import Kingfisher
 
 // Cell
 class ListCollectionViewCell : UICollectionViewCell {

@@ -51,13 +51,13 @@ extension API {
         case .getAdvertiseNow:
             return "/advertise/now"
         case .getBadgeDetil(let id):
-            return "/api/rgb/v1/item/badge/\(id)"
+            return "/item/badge/\(id)"
         case .getCoinUserList:
-            return "/api/rgb/v1/coin/list"
+            return "/coin/list"
         case .getAllBadgesList:
-            return "/api/rgb/v1/item/badge"
+            return "/item/badge"
         case .getCategoryList:
-            return "/api/rgb/v1/item/category"
+            return "/item/category"
         }
     }
     func getMethod() -> Moya.Method {

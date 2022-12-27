@@ -22,26 +22,43 @@ class ListViewModel: BaseVM {
         
         print("trans 작동")
         
-        input.viewReceive.asObservable()
-            .map { api.getAllBadgesListDataLoad()}
-            .subscribe { data in
-                data.map { datas in
-                    datas.subscribe { data, res in
-                        
-                        print("allbadgesList 작동")
-                        switch res {
-                        case .ok:
-                            allBadgesList.accept(data!)
-                            result.accept(true)
-                            print("allBadgesList 성공")
-                            
-                        default:
-                            result.accept(false)
-                            print("allBadgesList가 터짐")
-                        }
-                    }.disposed(by: self.disposeBag)
-                }
-            }.disposed(by: disposeBag)
+        api.getAllBadgesListDataLoad().subscribe(onSuccess: { data, res in
+            print("allbadgesList 작동")
+            switch res {
+            case .ok:
+                allBadgesList.accept(data!)
+                result.accept(true)
+                print("allBadgesList 성공")
+                
+            default:
+                result.accept(false)
+                print("allBadgesList가 터짐")
+            }
+        })
+        
+//        input.viewReceive.asObservable()
+//            .map {
+//                print("444444444444444444444444444444444444444")
+//                return api.getAllBadgesListDataLoad()
+//            }
+//            .subscribe { data in
+//                data.map { datas in
+//                    datas.subscribe { data, res in
+//                        
+//                        print("allbadgesList 작동")
+//                        switch res {
+//                        case .ok:
+//                            allBadgesList.accept(data!)
+//                            result.accept(true)
+//                            print("allBadgesList 성공")
+//                            
+//                        default:
+//                            result.accept(false)
+//                            print("allBadgesList가 터짐")
+//                        }
+//                    }.disposed(by: self.disposeBag)
+//                }
+//            }.disposed(by: disposeBag)
         
         return Output(allBadgeView: allBadgesList, result: result)
     }

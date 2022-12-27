@@ -63,6 +63,7 @@
 		0E31E38929458513002A6A82 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31E38829458513002A6A82 /* BaseVM.swift */; };
 		0E436E682949D7F4009E6791 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E436E672949D7F4009E6791 /* SignupViewModel.swift */; };
 		0E47A487293A12D200215CE7 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A486293A12D200215CE7 /* TokenModel.swift */; };
+		0E4D4324295B04F100EF75DC /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4D4323295B04F100EF75DC /* SearchTableViewCell.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
 		0E555B27290FDF2E005E379E /* GetCoinUserListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B26290FDF2E005E379E /* GetCoinUserListModel.swift */; };
@@ -202,6 +203,7 @@
 		0E31E38829458513002A6A82 /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
 		0E436E672949D7F4009E6791 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		0E47A486293A12D200215CE7 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
+		0E4D4323295B04F100EF75DC /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
 		0E555B26290FDF2E005E379E /* GetCoinUserListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoinUserListModel.swift; sourceTree = "<group>"; };
@@ -1398,6 +1400,7 @@
 			isa = PBXGroup;
 			children = (
 				0EF69C5A29291F3000C36DAC /* UserSearchView.swift */,
+				0E4D4323295B04F100EF75DC /* SearchTableViewCell.swift */,
 			);
 			path = UserSearch;
 			sourceTree = "<group>";
@@ -1577,6 +1580,7 @@
 				0E2CBE3429308090001667BE /* DrapCoinViewModel.swift in Sources */,
 				0EAFF92F29211D0D00162DD0 /* AdvertisementSectionView.swift in Sources */,
 				0E23C21A2925BDB600C467F8 /* ChangeThemeCell.swift in Sources */,
+				0E4D4324295B04F100EF75DC /* SearchTableViewCell.swift in Sources */,
 				0E2CBE1729307894001667BE /* SuggestionCoinViewModel.swift in Sources */,
 				0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */,
 				0EF59AF72909993A003FEA03 /* SuggestionCoinSectionView.swift in Sources */,

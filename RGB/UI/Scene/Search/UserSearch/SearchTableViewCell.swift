@@ -1,16 +1,20 @@
+//
+//  SearchCollectionView.swift
+//  RGB
+//
+//  Created by 박준하 on 2022/12/27.
+//
+
 import UIKit
 import SnapKit
 import Then
 
-class GiftCollectionViewCell: UICollectionViewCell {
+class SearchTableViewCell: UITableViewCell {
+    static let identifier = "SearchTableViewCell"
     
-    var identifier = "GiftCollectionViewCell"
-
     var userimageView = UIImageView().then {
         $0.backgroundColor = .red
         $0.layer.borderColor = UIColor.tertiaryLabel.cgColor
-        //        옆에 imageview 테두리 만들기
-        //        imageView.layer.borderWidth = 0.5
         $0.layer.cornerRadius = 15
     }
 
@@ -61,7 +65,6 @@ class GiftCollectionViewCell: UICollectionViewCell {
             $0.leading.equalTo(userimageView.snp.trailing).offset(10.0)
             $0.top.equalTo(userimageView.snp.top)
         }
-
         descriptionLabel.snp.makeConstraints {
             $0.leading.equalTo(titleLabel.snp.leading)
             $0.trailing.equalTo(titleLabel.snp.trailing)
@@ -75,7 +78,7 @@ class GiftCollectionViewCell: UICollectionViewCell {
             $0.height.equalTo(75.0)
             $0.width.equalTo(70.0)
         }
-        
+            
         bagesImageView.snp.makeConstraints {
             $0.centerX.equalTo(bagesImageBackgroundView.snp.centerX)
             $0.centerY.equalTo(bagesImageBackgroundView.snp.centerY)

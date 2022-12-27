@@ -19,12 +19,12 @@ class StatsViewController: BaseAbstractChart {
         
         view.backgroundColor = .black
         
-        data.bind(to: tableView.rx.items(cellIdentifier: StatsUserTableViewCell.identifier, cellType: StatsUserTableViewCell.self)) {
-            index, item, cell in
-            cell.img.image = UIImage(named: "MainBage")
-            cell.userName.text = "view \(index)"
-        }
-        .disposed(by: disposeBag)
+//        data.bind(to: tableView.rx.items(cellIdentifier: StatsUserTableViewCell.identifier, cellType: StatsUserTableViewCell.self)) {
+//            index, item, cell in
+//            cell.img.image = UIImage(named: "MainBage")
+//            cell.userName.text = "view \(index)"
+//        }
+//        .disposed(by: disposeBag)
         
         layout()
         attribute()
@@ -46,10 +46,10 @@ class StatsViewController: BaseAbstractChart {
         $0.backgroundColor = .red
     }
     
-    private lazy var tableView = UITableView().then {
-        $0.register(StatsUserTableViewCell.self, forCellReuseIdentifier: StatsUserTableViewCell.identifier)
-        $0.delegate = self
-    }
+//    private lazy var tableView = UITableView().then {
+//        $0.register(StatsUserTableViewCell.self, forCellReuseIdentifier: StatsUserTableViewCell.identifier)
+//        $0.delegate = self
+//    }
     
     private lazy var allAssetsLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 14.0, weight: .bold)
@@ -58,7 +58,7 @@ class StatsViewController: BaseAbstractChart {
     }
     
     private lazy var userAllAsstsLabel = UILabel().then {
-        $0.font = .systemFont(ofSize: 32.0, weight: .bold)
+        $0.font = .systemFont(ofSize: 26.0, weight: .bold)
         $0.textColor = .white
         $0.text = "482,930원"
     }
@@ -70,7 +70,7 @@ class StatsViewController: BaseAbstractChart {
     }
     
     private lazy var userAllDamageLabel = UILabel().then {
-        $0.font = .systemFont(ofSize: 24.0, weight: .bold)
+        $0.font = .systemFont(ofSize: 20.0, weight: .bold)
         $0.textColor = .white
         $0.text = "482,930원"
     }
@@ -97,16 +97,16 @@ extension StatsViewController {
         let dataSet = PieChartDataSet(entries: entries, label: "통계")
         dataSet.sliceSpace = 2
         dataSet.entryLabelColor = .black
-
+//
         dataSet.colors = ChartColorTemplates.vordiplom()
           + ChartColorTemplates.joyful()
           + ChartColorTemplates.colorful()
           + ChartColorTemplates.liberty()
           + ChartColorTemplates.pastel()
           + ChartColorTemplates.material()
-        
+//
         self.pieChartView.data = PieChartData(dataSet: dataSet)
-        self.pieChartView.spin(duration: 0.5, fromAngle: pieChartView.rotationAngle, toAngle: pieChartView.rotationAngle + 80)
+//        self.pieChartView.spin(duration: 0.5, fromAngle: pieChartView.rotationAngle, toAngle: pieChartView.rotationAngle + 80)
     }
     
     func removeFormatString(string: String) -> Double {
@@ -128,7 +128,7 @@ extension StatsViewController {
     
     func layout() {
         [
-            tableView,
+//            tableView,
             pieChartView,
             allAssetsLabel,
             userAllAsstsLabel,
@@ -137,25 +137,25 @@ extension StatsViewController {
             percentDamgeLabel
         ].forEach { view.addSubview($0) }
         
-        tableView.snp.makeConstraints {
-//            $0.edges.equalTo(view.safeAreaLayoutGuide).inset(UIEdgeInsets(top: 0, left: 0, bottom: 200, right: 0))
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            $0.leading.equalToSuperview().inset(30.0)
-            $0.height.equalTo(220)
-            $0.width.equalTo(150)
-        }
+//        tableView.snp.makeConstraints {
+////            $0.edges.equalTo(view.safeAreaLayoutGuide).inset(UIEdgeInsets(top: 0, left: 0, bottom: 200, right: 0))
+//            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+//            $0.leading.equalToSuperview().inset(30.0)
+//            $0.height.equalTo(220)
+//            $0.width.equalTo(150)
+//        }
         
         pieChartView.snp.makeConstraints {
 //            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            $0.top.equalTo(tableView.snp.top)
-            $0.trailing.equalToSuperview().inset(13.0)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(25.0)
+            $0.trailing.equalToSuperview().inset(23.0)
 //            $0.trailing.equalTo(tableView.snp.leading).inset(17.0)
             $0.height.width.equalTo(220.0)
         }
         
         allAssetsLabel.snp.makeConstraints {
-            $0.top.equalTo(pieChartView.snp.bottom).offset(42)
-            $0.leading.equalToSuperview().inset(30.0)
+            $0.top.equalTo(pieChartView.snp.top)
+            $0.leading.equalToSuperview().inset(23.0)
         }
         
         userAllAsstsLabel.snp.makeConstraints {
