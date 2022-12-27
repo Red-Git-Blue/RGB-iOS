@@ -12,9 +12,7 @@ import Charts
 
 class UserGraphListSectionCell: UICollectionViewCell {
     
-    private lazy var graphListbackgroundView = UIView().then {
-        $0.backgroundColor = UIColor(named: "CollectionViewColor")
-    }
+    private var graphListbackgroundView = LineChartView()
     
     private lazy var userSetView = UIView().then {
         $0.backgroundColor = UIColor(named: "CollectionViewColor")
@@ -65,7 +63,23 @@ class UserGraphListSectionCell: UICollectionViewCell {
 private extension UserGraphListSectionCell {
     
     func attribute() {
-        
+        var dataArray: [ChartDataEntry] = []
+        for i in 0...50 {
+            dataArray.append(ChartDataEntry(x: Double(i), y: Double.random(in: 0...120)))
+        }
+        let dataSet = LineChartDataSet(entries: dataArray)
+        dataSet.setColor(NSUIColor.red)
+        dataSet.drawCirclesEnabled = false
+        dataSet.drawValuesEnabled = false
+        let chartData = LineChartData(dataSet: dataSet)
+        graphListbackgroundView.data = chartData
+        graphListbackgroundView.xAxis.enabled = false
+        graphListbackgroundView.leftAxis.enabled = false
+        graphListbackgroundView.rightAxis.enabled = false
+        graphListbackgroundView.dragEnabled = false
+        graphListbackgroundView.scaleXEnabled = false
+        graphListbackgroundView.scaleYEnabled = false
+        graphListbackgroundView.legend.enabled = false
     }
     
     func layout() {
@@ -80,7 +94,9 @@ private extension UserGraphListSectionCell {
         ].forEach { addSubview($0) }
 
         graphListbackgroundView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalToSuperview()
+            $0.trailing.leading.equalToSuperview()
+            $0.bottom.equalTo(userSetView.snp.top).offset(30)
         }
         
         userSetView.snp.makeConstraints {

@@ -2,6 +2,7 @@ import UIKit
 import Then 
 import SnapKit
 import RxSwift
+import Charts
 
 class UserGraphListDetailViewController: UIViewController {
     
@@ -51,7 +52,7 @@ class UserGraphListDetailViewController: UIViewController {
         $0.textColor = .systemGray2
     }
     
-    internal lazy var graphList = UIView().then {
+    internal lazy var graphListView = LineChartView().then {
         $0.layer.cornerRadius = 20.0
         $0.backgroundColor = UIColor(named: "CollectionViewColor")
     }
@@ -169,6 +170,24 @@ extension UserGraphListDetailViewController {
             sheetPresentationController.detents = [DetailCustomDetent]
             self.isModalInPresentation = true
         }
+        
+        var dataArray: [ChartDataEntry] = []
+        for i in 0...50 {
+            dataArray.append(ChartDataEntry(x: Double(i), y: Double.random(in: 0...120)))
+        }
+        let dataSet = LineChartDataSet(entries: dataArray)
+        dataSet.setColor(NSUIColor.red)
+        dataSet.drawCirclesEnabled = false
+        dataSet.drawValuesEnabled = false
+        let chartData = LineChartData(dataSet: dataSet)
+        graphListView.data = chartData
+        graphListView.xAxis.enabled = false
+        graphListView.leftAxis.enabled = false
+        graphListView.rightAxis.enabled = false
+        graphListView.dragEnabled = false
+        graphListView.scaleXEnabled = false
+        graphListView.scaleYEnabled = false
+        graphListView.legend.enabled = false
     }
     
     func layout() {
@@ -178,7 +197,7 @@ extension UserGraphListDetailViewController {
             userImage,
             userName,
             userTakeCoin,
-            graphList,
+            graphListView,
             appraisedValue,
             nowCoinPriceLabel,
             firstPriceLabel,
@@ -228,7 +247,7 @@ extension UserGraphListDetailViewController {
             $0.leading.equalTo(userImage.snp.trailing).offset(10.0)
         }
         
-        graphList.snp.makeConstraints {
+        graphListView.snp.makeConstraints {
             $0.top.equalTo(userTakeCoin.snp.bottom).offset(20.0)
             $0.centerX.equalToSuperview()
             $0.height.equalTo(160.0)
@@ -236,7 +255,7 @@ extension UserGraphListDetailViewController {
         }
         
         appraisedValue.snp.makeConstraints {
-            $0.top.equalTo(graphList.snp.bottom).offset(20.0)
+            $0.top.equalTo(graphListView.snp.bottom).offset(20.0)
             $0.leading.equalTo(userImage.snp.leading)
         }
         

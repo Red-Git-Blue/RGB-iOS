@@ -1,4 +1,5 @@
 import UIKit
+import Charts
 
 class UserChartView: UIView {
     private final var controller: UIViewController
@@ -7,8 +8,8 @@ class UserChartView: UIView {
         $0.backgroundColor = UIColor(named: "222222")
     }
     
-    private lazy var chartView = UIView().then {
-        $0.backgroundColor = .darkGray
+    private lazy var chartView = LineChartView().then {
+        $0.backgroundColor = UIColor(named: "202020")
     }
     
     private lazy var coinLabel = UILabel().then {
@@ -82,6 +83,24 @@ extension UserChartView {
     func attribute() {
         backgroundView.layer.cornerRadius = 20
         chartView.layer.cornerRadius = 20
+        
+        var dataArray: [ChartDataEntry] = []
+        for i in 0...50 {
+            dataArray.append(ChartDataEntry(x: Double(i), y: Double.random(in: 0...120)))
+        }
+        let dataSet = LineChartDataSet(entries: dataArray)
+        dataSet.setColor(NSUIColor.red)
+        dataSet.drawCirclesEnabled = false
+        dataSet.drawValuesEnabled = false
+        let chartData = LineChartData(dataSet: dataSet)
+        chartView.data = chartData
+        chartView.xAxis.enabled = false
+        chartView.leftAxis.enabled = false
+        chartView.rightAxis.enabled = false
+        chartView.dragEnabled = false
+        chartView.scaleXEnabled = false
+        chartView.scaleYEnabled = false
+        chartView.legend.enabled = false
     }
     
     func layout() {
