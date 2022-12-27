@@ -40,7 +40,7 @@
 		0E2CBE4D2930B0CB001667BE /* NewBadgesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE4C2930B0CB001667BE /* NewBadgesViewModel.swift */; };
 		0E2CBE5A2930B511001667BE /* BadgesDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE592930B511001667BE /* BadgesDetailViewModel.swift */; };
 		0E2CBE5F2930B64A001667BE /* BagesDetailBuyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE5E2930B64A001667BE /* BagesDetailBuyViewModel.swift */; };
-		0E2CBE642930B7E2001667BE /* CategotyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE632930B7E2001667BE /* CategotyViewModel.swift */; };
+		0E2CBE642930B7E2001667BE /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE632930B7E2001667BE /* CategoryViewModel.swift */; };
 		0E2CBE692930B8C5001667BE /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE682930B8C5001667BE /* ListViewModel.swift */; };
 		0E2CBE6E2930B9E1001667BE /* UserInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE6D2930B9E1001667BE /* UserInformationViewModel.swift */; };
 		0E2CBE772930BB0D001667BE /* UserBadgesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CBE762930BB0D001667BE /* UserBadgesViewModel.swift */; };
@@ -105,6 +105,7 @@
 		0EE4352628F4476F00CA7E58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4352528F4476F00CA7E58 /* SceneDelegate.swift */; };
 		0EE4352D28F4477000CA7E58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EE4352C28F4477000CA7E58 /* Images.xcassets */; };
 		0EE4353028F4477000CA7E58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EE4352E28F4477000CA7E58 /* LaunchScreen.storyboard */; };
+		0EE55ECC295A68570060302E /* GetCategoryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE55ECB295A68570060302E /* GetCategoryListModel.swift */; };
 		0EEE8D3C2911093700227199 /* UserGraphListDetileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE8D3B2911093700227199 /* UserGraphListDetileVC.swift */; };
 		0EEE8D412911E75200227199 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE8D402911E75200227199 /* Roboto-Bold.ttf */; };
 		0EEE8D5729126E2800227199 /* GrassSectionDetilVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE8D5629126E2800227199 /* GrassSectionDetilVC.swift */; };
@@ -178,7 +179,7 @@
 		0E2CBE4C2930B0CB001667BE /* NewBadgesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBadgesViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE592930B511001667BE /* BadgesDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesDetailViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE5E2930B64A001667BE /* BagesDetailBuyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesDetailBuyViewModel.swift; sourceTree = "<group>"; };
-		0E2CBE632930B7E2001667BE /* CategotyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategotyViewModel.swift; sourceTree = "<group>"; };
+		0E2CBE632930B7E2001667BE /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE682930B8C5001667BE /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE6D2930B9E1001667BE /* UserInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewModel.swift; sourceTree = "<group>"; };
 		0E2CBE762930BB0D001667BE /* UserBadgesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBadgesViewModel.swift; sourceTree = "<group>"; };
@@ -244,6 +245,7 @@
 		0EE4352C28F4477000CA7E58 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0EE4352F28F4477000CA7E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EE4353128F4477000CA7E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EE55ECB295A68570060302E /* GetCategoryListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCategoryListModel.swift; sourceTree = "<group>"; };
 		0EEE8D3B2911093700227199 /* UserGraphListDetileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGraphListDetileVC.swift; sourceTree = "<group>"; };
 		0EEE8D402911E75200227199 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		0EEE8D5629126E2800227199 /* GrassSectionDetilVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassSectionDetilVC.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				0ECA53F72954472200BE76CD /* GetBadgeShopListModel.swift */,
 				0E14E871295433D300A8643D /* GetAdvertiseNowModel.swift */,
 				0EB22D4329583FBF006DBEC4 /* GetAllBadgesListModel.swift */,
+				0EE55ECB295A68570060302E /* GetCategoryListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -763,7 +766,7 @@
 		0E2CBE662930B808001667BE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				0E2CBE632930B7E2001667BE /* CategotyViewModel.swift */,
+				0E2CBE632930B7E2001667BE /* CategoryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1592,6 +1595,7 @@
 				0E31E38329457689002A6A82 /* Service.swift in Sources */,
 				0EA56B8929361DDA00967A99 /* FundsHighestThreePlusVC.swift in Sources */,
 				0EF69C3F2928637500C36DAC /* StatsVC.swift in Sources */,
+				0EE55ECC295A68570060302E /* GetCategoryListModel.swift in Sources */,
 				0E31E371294152B2002A6A82 /* MyModel.swift in Sources */,
 				0EAFF9352921335D00162DD0 /* CategorySectionView.swift in Sources */,
 				0E2CBDCB292E0518001667BE /* GrasscollectionViewCell.swift in Sources */,
@@ -1615,7 +1619,7 @@
 				0EAFF94429221BD000162DD0 /* LastTextView.swift in Sources */,
 				0EF69C4F2928D34B00C36DAC /* MyRankView.swift in Sources */,
 				0E2CBE3C293082C0001667BE /* StatsViewModel.swift in Sources */,
-				0E2CBE642930B7E2001667BE /* CategotyViewModel.swift in Sources */,
+				0E2CBE642930B7E2001667BE /* CategoryViewModel.swift in Sources */,
 				0E2CBE2129307C63001667BE /* SuggesionDetailViewModel.swift in Sources */,
 				0E47A487293A12D200215CE7 /* TokenModel.swift in Sources */,
 				0EF59AF92909994F003FEA03 /* SuggestionFeatureCollectionViewCell.swift in Sources */,

@@ -19,7 +19,8 @@ enum API {
     //shop
     case getBadgeShopList
     case getBadgeDetil(_ name: Int)
-    //성화야 니가 오른쪽을 보았다면 준하는 에러 때문에 없어지거야 도와줘(이건 detailview 넘어갈떄 나는 에러야) id 값을 어떻게 줘야할지 모르겠어
+    case getCategoryList
+    
     case getAllBadgesList
     
     //advertise

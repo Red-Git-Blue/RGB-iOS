@@ -19,7 +19,7 @@ class UserInformationView: UIView {
     let disposeBag = DisposeBag()
     
     private lazy var userProfileImage = UIImageView().then {
-        $0.backgroundColor = .red
+        $0.image = UIImage(named: "둥이배지")
     }
     
     private lazy var userNickname = UILabel().then {

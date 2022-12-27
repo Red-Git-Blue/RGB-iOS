@@ -68,7 +68,7 @@ extension FundsHighestThreePlusViewController: UICollectionViewDataSource {
 //        let rankingFeature = rankingFeatureList[indexPath.item]
 //        cell?.setup(rankingFeature: rankingFeature)
         
-        cell?.setup()
+        cell?.layout()
         cell?.backgroundColor = UIColor(named: "CollectionViewColor")
         cell?.layer.cornerRadius = 20
 

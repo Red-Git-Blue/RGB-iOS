@@ -41,7 +41,7 @@ final class FundsHighestThreeView: UIView {
 
         collectionView.register(
             SuggestionFeatureCollectionViewCell.self,
-            forCellWithReuseIdentifier: "SuggestionFeatureCollectionViewCell"
+            forCellWithReuseIdentifier: SuggestionFeatureCollectionViewCell.identifier
         )
 
         return collectionView
@@ -95,7 +95,7 @@ extension FundsHighestThreeView: UICollectionViewDataSource {
 //        cell?.setup(rankingFeature: rankingFeature)
         
         if(indexPath.row == 0) {
-            cell?.setup()
+            cell?.layout()
             cell?.layer.borderWidth = 1
             cell?.layer.borderColor = UIColor.white.cgColor
             cell?.layer.shadowColor = UIColor.yellow.cgColor
@@ -107,7 +107,7 @@ extension FundsHighestThreeView: UICollectionViewDataSource {
         }
         
         if(indexPath.row == 1) {
-            cell?.setup()
+            cell?.layout()
             cell?.layer.borderWidth = 1
             cell?.layer.borderColor = UIColor.white.cgColor
             cell?.layer.shadowColor = UIColor.white.cgColor
@@ -119,7 +119,7 @@ extension FundsHighestThreeView: UICollectionViewDataSource {
         }
         
         if(indexPath.row == 2) {
-            cell?.setup()
+            cell?.layout()
             cell?.layer.borderWidth = 1
             cell?.layer.borderColor = UIColor.white.cgColor
             cell?.layer.shadowColor = UIColor.orange.cgColor
@@ -130,7 +130,7 @@ extension FundsHighestThreeView: UICollectionViewDataSource {
             return cell!
         }
         
-        cell?.setup()
+        cell?.layout()
         cell?.backgroundColor = UIColor(named: "CollectionViewColor")
         cell?.layer.cornerRadius = 20
         return cell ?? UICollectionViewCell()

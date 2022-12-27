@@ -49,7 +49,7 @@ final class BadgesCell: UICollectionViewCell {
         coinPriceLabel.text = "\(coinData.toDigitString())원"
     }
     
-    func setupLayout() {
+    func layout() {
         [
             imageView,
             titleLabel,

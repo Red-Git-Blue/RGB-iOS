@@ -116,7 +116,22 @@ final class Service {
         return provider.rx.request(.getCoinUserList)
             .filterSuccessfulStatusCodes()
             .map(GetCoinUserListModel.self)
-            .map{
+            .map {
+                print($0)
+                return ($0, .ok)
+            }
+            .catch { error in
+                print(error)
+                return .just((nil, .fault))
+            }
+    }
+    
+    func getCategoryListLoad() -> Single<(GetCategoryListModel?, networkingResult)> {
+        print("카테고리 데이터 불러오는 중")
+        return provider.rx.request(.getCategoryList)
+            .filterSuccessfulStatusCodes()
+            .map(GetCategoryListModel.self)
+            .map {
                 print($0)
                 return ($0, .ok)
             }

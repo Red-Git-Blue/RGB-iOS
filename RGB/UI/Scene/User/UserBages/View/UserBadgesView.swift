@@ -22,7 +22,7 @@ class UserBadgesView: UIView {
     }
     
     private lazy var badgesCollectionView = UIView().then {
-        $0.backgroundColor = .red
+        $0.backgroundColor = UIColor(named: "222222")
     }
     
     private lazy var separator = UIView().then {

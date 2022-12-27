@@ -1,9 +1,8 @@
-import Foundation
+import UIKit
 import RxSwift
 import RxCocoa
-import RxRelay
 
-class SuggestionCoinViewModel: BaseVM {
+class CategoryViewModel {
     private let disposeBag = DisposeBag()
     
     struct Input {
@@ -11,36 +10,39 @@ class SuggestionCoinViewModel: BaseVM {
     }
     
     struct Output {
-        let coinList: PublishRelay<GetCoinUserListModel>
+        let categoryView: PublishRelay<GetCategoryListModel>
         let result: PublishRelay<Bool>
     }
     
     func trans(_ input: Input) -> Output {
         let api = Service()
-        let coinList = PublishRelay<GetCoinUserListModel>()
+        let categoryList = PublishRelay<GetCategoryListModel>()
         let result = PublishRelay<Bool>()
-
-        print("suggestionCoinViewModel은 trans를 거침")
+        
+        print("category trans를 거침")
         
         input.viewReceive.asObservable()
-            .map { api.coinUserList() }
+            .map { api.getCategoryListLoad() }
             .subscribe { data in
                 data.map { datas in
                     datas.subscribe { data, res in
+                        
+                        print("구독도됨")
+                        
                         switch res {
                         case .ok:
-                            coinList.accept(data!)
+                            categoryList.accept(data!)
                             result.accept(true)
-                            print("GetCoinUserListModel 성공")
+                            print("shopPageLoadBadge 성공")
                             
                         default:
                             result.accept(false)
-                            print("GetCoinUserListModel 실패")
+                            print("shopPageLoadBadge가 터짐")
                         }
                     }.disposed(by: self.disposeBag)
                 }
             }.disposed(by: disposeBag)
         
-        return Output(coinList: coinList, result: result)
+        return Output(categoryView: categoryList, result: result)
     }
 }

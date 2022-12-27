@@ -5,37 +5,38 @@ import SnapKit
 // Cell
 class CategoryCollectionViewCell : UICollectionViewCell {
     
-    static let identifier = "cell3"
+    static let identifier = "CategoryCollectionViewCell"
     
-    var img = UIImageView().then {
+    var imageView = UIImageView().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.backgroundColor = .black
     }
     
-    var label = UILabel().then {
+    var titleLabel = UILabel().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.text = "label label"
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.cellSetting()
+    func configure(with categoryImage: GetCategoryListModel,_ index: Int) {
+        let imageURL = URL(string: "\(categoryImage.content[index].categoryIcon.fileURL)")
+        imageView.kf.setImage(with: imageURL, placeholder: #imageLiteral(resourceName: "RGBLogo"))
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func forceLoadData(_ titleData: String) {
+        titleLabel.text = titleData
     }
     
-    func cellSetting() {
+    
+    func layout() {
         self.backgroundColor = .gray
-        self.addSubview(img)
-        self.addSubview(label)
+        self.addSubview(imageView)
+        self.addSubview(titleLabel)
         
-        img.contentMode = .scaleToFill
-        img.snp.makeConstraints {
+        imageView.contentMode = .scaleToFill
+        imageView.snp.makeConstraints {
             $0.top.leading.trailing.bottom.equalToSuperview()
         }
-        label.snp.makeConstraints {
+        titleLabel.snp.makeConstraints {
             $0.centerY.equalToSuperview().offset(15.0)
             $0.centerX.equalToSuperview()
         }

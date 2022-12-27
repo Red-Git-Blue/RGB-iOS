@@ -4,11 +4,11 @@ class UserChartView: UIView {
     private final var controller: UIViewController
     
     private lazy var backgroundView = UIView().then {
-        $0.backgroundColor = .gray
+        $0.backgroundColor = UIColor(named: "222222")
     }
     
     private lazy var chartView = UIView().then {
-        $0.backgroundColor = .red
+        $0.backgroundColor = .darkGray
     }
     
     private lazy var coinLabel = UILabel().then {

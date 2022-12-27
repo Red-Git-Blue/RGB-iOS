@@ -9,6 +9,8 @@ class CategoryViewController: BaseAbstractShop {
     override func viewIndex() -> Int {
         return 1
     }
+    private let viewReceive = PublishRelay<Void>()
+    var getCategoryList: GetCategoryListModel?
     
     var array = ["first","second","third","fourth","fifth","6","7","8","9","10","11","12"]
     
@@ -27,21 +29,10 @@ class CategoryViewController: BaseAbstractShop {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let data = Observable<[String]>.of(self.array)
-
+        
         attribute()
         layout()
-        
-        data.asObservable()
-            .bind(to: collectionView.rx
-                    .items(
-                        cellIdentifier: CategoryCollectionViewCell.identifier,
-                        cellType: CategoryCollectionViewCell.self)
-            ) { index, recommend, cell in
-                cell.img.image = UIImage(named: "CateforyCollectionViewCell")
-                cell.label.text = "index \(index)"
-                cell.layer.cornerRadius = 10
-            }
+        bind(CategoryViewModel())
     }
 }
 
@@ -70,8 +61,37 @@ extension CategoryViewController : UICollectionViewDelegateFlowLayout {
 
 extension CategoryViewController {
     
-    func bind(_ viewModel: CategotyViewModel) {
+    func bind(_ viewModel: CategoryViewModel) {
         
+        print("CategoryViewController bind를 거침")
+        
+        let input = CategoryViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()))
+        
+        let output = viewModel.trans(input)
+        
+        output.categoryView.subscribe(onNext: { dataValue in
+            self.getCategoryList = dataValue
+            
+            let data = Observable<[String]>.of(self.array)
+            
+            print("구독은 됨")
+            
+            data.asObservable()
+                .bind(to: self.collectionView.rx
+                        .items(
+                            cellIdentifier: CategoryCollectionViewCell.identifier,
+                            cellType: CategoryCollectionViewCell.self)
+                ) { index, recommend, cell in
+                    
+                    print("잠입 성공")
+                    cell.layout()
+                    let item = self.getCategoryList?.content[index]
+                    cell.forceLoadData(item!.categoryName)
+                    cell.configure(with: self.getCategoryList!, index)
+                    cell.imageView.image = UIImage(named: "CateforyCollectionViewCell")
+                    cell.layer.cornerRadius = 10
+                }
+        })
     }
     
     private func attribute() {

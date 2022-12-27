@@ -80,9 +80,9 @@ extension RevenueHighestThree: UICollectionViewDataSource {
         ) as? SuggestionFeatureCollectionViewCell
 //        let rankingFeature = rankingFeatureList[indexPath.item]
 //        cell?.setup(rankingFeature: rankingFeature)
+        cell?.layout()
         
         if(indexPath.row == 0) {
-            cell?.setup()
             cell?.layer.borderWidth = 1
             cell?.layer.borderColor = UIColor.white.cgColor
             cell?.layer.shadowColor = UIColor.yellow.cgColor
@@ -94,7 +94,6 @@ extension RevenueHighestThree: UICollectionViewDataSource {
         }
         
         if(indexPath.row == 1) {
-            cell?.setup()
             cell?.layer.borderWidth = 1
             cell?.layer.borderColor = UIColor.white.cgColor
             cell?.layer.shadowColor = UIColor.white.cgColor
@@ -106,7 +105,6 @@ extension RevenueHighestThree: UICollectionViewDataSource {
         }
         
         if(indexPath.row == 2) {
-            cell?.setup()
             cell?.layer.borderWidth = 1
             cell?.layer.borderColor = UIColor.white.cgColor
             cell?.layer.shadowColor = UIColor.orange.cgColor
@@ -117,7 +115,6 @@ extension RevenueHighestThree: UICollectionViewDataSource {
             return cell!
         }
         
-        cell?.setup()
         cell?.backgroundColor = UIColor(named: "CollectionViewColor")
         cell?.layer.cornerRadius = 20
         return cell ?? UICollectionViewCell()

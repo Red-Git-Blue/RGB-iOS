@@ -9,6 +9,7 @@ class BagesIntroduceView: UIView {
     private final var controller: UIViewController
     private let viewReceive = PublishRelay<Void>()
     let disposeBag = DisposeBag()
+    let id: Int
     
     var bageDetailList: BagesListModel?
     
@@ -42,8 +43,9 @@ class BagesIntroduceView: UIView {
         $0.backgroundColor = .separator
     }
     
-    init(frame: CGRect, viewController: UIViewController) {
+    init(frame: CGRect, viewController: UIViewController, id: Int) {
         controller = viewController
+        self.id = id
         super.init(frame: frame)
         setup()
         
@@ -98,7 +100,7 @@ extension BagesIntroduceView {
     }
     
     func bind(_ viewModel: BadgesDetailViewModel) {
-        let input = BadgesDetailViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()), id: 1)
+        let input = BadgesDetailViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()), id: id)
         
         let output = viewModel.trans(input)
         print(input)

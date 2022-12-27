@@ -76,6 +76,8 @@ private extension UserViewController {
         let bellNavigetionItem = UIBarButtonItem(image: UIImage(systemName: "bell"), style: .plain, target: nil, action: nil)
         let setNavigetionItem = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: nil, action: nil)
 
+        [bellNavigetionItem, setNavigetionItem].forEach { $0.tintColor = .white }
+
         navigationItem.rightBarButtonItems = [setNavigetionItem, bellNavigetionItem]
     }
 

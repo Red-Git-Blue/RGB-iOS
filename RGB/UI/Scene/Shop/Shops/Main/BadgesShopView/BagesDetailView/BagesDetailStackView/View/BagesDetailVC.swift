@@ -7,15 +7,25 @@ import RxCocoa
 class BagesDetailViewController: UIViewController {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
+    private let id: Int
 
     var disposeBag = DisposeBag()
+    
+    init(id: Int) {
+        self.id = id
+        super.init()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     private lazy var stackView = UIStackView().then { stackView in
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
         stackView.spacing = 0.0
         
-        let bagesTapSectionView = BagesIntroduceView(frame: .zero, viewController: self)
+        let bagesTapSectionView = BagesIntroduceView(frame: .zero, viewController: self, id: self.id)
         
         let newBagesSectionView = BadgesView(frame: .zero, viewController: self, viewName: "신규배지")
         

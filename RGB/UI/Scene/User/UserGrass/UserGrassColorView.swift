@@ -22,7 +22,7 @@ class UserGrassColorView: UIView {
     }
     
     private lazy var grassColorCollectionView = UIView().then {
-        $0.backgroundColor = .red
+        $0.backgroundColor = UIColor(named: "222222")
     }
 
     init(frame: CGRect, viewController: UIViewController) {

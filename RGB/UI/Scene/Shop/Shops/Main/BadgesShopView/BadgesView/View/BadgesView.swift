@@ -82,7 +82,7 @@ extension BadgesView: UICollectionViewDelegateFlowLayout {
 extension BadgesView {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row)
-        let detailViewController = BagesDetailViewController()
+        let detailViewController = BagesDetailViewController(id: (getBadgeShopList?.content[indexPath.row].id)!)
         detailViewController.modalPresentationStyle = .fullScreen
         controller.navigationController?.pushViewController(detailViewController, animated: true)
     }
@@ -96,8 +96,8 @@ extension BadgesView {
                                                    
         let output = viewModel.trans(input)
         
-        output.shopBadgeView.subscribe(onNext: { data in
-            self.getBadgeShopList = data
+        output.shopBadgeView.subscribe(onNext: { dataValue in
+            self.getBadgeShopList = dataValue
             
             let data = Observable<[String]>.of(self.array)
             
@@ -106,7 +106,7 @@ extension BadgesView {
                         .items(cellIdentifier: BadgesCell.identifier,
                                cellType: BadgesCell.self)
                 ) { index, recommend, cell in
-                    cell.setupLayout()
+                    cell.layout()
                     let item = self.getBadgeShopList?.content[index]
                     cell.forceLoadData(item!.name, item!.introduction, item!.price)
                     cell.configure(with: self.getBadgeShopList!, index)
