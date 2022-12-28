@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 import Then
 import ReusableKit
+import Charts
 
 class ChartUserView: UIView {
     
@@ -50,7 +51,7 @@ class ChartUserView: UIView {
 //    }
 
     private lazy var imageView = UIImageView().then {
-        $0.backgroundColor = .red
+        $0.image = UIImage(named: "둥이배지")
         $0.layer.borderColor = UIColor.tertiaryLabel.cgColor
         //        옆에 imageview 테두리 만들기
         //        imageView.layer.borderWidth = 0.5
@@ -78,9 +79,7 @@ class ChartUserView: UIView {
         $0.textColor = .red
     }
 
-    private var chartView = UIView().then {
-        $0.backgroundColor = .red
-    }
+    private var chartView = LineChartView()
 
     let ListcollectionView = UICollectionView(frame: .zero, collectionViewLayout: .init()).then {
       let layout = LeftAlignedCollectionViewFlowLayout()
@@ -116,6 +115,86 @@ class ChartUserView: UIView {
     //        collectionView.dequeue(Reusable.tagCell, for: IndexPath(row: beforeSelected, section: indexPath.section)).unselect()
         if(indexPath.row == beforeSelected) {
             return
+        }
+        
+        if(indexPath.row == 1) {
+            var dataArray: [ChartDataEntry] = []
+            for i in 0...50 {
+                dataArray.append(ChartDataEntry(x: Double(i), y: Double.random(in: 0...120)))
+            }
+            let dataSet = LineChartDataSet(entries: dataArray)
+            dataSet.setColor(NSUIColor.red)
+            dataSet.drawCirclesEnabled = false
+            dataSet.drawValuesEnabled = false
+            let chartData = LineChartData(dataSet: dataSet)
+            chartView.data = chartData
+            chartView.xAxis.enabled = false
+            chartView.leftAxis.enabled = false
+            chartView.rightAxis.enabled = false
+            chartView.dragEnabled = false
+            chartView.scaleXEnabled = false
+            chartView.scaleYEnabled = false
+            chartView.legend.enabled = false
+        }
+        
+        if(indexPath.row == 2) {
+            var dataArray: [ChartDataEntry] = []
+            for i in 0...50 {
+                dataArray.append(ChartDataEntry(x: Double(i), y: Double.random(in: 0...120)))
+            }
+            let dataSet = LineChartDataSet(entries: dataArray)
+            dataSet.setColor(NSUIColor.red)
+            dataSet.drawCirclesEnabled = false
+            dataSet.drawValuesEnabled = false
+            let chartData = LineChartData(dataSet: dataSet)
+            chartView.data = chartData
+            chartView.xAxis.enabled = false
+            chartView.leftAxis.enabled = false
+            chartView.rightAxis.enabled = false
+            chartView.dragEnabled = false
+            chartView.scaleXEnabled = false
+            chartView.scaleYEnabled = false
+            chartView.legend.enabled = false
+        }
+        
+        if(indexPath.row == 3) {
+            var dataArray: [ChartDataEntry] = []
+            for i in 0...50 {
+                dataArray.append(ChartDataEntry(x: Double(i), y: Double.random(in: 0...120)))
+            }
+            let dataSet = LineChartDataSet(entries: dataArray)
+            dataSet.setColor(NSUIColor.red)
+            dataSet.drawCirclesEnabled = false
+            dataSet.drawValuesEnabled = false
+            let chartData = LineChartData(dataSet: dataSet)
+            chartView.data = chartData
+            chartView.xAxis.enabled = false
+            chartView.leftAxis.enabled = false
+            chartView.rightAxis.enabled = false
+            chartView.dragEnabled = false
+            chartView.scaleXEnabled = false
+            chartView.scaleYEnabled = false
+            chartView.legend.enabled = false
+        }
+        
+        if(indexPath.row == 0) {
+            var dataArray: [ChartDataEntry] = []
+            for i in 0...50 {
+                dataArray.append(ChartDataEntry(x: Double(i), y: Double.random(in: 0...120)))
+            }
+            let dataSet = LineChartDataSet(entries: dataArray)
+            dataSet.setColor(NSUIColor.red)
+            dataSet.drawCirclesEnabled = false
+            dataSet.drawValuesEnabled = false
+            let chartData = LineChartData(dataSet: dataSet)
+            chartView.data = chartData
+            chartView.xAxis.enabled = false
+            chartView.leftAxis.enabled = false
+            chartView.rightAxis.enabled = false
+            chartView.dragEnabled = false
+            chartView.scaleXEnabled = false
+            chartView.scaleYEnabled = false
+            chartView.legend.enabled = false
         }
         
         (collectionView.cellForItem(at: IndexPath(row: beforeSelected, section: indexPath.section)) as! TagCell).unselect()
@@ -155,6 +234,24 @@ class ChartUserView: UIView {
         descriptionLabel.text = "박준하"
         coinPriceLabel.text = "152,894원"
         inDecreaseLabel.text = "+250원 (+2.14%)"
+        
+        var dataArray: [ChartDataEntry] = []
+        for i in 0...50 {
+            dataArray.append(ChartDataEntry(x: Double(i), y: Double.random(in: 0...120)))
+        }
+        let dataSet = LineChartDataSet(entries: dataArray)
+        dataSet.setColor(NSUIColor.red)
+        dataSet.drawCirclesEnabled = false
+        dataSet.drawValuesEnabled = false
+        let chartData = LineChartData(dataSet: dataSet)
+        chartView.data = chartData
+        chartView.xAxis.enabled = false
+        chartView.leftAxis.enabled = false
+        chartView.rightAxis.enabled = false
+        chartView.dragEnabled = false
+        chartView.scaleXEnabled = false
+        chartView.scaleYEnabled = false
+        chartView.legend.enabled = false
     }
     func layout() {
         [

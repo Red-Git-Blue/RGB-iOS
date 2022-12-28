@@ -89,7 +89,7 @@ import Kingfisher
             $0.top.equalToSuperview().inset(15.0)
             $0.trailing.equalToSuperview().inset(20.0)
             $0.height.equalTo(24.0)
-            $0.width.equalTo(50.0)
+            $0.width.equalTo(60.0)
         }
 
         inDecreaseLabel.snp.makeConstraints {

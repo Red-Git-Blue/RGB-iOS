@@ -30,9 +30,7 @@ class StatsViewController: BaseAbstractChart {
         attribute()
         
         var data = [Double]()
-        for _ in 0...8 {
-            data.append(Double.random(in: 0...100))
-        }
+        data.append(Double.random(in: 0...100))
         
         configureChartView(data)
     }
@@ -43,7 +41,6 @@ class StatsViewController: BaseAbstractChart {
     
     private lazy var pieChartView = PieChartView().then {
         $0.delegate = self
-        $0.backgroundColor = .red
     }
     
 //    private lazy var tableView = UITableView().then {
@@ -60,7 +57,7 @@ class StatsViewController: BaseAbstractChart {
     private lazy var userAllAsstsLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 26.0, weight: .bold)
         $0.textColor = .white
-        $0.text = "482,930원"
+        $0.text = "0원"
     }
     
     private lazy var allDamageLabel = UILabel().then {
@@ -72,13 +69,13 @@ class StatsViewController: BaseAbstractChart {
     private lazy var userAllDamageLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 20.0, weight: .bold)
         $0.textColor = .white
-        $0.text = "482,930원"
+        $0.text = "0원"
     }
     
     private lazy var percentDamgeLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 16.0, weight: .bold)
         $0.textColor = .red
-        $0.text = "(+34.21%)"
+        $0.text = "(0%)"
     }
 }
 
@@ -94,16 +91,17 @@ extension StatsViewController {
         data.forEach {
             entries.append(PieChartDataEntry(value: $0))
         }
-        let dataSet = PieChartDataSet(entries: entries, label: "통계")
+        let dataSet = PieChartDataSet(entries: entries, label: "통계 (없음)")
         dataSet.sliceSpace = 2
         dataSet.entryLabelColor = .black
 //
         dataSet.colors = ChartColorTemplates.vordiplom()
-          + ChartColorTemplates.joyful()
-          + ChartColorTemplates.colorful()
-          + ChartColorTemplates.liberty()
-          + ChartColorTemplates.pastel()
-          + ChartColorTemplates.material()
+        + ChartColorTemplates.joyful()
+//          + ChartColorTemplates.joyful()
+//          + ChartColorTemplates.colorful()
+//          + ChartColorTemplates.liberty()
+//          + ChartColorTemplates.pastel()
+//          + ChartColorTemplates.material()
 //
         self.pieChartView.data = PieChartData(dataSet: dataSet)
 //        self.pieChartView.spin(duration: 0.5, fromAngle: pieChartView.rotationAngle, toAngle: pieChartView.rotationAngle + 80)

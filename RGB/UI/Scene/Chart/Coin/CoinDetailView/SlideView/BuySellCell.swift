@@ -20,7 +20,7 @@ final class BuySellCell: UICollectionViewCell {
         $0.backgroundColor = color
     }
     private var coinLabel = UILabel().then {
-        $0.text = "1,834,728원"
+        $0.text = "152,894원"
         $0.font = .systemFont(ofSize: 24, weight: .bold)
         $0.numberOfLines = 1
         $0.textColor = .white
@@ -28,7 +28,7 @@ final class BuySellCell: UICollectionViewCell {
     }
     
     private var coinTextLabel = UILabel().then {
-        $0.text = "12코인"
+        $0.text = "0코인"
         $0.font = .systemFont(ofSize: 16, weight: .bold)
         $0.numberOfLines = 1
         $0.textColor = .gray
@@ -46,7 +46,7 @@ final class BuySellCell: UICollectionViewCell {
     }
     
     private var coinCountLabel = UILabel().then {
-        $0.text = "12"
+        $0.text = "0"
         $0.font = .systemFont(ofSize: 20, weight: .regular)
         $0.numberOfLines = 1
         $0.textColor = .white
@@ -67,7 +67,7 @@ final class BuySellCell: UICollectionViewCell {
     }
     
     private var userHaveLabel = UILabel().then {
-        $0.text = "83,463,910,234원 보유중"
+        $0.text = "0원 보유중"
         $0.font = .systemFont(ofSize: 20, weight: .bold)
         $0.numberOfLines = 1
         $0.textColor = .systemGray2

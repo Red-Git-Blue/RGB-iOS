@@ -58,6 +58,41 @@ extension UserGraphListSectionView: UICollectionViewDataSource {
         cell.setup()
         cell.backgroundColor = UIColor(named: "CollectionViewColor")
         
+        if indexPath.row == 0 {
+            cell.titleLabel.text = "JUNHA"
+            cell.descriptionLabel.text = "박준하"
+            cell.coinPriceLabel.text = "152,894원"
+            cell.inDecreaseLabel.text = "+12,000원(+15.7%)"
+        }
+        
+        if indexPath.row == 1 {
+            cell.titleLabel.text = "BLACKCH"
+            cell.descriptionLabel.text = "최승우"
+            cell.coinPriceLabel.text = "322,970원"
+            cell.inDecreaseLabel.text = "+42,000원(+19.7%)"
+        }
+        
+        if indexPath.row == 2 {
+            cell.titleLabel.text = "Hyunseok"
+            cell.descriptionLabel.text = "김현석"
+            cell.coinPriceLabel.text = "122,894원"
+            cell.inDecreaseLabel.text = "+15,120원(+12.6%)"
+        }
+        
+        if indexPath.row == 3 {
+            cell.titleLabel.text = "Moon"
+            cell.descriptionLabel.text = "문성화"
+            cell.coinPriceLabel.text = "1,412,894원"
+            cell.inDecreaseLabel.text = "+352,000원(+65.7%)"
+        }
+        
+        if indexPath.row == 4 {
+            cell.titleLabel.text = "Taegon"
+            cell.descriptionLabel.text = "임태곤"
+            cell.coinPriceLabel.text = "12,894원"
+            cell.inDecreaseLabel.text = "+100원(+0.52%)"
+        }
+        
         return cell
     }
     
@@ -96,11 +131,7 @@ private extension UserGraphListSectionView {
             UserGraphListModel(nowCoinPrice: 3256, changePercent: 75000, iTakeCoins: "12개", userImage: "없음", userName: "최승우"),
             UserGraphListModel(nowCoinPrice: 23552, changePercent: 600, iTakeCoins: "1개", userImage: "없음", userName: "김현석"),
             UserGraphListModel(nowCoinPrice: 64324, changePercent: 577000, iTakeCoins: "50개", userImage: "없음", userName: "문성화"),
-            UserGraphListModel(nowCoinPrice: 38234, changePercent: 7000, iTakeCoins: "2개", userImage: "없음", userName: "임태콘"),
-            UserGraphListModel(nowCoinPrice: 23456, changePercent: 5000, iTakeCoins: "20개", userImage: "없음", userName: "박준하"),
-            UserGraphListModel(nowCoinPrice: 3256, changePercent: 75000, iTakeCoins: "12개", userImage: "없음", userName: "최승우"),
-            UserGraphListModel(nowCoinPrice: 23552, changePercent: 600, iTakeCoins: "1개", userImage: "없음", userName: "김현석"),
-            UserGraphListModel(nowCoinPrice: 64324, changePercent: 577000, iTakeCoins: "50개", userImage: "없음", userName: "문성화")
+            UserGraphListModel(nowCoinPrice: 38234, changePercent: 7000, iTakeCoins: "2개", userImage: "없음", userName: "임태콘")
         ]
 
     }

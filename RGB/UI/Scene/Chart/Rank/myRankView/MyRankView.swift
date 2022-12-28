@@ -32,7 +32,7 @@ class MyRankView: UIView {
     }
     
     private lazy var fundsRanking = UILabel().then {
-        $0.text = "132위"
+        $0.text = "1위"
         $0.font = .systemFont(ofSize: 14.0, weight: .regular)
         $0.textColor = .white
     }
@@ -44,7 +44,7 @@ class MyRankView: UIView {
     }
     
     private lazy var revenueRanking = UILabel().then {
-        $0.text = "258위"
+        $0.text = "1위"
         $0.font = .systemFont(ofSize: 14.0, weight: .regular)
         $0.textColor = .white
     }

@@ -12,41 +12,37 @@ import Charts
 
 class UserGraphListSectionCell: UICollectionViewCell {
     
-    private var graphListbackgroundView = LineChartView()
+    var graphListbackgroundView = LineChartView()
     
-    private lazy var userSetView = UIView().then {
+    var userSetView = UIView().then {
         $0.backgroundColor = UIColor(named: "CollectionViewColor")
     }
 
-    private lazy var imageView = UIImageView().then {
-        $0.backgroundColor = .blue
+    var imageView = UIImageView().then {
+        $0.image = UIImage(named: "둥이배지")
         $0.layer.cornerRadius = 18
-//        $0.layer.borderColor = UIColor.tertiaryLabel.cgColor
-        //        옆에 imageview 테두리 만들기
-        //        imageView.layer.borderWidth = 0.5
-//        $0.layer.cornerRadius = 15
     }
 
-    private lazy var titleLabel = UILabel().then {
+    var titleLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 14.0, weight: .bold)
         $0.textColor = .white
         $0.numberOfLines = 2
         $0.text = "HYUNSUK"
     }
 
-    private lazy var descriptionLabel = UILabel().then {
+    var descriptionLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 12.0, weight: .regular)
         $0.textColor = .white
         $0.text = "김현석"
     }
 
-    private lazy var coinPriceLabel = UILabel().then {
+    var coinPriceLabel = UILabel().then {
         $0.text = "152,894원"
         $0.font = .systemFont(ofSize: 14.0, weight: .bold)
         $0.textColor = .white
     }
 
-    private var inDecreaseLabel = UILabel().then {
+    var inDecreaseLabel = UILabel().then {
         $0.text = "+12,000원 (+4.2%)"
         $0.font = .systemFont(ofSize: 12.0, weight: .semibold)
         $0.textColor = .red

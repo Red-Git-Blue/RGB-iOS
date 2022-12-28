@@ -17,7 +17,7 @@ final class UserViewController: UIViewController {
         
         let userBagesView = UserBadgesView(frame: .zero, viewController: self)
         
-        let userGrassColorView = UserGrassColorView(frame: .zero, viewController: self)
+//        let userGrassColorView = UserGrassColorView(frame: .zero, viewController: self)
         
         let spacingView = UIView()
         spacingView.snp.makeConstraints {
@@ -46,8 +46,8 @@ final class UserViewController: UIViewController {
             spacingMiddleView,
             userBagesView,
             lastSpacingView,
-            userGrassColorView,
-            lastView
+//            userGrassColorView,
+//            lastView
         ].forEach {
             stackView.addArrangedSubview($0)
         }

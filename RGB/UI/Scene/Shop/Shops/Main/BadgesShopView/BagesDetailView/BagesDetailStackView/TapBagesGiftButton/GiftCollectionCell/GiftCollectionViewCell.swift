@@ -24,29 +24,17 @@ class GiftCollectionViewCell: UICollectionViewCell {
         $0.font = .systemFont(ofSize: 12.0, weight: .semibold)
         $0.textColor = .secondaryLabel
     }
-    
-    var bagesImageBackgroundView = UIImageView().then {
-        $0.backgroundColor = .gray
-    }
-    
-    var bagesImageView = UIImageView().then {
-        $0.backgroundColor = .yellow
-    }
 
     func attribute() {
         titleLabel.text = "JUNHA0211"
         descriptionLabel.text = "12345678"
-        bagesImageBackgroundView.layer.cornerRadius = 20
-        bagesImageView.layer.cornerRadius = 15
     }
     
     func layout() {
         [
             userimageView,
             titleLabel,
-            descriptionLabel,
-            bagesImageBackgroundView,
-            bagesImageView
+            descriptionLabel
         ].forEach { addSubview($0) }
 
         userimageView.snp.makeConstraints {
@@ -66,21 +54,6 @@ class GiftCollectionViewCell: UICollectionViewCell {
             $0.leading.equalTo(titleLabel.snp.leading)
             $0.trailing.equalTo(titleLabel.snp.trailing)
             $0.top.equalTo(titleLabel.snp.bottom).offset(5.0)
-        }
-        
-        bagesImageBackgroundView.snp.makeConstraints {
-            $0.trailing.equalToSuperview()
-            $0.top.equalToSuperview()
-            $0.bottom.equalToSuperview()
-            $0.height.equalTo(75.0)
-            $0.width.equalTo(70.0)
-        }
-        
-        bagesImageView.snp.makeConstraints {
-            $0.centerX.equalTo(bagesImageBackgroundView.snp.centerX)
-            $0.centerY.equalTo(bagesImageBackgroundView.snp.centerY)
-            $0.height.equalTo(30.0)
-            $0.width.equalTo(30.0)
         }
     }
 }

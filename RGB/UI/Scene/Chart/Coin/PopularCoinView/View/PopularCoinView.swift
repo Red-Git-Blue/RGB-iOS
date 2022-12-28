@@ -80,6 +80,10 @@ extension PopularCoinView: UICollectionViewDataSource {
         cell?.layout()
         cell?.backgroundColor = UIColor(named: "CollectionViewColor")
         cell?.layer.cornerRadius = 20
+        cell!.titleLabel.text = "JUNHA0211"
+        cell!.descriptionLabel.text = "최고의 코인"
+        cell!.coinPriceLabel.text = "152,894"
+        cell!.inDecreaseLabel.text = "+15.7%"
         return cell ?? UICollectionViewCell()
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

@@ -14,6 +14,13 @@ class UserGraphListDetailViewController: UIViewController {
 
         attribute()
         layout()
+        
+        dealButton.rx.tap
+            .bind {
+                let detailViewController = CoinDetailViewController()
+                detailViewController.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(detailViewController, animated: true)
+            }
     }
     
     internal lazy var downButton = UIButton().then {
@@ -35,7 +42,7 @@ class UserGraphListDetailViewController: UIViewController {
     }
     
     internal lazy var userImage = UIImageView().then {
-        $0.backgroundColor = .red
+        $0.image = UIImage(named: "둥이배지")
         $0.layer.borderColor = UIColor.tertiaryLabel.cgColor
         $0.layer.cornerRadius = 13
     }
@@ -169,6 +176,7 @@ extension UserGraphListDetailViewController {
             }
             sheetPresentationController.detents = [DetailCustomDetent]
             self.isModalInPresentation = true
+        
         }
         
         var dataArray: [ChartDataEntry] = []

@@ -11,7 +11,7 @@ class UserBadgesView: UIView {
 
     private lazy var badgesCountLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 16.0, weight: .bold)
-        $0.text = "(12 / 53)"
+        $0.text = "(0 / 4)"
         $0.textColor = .gray
     }
 

@@ -12,7 +12,10 @@ final class SuggestionCoinSectionView: UIView {
     
     let disposeBag = DisposeBag()
     
-    var array: [String] = []
+    //네트워크 할 경우
+//    var array: [String] = []
+    
+    var array = ["1","2","3","4","5"]
 
     private lazy var titleLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 24.0, weight: .black)
@@ -84,30 +87,48 @@ private extension SuggestionCoinSectionView {
     
     func bind(_ viewModel: SuggestionCoinViewModel) {
         print("SuggestionCoinSectionView ViewModel 입니다")
-
-        let input = SuggestionCoinViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()))
-
-        let output = viewModel.trans(input)
         
-        output.coinList.subscribe(onNext: { dataValue in
-            self.getCoinList = dataValue
-            
-            let data = Observable<[String]>.of(self.array)
-            
-            print("하하하")
-            
-            data.asObservable()
-                .bind(to: self.collectionView.rx
-                    .items(cellIdentifier: SuggestionFeatureCollectionViewCell.identifier, cellType: SuggestionFeatureCollectionViewCell.self)
-                ) { index, recommend, cell in
-                    cell.layout()
-                    cell.backgroundColor = UIColor(named: "CollectionViewColor")
-                    cell.layer.cornerRadius = 20
-                    let item = self.getCoinList?.content[index]
-                    cell.forceLoadData(item!.ownerName, item!.name, item!.price, item!.increment)
-                    cell.configure(with: self.getCoinList!, index)
-                }
-        })
+        let data = Observable<[String]>.of(self.array)
+        
+        print("하하하")
+        
+        data.asObservable()
+            .bind(to: self.collectionView.rx
+                .items(cellIdentifier: SuggestionFeatureCollectionViewCell.identifier, cellType: SuggestionFeatureCollectionViewCell.self)
+            ) { index, recommend, cell in
+                cell.layout()
+                cell.backgroundColor = UIColor(named: "CollectionViewColor")
+                cell.layer.cornerRadius = 20
+                cell.titleLabel.text = "JUNHA0211"
+                cell.descriptionLabel.text = "최고의 코인"
+                cell.coinPriceLabel.text = "152,894"
+                cell.inDecreaseLabel.text = "+15.7%"
+            }
+
+        //네트워크 할 경우
+//        let input = SuggestionCoinViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()))
+//
+//        let output = viewModel.trans(input)
+//
+//        output.coinList.subscribe(onNext: { dataValue in
+//            self.getCoinList = dataValue
+//
+//            let data = Observable<[String]>.of(self.array)
+//
+//            print("하하하")
+//
+//            data.asObservable()
+//                .bind(to: self.collectionView.rx
+//                    .items(cellIdentifier: SuggestionFeatureCollectionViewCell.identifier, cellType: SuggestionFeatureCollectionViewCell.self)
+//                ) { index, recommend, cell in
+//                    cell.layout()
+//                    cell.backgroundColor = UIColor(named: "CollectionViewColor")
+//                    cell.layer.cornerRadius = 20
+//                    let item = self.getCoinList?.content[index]
+//                    cell.forceLoadData(item!.ownerName, item!.name, item!.price, item!.increment)
+//                    cell.configure(with: self.getCoinList!, index)
+//                }
+//        })
     }
     
     func attribute() {

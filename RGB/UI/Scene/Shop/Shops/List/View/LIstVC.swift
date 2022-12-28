@@ -87,7 +87,7 @@ extension ListViewController {
                     cell.cellSetting()
                     cell.configure(with: self.getAllBadgeList!, index)
                     cell.backgroundColor = .clear
-                    cell.layer.cornerRadius = 10
+                    cell.layer.cornerRadius = 20
                 }
         })
 }

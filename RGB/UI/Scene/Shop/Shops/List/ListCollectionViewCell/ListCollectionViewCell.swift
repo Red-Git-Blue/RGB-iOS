@@ -11,6 +11,7 @@ class ListCollectionViewCell : UICollectionViewCell {
     var imageView = UIImageView().then {
         
         $0.backgroundColor = .white
+        $0.layer.cornerRadius = 20
     }
     
     override init(frame: CGRect) {

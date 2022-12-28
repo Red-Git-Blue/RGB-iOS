@@ -40,7 +40,7 @@ class BagesDetailGiftViewController: UIViewController {
     }
     
     private lazy var personHoldingLabel = UILabel().then {
-        $0.text = "83,463,910,234원 보유중"
+        $0.text = "0원 보유중"
         $0.font = .systemFont(ofSize: 16.0, weight: .bold)
         $0.textColor = .gray
     }

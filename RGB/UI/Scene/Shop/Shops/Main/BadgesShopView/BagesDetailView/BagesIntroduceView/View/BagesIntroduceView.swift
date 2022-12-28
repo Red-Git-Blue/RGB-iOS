@@ -14,11 +14,10 @@ class BagesIntroduceView: UIView {
     
     var bageDetailList: BagesListModel?
     
-    private lazy var mainBadgesImage = UIImageView().then {
+    private lazy var mainBadgesImage = UIImageView().then { _ in
         let imageName = "MainBage"
         let image = UIImage(named: imageName)
         let imageView = UIImageView(image: image!)
-        $0.backgroundColor = .red
     }
     
     private lazy var badgesName = UILabel().then {
