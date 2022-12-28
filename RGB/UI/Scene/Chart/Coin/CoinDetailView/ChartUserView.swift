@@ -119,7 +119,7 @@ class ChartUserView: UIView {
         
         if(indexPath.row == 1) {
             var dataArray: [ChartDataEntry] = []
-            for i in 0...50 {
+            for i in 0...20 {
                 dataArray.append(ChartDataEntry(x: Double(i), y: Double.random(in: 0...120)))
             }
             let dataSet = LineChartDataSet(entries: dataArray)
@@ -139,7 +139,7 @@ class ChartUserView: UIView {
         
         if(indexPath.row == 2) {
             var dataArray: [ChartDataEntry] = []
-            for i in 0...50 {
+            for i in 0...30 {
                 dataArray.append(ChartDataEntry(x: Double(i), y: Double.random(in: 0...120)))
             }
             let dataSet = LineChartDataSet(entries: dataArray)
@@ -159,7 +159,27 @@ class ChartUserView: UIView {
         
         if(indexPath.row == 3) {
             var dataArray: [ChartDataEntry] = []
-            for i in 0...50 {
+            for i in 0...40 {
+                dataArray.append(ChartDataEntry(x: Double(i), y: Double.random(in: 0...120)))
+            }
+            let dataSet = LineChartDataSet(entries: dataArray)
+            dataSet.setColor(NSUIColor.red)
+            dataSet.drawCirclesEnabled = false
+            dataSet.drawValuesEnabled = false
+            let chartData = LineChartData(dataSet: dataSet)
+            chartView.data = chartData
+            chartView.xAxis.enabled = false
+            chartView.leftAxis.enabled = false
+            chartView.rightAxis.enabled = false
+            chartView.dragEnabled = false
+            chartView.scaleXEnabled = false
+            chartView.scaleYEnabled = false
+            chartView.legend.enabled = false
+        }
+        
+        if(indexPath.row == 4) {
+            var dataArray: [ChartDataEntry] = []
+            for i in 0...40 {
                 dataArray.append(ChartDataEntry(x: Double(i), y: Double.random(in: 0...120)))
             }
             let dataSet = LineChartDataSet(entries: dataArray)

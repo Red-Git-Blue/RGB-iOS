@@ -110,8 +110,8 @@ extension BagesIntroduceView {
         output.badgeDetailData.subscribe(onNext: { data in
             self.badgesName.text = "\(data.name)"
             self.badgesDescriptions.text = "\(data.introduction)"
-            self.coinPriceLabel.text = "\(data.price)"
             self.badgesDescriptions.lineBreakMode = .byCharWrapping
+            self.coinPriceLabel.text = "\(data.price.toDigitString())원"
             
             self.mainBadgesImage.kf.setImage(with: URL(string: data.mainImage.fileURL), placeholder: #imageLiteral(resourceName: "RGBLogo"))
             
