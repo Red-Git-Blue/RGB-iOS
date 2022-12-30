@@ -62,6 +62,10 @@ extension BagesDetailBuyViewController {
         purchaseButton.rx.tap
             .bind {
                 print("🤑:: 구매구매!")
+                let alert = UIAlertController(title: "돈 부족!!", message: "코인으로 돈을 벌고 배지를 사주세요", preferredStyle: UIAlertController.Style.alert)
+                let okAction = UIAlertAction(title: "OK", style: .default)
+                alert.addAction(okAction)
+                self.present(alert, animated: false, completion: nil)
             }.disposed(by: disposeBag)
         
         cancelButton.rx.tap

@@ -66,6 +66,13 @@ class BagesDetailGiftViewController: UIViewController {
         layout()
         collectionView.reloadData()
         
+        giftButton.rx.tap.bind {
+            let alert = UIAlertController(title: "돈 부족!!", message: "코인으로 돈을 벌고 배지를 선물해주세요", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(okAction)
+            self.present(alert, animated: false, completion: nil)
+        }
+        
     }
 }
 
