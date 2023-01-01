@@ -19,6 +19,8 @@ final class UserViewController: UIViewController {
         
 //        let userGrassColorView = UserGrassColorView(frame: .zero, viewController: self)
         
+        let userGrassSectionView = GrassSectionView(frame: .zero, viewController: self, size: 16.0)
+        
         let spacingView = UIView()
         spacingView.snp.makeConstraints {
             $0.height.equalTo(210.0)
@@ -31,12 +33,12 @@ final class UserViewController: UIViewController {
         
         let lastSpacingView = UIView()
         lastSpacingView.snp.makeConstraints {
-            $0.height.equalTo(320.0)
+            $0.height.equalTo(300.0)
         }
         
         let lastView = UIView()
         lastView.snp.makeConstraints {
-            $0.height.equalTo(400.0)
+            $0.height.equalTo(120.0)
         }
         
         [
@@ -46,8 +48,8 @@ final class UserViewController: UIViewController {
             spacingMiddleView,
             userBagesView,
             lastSpacingView,
-//            userGrassColorView,
-//            lastView
+            userGrassSectionView,
+            lastView
         ].forEach {
             stackView.addArrangedSubview($0)
         }

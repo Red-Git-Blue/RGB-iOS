@@ -5,11 +5,28 @@ import PContributionsView
 
 class GrassSectionView: UIView {
     private final var controller: UIViewController
+    var textSize: Double
     
     var grassSection = [GrassSectionModel]()
     
+
+    private let separatorView = SeparatorView(frame: .zero)
+
+    init(frame: CGRect, viewController: UIViewController, size: Double) {
+        controller = viewController
+        self.textSize = size
+        super.init(frame: frame)
+        attribute()
+        layout()
+        collectionView.reloadData()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private lazy var titleLabel = UILabel().then {
-        $0.font = .systemFont(ofSize: 24.0, weight: .black)
+        $0.font = .systemFont(ofSize: textSize, weight: .black)
         $0.text = "잔디"
     }
     
@@ -34,21 +51,6 @@ class GrassSectionView: UIView {
 
         return collectionView
     }()
-
-    private let separatorView = SeparatorView(frame: .zero)
-
-    init(frame: CGRect, viewController: UIViewController) {
-        controller = viewController
-        super.init(frame: frame)
-
-        attribute()
-        layout()
-        collectionView.reloadData()
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }
 
 extension GrassSectionView: UICollectionViewDataSource {
