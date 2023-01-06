@@ -140,4 +140,18 @@ final class Service {
                 return .just((nil, .fault))
             }
     }
+    
+    func getOwnedCoinsLoad() -> Single<(OwnedCoinsModel?, networkingResult)> {
+        return provider.rx.request(.getOwnedCoins)
+            .filterSuccessfulStatusCodes()
+            .map(OwnedCoinsModel.self)
+            .map {
+                print($0)
+                return ($0, .ok)
+            }
+            .catch { error in
+                print(error)
+                return .just((nil, .fault))
+            }
+    }
 }

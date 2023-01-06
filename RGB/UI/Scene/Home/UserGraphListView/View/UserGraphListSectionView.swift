@@ -1,11 +1,14 @@
 import SnapKit
+import RxRelay
 import Then
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class UserGraphListSectionView: UIView {
     private final var controller: UIViewController
-    
-    var userGraphModelList = [UserGraphListModel]()
+    private let viewReceive = PublishRelay<Void>()
+    var userGraphModelList: OwnedCoinsModel?
     
     private lazy var titleLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 24.0, weight: .black)
@@ -18,7 +21,7 @@ final class UserGraphListSectionView: UIView {
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.delegate = self
-        collectionView.dataSource = self
+//        collectionView.dataSource = self
 
         collectionView.isPagingEnabled = true
         collectionView.backgroundColor = .systemBackground
@@ -27,7 +30,7 @@ final class UserGraphListSectionView: UIView {
 
         collectionView.register(
             UserGraphListSectionCell.self,
-            forCellWithReuseIdentifier: "UserGraphListSectionCell"
+            forCellWithReuseIdentifier: UserGraphListSectionCell.identifier
         )
 
         return collectionView
@@ -41,67 +44,11 @@ final class UserGraphListSectionView: UIView {
         layout()
         attribute()
         collectionView.reloadData()
+        bind(UserGraphListSectionViewModel())
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-}
-
-extension UserGraphListSectionView: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserGraphListSectionCell", for: indexPath) as! UserGraphListSectionCell
-        cell.setup()
-        cell.backgroundColor = UIColor(named: "CollectionViewColor")
-        
-        if indexPath.row == 0 {
-            cell.titleLabel.text = "JUNHA"
-            cell.descriptionLabel.text = "박준하"
-            cell.coinPriceLabel.text = "152,894원"
-            cell.inDecreaseLabel.text = "+12,000원(+15.7%)"
-        }
-        
-        if indexPath.row == 1 {
-            cell.titleLabel.text = "BLACKCH"
-            cell.descriptionLabel.text = "최승우"
-            cell.coinPriceLabel.text = "322,970원"
-            cell.inDecreaseLabel.text = "+42,000원(+19.7%)"
-        }
-        
-        if indexPath.row == 2 {
-            cell.titleLabel.text = "Hyunseok"
-            cell.descriptionLabel.text = "김현석"
-            cell.coinPriceLabel.text = "122,894원"
-            cell.inDecreaseLabel.text = "+15,120원(+12.6%)"
-        }
-        
-        if indexPath.row == 3 {
-            cell.titleLabel.text = "Moon"
-            cell.descriptionLabel.text = "문성화"
-            cell.coinPriceLabel.text = "1,412,894원"
-            cell.inDecreaseLabel.text = "+352,000원(+65.7%)"
-        }
-        
-        if indexPath.row == 4 {
-            cell.titleLabel.text = "Taegon"
-            cell.descriptionLabel.text = "임태곤"
-            cell.coinPriceLabel.text = "12,894원"
-            cell.inDecreaseLabel.text = "+100원(+0.52%)"
-        }
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedSuggesion = userGraphModelList[indexPath.row]
-        print(userGraphModelList[indexPath.row])
-        let detailViewController = UserGraphListDetailViewController()
-        detailViewController.userGraphList = selectedSuggesion
-        controller.present(detailViewController, animated: true)
     }
 }
 
@@ -119,20 +66,58 @@ extension UserGraphListSectionView: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension UserGraphListSectionView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedSuggesion = userGraphModelList!.content[indexPath.row]
+        print(userGraphModelList!.content[indexPath.row])
+        let detailViewController = UserGraphListDetailViewController()
+        detailViewController.userGraphList = selectedSuggesion
+        controller.present(detailViewController, animated: true)
+    }
+}
+
 private extension UserGraphListSectionView {
     
     func bind(_ viewModel: UserGraphListSectionViewModel) {
-        
+        let input = UserGraphListSectionViewModel.Input(viewReceive: viewReceive.asDriver(onErrorJustReturn: ()))
+
+        let output = viewModel.trans(input)
+
+        output.graphModelList.subscribe(onNext: { dataValue in
+            self.userGraphModelList = dataValue
+            
+            self.userGraphModelList?.content.append(OwnedCoinsModel.Content(coinID: 0, name: "asdf", ownerName: "소유자", startPrice: 100, price: 120, boughtPrice: 110, boughtAmount: 5, previousPrice: 110, maxPrice: 130, minPrice: 90, totalBuyCount: 10, totalSellCount: 5, increment: OwnedCoinsModel.Increment(difference: 100, percent: 1.0), imageURL: nil, graph: []))
+
+            let data = Observable<[OwnedCoinsModel.Content]>.of(self.userGraphModelList!.content)
+
+            print("userGraphList까지는 들어옴")
+            print("안에는 이딴게 들었음: \(self.userGraphModelList?.content)")
+            
+            data.asObservable()
+                .bind(to: self.collectionView.rx
+                    .items(cellIdentifier: UserGraphListSectionCell.identifier, cellType: UserGraphListSectionCell.self)
+                ) { index, recommend, cell in
+                    print("데이터불러오기 성공")
+                    cell.layout()
+                    cell.backgroundColor = UIColor(named: "CollectionViewColor")
+                    cell.layer.cornerRadius = 20
+                    let item = self.userGraphModelList?.content[index]
+                    cell.setDataArray(item!.graph)
+                    cell.attribute()
+                }.dispose()
+            
+            print("dkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdk")
+        })
     }
     
     func attribute() {
-        userGraphModelList = [
-            UserGraphListModel(nowCoinPrice: 23456, changePercent: 5000, iTakeCoins: "20개", userImage: "없음", userName: "박준하"),
-            UserGraphListModel(nowCoinPrice: 3256, changePercent: 75000, iTakeCoins: "12개", userImage: "없음", userName: "최승우"),
-            UserGraphListModel(nowCoinPrice: 23552, changePercent: 600, iTakeCoins: "1개", userImage: "없음", userName: "김현석"),
-            UserGraphListModel(nowCoinPrice: 64324, changePercent: 577000, iTakeCoins: "50개", userImage: "없음", userName: "문성화"),
-            UserGraphListModel(nowCoinPrice: 38234, changePercent: 7000, iTakeCoins: "2개", userImage: "없음", userName: "임태콘")
-        ]
+//        userGraphModelList = [
+//            UserGraphListModel(nowCoinPrice: 23456, changePercent: 5000, iTakeCoins: "20개", userImage: "없음", userName: "박준하"),
+//            UserGraphListModel(nowCoinPrice: 3256, changePercent: 75000, iTakeCoins: "12개", userImage: "없음", userName: "최승우"),
+//            UserGraphListModel(nowCoinPrice: 23552, changePercent: 600, iTakeCoins: "1개", userImage: "없음", userName: "김현석"),
+//            UserGraphListModel(nowCoinPrice: 64324, changePercent: 577000, iTakeCoins: "50개", userImage: "없음", userName: "문성화"),
+//            UserGraphListModel(nowCoinPrice: 38234, changePercent: 7000, iTakeCoins: "2개", userImage: "없음", userName: "임태콘")
+//        ]
 
     }
     

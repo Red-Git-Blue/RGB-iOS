@@ -29,6 +29,9 @@ enum API {
     //main
     case getCoinUserList
     
+    //coin
+    case getOwnedCoins
+    
 }
 
 extension API: Moya.TargetType {

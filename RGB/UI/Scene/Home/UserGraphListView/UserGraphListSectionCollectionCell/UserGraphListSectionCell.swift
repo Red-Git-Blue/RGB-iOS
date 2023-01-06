@@ -12,6 +12,10 @@ import Charts
 
 class UserGraphListSectionCell: UICollectionViewCell {
     
+    private var dataArray: [ChartDataEntry] = []
+    
+    static let identifier = "UserGraphListSectionCell"
+    
     var graphListbackgroundView = LineChartView()
     
     var userSetView = UIView().then {
@@ -53,16 +57,15 @@ class UserGraphListSectionCell: UICollectionViewCell {
         layout()
         
     }
-}
-
-// MARK: Private
-private extension UserGraphListSectionCell {
+    
+    func setDataArray(_ entry: [OwnedCoinsModel.Graph]) {
+        dataArray = entry.map {
+            ChartDataEntry(x: Double($0.date), y: Double($0.price))
+        }
+    }
+    
     
     func attribute() {
-        var dataArray: [ChartDataEntry] = []
-        for i in 0...50 {
-            dataArray.append(ChartDataEntry(x: Double(i), y: Double.random(in: 0...120)))
-        }
         let dataSet = LineChartDataSet(entries: dataArray)
         dataSet.setColor(NSUIColor.red)
         dataSet.drawCirclesEnabled = false

@@ -64,6 +64,7 @@
 		0E436E682949D7F4009E6791 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E436E672949D7F4009E6791 /* SignupViewModel.swift */; };
 		0E47A487293A12D200215CE7 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47A486293A12D200215CE7 /* TokenModel.swift */; };
 		0E4D4324295B04F100EF75DC /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4D4323295B04F100EF75DC /* SearchTableViewCell.swift */; };
+		0E4D5A142968261E00265762 /* OwnedCoinsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4D5A132968261E00265762 /* OwnedCoinsModel.swift */; };
 		0E555B22290FB768005E379E /* BackGroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B21290FB768005E379E /* BackGroundVC.swift */; };
 		0E555B24290FB7F5005E379E /* BackGroundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B23290FB7F5005E379E /* BackGroundTypes.swift */; };
 		0E555B27290FDF2E005E379E /* GetCoinUserListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555B26290FDF2E005E379E /* GetCoinUserListModel.swift */; };
@@ -204,6 +205,7 @@
 		0E436E672949D7F4009E6791 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		0E47A486293A12D200215CE7 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		0E4D4323295B04F100EF75DC /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		0E4D5A132968261E00265762 /* OwnedCoinsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnedCoinsModel.swift; sourceTree = "<group>"; };
 		0E555B21290FB768005E379E /* BackGroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundVC.swift; sourceTree = "<group>"; };
 		0E555B23290FB7F5005E379E /* BackGroundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundTypes.swift; sourceTree = "<group>"; };
 		0E555B26290FDF2E005E379E /* GetCoinUserListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoinUserListModel.swift; sourceTree = "<group>"; };
@@ -1123,6 +1125,7 @@
 			isa = PBXGroup;
 			children = (
 				0E2CBE1D29307B3F001667BE /* UserGraphListModel.swift */,
+				0E4D5A132968261E00265762 /* OwnedCoinsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1602,6 +1605,7 @@
 				0EE55ECC295A68570060302E /* GetCategoryListModel.swift in Sources */,
 				0E31E371294152B2002A6A82 /* MyModel.swift in Sources */,
 				0EAFF9352921335D00162DD0 /* CategorySectionView.swift in Sources */,
+				0E4D5A142968261E00265762 /* OwnedCoinsModel.swift in Sources */,
 				0E2CBDCB292E0518001667BE /* GrasscollectionViewCell.swift in Sources */,
 				0EF59ADD29097AD9003FEA03 /* CoinSearchVC.swift in Sources */,
 				0E61D6952907F0080098A3F5 /* PasswordChangeVC.swift in Sources */,

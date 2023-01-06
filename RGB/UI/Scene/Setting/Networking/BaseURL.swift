@@ -32,6 +32,8 @@ extension API {
             return URL(string: url)!
         case .getCategoryList:
             return URL(string: url)!
+        case .getOwnedCoins:
+            return URL(string: url)!
         }
     }
     func getPath() -> String {
@@ -58,6 +60,8 @@ extension API {
             return "/item/badge"
         case .getCategoryList:
             return "/item/category"
+        case .getOwnedCoins:
+            return "/coin"
         }
     }
     func getMethod() -> Moya.Method {

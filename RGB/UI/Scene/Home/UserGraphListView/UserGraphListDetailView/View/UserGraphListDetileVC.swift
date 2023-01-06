@@ -6,7 +6,7 @@ import Charts
 
 class UserGraphListDetailViewController: UIViewController {
     
-    var userGraphList: UserGraphListModel?
+    var userGraphList: OwnedCoinsModel.Content?
     var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -48,13 +48,13 @@ class UserGraphListDetailViewController: UIViewController {
     }
     
     internal lazy var userName = UILabel().then {
-        $0.text = userGraphList?.userName ?? "이름이 없음"
+        $0.text = userGraphList?.name ?? "이름이 없음"
         $0.font = .systemFont(ofSize: 14.0, weight: .bold)
         $0.textColor = .white
     }
     
     internal lazy var userTakeCoin = UILabel().then {
-        $0.text = userGraphList?.iTakeCoins ?? "보유하고 있는 코인이 없음"
+        $0.text = "\(userGraphList?.boughtAmount ?? 0)"
         $0.font = .systemFont(ofSize: 12.0, weight: .regular)
         $0.textColor = .systemGray2
     }
@@ -71,7 +71,7 @@ class UserGraphListDetailViewController: UIViewController {
     }
     
     internal lazy var nowCoinPriceLabel = UILabel().then {
-        $0.text = "\(userGraphList!.nowCoinPrice!)원"
+        $0.text = "\(userGraphList!.price)원"
         $0.font = UIFont(name: "Roboto-Bold", size: 24.0)
         $0.textColor = .white
     }
@@ -98,7 +98,7 @@ class UserGraphListDetailViewController: UIViewController {
     }
     
     private lazy var reserveCoin = UILabel().then {
-        $0.text = "\(userGraphList!.iTakeCoins!)"
+        $0.text = "\(userGraphList!.boughtAmount)"
         $0.font = UIFont(name: "Roboto-Bold", size: 16.0)
         $0.textColor = .white
     }
